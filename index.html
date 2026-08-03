@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IGI — Instituto Gastronómico Internacional | DEMO de propuesta</title>
+<meta name="description" content="Demo de propuesta del nuevo sitio de IGI: carreras y cursos de gastronomía con filiales en 7 países.">
+<link rel="canonical" href="https://web3.igionline.com.ar/">
+<!-- Open Graph (previsualización al compartir en Facebook / WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="IGI — Instituto Gastronómico Internacional">
+<meta property="og:title" content="IGI — Instituto Gastronómico Internacional">
+<meta property="og:description" content="La red educativa de gastronomía más grande de Latinoamérica. Carreras y cursos con certificación universitaria, en más de 70 filiales de 7 países. Encontrá tu sede más cercana.">
+<meta property="og:url" content="https://web3.igionline.com.ar/">
+<meta property="og:image" content="https://web3.igionline.com.ar/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_AR">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IGI — Instituto Gastronómico Internacional">
+<meta name="twitter:description" content="La red educativa de gastronomía más grande de Latinoamérica. Carreras y cursos con certificación universitaria en 7 países.">
+<meta name="twitter:image" content="https://web3.igionline.com.ar/og-image.jpg">
+<style>
+:root{
+  --naranja:#F58220; --naranja-osc:#D96A0B; --azul:#1F2430; --azul-2:#2B3245;
+  --gris:#6B7280; --gris-claro:#F4F5F7; --blanco:#fff; --verde-wsp:#25D366;
+  --rojo:#E23B3B; --amarillo:#FFC93C; --radius:14px;
+  --sombra:0 4px 18px rgba(31,36,48,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html{overflow-x:hidden}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;color:var(--azul);background:var(--blanco);line-height:1.55;overflow-x:hidden;max-width:100%}
+img{max-width:100%}
+a{color:var(--naranja-osc);text-decoration:none}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* ===== Banderas SVG ===== */
+.bandera-svg{display:inline-block;width:22px;height:15px;border-radius:3px;overflow:hidden;vertical-align:-2.5px;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.bandera-svg svg{width:100%;height:100%;display:block}
+.gate-pais .bandera-svg{width:60px;height:41px;border-radius:6px;margin-bottom:9px;box-shadow:0 2px 8px rgba(0,0,0,.22)}
+.top-strip .bandera-svg{width:19px;height:13px;vertical-align:-2px}
+.paises-tabs .bandera-svg{width:20px;height:14px}
+footer .bandera-svg{width:26px;height:18px;margin-right:4px}
+/* ===== Puerta de país ===== */
+.gate{position:fixed;inset:0;z-index:300;background:radial-gradient(circle at 25% 15%,rgba(255,255,255,.16),transparent 50%),radial-gradient(circle at 85% 90%,rgba(120,50,0,.30),transparent 55%),linear-gradient(140deg,#F58220,#E8710A 55%,#D96A0B);display:flex;align-items:center;justify-content:center;padding:20px;overflow:auto}
+.gate.cerrada{display:none}
+.gate-card{max-width:860px;width:100%;text-align:center}
+.gate-card img{height:min(300px,34vh);margin:0 auto 10px;display:block;filter:drop-shadow(0 10px 30px rgba(120,50,0,.35))}
+.gate-card h2{font-size:clamp(24px,3.4vw,34px);margin-bottom:6px;color:#fff;text-shadow:0 2px 8px rgba(120,50,0,.3)}
+.gate-card p{color:#FFE9D2;margin-bottom:26px;font-size:16.5px}
+.gate-card p b{color:#fff}
+.gate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gate-pais{background:#fff;border:2px solid transparent;border-radius:16px;padding:18px 8px 14px;cursor:pointer;font-weight:800;font-size:14px;color:var(--azul);font-family:inherit;transition:.15s;position:relative;box-shadow:0 8px 20px rgba(120,50,0,.25)}
+.gate-pais:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(120,50,0,.35);border-color:var(--azul)}
+.gate-pais .bandera{display:block;font-size:38px;margin-bottom:6px}
+.gate-pais .prox{position:absolute;top:6px;right:6px;background:#FFF2D9;color:#8a6a12;font-size:9px;font-weight:800;padding:2px 7px;border-radius:10px}
+.gate-nota{margin-top:22px;font-size:12.5px;color:#FFDBB5;line-height:1.55;animation:subeFade .6s 1.15s both}
+/* ===== Animaciones de bienvenida ===== */
+@keyframes gateLogoEntra{0%{opacity:0;transform:translateY(-34px) scale(.5)}60%{opacity:1;transform:translateY(8px) scale(1.05)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes gateFlota{0%{transform:translateY(0) rotate(-0.6deg)}50%{transform:translateY(-9px) rotate(0.5deg)}100%{transform:translateY(0) rotate(-0.6deg)}}
+.logo-wrap{position:relative;display:inline-block;margin:0 auto 10px;animation:gateLogoEntra .95s cubic-bezier(.2,.8,.3,1.15) both}
+.logo-wrap img{height:min(300px,34vh);display:block;filter:drop-shadow(0 10px 30px rgba(120,50,0,.35))}
+@keyframes brillo{0%,55%{background-position:170% 0}100%{background-position:-70% 0}}
+.logo-shine{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%);background-size:260% 100%;background-repeat:no-repeat;animation:brillo 5.5s ease-in-out 1.6s infinite;-webkit-mask-size:contain;-webkit-mask-position:center;-webkit-mask-repeat:no-repeat;mask-size:contain;mask-position:center;mask-repeat:no-repeat}
+.gate-card>img{display:none}
+@keyframes subeFade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.gate-card h2{animation:subeFade .6s .4s both}
+.gate-card p{animation:subeFade .6s .55s both}
+.gate-grid .gate-pais{animation:subeFade .5s both}
+.gate-grid .gate-pais:nth-child(1){animation-delay:.65s}
+.gate-grid .gate-pais:nth-child(2){animation-delay:.73s}
+.gate-grid .gate-pais:nth-child(3){animation-delay:.81s}
+.gate-grid .gate-pais:nth-child(4){animation-delay:.89s}
+.gate-grid .gate-pais:nth-child(5){animation-delay:.97s}
+.gate-grid .gate-pais:nth-child(6){animation-delay:1.05s}
+.gate-grid .gate-pais:nth-child(7){animation-delay:1.13s}
+/* Banderas del gate: onda suave que recorre la tela (franjas con desfase sinusoidal) */
+.ola{display:flex;margin:0 auto 9px;filter:drop-shadow(0 4px 7px rgba(0,0,0,.2))}
+.ola-s{height:100%;overflow:hidden;flex:none;animation:ondita 2.7s ease-in-out infinite}
+.ola-i{display:block;height:100%}
+.ola-i svg{width:100%;height:100%;display:block}
+@keyframes ondita{0%,100%{transform:translateY(1.7px)}50%{transform:translateY(-1.7px)}}
+.gate-pais:nth-child(2n) .ola-s{animation-duration:3.1s}
+.gate-pais:nth-child(3n) .ola-s{animation-duration:2.4s}
+#logo-h{transition:transform .25s ease}
+.logo:hover #logo-h{transform:scale(1.05) rotate(-1.5deg)}
+@media(prefers-reduced-motion:reduce){.logo-wrap,.logo-shine,.gate-card h2,.gate-card p,.gate-pais,.gate-nota,.ola-s{animation:none!important}}
+@media(max-width:640px){.gate{align-items:flex-start;padding-top:24px;padding-bottom:24px}.gate-grid{grid-template-columns:repeat(2,1fr)}.gate-card img{height:min(150px,20vh)}.logo-wrap img{height:min(150px,20vh)}}
+
+/* ===== Barra demo ===== */
+.demo-bar{background:var(--azul);color:#cbd2e0;font-size:12.5px;padding:6px 0;text-align:center}
+.demo-bar b{color:var(--amarillo)}
+.demo-bar button{margin-left:10px;background:transparent;border:1px solid #556;color:#cbd2e0;border-radius:20px;padding:2px 10px;font-size:11.5px;cursor:pointer}
+.demo-bar button.on{background:var(--amarillo);color:var(--azul);border-color:var(--amarillo);font-weight:700}
+
+/* ===== Notas de propuesta ===== */
+.nota{display:none;background:#FFF7DC;border:1px dashed #E4C24A;color:#6b5b16;font-size:12.5px;padding:8px 12px;border-radius:8px;margin:10px 0}
+body.mostrar-notas .nota{display:block}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:50;background:var(--blanco);box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.top-strip{background:var(--gris-claro);font-size:12.5px}
+.top-strip .container{display:flex;justify-content:space-between;align-items:center;height:34px}
+.paises{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.paises span.lbl{color:var(--gris)}
+.paises a{color:var(--azul);opacity:.55;font-weight:600}
+.paises a.activo{opacity:1;color:var(--naranja-osc);border-bottom:2px solid var(--naranja)}
+.top-links{display:flex;gap:14px}
+.top-links a{color:var(--gris)}
+.navbar .container{display:flex;align-items:center;gap:26px;height:108px}
+#logo-h{height:88px;display:block}
+#logo-f{height:64px!important}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo .iso{width:44px;height:44px;border-radius:50%;background:var(--naranja);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;letter-spacing:.5px;border:3px solid var(--azul)}
+.logo .txt b{display:block;font-size:15px;line-height:1.1}
+.logo .txt span{font-size:10.5px;color:var(--gris);letter-spacing:.6px}
+nav.menu{display:flex;gap:20px;margin-left:auto}
+nav.menu a{color:var(--azul);font-weight:600;font-size:14.5px;padding:6px 2px}
+nav.menu a:hover{color:var(--naranja-osc)}
+.cta-header{display:flex;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:30px;padding:10px 18px;font-weight:700;font-size:14px;cursor:pointer;border:none;transition:.15s}
+.btn-naranja{background:var(--naranja);color:#fff}
+.btn-naranja:hover{background:var(--naranja-osc);color:#fff}
+.btn-borde{background:#fff;border:2px solid var(--naranja);color:var(--naranja-osc)}
+.btn-wsp{background:var(--verde-wsp);color:#fff}
+.btn-wsp:hover{filter:brightness(.95);color:#fff}
+.btn-oscuro{background:var(--azul);color:#fff}
+.hamb{display:none;margin-left:auto;background:none;border:none;font-size:26px;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{background:linear-gradient(120deg,var(--azul) 0%,var(--azul-2) 48%,#7a3d08 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(245,130,32,.38),transparent 70%);right:-120px;top:-140px}
+.hero::after{content:"";}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;object-position:center;transition:opacity 1.4s ease}
+.hero-bg-b{opacity:0}
+.hero-tag{position:absolute;bottom:18px;right:22px;z-index:3;background:rgba(10,13,20,.6);color:#fff;padding:9px 18px;border-radius:26px;font-size:13.5px;font-weight:700;cursor:pointer;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);transition:.2s}
+.hero-tag:hover{background:var(--naranja);border-color:var(--naranja)}
+/* Variantes de portada */
+body:not(.hero-a) .hero-bg,body:not(.hero-a) .hero-tag{display:none}
+body.hero-a .hero-der{display:none}
+body.hero-a .hero-grid{grid-template-columns:1fr}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+.hero-izq,.hero-der{min-width:0}
+/* B: mosaico */
+.mosaico{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:70px;gap:8px;width:100%}
+.mos-t{position:relative;border-radius:12px;overflow:hidden;cursor:pointer;background:#2B3245}
+.mos-t img{width:100%;height:100%;object-fit:cover;transition:transform .25s ease;display:block}
+.mos-t:hover img{transform:scale(1.08)}
+.mos-t::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.62))}
+.mos-t span{position:absolute;left:8px;bottom:6px;right:5px;color:#fff;font-size:9.5px;font-weight:800;z-index:1;line-height:1.15}
+.mos-t.grande{grid-column:span 2;grid-row:span 2}
+.mos-t.grande span{font-size:14px;left:12px;bottom:10px}
+/* C: selector interactivo */
+.sel-wrap{width:100%}
+.sel-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 44px rgba(0,0,0,.4);color:var(--azul);cursor:pointer;transition:transform .2s}
+.sel-card:hover{transform:translateY(-3px)}
+.sel-card .foto-sel{position:relative;height:230px}
+.sel-card .foto-sel img{width:100%;height:100%;object-fit:cover;display:block}
+.sel-card .cuerpo-sel{padding:15px 18px 17px}
+.sel-card h3{font-size:19px;margin-bottom:5px}
+.sel-card .datos{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.sel-card .ver-mas{color:var(--naranja-osc);font-weight:800;font-size:13.5px}
+.sel-chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.sel-chip{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.30);color:#fff;border-radius:20px;padding:6px 13px;font-size:12.5px;font-weight:700;cursor:pointer;transition:.15s}
+.sel-chip.on,.sel-chip:hover{background:var(--naranja);border-color:var(--naranja)}
+.sel-barra{height:3px;background:rgba(255,255,255,.18);border-radius:2px;margin-top:10px;overflow:hidden}
+.sel-barra i{display:block;height:100%;background:var(--naranja);width:0%}
+@keyframes selprog{from{width:0}to{width:100%}}
+/* D: cinta en movimiento sobre foto que funde a gris */
+body.hero-d .hero-grid{grid-template-columns:1fr;gap:24px}
+body.hero-d .hero{background:linear-gradient(180deg,#181d28 0%,#252b3a 38%,#3a4150 62%,#4d5462 82%,#575e6c 100%)}
+body.hero-d .hero-bg{display:block;opacity:.26;filter:grayscale(.7);-webkit-mask-image:linear-gradient(180deg,#000 38%,rgba(0,0,0,.3) 58%,transparent 72%);mask-image:linear-gradient(180deg,#000 38%,rgba(0,0,0,.3) 58%,transparent 72%)}
+body.hero-d .hero-tag{display:none}
+body.hero-d .cin-t{box-shadow:0 10px 24px rgba(15,18,26,.35)}
+body.hero-d .cifras{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15)}
+.cinta{overflow:hidden;width:100%;max-width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.cinta-track{display:flex;gap:12px;width:max-content;animation:cinta 55s linear infinite}
+.cinta:hover .cinta-track{animation-play-state:paused}
+@keyframes cinta{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.cin-t{position:relative;width:172px;height:122px;border-radius:12px;overflow:hidden;cursor:pointer;flex:none;background:#2B3245}
+.cin-t img{width:100%;height:100%;object-fit:cover;display:block}
+.cin-t::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.68))}
+.cin-t span{position:absolute;left:9px;bottom:7px;right:6px;color:#fff;font-size:11px;font-weight:800;z-index:1;line-height:1.2}
+.cin-t:hover img{transform:scale(1.06);transition:.25s}
+@media(prefers-reduced-motion:reduce){.cinta-track{animation:none}}
+/* E: buscador protagonista */
+.busca-hero{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:18px;backdrop-filter:blur(4px)}
+.busca-hero .bh-titulo{font-weight:800;font-size:16px;margin-bottom:10px;color:#fff}
+.busca-hero input{width:100%;padding:13px 16px;border-radius:12px;border:none;font-size:14.5px;font-family:inherit;margin-bottom:12px}
+.bh-pills{display:flex;flex-wrap:wrap;gap:7px;max-height:240px;overflow:auto}
+.bh-pill{background:rgba(255,255,255,.13);border:1.5px solid rgba(255,255,255,.28);color:#fff;border-radius:20px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;transition:.15s}
+.bh-pill:hover{background:var(--naranja);border-color:var(--naranja)}
+.bh-pill em{font-style:normal;opacity:.75;font-weight:600;font-size:10.5px;display:block}
+.bh-vacio{color:#d6dae4;font-size:13px}
+/* F: elegí tu camino */
+.caminos{display:flex;flex-direction:column;gap:10px;width:100%}
+.camino{background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.22);border-radius:14px;padding:13px 16px;cursor:pointer;color:#fff;transition:.15s}
+.camino:hover{border-color:var(--naranja)}
+.camino.abierto{background:rgba(245,130,32,.16);border-color:var(--naranja)}
+.camino .cam-head{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:14.5px}
+.camino .cam-head em{font-style:normal;font-size:11.5px;color:#f5c9a0;font-weight:700}
+.camino .cam-progs{display:none;flex-wrap:wrap;gap:7px;margin-top:11px}
+.camino.abierto .cam-progs{display:flex}
+/* G: muro vivo */
+body.hero-g .hero-grid{grid-template-columns:1fr}
+body.hero-g .hero-der{display:none}
+.muro{position:absolute;inset:0;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:repeat(2,1fr);gap:6px;padding:6px;z-index:0}
+.muro .mt{overflow:hidden;border-radius:8px;position:relative}
+.muro .mt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.20;transition:opacity 1s ease,transform 1s ease}
+.muro .mt.brilla img{opacity:.62;transform:scale(1.05)}
+.muro-tag{position:absolute;bottom:18px;right:22px;z-index:3;background:rgba(10,13,20,.65);color:#fff;padding:9px 18px;border-radius:26px;font-size:13.5px;font-weight:700;cursor:pointer;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.25);transition:.2s}
+.muro-tag:hover{background:var(--naranja);border-color:var(--naranja)}
+/* H: por áreas */
+.areas-tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.area-tab{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.28);color:#fff;border-radius:20px;padding:7px 14px;font-size:12.5px;font-weight:800;cursor:pointer;transition:.15s}
+.area-tab.on,.area-tab:hover{background:var(--naranja);border-color:var(--naranja)}
+.area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.area-card{position:relative;border-radius:11px;overflow:hidden;cursor:pointer;height:96px;background:#2B3245}
+.area-card img{width:100%;height:100%;object-fit:cover;display:block;transition:.25s}
+.area-card:hover img{transform:scale(1.07)}
+.area-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.7))}
+.area-card span{position:absolute;left:8px;bottom:6px;right:5px;color:#fff;font-size:10px;font-weight:800;z-index:1;line-height:1.15}
+.hero .container{position:relative;z-index:2}
+.gal-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal-item small{z-index:1;text-shadow:0 1px 5px rgba(0,0,0,.85);font-size:9.5px}
+.video-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.7)}
+.video-thumb .play,.video-thumb .dur-v{z-index:1}
+#kit-uni{height:auto;padding:0}
+#kit-uni img{width:100%;height:150px;object-fit:cover;object-position:top;border-radius:10px;display:block}
+.hero .container{padding:64px 20px 56px;position:relative;z-index:1}
+.hero .kicker{color:var(--amarillo);font-weight:700;letter-spacing:1.5px;font-size:13px;text-transform:uppercase}
+.hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.12;margin:12px 0 16px;max-width:640px}
+.hero h1 em{font-style:normal;color:var(--naranja)}
+.hero p.sub{max-width:560px;color:#d6dae4;font-size:17px;margin-bottom:26px}
+.hero .acciones{display:flex;gap:12px;flex-wrap:wrap}
+.cifras{display:flex;gap:0;flex-wrap:wrap;margin-top:44px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius)}
+.cifra{flex:1;min-width:140px;text-align:center;padding:18px 10px}
+.cifra b{display:block;font-size:30px;color:var(--naranja)}
+.cifra span{font-size:12.5px;color:#c9cfdb}
+
+/* ===== Secciones ===== */
+section.bloque{padding:58px 0}
+section.bloque.gris{background:linear-gradient(180deg,#FDF1E3,#FBEEDF)}
+/* Kit incluido */
+.kit-bloque{background:linear-gradient(115deg,#E8710A,#F58220 55%,#FF9E45);position:relative;overflow:hidden}
+.kit-bloque::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.09);top:-160px;right:-120px}
+.kit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1}
+.kit-item{background:#fff;border-radius:14px;padding:20px;text-align:center;box-shadow:0 8px 22px rgba(120,60,0,.22);position:relative}
+.kit-visual{font-size:52px;height:92px;display:flex;align-items:center;justify-content:center}
+.kit-item h4{font-size:15.5px;margin-bottom:6px}
+.kit-item ul{list-style:none;font-size:12.5px;color:var(--gris)}
+.kit-item li{padding:2px 0}
+.kit-tag{position:absolute;top:12px;right:-8px;background:var(--azul);color:var(--amarillo);font-size:10px;font-weight:800;letter-spacing:.8px;padding:4px 10px;border-radius:6px 0 0 6px;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.kit-libros{height:92px;display:flex;align-items:flex-end;justify-content:center;gap:4px;margin-bottom:4px}
+.libro{width:34px;height:78px;border-radius:3px 6px 6px 3px;box-shadow:2px 3px 6px rgba(0,0,0,.25);display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;transform:rotate(-1deg)}
+.libro:nth-child(2){height:84px;transform:rotate(1deg)}
+.libro:nth-child(3){height:74px}
+.libro:nth-child(4){height:82px;transform:rotate(-2deg)}
+.libro:nth-child(5){height:70px;transform:rotate(2deg)}
+.libro span{writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;font-size:8px;font-weight:800;letter-spacing:1px}
+.enc{max-width:640px;margin:0 auto 30px;text-align:center}
+.insta-head .enc{margin-left:0;margin-right:0;text-align:left}
+.enc .mini{color:var(--naranja-osc);font-weight:800;letter-spacing:1.4px;font-size:12.5px;text-transform:uppercase}
+.enc h2{font-size:clamp(24px,3vw,34px);margin:6px 0 10px}
+.enc p{color:var(--gris)}
+
+/* Cards de programas */
+.grid{display:grid;gap:20px}
+.grid.c3{grid-template-columns:repeat(3,1fr)}
+.grid.c4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);overflow:hidden;display:flex;flex-direction:column;transition:.18s;cursor:pointer;border:1px solid #eceef2}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(31,36,48,.16)}
+.card .foto{height:120px;display:flex;align-items:center;justify-content:center;font-size:52px;color:#fff;position:relative}
+.card .tag{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.35);backdrop-filter:blur(2px);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+.card .cuerpo{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:17.5px;line-height:1.25}
+.card .datos{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--gris-claro);color:var(--azul-2);font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:20px}
+.card p.desc{font-size:13.5px;color:var(--gris);flex:1}
+.card .pie{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
+.card .pie .ver{font-weight:700;font-size:13.5px;color:var(--naranja-osc)}
+.wsp-mini{width:34px;height:34px;border-radius:50%;background:var(--verde-wsp);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px}
+
+/* Filtros catálogo */
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.filtro{background:#fff;border:2px solid #e3e6ec;border-radius:30px;padding:8px 16px;font-weight:600;font-size:13.5px;cursor:pointer;color:var(--azul-2)}
+.filtro.on{background:var(--naranja);border-color:var(--naranja);color:#fff}
+
+/* Próximos inicios */
+.tabla-inicios{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--sombra);font-size:14px}
+.tabla-inicios th{background:var(--azul);color:#fff;text-align:left;padding:12px 16px;font-size:12.5px;text-transform:uppercase;letter-spacing:.6px}
+.tabla-inicios td{padding:12px 16px;border-top:1px solid #eef0f4}
+.tabla-inicios tr:hover td{background:#FFF6EC}
+.fecha-pill{background:#FFEBD6;color:var(--naranja-osc);font-weight:800;padding:4px 10px;border-radius:8px;font-size:12.5px;white-space:nowrap}
+.inicios-board{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);overflow:hidden;border:1px solid #eceef2}
+.inicios-head,.ini-row{display:grid;grid-template-columns:104px 1fr auto;gap:14px;align-items:center;padding:12px 16px}
+.inicios-head{background:var(--azul);color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.6px;font-weight:700}
+.inicios-viewport{height:300px;overflow:hidden;position:relative}
+.inicios-viewport::after{content:"";position:absolute;left:0;right:0;bottom:0;height:52px;background:linear-gradient(transparent,#fff);pointer-events:none;z-index:2}
+.inicios-track{display:flex;flex-direction:column;animation:iniscroll 32s linear infinite;will-change:transform}
+.inicios-viewport:hover .inicios-track{animation-play-state:paused}
+.ini-row{border-top:1px solid #eef0f4;font-size:14px}
+.ini-row:hover{background:#FFF6EC}
+.ini-info b{display:block;font-size:14.5px;line-height:1.25;color:var(--azul)}
+.ini-info small{color:var(--gris);font-size:12.5px}
+.ini-btn{padding:7px 14px;white-space:nowrap}
+@keyframes iniscroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@media(prefers-reduced-motion:reduce){.inicios-track{animation:none}}
+@media(max-width:560px){.inicios-head,.ini-row{grid-template-columns:82px 1fr auto;gap:10px;padding:11px 12px}.ini-btn{padding:7px 11px;font-size:12.5px}.inicios-viewport{height:340px}}
+
+/* Ficha de programa */
+.ficha-hero{background:linear-gradient(115deg,var(--azul),var(--azul-2));color:#fff;padding:46px 0 0}
+.ficha-hero .migas{font-size:12.5px;color:#aab2c5;margin-bottom:14px}
+.ficha-hero .migas a{color:#d7dce8}
+.ficha-hero h1{font-size:clamp(28px,3.6vw,42px);max-width:700px}
+.ficha-hero p.lead{color:#d6dae4;max-width:640px;margin:12px 0 26px;font-size:16.5px}
+.datos-duros{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-radius:var(--radius) var(--radius) 0 0;box-shadow:var(--sombra);transform:translateY(1px)}
+.dato{padding:18px 14px;text-align:center;border-right:1px solid #eef0f4}
+.dato:last-child{border-right:none}
+.dato .ic{font-size:20px}
+.dato b{display:block;color:var(--azul);font-size:14.5px;margin-top:3px}
+.dato span{font-size:11.5px;color:var(--gris);text-transform:uppercase;letter-spacing:.5px}
+.ficha-body{padding:44px 0 58px}
+.ficha-cols{display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start}
+.ficha-main h2{font-size:22px;margin:28px 0 12px;padding-left:12px;border-left:4px solid var(--naranja)}
+.ficha-main h2:first-child{margin-top:0}
+.ficha-main p{color:#3c4354;margin-bottom:10px}
+.materias{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.anio{background:var(--gris-claro);border-radius:12px;padding:16px 18px}
+.anio h4{color:var(--naranja-osc);margin-bottom:8px;font-size:15px}
+.anio ul{list-style:none}
+.anio li{padding:4px 0 4px 22px;position:relative;font-size:14px}
+.anio li::before{content:"✔";position:absolute;left:0;color:var(--naranja);font-size:12px}
+.incluye{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px}
+.inc-item{flex:1;min-width:150px;background:#FFF6EC;border:1px solid #FFE1BD;border-radius:12px;padding:14px;text-align:center;font-size:13.5px;font-weight:600}
+.inc-item .ic{font-size:24px;display:block;margin-bottom:4px}
+.razones{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.razon{background:#fff;border:1px solid #eceef2;border-left:4px solid var(--naranja);border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--gris);box-shadow:var(--sombra)}
+.razon b{display:block;color:var(--azul);margin-bottom:3px;font-size:14px}
+.salidas-pills{display:flex;flex-wrap:wrap;gap:8px}
+.salida-pill{background:var(--azul);color:#fff;border-radius:20px;padding:8px 15px;font-size:13px;font-weight:600}
+@media(max-width:560px){.razones{grid-template-columns:1fr}}
+.faq-item{background:#fff;border:1px solid #e8eaf0;border-radius:10px;margin-bottom:10px;overflow:hidden}
+.faq-item summary{padding:14px 16px;font-weight:700;cursor:pointer;font-size:14.5px;list-style:none;display:flex;justify-content:space-between}
+.faq-item summary::after{content:"+";color:var(--naranja);font-size:18px;font-weight:800}
+.faq-item[open] summary::after{content:"–"}
+.faq-item .resp{padding:0 16px 14px;color:var(--gris);font-size:14px}
+
+/* Panel lateral conversión */
+.panel{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:22px;position:sticky;top:120px;border-top:5px solid var(--naranja)}
+.panel h3{font-size:17px;margin-bottom:4px}
+.panel .sub{font-size:13px;color:var(--gris);margin-bottom:14px}
+.panel .btn{width:100%;justify-content:center;margin-bottom:10px}
+.panel form{display:flex;flex-direction:column;gap:9px;margin-top:8px}
+.panel input,.panel select,.panel textarea,
+.form-contacto input,.form-contacto select,.form-contacto textarea{width:100%;padding:11px 13px;border:1.5px solid #dfe3ea;border-radius:9px;font-size:14px;font-family:inherit;background:#fff}
+.panel input:focus,.panel select:focus{outline:2px solid var(--naranja);border-color:transparent}
+.panel .legal{font-size:11px;color:#9aa1af;margin-top:6px}
+
+/* Filiales */
+.paises-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.finder{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.finder input{flex:1;min-width:240px;padding:13px 16px;border:2px solid #e3e6ec;border-radius:30px;font-size:14.5px;font-family:inherit}
+.finder input:focus{outline:none;border-color:var(--naranja)}
+#geo-estado{font-size:13px;color:var(--gris);margin-bottom:12px}
+#geo-estado b{color:#1a7f43}
+.km-chip{background:#E8F8EE;color:#166534;font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:20px}
+.reg-chip{background:#FFF6EC;color:var(--naranja-osc);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px}
+.sin-cerca{background:#fff;border:2px dashed var(--naranja);border-radius:14px;padding:22px;margin-top:22px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.sin-cerca p{font-size:14px;color:var(--azul-2);max-width:520px}
+.grid-filiales{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.filial-card{background:#fff;border-radius:12px;box-shadow:var(--sombra);padding:18px;border:1px solid #eceef2;cursor:pointer;transition:.15s}
+.filial-card:hover{transform:translateY(-3px)}
+.filial-card h4{font-size:16px;display:flex;align-items:center;gap:8px}
+.filial-card .dir{font-size:13px;color:var(--gris);margin:6px 0 10px}
+.filial-card .canales{display:flex;gap:8px}
+.canal{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff}
+.canal.w{background:var(--verde-wsp)}.canal.t{background:var(--azul-2)}.canal.m{background:var(--naranja)}
+.filial-card .ver-sede{font-size:13px;font-weight:700;color:var(--naranja-osc);margin-top:10px;display:inline-block}
+
+/* Ficha filial */
+.sede-head{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:stretch}
+.sede-info{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:26px}
+.sede-info h1{font-size:30px;margin-bottom:4px}
+.sede-info .estado{color:#1a7f43;font-weight:700;font-size:13px}
+.sede-datos{margin:16px 0;display:flex;flex-direction:column;gap:9px;font-size:14.5px}
+.sede-datos div{display:flex;gap:10px;align-items:flex-start}
+.sede-datos .ic{width:22px;text-align:center}
+.mapa-sede{display:flex;flex-direction:column;gap:10px}
+.mapa-sede iframe{width:100%;flex:1;min-height:280px;border:0;border-radius:var(--radius);box-shadow:var(--sombra);background:#e8ecf3}
+.mapa-ph{min-height:280px;border-radius:var(--radius);background:repeating-linear-gradient(45deg,#e8ecf3,#e8ecf3 12px,#dfe5ee 12px,#dfe5ee 24px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--gris);font-weight:600;text-align:center;padding:20px}
+.mapa-ph .pin{font-size:42px}
+.mapa-ph small{font-weight:400;max-width:320px;line-height:1.4}
+
+/* Testimonios */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.testi{background:#fff;border-radius:12px;box-shadow:var(--sombra);padding:20px;font-size:14px}
+.sep-lbl{display:flex;align-items:center;gap:18px;max-width:680px;margin:46px auto 32px;color:var(--gris);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.6px}
+.sep-lbl::before,.sep-lbl::after{content:"";flex:1;height:1px;background:#e4e7ec}
+.sep-lbl span{white-space:nowrap}
+.testi .txt{color:#3c4354;font-style:italic}
+.testi .quien{display:flex;gap:10px;align-items:center;margin-top:14px}
+.testi .ava{width:40px;height:40px;border-radius:50%;background:var(--naranja);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.testi b{display:block;font-size:13.5px}
+.testi span{font-size:12px;color:var(--gris)}
+.estrellas{color:var(--amarillo);font-size:13px;margin-bottom:8px}
+
+/* Franja gancho */
+.franja{background:linear-gradient(100deg,var(--naranja),var(--naranja-osc));color:#fff;text-align:center;padding:46px 20px}
+.franja h2{font-size:clamp(22px,3vw,32px);max-width:760px;margin:0 auto 10px}
+.franja p{opacity:.92;max-width:640px;margin:0 auto 20px}
+
+/* Contacto */
+.form-contacto{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px}
+.form-contacto .full{grid-column:1/-1}
+.ok-msg{display:none;background:#E8F8EE;border:1px solid #9ADBB4;color:#166534;padding:14px;border-radius:10px;grid-column:1/-1;font-weight:600}
+
+/* Footer */
+footer{background:var(--azul);color:#c3c9d6;font-size:13.5px;margin-top:0}
+footer .grid-footer{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:30px;padding:48px 0 30px}
+footer h5{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+footer ul{list-style:none}
+footer li{margin-bottom:7px}
+footer a{color:#c3c9d6}
+footer a:hover{color:var(--naranja)}
+.footer-bottom{border-top:1px solid #333b4d;padding:16px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;color:#8d95a6}
+.social-links{display:flex;gap:16px;align-items:center}
+.social-links a{display:inline-flex;align-items:center;gap:6px;color:#c3c9d6}
+.social-links a:hover{color:#fff}
+.social-links svg{flex:none}
+.top-social{display:inline-flex;gap:12px;align-items:center;margin-left:4px}
+.top-social a{display:inline-flex;color:var(--gris)}
+.top-social a:hover{color:var(--naranja-osc)}
+.insta-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:22px}
+.insta-cta{display:flex;gap:10px;flex-wrap:wrap}
+.insta-follow{background:linear-gradient(45deg,#F58529,#DD2A7B 52%,#8134AF);color:#fff;border:none}
+.insta-follow:hover{filter:brightness(1.06);color:#fff}
+.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.ig-tile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;display:block;background:#2B3245}
+.ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease;display:block}
+.ig-tile:hover img{transform:scale(1.07)}
+.ig-tile::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0);transition:.2s}
+.ig-tile:hover::after{background:rgba(0,0,0,.16)}
+.ig-tile .ig-ic{position:absolute;top:8px;right:8px;color:#fff;opacity:0;transition:.2s;z-index:1;filter:drop-shadow(0 1px 4px rgba(0,0,0,.6))}
+.ig-tile:hover .ig-ic{opacity:1}
+@media(max-width:900px){.insta-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.insta-grid{grid-template-columns:repeat(2,1fr)}.insta-head{align-items:flex-start}}
+.ig-widget-wrap{min-height:280px;max-height:470px;border-radius:14px;overflow:hidden;position:relative}
+.ig-widget-wrap::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(to bottom,rgba(251,238,223,0),#FBEEDF);pointer-events:none}
+.ig-loading{padding:60px 20px;text-align:center;color:var(--gris);font-weight:600;background:#fff;border-radius:14px;border:1px solid #eceef2}
+.colacion-feature{display:grid;grid-template-columns:auto 1fr;gap:30px;align-items:center;background:#fff;border-radius:16px;padding:22px;box-shadow:var(--sombra);border:1px solid #eceef2;margin-bottom:26px}
+.cf-video{flex:none;border-radius:12px;overflow:hidden;line-height:0;background:#eceff5}
+.cf-video iframe{display:block;max-width:100%;width:267px;height:591px}
+.cf-text h3{font-size:24px;margin:8px 0 6px;color:var(--azul)}
+.cf-text p{color:var(--gris);margin-bottom:16px;font-size:15.5px}
+.btn-fb{background:#1877F2;color:#fff}
+.btn-fb:hover{filter:brightness(1.06);color:#fff}
+@media(max-width:700px){.colacion-feature{grid-template-columns:1fr;justify-items:center;text-align:center;padding:18px}.cf-video iframe{width:100%;max-width:300px}}
+.reels-intro{text-align:center;max-width:640px;margin:0 auto 20px}
+.reels-intro p{color:var(--gris);font-size:15.5px;margin-top:8px}
+.reels-row{display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
+.reel-card{border-radius:14px;overflow:hidden;box-shadow:var(--sombra);border:1px solid #eceef2;background:#fff}
+.reel-card iframe{display:block;width:267px;height:591px;max-width:100%}
+.reel-cap{padding:11px 12px;font-weight:800;font-size:13.5px;color:var(--azul);text-align:center}
+.reels-4 .reel-card iframe{width:250px;height:560px}
+@media(max-width:1153px){.reels-4{max-width:544px;margin-left:auto;margin-right:auto}}
+.wide-videos{display:flex;flex-direction:column;gap:28px;align-items:center;margin-top:26px}
+.wide-vid{width:100%;max-width:640px}
+.yt-cap{font-weight:800;font-size:14px;color:var(--azul);text-align:center;margin-bottom:12px}
+.yt-frame{position:relative;padding-bottom:56.25%;height:0;border-radius:14px;overflow:hidden;box-shadow:var(--sombra);border:1px solid #eceef2;background:#000}
+.yt-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fb-wide{display:flex;justify-content:center}
+.fb-wide iframe{max-width:100%;border-radius:14px;box-shadow:var(--sombra);border:1px solid #eceef2;background:#eceff5}
+.video-grupo{margin-top:38px;padding-top:30px;border-top:1px dashed #d6dae2}
+.video-grupo:first-of-type{margin-top:26px;padding-top:0;border-top:none}
+.grupo-titulo{display:flex;align-items:center;gap:14px;justify-content:center;text-align:left;max-width:600px;margin:0 auto 22px}
+.grupo-emoji{font-size:34px;line-height:1;flex-shrink:0}
+.grupo-titulo h3{margin:0;font-size:21px;color:var(--azul);font-weight:800;letter-spacing:-.2px}
+.grupo-titulo p{margin:3px 0 0;font-size:14px;color:var(--gris);line-height:1.4}
+@media(max-width:560px){.reel-card iframe{width:300px}.grupo-titulo{gap:11px}.grupo-emoji{font-size:28px}.grupo-titulo h3{font-size:18px}}
+.badge-paises{display:flex;gap:6px;font-size:18px;margin-top:8px}
+
+/* WhatsApp flotante */
+.wsp-float{position:fixed;right:22px;bottom:22px;z-index:80;display:flex;align-items:center;gap:10px;background:var(--verde-wsp);color:#fff;border-radius:40px;padding:12px 20px 12px 14px;font-weight:800;box-shadow:0 8px 22px rgba(0,0,0,.25);cursor:pointer;font-size:14.5px;border:none}
+.wsp-float .ic{font-size:22px}
+.wsp-selector{position:fixed;right:22px;bottom:84px;z-index:80;background:#fff;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.25);padding:16px;width:290px;display:none}
+.wsp-selector.abierto{display:block}
+.wsp-selector h4{font-size:14px;margin-bottom:10px}
+.wsp-selector select{width:100%;padding:10px;border:1.5px solid #dfe3ea;border-radius:8px;margin-bottom:10px;font-size:14px}
+.wsp-selector .btn{width:100%;justify-content:center}
+
+/* Experiencia IGI: videos y galería */
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.video-card{background:#fff;border-radius:12px;box-shadow:var(--sombra);overflow:hidden;cursor:pointer;transition:.15s}
+.video-card:hover{transform:translateY(-3px)}
+.video-thumb{position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:54px;color:#fff}
+.video-thumb .play{position:absolute;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--rojo);display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 14px rgba(0,0,0,.3);padding-left:4px}
+.video-thumb .dur-v{position:absolute;bottom:8px;right:10px;background:rgba(0,0,0,.75);color:#fff;font-size:11.5px;font-weight:700;padding:2px 7px;border-radius:5px}
+.video-card .vc-body{padding:12px 15px 15px}
+.video-card h4{font-size:14.5px;line-height:1.3}
+.video-card span{font-size:12px;color:var(--gris)}
+.galeria{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:24px}
+.gal-item{aspect-ratio:1;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:34px;color:#fff;position:relative;overflow:hidden}
+.gal-item small{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:8.5px;color:rgba(255,255,255,.85);font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+/* Diferenciales */
+.difs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dif{background:#fff;border-radius:12px;padding:20px;box-shadow:var(--sombra);border-top:4px solid var(--naranja);cursor:default;position:relative}
+.dif .ic{font-size:32px}
+.dif h4{margin:8px 0 6px;font-size:15.5px}
+.dif p{font-size:13px;color:var(--gris)}
+.pais-tag{position:absolute;top:12px;right:12px;font-size:11px;font-weight:800;background:var(--gris-claro);border-radius:14px;padding:2px 9px;color:var(--azul-2)}
+.dif a{font-size:13px;font-weight:700;display:inline-block;margin-top:8px;cursor:pointer}
+/* Validador de certificados */
+.validador{display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start}
+.val-form{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:26px}
+.val-form input{width:100%;padding:13px;border:1.5px solid #dfe3ea;border-radius:9px;font-size:15px;margin:10px 0;font-family:inherit;letter-spacing:1px}
+.cert-demo{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:24px;text-align:center;border-top:5px solid var(--naranja)}
+.cert-demo .sello{width:74px;height:74px;border-radius:50%;background:var(--naranja);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin:0 auto 10px;border:4px solid var(--azul)}
+.cert-demo img.qr{width:130px;height:130px;margin:12px auto;display:block;border:1px solid #eee;border-radius:8px}
+.cert-ok{background:#E8F8EE;border:1px solid #9ADBB4;color:#166534;border-radius:10px;padding:12px;font-size:13.5px;font-weight:600;margin-top:12px;display:none}
+.pasos-val{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.paso-val{background:var(--gris-claro);border-radius:12px;padding:16px;font-size:13.5px}
+.paso-val b{display:block;color:var(--naranja-osc);font-size:20px}
+/* Folleto en ficha */
+.folleto-img{width:100%;border-radius:10px;border:1px solid #e8eaf0;margin-bottom:12px;cursor:zoom-in;display:block}
+.folleto-cap{font-size:11.5px;color:#9aa1af;text-align:center;margin:-6px 0 12px}
+.card .foto{position:relative;overflow:hidden}
+.card .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.card .foto .tag{z-index:2}
+/* Lightbox folleto */
+.lightbox{position:fixed;inset:0;background:rgba(15,18,26,.85);z-index:99;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:30px 10px}
+.lightbox.abierta{display:flex}
+.lightbox img{max-width:min(92vw,520px);border-radius:10px}
+.lightbox .cerrar{position:fixed;top:16px;right:20px;background:#fff;border:none;border-radius:50%;width:38px;height:38px;font-size:18px;cursor:pointer;font-weight:800}
+
+/* Vistas SPA */
+.vista{display:none}
+.vista.activa{display:block}
+
+@media(max-width:900px){
+  .grid.c3,.grid.c4,.grid-filiales,.testis,.video-grid{grid-template-columns:1fr 1fr}
+  .difs,.kit-grid{grid-template-columns:1fr 1fr}
+  .galeria{grid-template-columns:repeat(3,1fr)}
+  .validador{grid-template-columns:1fr}
+  .pasos-val{grid-template-columns:1fr}
+  .ficha-cols{grid-template-columns:1fr}
+  .panel{position:static}
+  .datos-duros{grid-template-columns:repeat(3,1fr)}
+  .sede-head{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .mosaico{grid-auto-rows:76px}
+  .sel-card .foto-sel{height:180px}
+  nav.menu{display:none}
+  nav.menu.abierto{display:flex;flex-direction:column;position:absolute;top:120px;left:0;right:0;background:#fff;padding:18px 22px;box-shadow:0 14px 20px rgba(0,0,0,.15);gap:14px}
+  .navbar .container{height:80px}
+  #logo-h{height:62px}
+  .hamb{display:block}
+  .cta-header .btn-borde{display:none}
+  .top-strip .container{height:auto;min-height:36px;flex-wrap:wrap;gap:6px;padding-top:6px;padding-bottom:6px}
+  .paises{gap:8px;row-gap:4px}
+  .top-links{display:none}
+  footer .grid-footer{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .grid.c3,.grid.c4,.grid-filiales,.testis,.materias,.form-contacto,.video-grid,.difs,.kit-grid{grid-template-columns:1fr}
+  .galeria{grid-template-columns:1fr 1fr}
+  .datos-duros{grid-template-columns:repeat(2,1fr)}
+  .cifra{min-width:110px}
+  .hero .container{padding:34px 18px 40px}
+  .hero h1{font-size:clamp(25px,7.4vw,32px);line-height:1.16;max-width:100%;overflow-wrap:break-word;word-break:break-word;hyphens:auto}
+  .hero p.sub{font-size:15.5px;max-width:100%}
+  .hero .kicker{font-size:11.5px;letter-spacing:1px}
+  .hero .acciones{width:100%}
+  .hero .acciones .btn{width:100%;justify-content:center}
+  .wsp-float{right:14px;bottom:14px;padding:11px 16px 11px 13px;font-size:13.5px}
+  .wsp-float .ic{font-size:19px}
+  .wsp-selector{right:12px;left:12px;width:auto;bottom:76px}
+  .manuales-band{grid-template-columns:1fr!important;text-align:center;padding:26px 20px!important}
+  .manuales-band .mb-ic{margin:0 auto}
+}
+.manuales-band{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:linear-gradient(120deg,#1F2430,#2B3245);border-radius:20px;padding:34px 38px;box-shadow:0 14px 34px rgba(15,18,26,.28)}
+.manuales-band .mb-ic{width:92px;height:92px;border-radius:22px;background:linear-gradient(135deg,#F58220,#D96A0B);display:flex;align-items:center;justify-content:center;font-size:46px;flex:none;box-shadow:0 8px 20px rgba(217,106,11,.4)}
+.manuales-band h2{color:#fff;font-size:clamp(21px,2.6vw,27px);margin-bottom:8px}
+.manuales-band h2 em{font-style:normal;color:var(--naranja)}
+.manuales-band p{color:#d6dae4;font-size:16px;line-height:1.6}
+.manuales-band p b{color:#fff}
+.manuales-tag{display:inline-block;background:rgba(245,130,32,.18);color:#F9A24E;font-weight:800;font-size:12px;letter-spacing:.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<!-- Puerta de entrada: selección de país -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="logo-wrap">
+      <img id="logo-gate" alt="IGI — Instituto Gastronómico Internacional">
+      <div class="logo-shine" id="logo-shine"></div>
+    </div>
+    <h2>¡Bienvenido a IGI!</h2>
+    <p>La red educativa de gastronomía más grande de Latinoamérica.<br><b>¿Desde qué país nos visitás?</b></p>
+    <div class="gate-grid">
+      <button class="gate-pais" onclick="elegirPaisGate('AR','Argentina')"><span class="bandera fl" data-flag="AR"></span>Argentina</button>
+      <button class="gate-pais" onclick="elegirPaisGate('BO','Bolivia')"><span class="bandera fl" data-flag="BO"></span>Bolivia</button>
+      <button class="gate-pais" onclick="elegirPaisGate('BR','Brasil')"><span class="bandera fl" data-flag="BR"></span>Brasil<span class="prox">em breve</span></button>
+      <button class="gate-pais" onclick="elegirPaisGate('CL','Chile')"><span class="bandera fl" data-flag="CL"></span>Chile</button>
+      <button class="gate-pais" onclick="elegirPaisGate('CO','Colombia')"><span class="bandera fl" data-flag="CO"></span>Colombia</button>
+      <button class="gate-pais" onclick="elegirPaisGate('PY','Paraguay')"><span class="bandera fl" data-flag="PY"></span>Paraguay</button>
+      <button class="gate-pais" onclick="elegirPaisGate('UY','Uruguay')"><span class="bandera fl" data-flag="UY"></span>Uruguay</button>
+    </div>
+    <div class="gate-nota">En esta demo solo está desarrollada la versión Argentina: al elegir otro país te lo mostramos igual, como referencia.<br>En el sitio real, tu elección se recuerda y entrás directo a tu país en las próximas visitas.</div>
+  </div>
+</div>
+
+<!-- Barra de demo -->
+<div class="demo-bar">🔧 <b>DEMO DE PROPUESTA</b> — Sitio nuevo de IGI (no es el sitio real; dirección provisoria de trabajo)
+  <button id="btnNotas" onclick="toggleNotas()">💡 Ver notas de la propuesta</button>
+</div>
+
+<header>
+  <div class="top-strip">
+    <div class="container">
+      <div class="paises">
+        <span class="lbl" style="cursor:pointer;font-weight:700" onclick="abrirGate()">🌎 Cambiar país:</span>
+        <a class="activo" href="#/"><span class="fl" data-flag="AR"></span> Argentina</a>
+        <a href="#/" onclick="alertPais(event,'Brasil')"><span class="fl" data-flag="BR"></span></a>
+        <a href="#/" onclick="alertPais(event,'Bolivia')"><span class="fl" data-flag="BO"></span></a>
+        <a href="#/" onclick="alertPais(event,'Chile')"><span class="fl" data-flag="CL"></span></a>
+        <a href="#/" onclick="alertPais(event,'Colombia')"><span class="fl" data-flag="CO"></span></a>
+        <a href="#/" onclick="alertPais(event,'Paraguay')"><span class="fl" data-flag="PY"></span></a>
+        <a href="#/" onclick="alertPais(event,'Uruguay')"><span class="fl" data-flag="UY"></span></a>
+      </div>
+      <div class="top-links">
+        <a href="#/">Campus virtual</a>
+        <a href="#/">Franquicias</a>
+        <span class="top-social">
+          <a href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener" aria-label="Instagram @igi.argentina" title="@igi.argentina"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84m0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4m6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/></svg></a>
+          <a href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener" aria-label="Facebook Institutos.IGI" title="Facebook /Institutos.IGI"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.68 4.53-4.68 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.24h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07"/></svg></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="container">
+      <div class="logo" onclick="ir('home')">
+        <img id="logo-h" alt="IGI — Instituto Gastronómico Internacional">
+      </div>
+      <nav class="menu" id="menu">
+        <a onclick="ir('catalogo','carrera')">Carreras</a>
+        <a onclick="ir('catalogo','curso')">Cursos</a>
+        <a onclick="ir('filiales')">Filiales</a>
+        <a onclick="ir('nosotros')">Nosotros</a>
+        <a onclick="ir('certificados')">Certificados</a>
+        <a onclick="ir('contacto')">Contacto</a>
+      </nav>
+      <div class="cta-header">
+        <button class="btn btn-borde" onclick="ir('contacto')">Pedí info</button>
+      </div>
+      <button class="hamb" onclick="document.getElementById('menu').classList.toggle('abierto')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= VISTA HOME ================= -->
+<div class="vista activa" id="v-home">
+
+  <div class="hero">
+    <img class="hero-bg" id="hero-bg" alt="Alumnos cocinando en IGI">
+    <img class="hero-bg hero-bg-b" id="hero-bg2" alt="" aria-hidden="true">
+    <div class="hero-tag" id="hero-tag"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-izq">
+          <div class="kicker">¿Querés ser chef? Serás el mejor.</div>
+          <h1>Estudiá gastronomía en la red educativa <em>más grande de Latinoamérica</em></h1>
+          <p class="sub">Carreras y cursos con certificaciones universitarias, uniforme y material de estudio incluidos, en más de 70 filiales de 7 países. Encontrá tu sede más cercana y empezá hoy.</p>
+          <div class="acciones">
+            <button class="btn btn-naranja" onclick="ir('catalogo','todos')">Descubrí carreras y cursos</button>
+            <button class="btn btn-wsp" onclick="abrirWsp()">💬 Escribinos por WhatsApp</button>
+            <button class="btn btn-oscuro" onclick="ir('filiales')">📍 Buscá tu filial</button>
+          </div>
+        </div>
+        <div class="hero-der" id="hero-der"></div>
+      </div>
+      <div class="cifras">
+        <div class="cifra"><b>23</b><span>años formando chefs</span></div>
+        <div class="cifra"><b>7</b><span>países</span></div>
+        <div class="cifra"><b>+70</b><span>filiales</span></div>
+        <div class="cifra"><b>+240.000</b><span>egresados</span></div>
+        <div class="cifra"><b>+10.500</b><span>egresan cada año</span></div>
+      </div>
+      <div class="nota">💡 <b>Nota de propuesta:</b> el hero replica el patrón ganador del benchmark (Le Cordon Bleu / ISMM): promesa + cifras de confianza + 3 CTAs (catálogo, WhatsApp, filial). Las cifras son de ejemplo: hay que cargar las reales.</div>
+    </div>
+  </div>
+
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Formación profesional</div>
+        <h2>Nuestras carreras</h2>
+        <p>Programas anuales y bianuales con título privado y certificaciones universitarias. Te regalamos el uniforme y los manuales de cada área, con recetarios y materias primas incluidas.</p>
+      </div>
+      <div class="grid c3" id="home-carreras"></div>
+      <div class="nota">💡 Cada card lleva a una <b>ficha completa</b> (patrón BCC/IAG): datos duros arriba, materias por año, qué incluye, FAQs y conversión al costado. En el sitio real cada ficha tendrá además su versión por sede (patrón ICE: /carreras/chef-internacional/cordoba/).</div>
+    </div>
+  </section>
+
+  <section class="bloque gris">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Cursos y talleres</div>
+        <h2>Todos nuestros cursos</h2>
+        <p>De 3 a 6 meses: cocina, pastelería, panadería, tortas, catering, servicio de salón, coctelería, café, arte latte y cocina para chicos. Todos con su ficha completa.</p>
+      </div>
+      <div class="grid c4" id="home-cursos"></div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Por qué IGI</div>
+        <h2>Lo que solo te da IGI</h2>
+      </div>
+      <div class="difs">
+        <div class="dif"><span class="pais-tag">🌎 Regional</span><div class="ic">🏆</div><h4>Torneo InterIGI</h4><p>Hace más de 20 años, los mejores alumnos de todas las filiales compiten en el torneo gastronómico educativo más importante de Latinoamérica. Una experiencia única de nivel profesional.</p><a onclick="document.getElementById('experiencia').scrollIntoView({behavior:'smooth'})">Ver videos del torneo →</a></div>
+        <div class="dif"><span class="pais-tag">🌎 Internacional</span><div class="ic">✈️</div><h4>Pasantías rentadas en USA y Europa</h4><p>Nuestros alumnos acceden a pasantías rentadas en Estados Unidos y Europa: experiencia internacional real, con ingresos, antes de recibirse.</p><a onclick="abrirWsp('Pasantías rentadas')">Consultar requisitos →</a></div>
+        <div class="dif"><span class="pais-tag"><span class="fl" data-flag="AR"></span> Argentina</span><div class="ic">🎓</div><h4>Certificaciones universitarias optativas</h4><p>En Argentina podés sumar a tu título de IGI certificaciones universitarias optativas que potencian tu CV y respaldan tu formación.</p><a onclick="abrirWsp('Certificaciones universitarias')">Saber más →</a></div>
+        <div class="dif"><span class="pais-tag">💻 Online</span><div class="ic">🔐</div><h4>Certificados verificables con QR</h4><p>Cada certificado IGI lleva un código QR único. Descargá tus certificaciones cuando quieras y cualquier empleador puede validarlas online al instante.</p><a onclick="ir('certificados')">Validar un certificado →</a></div>
+      </div>
+      <div class="nota">💡 <b>Nota de propuesta:</b> estos 4 diferenciales son ORO y hoy no están en el sitio actual. Las pasantías rentadas responden directo al gancho "Francia y España" de IGA (competidor directo); el QR verificable es un diferencial de confianza que ningún competidor regional tiene (solo Mausi Sebess). Cada uno merece además su página propia indexable.</div>
+    </div>
+  </section>
+
+  <section class="bloque gris" id="experiencia">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">La experiencia IGI</div>
+        <h2>Torneo InterIGI y actos de colación</h2>
+        <p>Hace más de 20 años organizamos el torneo gastronómico educativo más importante de Latinoamérica, y cada año celebramos colaciones multitudinarias junto a las familias de toda la red.</p>
+      </div>
+      <div class="reels-intro">
+        <span class="manuales-tag">🎥 Videos 100% propios de nuestros eventos</span>
+      </div>
+      <div class="reels-row reels-4">
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1062299242023494%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><div class="reel-cap">🏆 InterIGI — San Juan</div></div>
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1168102091318287%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><div class="reel-cap">👨‍🍳 Torneo de Cocineritos</div></div>
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F868200032475247%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><div class="reel-cap">🎓 Última colación</div></div>
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1496059365089873%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><div class="reel-cap">🎓 Colación 2025</div></div>
+      </div>
+      <div class="galeria">
+        <div class="gal-item" style="background:linear-gradient(135deg,#F58220,#D96A0B)">🥇<small>Podio InterIGI</small></div>
+        <div class="gal-item" style="background:linear-gradient(135deg,#2B3245,#4A5878)">🎓<small>Colación 2025</small></div>
+        <div class="gal-item" style="background:linear-gradient(135deg,#0E7C61,#2BAE8E)">👨‍🍳<small>Competencia</small></div>
+        <div class="gal-item" style="background:linear-gradient(135deg,#C42847,#E85D75)">📸<small>Familias</small></div>
+        <div class="gal-item" style="background:linear-gradient(135deg,#5C3A21,#96633C)">🍽️<small>Platos finalistas</small></div>
+        <div class="gal-item" style="background:linear-gradient(135deg,#3B2A78,#6C55B8)">🎉<small>Festejo</small></div>
+      </div>
+      <div class="nota">💡 Seleccionamos <b>4 videos clave</b> del Torneo InterIGI y de los actos de colación para una home ágil (en PC se ven los 4 en una fila; en celular se acomodan solos). El resto del material irá en las páginas internas de cada evento. Embebidos de Facebook con carga diferida para no frenar el sitio. La galería de abajo sigue como ejemplo: ahí van fotos reales. Este contenido emocional es el que mejor convierte y el que nadie más tiene: es material propio, imposible de copiar.</div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Inscripciones abiertas</div>
+        <h2>Próximos inicios en Argentina</h2>
+        <p>Elegí tu programa, tu sede y tu horario. Cupos limitados por comisión.</p>
+      </div>
+      <div class="inicios-board">
+        <div class="inicios-head"><span>Inicio</span><span>Programa · Filial · Horario</span><span></span></div>
+        <div class="inicios-viewport"><div class="inicios-track" id="inicios-track"></div></div>
+      </div>
+      <div class="nota">💡 El <b>calendario de próximos inicios</b> es el mejor patrón de urgencia del benchmark (Mariano Moreno). El listado <b>rota automáticamente</b> mostrando todos los inicios; pasá el mouse por encima para pausarlo. Fechas de ejemplo — en el sitio real se cargan desde el sistema académico y cada fila enlaza al WhatsApp de la sede.</div>
+    </div>
+  </section>
+
+  <section class="bloque kit-bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini" style="color:#fff">Incluido en tu cuota · sin costos ocultos</div>
+        <h2 style="color:#fff">Te regalamos el uniforme y los manuales 🎁</h2>
+        <p style="color:#FFE3C4">Desde el primer día cursás equipado como un profesional. Todo esto —incluidos los derechos de examen— está dentro de tu cuota. Vos solo traé las ganas.</p>
+      </div>
+      <div class="kit-grid">
+        <div class="kit-item">
+          <div class="kit-visual" id="kit-uni">👨‍🍳</div>
+          <h4>Uniforme profesional</h4>
+          <ul><li>Chaqueta IGI</li><li>Gorro de chef</li><li>Delantal</li></ul>
+          <span class="kit-tag">DE REGALO</span>
+        </div>
+        <div class="kit-item">
+          <div class="kit-libros">
+            <div class="libro" style="background:linear-gradient(#F58220,#C96208)"><span>COCINA</span></div>
+            <div class="libro" style="background:linear-gradient(#2BAE8E,#0E7C61)"><span>PASTELERÍA</span></div>
+            <div class="libro" style="background:linear-gradient(#4FA3D8,#1273B5)"><span>PANADERÍA</span></div>
+            <div class="libro" style="background:linear-gradient(#E85D75,#C42847)"><span>BEBIDAS</span></div>
+            <div class="libro" style="background:linear-gradient(#8b93a8,#5a6478)"><span>SERVICIO</span></div>
+          </div>
+          <h4>Libros y manuales</h4>
+          <ul><li>Libros impresos de edición propia, exclusivos de IGI (carreras)</li><li>Apuntes de estudio en los cursos</li></ul>
+          <span class="kit-tag">DE REGALO</span>
+        </div>
+        <div class="kit-item">
+          <div class="kit-visual">📖</div>
+          <h4>Recetarios</h4>
+          <ul><li>Todas las recetas de cada clase</li><li>Para siempre, tuyos</li></ul>
+          <span class="kit-tag">INCLUIDO</span>
+        </div>
+        <div class="kit-item">
+          <div class="kit-visual">🥕</div>
+          <h4>Materias primas</h4>
+          <ul><li>Los ingredientes de todas las prácticas</li><li>No comprás nada aparte</li></ul>
+          <span class="kit-tag">INCLUIDO</span>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:26px"><button class="btn btn-oscuro" onclick="ir('catalogo','todos')">Ver toda la oferta</button></div>
+      <div class="nota">💡 En el sitio real, los visuales del kit se reemplazan por <b>fotos reales</b>: un alumno con el uniforme puesto, la pila de manuales (como en los folletos) y las mesadas con ingredientes. Es el argumento de venta más tangible de IGI: merece fotos propias, no íconos.</div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Egresados IGI</div>
+        <h2>Testimonios de nuestros alumnos</h2>
+        <p>Nadie lo cuenta mejor que quienes ya pasaron por IGI. Son testimonios 100% reales, grabados en distintos momentos de la experiencia: los primeros, en vivo el día de la colación —con el título recién recibido en la mano, entre la emoción, el orgullo y las ganas de salir a trabajar—; los dos últimos, puertas adentro de nuestras propias cocinas, durante la cursada, con el delantal puesto y las manos en la masa. En cada uno vas a escuchar lo mismo desde su lugar: el acompañamiento de los profes clase a clase, la práctica desde el día uno y las oportunidades que se abren al recibirse. Es la prueba más honesta de lo que significa formarte con nosotros.</p>
+      </div>
+      <div class="reels-intro">
+        <span class="manuales-tag">💬 Videos reales · testimonios de alumnos</span>
+      </div>
+      <div class="reels-row reels-4">
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1349401786192455%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F666768965683417%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1681044942805633%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+        <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1186495000153999%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+      </div>
+      <div class="sep-lbl"><span>Y en sus palabras…</span></div>
+      <div class="testis">
+        <div class="testi"><div class="estrellas">★★★★★</div><div class="txt">"Arranqué el ABC Chef sin saber hervir agua y hoy tengo mi propio emprendimiento de viandas. Los profes te acompañan clase a clase."</div><div class="quien"><div class="ava">M</div><div><b>Micaela R.</b><span>Egresada ABC Chef · IGI Quilmes</span></div></div></div>
+        <div class="testi"><div class="estrellas">★★★★★</div><div class="txt">"La carrera de Chef Internacional me abrió las puertas de un hotel 5 estrellas. La cursada es 100% práctica, cocinás desde el día uno."</div><div class="quien"><div class="ava">J</div><div><b>Julián T.</b><span>Chef Internacional · IGI Belgrano</span></div></div></div>
+        <div class="testi"><div class="estrellas">★★★★★</div><div class="txt">"Hice Pastelero Internacional y después Diseño de Tortas. Hoy vivo de mis tortas de boda. IGI me cambió la vida."</div><div class="quien"><div class="ava">S</div><div><b>Sofía L.</b><span>Pastelera · IGI Córdoba</span></div></div></div>
+      </div>
+      <div class="nota">💡 Arriba van <b>4 videos reales de testimonios de alumnos</b> (embebidos de Facebook con carga diferida), en la misma fila prolija que la sección de eventos. Los tres testimonios en texto de abajo siguen como ejemplo: en el sitio real conviene sumar egresados <b>reales, con nombre, sede y logro verificable</b>. Es lo que más citan las IAs y lo que más convence.</div>
+    </div>
+  </section>
+
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Preguntas frecuentes</div>
+        <h2>Lo que todos nos preguntan</h2>
+      </div>
+      <details class="faq-item"><summary>¿Necesito conocimientos previos para empezar?</summary><div class="resp">No. Tanto las carreras como los cursos ABC están pensados para empezar desde cero. Cada programa indica a quién está dirigido en su ficha.</div></details>
+      <details class="faq-item"><summary>¿Qué título obtengo al recibirme?</summary><div class="resp">Todos los programas otorgan título privado de IGI, con certificaciones universitarias disponibles. La validez del título depende de la normativa de cada país: consultá en tu filial.</div></details>
+      <details class="faq-item"><summary>¿Qué incluye la cuota?</summary><div class="resp">El uniforme, el material de estudio (manuales en las carreras, apuntes en los cursos), los recetarios, las materias primas de todas las clases prácticas y los derechos de examen. No tenés costos ocultos.</div></details>
+      <details class="faq-item"><summary>¿Dónde puedo cursar?</summary><div class="resp">IGI tiene más de 70 filiales en Argentina, Brasil, Bolivia, Chile, Colombia, Paraguay y Uruguay. Buscá tu sede más cercana en la sección Filiales: cada una tiene su propio WhatsApp, teléfono y mail.</div></details>
+      <div class="nota">💡 FAQs visibles y con respuesta directa en la primera oración: clave para que ChatGPT/Gemini/Perplexity citen a IGI (GEO). En el sitio real, cada ficha de curso y de sede tendrá sus propias FAQs.</div>
+    </div>
+  </section>
+
+  <section class="bloque gris insta-sec">
+    <div class="container">
+      <div class="insta-head">
+        <div class="enc" style="margin-bottom:0;text-align:left">
+          <div class="mini">Seguinos en redes</div>
+          <h2>@igi.argentina en Instagram</h2>
+          <p style="margin:0">Torneo InterIGI, actos de colación, clases y los platos de nuestros alumnos, todos los días.</p>
+        </div>
+        <div class="insta-cta">
+          <a class="btn insta-follow" href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener">📸 Seguir en Instagram</a>
+          <a class="btn btn-oscuro" href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener">👍 Facebook</a>
+        </div>
+      </div>
+      <div id="ig-widget" class="ig-widget-wrap"><div class="ig-loading">📷 Cargando las últimas publicaciones de @igi.argentina…</div></div>
+      <div class="nota">💡 Esta grilla trae <b>automáticamente las últimas publicaciones reales de @igi.argentina</b> de forma liviana (sin frenar la página ni afectar el posicionamiento). La dejamos en <b>vista compacta</b> para no alargar la home; con el botón "Seguir en Instagram" el visitante ve el perfil completo. Idea a futuro: mostrar el feed del país que elige el visitante.</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VISTA CATÁLOGO ================= -->
+<div class="vista" id="v-catalogo">
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Argentina</div>
+        <h2>Carreras y cursos</h2>
+        <p>Filtrá por tipo de programa. Cada ficha tiene el detalle completo de materias, duración y qué incluye.</p>
+      </div>
+      <div class="filtros">
+        <button class="filtro on" data-f="todos" onclick="filtrar('todos',this)">Todos</button>
+        <button class="filtro" data-f="carrera" onclick="filtrar('carrera',this)">🎓 Carreras</button>
+        <button class="filtro" data-f="curso" onclick="filtrar('curso',this)">👨‍🍳 Cursos cortos</button>
+        <button class="filtro" data-f="bebidas" onclick="filtrar('bebidas',this)">🍸 Café y coctelería</button>
+        <button class="filtro" data-f="kids" onclick="filtrar('kids',this)">🧒 Cocineritos</button>
+      </div>
+      <div class="grid c3" id="grid-catalogo"></div>
+      <div class="nota">💡 En el sitio real este catálogo suma un segundo filtro por <b>sede y modalidad</b> (patrón Le Cordon Bleu: categoría × sede), y cada programa tiene URL propia indexable.</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VISTA FICHA PROGRAMA ================= -->
+<div class="vista" id="v-programa"></div>
+
+<!-- ================= VISTA FILIALES ================= -->
+<div class="vista" id="v-filiales">
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Red IGI</div>
+        <h2>Encontrá tu filial</h2>
+        <p>Más de 70 sedes en 7 países. Cada filial tiene su propio WhatsApp, teléfono y mail para que hables directo con tu sede.</p>
+      </div>
+      <div class="finder">
+        <input id="buscar-filial" placeholder="🔎 Escribí tu barrio, ciudad o provincia (ej.: Palermo, Rosario, Salta…)" oninput="renderFiliales()">
+        <button class="btn btn-naranja" onclick="usarUbicacion()">📍 Usar mi ubicación</button>
+      </div>
+      <div id="geo-estado"></div>
+      <div class="paises-tabs" id="tabs-paises">
+        <button class="filtro on" onclick="verPais('AR',this)"><span class="fl" data-flag="AR"></span> Argentina</button>
+        <button class="filtro" onclick="verPais('PY',this)"><span class="fl" data-flag="PY"></span> Paraguay</button>
+        <button class="filtro" onclick="verPais('BO',this)"><span class="fl" data-flag="BO"></span> Bolivia</button>
+        <button class="filtro" onclick="verPais('CL',this)"><span class="fl" data-flag="CL"></span> Chile</button>
+        <button class="filtro" onclick="verPais('UY',this)"><span class="fl" data-flag="UY"></span> Uruguay</button>
+        <button class="filtro" onclick="verPais('CO',this)"><span class="fl" data-flag="CO"></span> Colombia</button>
+        <button class="filtro" onclick="verPais('BR',this)"><span class="fl" data-flag="BR"></span> Brasil</button>
+      </div>
+      <div class="paises-tabs" id="regiones-ar"></div>
+      <div class="grid-filiales" id="grid-filiales"></div>
+      <div class="nota">💡 <b>Cómo encuentra cada uno su filial más próxima (propuesta completa):</b> ① buscador tolerante a acentos que entiende barrios y zonas ("Palermo" encuentra Belgrano, "Tigre" encuentra Pacheco — cada filial lleva palabras clave de su zona de influencia); ② botón "Usar mi ubicación" que ordena por distancia real en km (probalo); ③ filtros por región CABA/GBA/Provincia/Interior; ④ el bloque "¿No hay una filial cerca?" rescata al que quedó lejos (online + aviso de apertura = base de demanda para franquicias). En el sitio real se suma: mapa interactivo con pins, autocompletado con Google Places, sugerencia por IP ("¿Estás en Rosario?"), y — clave — <b>Google Business Profile por filial</b>, porque la mitad de la gente busca "escuela de cocina cerca" directo en Google Maps y hoy esas búsquedas no las gana nadie. Datos reales del directorio oficial (73 sedes, jul 2026).</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VISTA FICHA FILIAL ================= -->
+<div class="vista" id="v-sede"></div>
+
+<!-- ================= VISTA CERTIFICADOS ================= -->
+<div class="vista" id="v-certificados">
+  <section class="bloque gris">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Validación online</div>
+        <h2>Validá un certificado IGI</h2>
+        <p>Cada certificado que emite IGI lleva un código QR y un número único. Alumnos y empleadores pueden verificar su autenticidad al instante, desde cualquier país.</p>
+      </div>
+      <div class="validador">
+        <div>
+          <div class="val-form">
+            <b>🔎 Ingresá el código del certificado</b>
+            <input id="cod-cert" placeholder="Ej.: IGI-AR-2026-04815" maxlength="20">
+            <button class="btn btn-naranja" onclick="validarCert()">Validar certificado</button>
+            <div class="cert-ok" id="cert-ok">✅ <b>Certificado válido.</b> (Demo) Chef Internacional — Egresado 2026 · IGI Belgrano, Argentina. Emitido por Instituto Gastronómico Internacional.<br><span style="font-weight:400">En el sitio real, esta consulta pega contra la base académica de IGI y muestra el certificado oficial descargable.</span></div>
+          </div>
+          <div class="pasos-val">
+            <div class="paso-val"><b>1</b>Al recibirte, tu certificado se emite con un QR y un código único.</div>
+            <div class="paso-val"><b>2</b>Entrás a tu cuenta de alumno y descargás tus certificaciones cuando quieras, desde donde quieras.</div>
+            <div class="paso-val"><b>3</b>Cualquier empleador escanea el QR o carga el código acá, y verifica tu título al instante.</div>
+          </div>
+          <div class="nota">💡 <b>Nota de propuesta:</b> el validador con QR es un diferencial enorme de confianza (solo Mausi Sebess tiene algo así en la región). Además genera visitas de EMPLEADORES al sitio — una audiencia nueva. Recomendación: URL corta tipo <b>igi.com/validar</b> impresa en cada certificado, y que el "registro de certificaciones" del alumno viva en el mismo login del campus.</div>
+        </div>
+        <div class="cert-demo">
+          <div class="sello">IGI</div>
+          <b>CERTIFICADO OFICIAL</b>
+          <div style="font-size:13px;color:var(--gris);margin:6px 0">Chef Internacional<br>María Ejemplo · Egresada 2026<br>IGI Belgrano · Argentina</div>
+          <img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE9klEQVR4nO3dy60bNwBA0ThwIdm4APdfRArIxp0oe48RMAQ/V/I5y+Dp4+iCAIcz5JfX6/UH9Px5+wvAr0mTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9XXkj/769n339/gPP/75+6f/su/7PD9rxPP77PvOI+888q+o/aZPRk2ipEmUNImSJlHSJGpohv40N5MdcXImO2LV/Hffq1a9T+03NWoSJU2ipEmUNImSJlGTM/SnuVnY3KxwZPa9aj4+9zf7ZrsnP+vkb/pk1CRKmkRJkyhpEiVNopbN0E+6O0c+eU/7vjsK+oyaREmTKGkSJU2ipEnUW87QVz1nPfdM99yrVq1H331+/CSjJlHSJEqaREmTKGkStWyGXlul3Xf//Jy5d767C9zd39SoSZQ0iZImUdIkSppETc7Q767kzq1Zr9oFfd9ce993HlFbnTdqEiVNoqRJlDSJkiZRX16v1+3v8L/tW1l+xxXq2s51qxg1iZImUdIkSppESZOoyfPQ59aRTz6dPfL8+Ij+3QJPd8+DW3XFwKhJlDSJkiZR0iRKmkQdvcv95Cx+7tOf9s1b992vPufunP3JqEmUNImSJlHSJEqaRE3O0Pc9Q73qRPKTe6ztW0e+6+4VFaMmUdIkSppESZMoaRK17Dn0faeb1Wa7d9e+T57Gfvf3MmoSJU2ipEmUNImSJlGTz6E/rbqv++QM9O73WXUe3L5X3d0Tz6hJlDSJkiZR0iRKmkQtu8t97m/2nXd2cl173736I5819zdPJ6+NjDBqEiVNoqRJlDSJkiZRG3eKu7seXbs3fsS+ndlq1xBGGDWJkiZR0iRKmkRJk6jJ59BXzRPn7Ls+sOqzRpx8WvzkO5uh8+GkSZQ0iZImUdIkauN56Hf3Gdt3dtick3vLz7l7T/uTUZMoaRIlTaKkSZQ0iRqaoZ9cI767L/q+V+2bj9+dR++77mHUJEqaREmTKGkSJU2ilq2h311rnlM7p2zfZ43Yd/q5vdz5KNIkSppESZMoaRK17Dz0fe7e9z5n33P6n/qqJ6MmUdIkSppESZMoaRK1cYZe2wlt37r2vmsII2rPBaz6/2zUJEqaREmTKGkSJU2iJu9yfzp5z/bdM9pWqZ0/Pmff9QGjJlHSJEqaREmTKGkStXGnuLl3PjnXvnuqe+1VJ8/CG2HUJEqaREmTKGkSJU2ilp2H/nR3Bvr0+5zj9nRyT7xVjJpESZMoaRIlTaKkSdTG89BH7Ns/be6zRt757jnmc7/F3fm459D5KNIkSppESZMoaRL1Bnu5P508kbx2LWJEbQe8OUZNoqRJlDSJkiZR0iRq2U5x+9x9PnrfuWlzn77K3Hd22hpIkyppEiVNoqRJ1NAM/enkSeIj3nHWfPI5/ZH3GXHyWo1RkyhpEiVNoqRJlDSJmpyhP52cJ/b3V5+zbz+32tn0I4yaREmTKGkSJU2ipEnUshn6SSdXcvftC7fqrvJVr1p118Gq+xmMmkRJkyhpEiVNoqRJ1FvO0EfUzjqfs+9kt1VP5Y/wHDofRZpESZMoaRIlTaKG9nLf90z3vs/at85+d3f3fdcHTr6zNXTemDSJkiZR0iRKmkRNrqHf3d19ZMa37xT1VVbtEn/3GfNVv8WTUZMoaRIlTaKkSZQ0iXrL89D5HRg1iZImUdIkSppESZMoaRIlTaKkSZQ0iZImUdIk6l83ANczk1vP9QAAAABJRU5ErkJggg==" alt="QR de validación">
+          <div style="font-size:12px;letter-spacing:1.5px;font-weight:700">IGI-AR-2026-04815</div>
+          <div style="font-size:11px;color:#9aa1af;margin-top:8px">Escaneá el QR para validar online<br>certificados.igi-la.com</div>
+          <button class="btn btn-borde" style="margin-top:12px" onclick="alert('DEMO: acá el alumno logueado descarga su certificado en PDF.')">⬇️ Descargar mi certificado</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VISTA NOSOTROS ================= -->
+<div class="vista" id="v-nosotros">
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Quiénes somos</div>
+        <h2>Desde 2003 formando a los chefs de Latinoamérica</h2>
+      </div>
+      <div style="max-width:760px">
+        <p style="margin-bottom:12px">El <b>Instituto Gastronómico Internacional (IGI)</b> nació en <b>2003</b> — hace más de 20 años — y hoy es la red educativa de gastronomía más grande de Latinoamérica: más de <b>70 filiales</b> en <b>Argentina, Brasil, Bolivia, Chile, Colombia, Paraguay y Uruguay</b>.</p>
+        <p style="margin-bottom:12px">Formamos cocineros, pasteleros, panaderos, bartenders y baristas con un método 100% práctico: cocinás desde la primera clase, con uniforme, material de estudio, recetarios y materias primas incluidas. Todos los programas otorgan título privado con certificaciones universitarias disponibles.</p>
+        <p style="margin-bottom:12px">Nuestra red de filiales significa que podés cursar cerca de tu casa, con los mismos programas y la misma calidad en cualquier país de la región.</p>
+        <p style="margin-bottom:12px">Cada año, los mejores alumnos de todas las filiales compiten en el <b>Torneo InterIGI</b>, que celebramos hace más de 20 años, y más de <b>10.500 egresados por año</b> reciben su título en nuestros <b>actos de colación</b> multitudinarios — ya son más de <b>240.000</b> en toda la red. Todos los certificados se emiten con <b>código QR verificable online</b>: cada alumno tiene su registro de certificaciones, puede descargarlas cuando quiera y cualquier empleador puede validarlas al instante.</p>
+        <p>Además: en Paraguay ofrecemos <b>pasantías rentadas en Estados Unidos y Europa</b>, y en Argentina, <b>certificaciones universitarias optativas</b> que potencian tu título.</p>
+      </div>
+      <div class="cifras" style="background:var(--gris-claro);border:1px solid #e6e9ef;margin-top:30px">
+        <div class="cifra"><b style="color:var(--naranja-osc)">2003</b><span>fundación</span></div>
+        <div class="cifra"><b style="color:var(--naranja-osc)">7</b><span>países</span></div>
+        <div class="cifra"><b style="color:var(--naranja-osc)">+70</b><span>filiales</span></div>
+        <div class="cifra"><b style="color:var(--naranja-osc)">+240.000</b><span>egresados</span></div>
+        <div class="cifra"><b style="color:var(--naranja-osc)">+10.500</b><span>egresados por año</span></div>
+        <div class="cifra"><b style="color:var(--naranja-osc)">14</b><span>programas</span></div>
+      </div>
+      <div class="nota">💡 Página "Sobre IGI" con <b>datos duros y citables</b> (año, países, filiales, egresados): es la que usan las IAs para recomendar. Cifras de ejemplo a confirmar. En el sitio real suma: historia, equipo directivo, acreditaciones por país, prensa.</div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VISTA CONTACTO ================= -->
+<div class="vista" id="v-contacto">
+  <section class="bloque">
+    <div class="container">
+      <div class="enc">
+        <div class="mini">Contacto</div>
+        <h2>Hablemos hoy</h2>
+        <p>Elegí tu curso y tu filial y te contactamos, o escribile directo a tu sede por WhatsApp.</p>
+      </div>
+      <form class="form-contacto" onsubmit="enviarForm(event)">
+        <input required placeholder="Nombre y apellido">
+        <input required type="email" placeholder="Email">
+        <input required type="tel" placeholder="Teléfono / WhatsApp">
+        <select id="sel-curso" required><option value="">¿Qué querés estudiar?</option></select>
+        <select id="sel-filial" required class="full"><option value="">¿En qué filial te queda cómodo cursar?</option></select>
+        <textarea class="full" rows="3" placeholder="Contanos tu consulta (opcional)"></textarea>
+        <div class="full" style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-naranja" type="submit">Enviar consulta</button>
+          <button class="btn btn-wsp" type="button" onclick="abrirWsp()">💬 Prefiero WhatsApp</button>
+        </div>
+        <div class="ok-msg" id="okmsg">✅ ¡Gracias! (Demo) En el sitio real, este lead llega directo al WhatsApp/CRM de la filial elegida, con el curso de interés ya cargado.</div>
+        <div class="full" style="font-size:11.5px;color:#9aa1af">Al enviar aceptás nuestra política de privacidad. Tus datos van directo a la filial que elegiste.</div>
+      </form>
+      <div class="nota">💡 Formulario corto pero calificador (patrón ICE): pide <b>curso + filial</b>, así el lead se rutea solo a la sede correcta. Nada de dropdowns con 40 filiales sueltas: primero país/provincia, después sede (en la demo está simplificado).</div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="grid-footer">
+      <div>
+        <img id="logo-f" alt="IGI — Instituto Gastronómico Internacional" style="height:54px;margin-bottom:12px;display:block">
+        <p>La red de capacitación gastronómica más grande de Latinoamérica. Desde 2003. 7 países. +70 filiales.</p>
+        <div class="badge-paises"><span class="fl" data-flag="AR"></span><span class="fl" data-flag="BR"></span><span class="fl" data-flag="BO"></span><span class="fl" data-flag="CL"></span><span class="fl" data-flag="CO"></span><span class="fl" data-flag="PY"></span><span class="fl" data-flag="UY"></span></div>
+      </div>
+      <div>
+        <h5>Quiero estudiar</h5>
+        <ul>
+          <li><a onclick="ir('catalogo','carrera')">Carreras</a></li>
+          <li><a onclick="ir('catalogo','curso')">Cursos cortos</a></li>
+          <li><a onclick="ir('catalogo','kids')">Cocineritos</a></li>
+          <li><a onclick="ir('filiales')">Buscar filial</a></li>
+          <li><a onclick="ir('contacto')">Pedir información</a></li>
+          <li><a onclick="ir('certificados')">Validá tu certificado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Institucional</h5>
+        <ul>
+          <li><a onclick="ir('nosotros')">Sobre IGI</a></li>
+          <li><a href="#/">Franquicias</a></li>
+          <li><a href="#/">Trabajá con nosotros</a></li>
+          <li><a href="#/">Campus virtual</a></li>
+          <li><a href="#/">Blog (próximamente)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Nuestra red · 7 países</h5>
+        <ul>
+          <li><a onclick="ir('filiales')"><span class="fl" data-flag="AR"></span> Argentina</a> · <a onclick="ir('filiales')"><span class="fl" data-flag="BR"></span> Brasil</a> · <a onclick="ir('filiales')"><span class="fl" data-flag="BO"></span> Bolivia</a></li>
+          <li><a onclick="ir('filiales')"><span class="fl" data-flag="CL"></span> Chile</a> · <a onclick="ir('filiales')"><span class="fl" data-flag="CO"></span> Colombia</a> · <a onclick="ir('filiales')"><span class="fl" data-flag="PY"></span> Paraguay</a> · <a onclick="ir('filiales')"><span class="fl" data-flag="UY"></span> Uruguay</a></li>
+          <li style="margin-top:10px"><a onclick="ir('filiales')"><b>📍 Todas las filiales, con su WhatsApp, teléfono y mail →</b></a></li>
+          <li style="margin-top:6px;font-size:12px;color:#8d95a6">Todas las sedes de la red ofrecen la misma calidad y los mismos programas.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2003–2026 IGI — Instituto Gastronómico Internacional · DEMO de propuesta (no es el sitio oficial)</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener" aria-label="Instagram de IGI Argentina" title="@igi.argentina"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84m0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4m6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/></svg> <b>@igi.argentina</b></a>
+        <a href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener" aria-label="Facebook de IGI" title="Facebook /Institutos.IGI"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.68 4.53-4.68 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.24h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07"/></svg> <b>Institutos.IGI</b></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox de folletos -->
+<div class="lightbox" id="lightbox" onclick="cerrarFolleto()">
+  <button class="cerrar" onclick="cerrarFolleto()">✕</button>
+  <img id="lb-img" alt="Folleto ampliado">
+</div>
+
+<!-- WhatsApp flotante -->
+<button class="wsp-float" onclick="abrirWsp()"><span class="ic">💬</span> WhatsApp</button>
+<div class="wsp-selector" id="wsp-sel">
+  <h4>💬 ¿Con qué filial querés hablar?</h4>
+  <select id="wsp-filial"></select>
+  <button class="btn btn-wsp" onclick="lanzarWsp()">Abrir chat de WhatsApp</button>
+  <div style="font-size:11px;color:#9aa1af;margin-top:8px">En páginas de una sede, el botón abre directo el chat de esa filial.</div>
+</div>
+
+<script>
+const LOGO_H="logo-header.png",LOGO_F="logo-footer.png",FOTOS={hero:"hero-01-chef.jpg",uniforme:"kit-uniforme.jpg",galx:[{src:"exp-01-podio.jpg",t:"Podio InterIGI"},{src:"exp-02-colacion.jpg",t:"Colación 2025"},{src:"exp-03-competencia.jpg",t:"Competencia"},{src:"exp-04-familias.jpg",t:"Familias"},{src:"exp-05-platos.jpg",t:"Platos finalistas"},{src:"exp-06-festejo.jpg",t:"Festejo"}],sedeGal:[{src:"sede-01-panaderia.jpg"},{src:"sede-02-cocina.jpg"},{src:"sede-03-pasteleria.jpg"},{src:"sede-04-clase.jpg"},{src:"sede-05-tortas.jpg"},{src:"sede-06-emplatado.jpg"}],vt:["video-torneo.jpg","video-colacion.jpg","video-testimonios.jpg"],"chef-internacional":"prog-chef-internacional.jpg","pastelero-internacional":"prog-pastelero-internacional.jpg","maestro-pastelero":"prog-maestro-pastelero.jpg","abc-chef":"prog-abc-chef.jpg","abc-pastelero":"prog-abc-pastelero.jpg","abc-panadero":"prog-abc-panadero.jpg","abc-tortas":"prog-abc-tortas.jpg","diseno-tortas":"prog-diseno-tortas.jpg","catering":"prog-catering.jpg","mozo-maitre":"prog-mozo-maitre.jpg","bartender":"prog-bartender.jpg","barista":"prog-barista.jpg","arte-latte":"prog-arte-latte.jpg","cocineritos":"prog-cocineritos.jpg"};
+const HEROS_EXTRA=["hero-02-tortas.jpg","hero-03-bartender.jpg","hero-04-panadero.jpg"];
+const LOGO_GATE="logo-bienvenida.png";
+const LOGO_H2="logo-header.png";
+const FLYERS={"chef-internacional":"prog-chef-internacional.jpg","pastelero-internacional":"prog-pastelero-internacional.jpg","maestro-pastelero":"prog-maestro-pastelero.jpg","abc-chef":"prog-abc-chef.jpg","abc-pastelero":"prog-abc-pastelero.jpg","abc-panadero":"prog-abc-panadero.jpg","abc-tortas":"prog-abc-tortas.jpg","diseno-tortas":"prog-diseno-tortas.jpg","catering":"prog-catering.jpg","mozo-maitre":"prog-mozo-maitre.jpg","bartender":"prog-bartender.jpg","barista":"prog-barista.jpg","arte-latte":"prog-arte-latte.jpg","cocineritos":"prog-cocineritos.jpg"};
+/* ================= DATOS ================= */
+const PROGRAMAS = [
+ {id:'chef-internacional',tipo:'carrera',cat:'carrera',emoji:'👨‍🍳',color:'linear-gradient(120deg,#E24E1B,#F58220)',nombre:'Chef Internacional',titulo:'Profesional Gastronómico',dur:'2 años lectivos',frec:'5 hs semanales',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Una carrera profesional, basada en las técnicas de la cocina moderna nacional e internacional, para quienes quieran introducirse en todos los secretos del arte culinario. Pensada como puntapié inicial de una formación con proyección internacional.',
+  resumen:'Desarrollamos especialmente nuestro programa de estudios pensando en que te conviertas en profesional en un ambiente ameno y divertido.',
+  objetivo:'Preparar al alumno para dirigir su propio negocio gastronómico o cubrir la demanda laboral en hoteles, restaurantes y empresas.',
+  materias:[{t:'1º año',items:['Panadería I','Cocina I','Cocina latinoamericana','Pastas y salsas','Pastelería I','Buffet I','Higiene y bromatología','Conservación de alimentos','Nutrición','Química culinaria','Costos gastronómicos']},{t:'2º año',items:['Panadería II','Cocina internacional','Alta cocina','Alta pastelería','Buffet II','Marketing gastronómico','Organización de eventos','Ceremonial y protocolo','Enología','Management gastronómico','Servicio de mesa']}],
+  incluye:['👔 Uniforme de regalo','📚 Manuales y recetarios','🥕 Materias primas','📝 Derechos de examen','🎓 Certificaciones universitarias']},
+ {id:'pastelero-internacional',tipo:'carrera',cat:'carrera',emoji:'🍰',color:'linear-gradient(120deg,#C42847,#E85D75)',nombre:'Pastelero Internacional',titulo:'Profesional Pastelero',dur:'1 año lectivo',frec:'5 hs semanales',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Una carrera profesional basada en las técnicas de la Pastelería moderna nacional e internacional, dirigida a quienes quieran introducirse en todos los secretos de este dulce arte. Pensada para formar profesionales a nivel internacional.',
+  resumen:'Un programa completo para desarrollar todas tus habilidades en la Pastelería: un universo lleno de posibilidades que te develará sus secretos.',
+  objetivo:'Esta carrera está orientada al futuro profesional que desea incursionar en el maravilloso mundo de la pastelería. Obtendrá los conocimientos de las materias primas utilizadas en pastelería y de las diversas técnicas de elaboración, desde las más sencillas hasta las de nivel internacional y más sofisticadas. Tendrá en sus manos una carrera con la cual podrá desempeñarse en un amplio espectro profesional o iniciar un emprendimiento personal.',
+  materias:[{t:'Materias',items:['Pastelería clásica y europea','Pastelería superior','Panadería dulce y salada','Pastelería de vanguardia','Higiene y bromatología','Conservación de los alimentos','Nutrición','Química culinaria','Costos gastronómicos']}],
+  incluye:['👔 Uniforme de regalo','📚 Manuales y recetarios','🥕 Materias primas','📝 Derechos de examen','🎓 Certificaciones universitarias']},
+ {id:'maestro-pastelero',tipo:'carrera',cat:'carrera',emoji:'🧁',color:'linear-gradient(120deg,#D81E7B,#F06AAE)',nombre:'Maestro Pastelero',titulo:'Maestro Pastelero',dur:'1 año lectivo',frec:'3 hs semanales',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un programa completo para desarrollar todas tus habilidades en la Pastelería: un universo lleno de posibilidades que te develará sus secretos.',
+  resumen:'Una carrera pensada para quienes quieran introducirse en los secretos del arte de la Pastelería.',
+  objetivo:'Dominar las diversas técnicas de elaboración y conocer las materias primas de la pastelería, para desempeñarse en el mercado profesional o iniciar un emprendimiento personal.',
+  materias:[{t:'Materias',items:['Pastelería clásica y europea','Pastelería superior','Panadería dulce y salada','Pastelería de vanguardia']}],
+  incluye:['👔 Uniforme de regalo','📚 Manuales y recetarios','🥕 Materias primas','📝 Derechos de examen','🎓 Certificaciones universitarias']},
+ {id:'abc-chef',tipo:'curso',cat:'curso',emoji:'🍳',color:'linear-gradient(120deg,#0E7C61,#2BAE8E)',nombre:'ABC Chef',titulo:'Curso ABC Chef',dur:'5 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso práctico y de corta duración que te llevará por los caminos de las distintas áreas de la cocina.',
+  resumen:'Un curso que te permitirá lucirte en la cocina, en familia o con tus amigos.',
+  objetivo:'Aprenderás y aplicarás adecuadamente técnicas básicas de manipulación, métodos de cocción y presentación de platos según el producto, con el fin de lograr óptimos resultados. Aprenderás también a reconocer y evaluar tipos y cualidades de las diferentes materias primas para su posterior utilización.',
+  dirigido:'Toda persona que desee dar sus primeros pasos en el arte culinario.',
+  materias:[{t:'Materias',items:['Cocina, pastas y salsas','Panes, pizzas y empanadas','Pastelería']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'abc-pastelero',tipo:'curso',cat:'curso',emoji:'🎂',color:'linear-gradient(120deg,#5CA62D,#8CCB5E)',nombre:'ABC Pastelero',titulo:'Curso ABC Pastelero',dur:'5 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso práctico y de corta duración que te introducirá por los dulces senderos de la pastelería.',
+  resumen:'Este breve curso te sorprenderá por su amplio y abarcativo programa. Aprenderás de forma divertida y amena, sin necesidad de conocimientos previos.',
+  objetivo:'Recorrer el universo de la pastelería desde cero: budines, merengues, masas, tartas, tortas, postres clásicos y chocolatería, con técnica profesional y resultados desde la primera clase.',
+  dirigido:'Quienes no se conformen con probar cosas ricas, sino que quieran tener la posibilidad dulce y real de hacerlas ellos mismos.',
+  materias:[{t:'Realizarás, entre otras cosas…',items:['Budines, brownies y muffins','Merengues y masas friables','Cookies, alfajores y lemon pie','Tartas y batidos livianos','Tortas, cremas y masas finas','Cheesecake, tiramisú y pionono','Bavaroise y mousses','Chocolates y bombones']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'abc-panadero',tipo:'curso',cat:'curso',emoji:'🥖',color:'linear-gradient(120deg,#1273B5,#4FA3D8)',nombre:'ABC Panadero',titulo:'Curso ABC Panadero',dur:'5 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso práctico y de corta duración que te introducirá al mundo de la panadería de manera práctica y concreta.',
+  resumen:'De la P a la N… ¡el mundo del pan! Aprenderás de forma divertida y amena, sin necesidad de conocimientos previos.',
+  objetivo:'Dominar los panificados y métodos de amasado, la función de cada ingrediente, los tipos de coberturas y los métodos de cocción y elaboración.',
+  dirigido:'Quienes deseen incursionar en los secretos de las harinas, los tipos de masas y las combinaciones más clásicas y creativas presentes en el mundo de la panificación.',
+  materias:[{t:'Algunos temas',items:['Panificados y métodos de amasado','Función de cada ingrediente','Masas con cortezas crocantes y suaves','Masas saborizadas y enriquecidas','Facturas y masas hojaldradas','Panes de Latinoamérica']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'abc-tortas',tipo:'curso',cat:'curso',emoji:'🍥',color:'linear-gradient(120deg,#C22335,#E85A68)',nombre:'ABC Tortas',titulo:'Curso ABC Tortas',dur:'5 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso práctico y de corta duración que te llevará a recorrer el mundo aprendiendo a realizar tortas con historia, ¡tortas con nombre y apellido!',
+  resumen:'Un curso que te permitirá lucirte elaborando las tortas más famosas de todos los rincones del planeta, sorprendiéndote por su amplio y abarcativo programa.',
+  objetivo:'Elaborar las tortas más famosas del mundo aplicando las técnicas originales, con equipamiento vanguardista y enfoque artesanal e industrial.',
+  dirigido:'Estudiantes con o sin experiencia en pastelería que quieran elaborar las tortas más famosas aplicando las técnicas originales y equipamiento vanguardista, con enfoque artesanal e industrial.',
+  materias:[{t:'Algunas de las tortas',items:['Croquembouche y Paris Brest','Tiramisú y Devil´s Cake','Torta Opera y Torta Dobos','Pastel Mississippi y Torta Baba','Brooklyn Blackout y Red Velvet','Torta Mimosa y Torta Frasier','Boston Cream Cake','Torta Sara y Torta Leguizamo, y más…']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'diseno-tortas',tipo:'curso',cat:'curso',emoji:'🎨',color:'linear-gradient(120deg,#E0447C,#F291B7)',nombre:'Diseño de Tortas',titulo:'Curso Diseño de Tortas',dur:'3 meses',frec:'12 clases prácticas · equipamiento incluido',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Aprendé desde cero o perfeccioná tus técnicas para crear tortas increíbles que deslumbrarán a tus clientes o seres queridos. Ideal tanto para principiantes como para quienes buscan llevar sus habilidades al siguiente nivel.',
+  dirigido:'Aficionados a la repostería que deseen aprender a decorar tortas como profesionales; pasteleros y emprendedores que busquen perfeccionar sus técnicas y agregar valor a sus productos; y creativos y organizadores de eventos que quieran ofrecer tortas temáticas y personalizadas.',
+  objetivo:'Dominar coberturas y rellenos con buttercream, fondant y ganache; crear tortas temáticas para bodas y eventos; técnicas avanzadas de pintura sobre fondant, flores y modelado; y presentar un proyecto final propio.',
+  materias:[{t:'Algunos temas',items:['Coberturas y rellenos: buttercream, fondant, ganache','Piping básico y avanzado','Flores en buttercream y pintura sobre fondant','Modelado de figuras en fondant y pasta de goma','Tortas temáticas y efectos especiales','Aerógrafos y polvos comestibles','Tortas para bodas y eventos']}],
+  incluye:['📚 Apuntes y recetarios','🥕 Materias primas','🛠️ Equipamiento incluido','📝 Derechos de examen']},
+ {id:'catering',tipo:'curso',cat:'curso',emoji:'🥂',color:'linear-gradient(120deg,#3B2A78,#6C55B8)',nombre:'Catering para Eventos',titulo:'Curso Catering para Eventos',dur:'5 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso netamente práctico con rápida salida laboral independiente.',
+  resumen:'Aprenderás a diseñar una recepción con la inclusión de nuevas ideas y materias primas para jerarquizar el nivel de la propuesta gastronómica.',
+  objetivo:'Diseñar una recepción manejando los tiempos de programación, elaboración y montaje, para optimizar costos de producción y aprovechamiento de todos los recursos. Conocerás los diferentes modos de elaboración y presentación con el objetivo de mejorar el impacto y la percepción visual de tu propuesta.',
+  dirigido:'Estudiantes, cocineros, microemprendedores y todos aquellos que deseen dar sus primeros pasos en el catering.',
+  materias:[{t:'Materias',items:['Recepciones','Entradas y platos principales','Postres y mesas dulces','Tortas, mousses y cremas','Terrinas y ballotinas','Panes de restaurant','Carne de cerdo','Risottos']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'mozo-maitre',tipo:'curso',cat:'curso',emoji:'🤵',color:'linear-gradient(120deg,#5B2A63,#93549E)',nombre:'Mozo / Camarera + Maître',titulo:'Mozo/Camarera de Salón y Maître Profesional',dur:'3 meses + 3 meses',frec:'3 hs semanales',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso corto y de rápida salida laboral que te capacitará en el arte del montaje y preparación de mesas y atención al cliente comensal en las diferentes categorías de hoteles, restaurantes, bares y confiterías. También podrás asistir en distintos tipos de eventos.',
+  resumen:'Al finalizar el curso de Mozo/Camarera podés ampliar tus conocimientos con Maître Profesional (3 meses más).',
+  objetivo:'Dominar la metodología del servicio y la atención al cliente. Una vez finalizado el curso de mozo, el alumno podrá ampliar sus conocimientos para ser un especialista en el manejo de personal, la atención al cliente y el armado de distintos tipos de eventos.',
+  dirigido:'Quienes buscan una salida laboral rápida en hoteles, restaurantes, bares, confiterías y eventos.',
+  materias:[{t:'Mozo/Camarera (3 meses)',items:['Higiene y presencia en el trabajo','Introducción a bebidas y gastronomía','Metodología del servicio y atención al cliente','Cristalería y vajilla según eventos','Protocolo y servicio de mesa','Comandas y vocabulario de salón','Introducción a la enología','Servicio internacional']},{t:'Maître Profesional (3 meses)',items:['Recursos humanos y organización del personal','Mise en place','Control de stock y cálculo de bebidas','Mantelería, cristalería y personal por tipo de servicio']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes','📝 Derechos de examen']},
+ {id:'bartender',tipo:'curso',cat:'bebidas',emoji:'🍸',color:'linear-gradient(120deg,#B4126B,#E4599E)',nombre:'Bartender Internacional',titulo:'Bartender Profesional',dur:'6 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Un curso práctico y de corta duración para iniciarte en la profesión de bartender.',
+  objetivo:'Formarte como bartender profesional dominando desde la coctelería básica y clásica hasta la alta coctelería y la alta coctelería étnica.',
+  dirigido:'Toda persona que quiera iniciarse en esta profesión, con o sin conocimientos previos.',
+  materias:[{t:'Materias',items:['Coctelería básica','Coctelería clásica','Alta coctelería','Alta coctelería étnica']}],
+  incluye:['👔 Uniforme de regalo','📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'barista',tipo:'curso',cat:'bebidas',emoji:'☕',color:'linear-gradient(120deg,#5C3A21,#96633C)',nombre:'Barista Internacional',titulo:'Barista Internacional',dur:'3 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Convertite en un barista experto: café de alta calidad, espresso básico y avanzado, latte art y gestión de tu propia cafetería.',
+  objetivo:'Dominar molienda, dosificación, extracción y servicio; el arte del latte; el uso de la barra profesional; y la atención al cliente, gestión y marketing de una cafetería.',
+  materias:[{t:'Algunos temas',items:['Historia y tipos de café','Barra de café y sus herramientas','Espresso básico y avanzado','Latte art básico y avanzado','Métodos de café filtrado','Bebidas frías y heladas','Mantenimiento y limpieza de equipos','Gestión y marketing de cafeterías']}],
+  incluye:['📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'arte-latte',tipo:'curso',cat:'bebidas',emoji:'🫖',color:'linear-gradient(120deg,#7A4A12,#B97E33)',nombre:'Experto en Arte Latte',titulo:'Experto en Arte Latte',dur:'3 meses',frec:'1 clase semanal de 2 hs · 100% práctico',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Dominá las técnicas para diseñar figuras artísticas sobre café con leche texturizada: del corazón y el tulipán a composiciones 3D y etching.',
+  objetivo:'Dominar la vaporización de leche y la microespuma ideal; aprender más de 20 figuras; aplicar técnicas decorativas con punzón y polvos; y prepararte para competencias de arte latte con evaluación final ante jurado.',
+  materias:[{t:'Algunos temas',items:['Texturización de leche (incl. leches vegetales)','Corazón, rosetta y tulipán en todas sus variantes','Latte art multicapas: doble y triple vertido','Etching: flores, espirales, caritas, textos','Decoración con stencil, cacao y canela','Arte 3D: figuras animales y modelado de espuma','Composición libre y simulacro de competencia']}],
+  incluye:['📚 Apuntes y recetarios','🥕 Materias primas','📝 Derechos de examen']},
+ {id:'cocineritos',tipo:'kids',cat:'kids',emoji:'🧒',color:'linear-gradient(120deg,#F0841C,#33B5B5)',nombre:'Cocineritos IGI',titulo:'Cocinerito Express',dur:'3 módulos de 3 meses',frec:'1 clase semanal de 2 hs',mod:'Presencial',cert:'Título privado · Certificación universitaria',
+  desc:'Para jugar y aprender al mismo tiempo, con actividades especialmente pensadas para los más chiquitos.',
+  objetivo:'Elaborar y presentar platos dulces y salados en grupo, aprender a usar los utensilios y reconocer ingredientes, con nociones de higiene y buenas costumbres alimentarias.',
+  materias:[{t:'Materias',items:['Introducción a la cocina','Panadería','Pastas y salsas','Pastelería clásica']}],
+  incluye:['📚 Apuntes y recetarios','🥕 Materias primas','🎈 Actividades para chicos','📝 Derechos de examen']}
+];
+
+/* ===== Capa de marketing por programa (gancho + razones + salida laboral) ===== */
+const MKT={
+ 'chef-internacional':{gancho:'De cero a chef profesional en 2 años.',
+  razones:[['Cocinás desde la primera clase','100% práctica en cocinas profesionales: acá no venís a mirar, venís a cocinar.'],['22 materias, toda la gastronomía','De la panadería a la alta cocina, de la enología al management: salís sabiendo manejar una cocina completa.'],['Doble salida: empleo o negocio propio','Costos, marketing y management gastronómico incluidos para que puedas abrir lo tuyo.'],['Tu formación viaja con vos','El respaldo de una red de 7 países y +240.000 egresados, con certificaciones universitarias optativas.']],
+  salidas:['Chef en hoteles y restaurantes','Jefe de cocina / jefe de partida','Tu propio restaurante o rotisería','Catering y eventos','Cocina de empresas']},
+ 'pastelero-internacional':{gancho:'Convertí tu pasión por lo dulce en tu profesión.',
+  razones:[['De lo clásico a la vanguardia en 1 año','Pastelería europea, superior y de vanguardia: el recorrido completo, intensivo.'],['Producí como profesional','Química culinaria, conservación y costos: la diferencia entre hacer tortas ricas y vivir de ellas.'],['Emprendé desde el día uno','Muchos alumnos empiezan a vender sus productos antes de recibirse.'],['Todo incluido','Uniforme, manuales, recetarios y materias primas de regalo.']],
+  salidas:['Pastelero de hoteles y restaurantes','Tu propio emprendimiento dulce','Panadería dulce y salada','Mesas dulces para eventos']},
+ 'maestro-pastelero':{gancho:'La pastelería profesional, en solo 3 horas por semana.',
+  razones:[['Compatible con tu vida','3 horas semanales: podés trabajar o estudiar otra cosa mientras te formás.'],['El recorrido completo','Pastelería clásica y europea, superior, panadería dulce y salada, y vanguardia.'],['Profesionalizá lo que ya hacés','Ideal si ya vendés tortas o postres y querés técnica y título que lo respalden.'],['Título privado + certificaciones','Con el aval de una red con 23 años de trayectoria.']],
+  salidas:['Emprendimiento propio','Pastelerías y cafeterías','Producción para eventos']},
+ 'abc-chef':{gancho:'Tu primer paso en la cocina — sin experiencia previa.',
+  razones:[['Resultados desde la primera clase','5 meses netamente prácticos, una clase de 2 horas por semana: de cada clase te llevás un plato hecho por vos.'],['3 mundos en un curso','Cocina, panificados y pastelería: probás todo y descubrís lo tuyo.'],['Uniforme de regalo','Más recetarios y materias primas incluidas: venís solo con las ganas.'],['Tu base para la carrera','Si te apasiona, seguís con Chef Internacional con la base ya hecha.']],
+  salidas:['Lucite en tu casa, en familia o con amigos','Base para la carrera de Chef Internacional','Primeros trabajos en cocina']},
+ 'abc-pastelero':{gancho:'Hacé vos las cosas ricas que siempre comprás.',
+  razones:[['De budines a bombones en 5 meses','Un programa amplio que te sorprende: 8 familias de productos dulces.'],['Sin conocimientos previos','Aprendés de forma divertida y amena, paso a paso.'],['Recetas que podés vender mañana','Cheesecake, alfajores, tortas: productos con salida comercial inmediata.'],['Materias primas incluidas','Practicás con todo provisto por IGI.']],
+  salidas:['Venta de tortas y postres desde casa','Base para Maestro Pastelero','La estrella de cada cumpleaños']},
+ 'abc-panadero':{gancho:'El oficio de siempre, con más demanda que nunca.',
+  razones:[['El pan artesanal está en auge','Panaderías artesanales y de masa madre se multiplican en toda Latinoamérica.'],['De facturas a panes del mundo','Amasados, hojaldres, masas enriquecidas y panes de Latinoamérica en 5 meses.'],['Emprendé con baja inversión','Un horno y técnica: pocos oficios permiten arrancar tan rápido.'],['Sin conocimientos previos','De la P a la N, te llevamos de la mano.']],
+  salidas:['Panadería artesanal propia','Venta por encargo','Empleo en panaderías y cafeterías']},
+ 'abc-tortas':{gancho:'Las tortas más famosas del mundo, hechas por vos.',
+  razones:[['15+ tortas con nombre y apellido','Croquembouche, Ópera, Red Velvet, Dobos... el repertorio que todos quieren.'],['Técnicas originales','Cada torta con su receta e historia verdaderas, como se hace en su país de origen.'],['Enfoque artesanal e industrial','Aprendé a hacer una... y también a producir veinte.'],['Con o sin experiencia','El programa arranca desde cero.']],
+  salidas:['Venta de tortas premium por encargo','Dupla perfecta con Diseño de Tortas','Producción para cafeterías y eventos']},
+ 'diseno-tortas':{gancho:'Del fondant al 3D: tortas que enamoran (y se comparten).',
+  razones:[['El segmento que mejor paga','Bodas, cumpleaños y eventos pagan mucho más por tortas de diseño.'],['Técnicas avanzadas','Pintura sobre fondant, flores en buttercream, modelado, aerógrafo y polvos comestibles.'],['Proyecto final propio','Terminás con tu torta de autor, lista para mostrar a tus primeros clientes.'],['Equipamiento incluido','Las 12 clases prácticas, con todos los materiales provistos.']],
+  salidas:['Cake designer para bodas y eventos','Un Instagram de tortas que vende solo','Servicio premium para organizadores de eventos']},
+ 'catering':{gancho:'Tu propio negocio gastronómico en 5 meses.',
+  razones:[['La salida independiente más rápida','Netamente práctico y pensado para que factures tus primeros eventos enseguida.'],['Gestión real, no solo recetas','Tiempos, montaje y costos de producción: lo que hace rentable un catering.'],['De la recepción a la mesa dulce','El menú completo de un evento, en un solo curso.'],['Impacto visual','Elaboración y presentación pensadas para sorprender al comensal.']],
+  salidas:['Catering propio para eventos','Servicios para empresas','Más facturación si ya sos cocinero']},
+ 'mozo-maitre':{gancho:'Trabajá este mismo año en hoteles, bares y eventos.',
+  razones:[['Demanda constante','Hoteles, restaurantes y eventos buscan personal de salón todo el año.'],['Salida inmediata','En 3 meses estás listo para trabajar; con propinas, el ingreso arranca rápido.'],['Camino de crecimiento','Seguí con Maître Profesional y pasá a dirigir el salón y el personal.'],['Protocolo y enología','Los detalles que te diferencian del resto y te abren las puertas de la primera línea.']],
+  salidas:['Mozo/camarera en hoteles, restaurantes y bares','Banquetes y eventos','Maître: jefe de salón']},
+ 'bartender':{gancho:'Dueño de la barra: 6 meses para vivir de la coctelería.',
+  razones:[['Siempre hay barra que atender','Bares, hoteles y eventos buscan bartenders profesionales todo el año.'],['De la clásica a la étnica','El recorrido completo: coctelería básica, clásica, alta y alta étnica.'],['Compatible con todo','2 horas semanales: ideal para sumar un oficio mientras estudiás o trabajás.'],['Uniforme y materias primas','Practicás con insumos reales, incluidos en el curso.']],
+  salidas:['Bartender en bares y hoteles','Barras móviles para eventos','Competencias de coctelería']},
+ 'barista':{gancho:'El café de especialidad busca baristas: convertite en uno.',
+  razones:[['Un mercado en plena explosión','Las cafeterías de especialidad se multiplican en todas las ciudades de la región.'],['Mucho más que espresso','Molienda, extracción, filtrados, latte art y bebidas frías: el oficio completo.'],['Gestión incluida','Atención al cliente, marketing y manejo de cafetería, por si querés abrir la tuya.'],['En 3 meses estás listo','Una clase semanal de 2 horas: un oficio con salida inmediata.']],
+  salidas:['Barista en cafeterías de especialidad','Tu propia cafetería','Catas y eventos de café']},
+ 'arte-latte':{gancho:'Convertí cada taza en una obra (y en más propinas).',
+  razones:[['Más de 20 figuras','Del corazón básico al arte 3D con figuras de animales y etching.'],['100% práctico','Vaporización, microespuma y vertido: taza tras taza hasta dominarlo.'],['Preparate para competir','Simulacro y evaluación final ante jurado, como en las competencias reales.'],['El diferencial que te contrata','Entre dos baristas, el puesto se lo lleva el que hace latte art.']],
+  salidas:['Barista especializado','Competencias de latte art','Contenido irresistible para las redes de tu cafetería']},
+ 'cocineritos':{gancho:'El plan favorito de la semana para tus hijos.',
+  razones:[['Juegan y aprenden de verdad','Técnicas gastronómicas reales adaptadas para los más chiquitos, con seguridad e higiene.'],['Confianza que se ve','Terminan cada clase con SU plato hecho, y eso se nota en la autoestima.'],['Mejores hábitos en la mesa','Conocer los ingredientes es la mejor forma de que prueben cosas nuevas.'],['Todo incluido','Apuntes, recetarios, materias primas y actividades pensadas para chicos.']],
+  salidas:['Confianza y autonomía en la cocina','Buenos hábitos alimentarios','Cumpleaños inolvidables: ¡cocinan ellos!']}
+};
+PROGRAMAS.forEach(p=>Object.assign(p,MKT[p.id]||{}));
+
+const FILIALES = {"AR": [{"id": "belgrano", "n": "IGI Belgrano", "ciudad": "Belgrano", "reg": "CABA", "lat": -34.566, "lng": -58.457, "dir": "Av. Cabildo 811 (esq. F. Lacroze)", "tel": "(011) 4776-2911", "wsp": "5491137993267", "mail": "belgrano@igi-la.com", "kw": "belgrano cabildo palermo colegiales nuñez las cañitas", "real": true}, {"id": "flores", "n": "IGI Flores", "ciudad": "Flores", "reg": "CABA", "lat": -34.628, "lng": -58.463, "dir": "Pedernera 15 (esq. Av. Rivadavia)", "tel": "4619-0011", "wsp": "", "mail": "flores@igi-la.com", "kw": "flores caballito floresta parque chacabuco", "real": true}, {"id": "congreso", "n": "IGI Congreso", "ciudad": "Congreso", "reg": "CABA", "lat": -34.609, "lng": -58.392, "dir": "Av. Rivadavia 2213", "tel": "4954-5009", "wsp": "", "mail": "congreso@igi-la.com", "kw": "congreso balvanera once almagro san cristobal boedo monserrat centro", "real": true}, {"id": "liniers", "n": "IGI Liniers", "ciudad": "Liniers", "reg": "CABA", "lat": -34.644, "lng": -58.52, "dir": "José León Suárez 16 (esq. Av. Rivadavia)", "tel": "4641-1297", "wsp": "", "mail": "liniers@igi-la.com", "kw": "liniers mataderos versalles villa luro ciudadela", "real": true}, {"id": "villaurquiza", "n": "IGI Villa Urquiza", "ciudad": "Villa Urquiza", "reg": "CABA", "lat": -34.57, "lng": -58.487, "dir": "Monroe 5115 (esq. Triunvirato)", "tel": "4521-3493", "wsp": "", "mail": "villaurquiza@igi-la.com", "kw": "villa urquiza villa pueyrredon coghlan saavedra parque chas", "real": true}, {"id": "pompeya", "n": "IGI Pompeya", "ciudad": "Pompeya", "reg": "CABA", "lat": -34.652, "lng": -58.413, "dir": "Av. Sáenz 968", "tel": "4911-8293", "wsp": "", "mail": "pompeya@igi-la.com", "kw": "pompeya nueva pompeya parque patricios barracas soldati", "real": true}, {"id": "sanfernando", "n": "IGI San Fernando", "ciudad": "San Fernando", "reg": "GBA Norte", "lat": -34.441, "lng": -58.559, "dir": "Constitución 528", "tel": "4745-7722", "wsp": "5491133390977", "mail": "sanfernando@igi-la.com", "kw": "san fernando tigre victoria virreyes", "real": true}, {"id": "pacheco", "n": "IGI Pacheco", "ciudad": "Pacheco", "reg": "GBA Norte", "lat": -34.452, "lng": -58.64, "dir": "Av. Hipólito Yrigoyen 533", "tel": "4736-9430", "wsp": "5491127033301", "mail": "pacheco@igi-la.com", "kw": "pacheco general pacheco benavidez nordelta tigre", "real": true}, {"id": "sanisidro", "n": "IGI San Isidro", "ciudad": "San Isidro", "reg": "GBA Norte", "lat": -34.47, "lng": -58.527, "dir": "Av. Centenario 428", "tel": "4747-4956", "wsp": "", "mail": "sanisidro@igi-la.com", "kw": "san isidro martinez acassuso beccar boulogne", "real": true}, {"id": "vicentelopez", "n": "IGI Vicente López", "ciudad": "Vicente López", "reg": "GBA Norte", "lat": -34.526, "lng": -58.475, "dir": "Av. Maipú 196", "tel": "4837-9398", "wsp": "", "mail": "vicentelopez@igi-la.com", "kw": "vicente lopez olivos florida munro la lucila", "real": true}, {"id": "sanmartin", "n": "IGI San Martín", "ciudad": "San Martín", "reg": "GBA Norte", "lat": -34.573, "lng": -58.537, "dir": "Saavedra 2009 (esq. Peatonal Belgrano)", "tel": "4754-0117", "wsp": "", "mail": "sanmartin@igi-la.com", "kw": "san martin villa ballester villa maipu san andres", "real": true}, {"id": "sanmiguel", "n": "IGI San Miguel", "ciudad": "San Miguel", "reg": "GBA Norte", "lat": -34.543, "lng": -58.712, "dir": "Italia 1208 (esq. Pte. Perón)", "tel": "4664-2747", "wsp": "", "mail": "sanmiguel@igi-la.com", "kw": "san miguel bella vista muñiz los polvorines", "real": true}, {"id": "josecpaz", "n": "IGI José C. Paz", "ciudad": "José C. Paz", "reg": "GBA Norte", "lat": -34.515, "lng": -58.765, "dir": "Zubiría 5083", "tel": "02320-425904", "wsp": "", "mail": "josecpaz@igi-la.com", "kw": "jose c paz del viso tortuguitas", "real": true}, {"id": "grandbourg", "n": "IGI Grand Bourg", "ciudad": "Grand Bourg", "reg": "GBA Norte", "lat": -34.49, "lng": -58.72, "dir": "Eva Duarte de Perón 1395", "tel": "02320-574560", "wsp": "", "mail": "grandbourg@igi-la.com", "kw": "grand bourg malvinas argentinas ing pablo nogues", "real": true}, {"id": "pilar", "n": "IGI Pilar", "ciudad": "Pilar", "reg": "GBA Norte", "lat": -34.459, "lng": -58.914, "dir": "Rivadavia 670", "tel": "0230-447-7356", "wsp": "", "mail": "pilar@igi-la.com", "kw": "pilar del viso manzanares presidente derqui", "real": true}, {"id": "moron", "n": "IGI Morón", "ciudad": "Morón", "reg": "GBA Oeste", "lat": -34.653, "lng": -58.62, "dir": "Belgrano 22", "tel": "4627-7201", "wsp": "", "mail": "moron@igi-la.com", "kw": "moron castelar haedo el palomar ituzaingo", "real": true}, {"id": "merlo", "n": "IGI Merlo", "ciudad": "Merlo", "reg": "GBA Oeste", "lat": -34.665, "lng": -58.728, "dir": "Av. del Libertador 121", "tel": "(0220) 486-0770", "wsp": "", "mail": "merlo@igi-la.com", "kw": "merlo san antonio de padua libertad parque san martin", "real": true}, {"id": "moreno", "n": "IGI Moreno", "ciudad": "Moreno", "reg": "GBA Oeste", "lat": -34.634, "lng": -58.79, "dir": "Av. Bartolomé Mitre 2692", "tel": "(0237) 413-0011", "wsp": "", "mail": "moreno@igi-la.com", "kw": "moreno paso del rey trujui la reja", "real": true}, {"id": "sanjusto", "n": "IGI San Justo", "ciudad": "San Justo", "reg": "GBA Oeste", "lat": -34.677, "lng": -58.56, "dir": "Av. Arturo Illia 2226", "tel": "1161043861", "wsp": "", "mail": "sanjusto@igi-la.com", "kw": "san justo la matanza ramos mejia lomas del mirador", "real": true}, {"id": "laferrere", "n": "IGI Laferrere", "ciudad": "Laferrere", "reg": "GBA Oeste", "lat": -34.75, "lng": -58.59, "dir": "Av. Luro 5960", "tel": "(011) 3933-6106", "wsp": "", "mail": "laferrere@igi-la.com", "kw": "laferrere gregorio de laferrere la matanza rafael castillo", "real": true}, {"id": "gonzalezcatan", "n": "IGI González Catán", "ciudad": "González Catán", "reg": "GBA Oeste", "lat": -34.77, "lng": -58.65, "dir": "Simón Pérez 4874", "tel": "—", "wsp": "", "mail": "gonzalezcatan@igi-la.com", "kw": "gonzalez catan la matanza virrey del pino", "real": true, "prox": true}, {"id": "quilmes", "n": "IGI Quilmes", "ciudad": "Quilmes", "reg": "GBA Sur", "lat": -34.72, "lng": -58.254, "dir": "Hipólito Yrigoyen 580", "tel": "4040-5516", "wsp": "", "mail": "quilmes@igi-la.com", "kw": "quilmes bernal ezpeleta don bosco solano", "real": true}, {"id": "lomasdezamora", "n": "IGI Lomas de Zamora", "ciudad": "Lomas de Zamora", "reg": "GBA Sur", "lat": -34.76, "lng": -58.4, "dir": "Boedo 213", "tel": "4243-3502", "wsp": "", "mail": "lomasdezamora@igi-la.com", "kw": "lomas de zamora banfield temperley turdera llavallol", "real": true}, {"id": "lanus", "n": "IGI Lanús", "ciudad": "Lanús", "reg": "GBA Sur", "lat": -34.7, "lng": -58.39, "dir": "Hipólito Yrigoyen 4711", "tel": "4241-1654", "wsp": "", "mail": "lanus@igi-la.com", "kw": "lanus remedios de escalada valentin alsina gerli avellaneda", "real": true}, {"id": "berazategui", "n": "IGI Berazategui", "ciudad": "Berazategui", "reg": "GBA Sur", "lat": -34.763, "lng": -58.212, "dir": "Calle 14 N°5089", "tel": "(011) 4256-1770", "wsp": "", "mail": "berazategui@igi-la.com", "kw": "berazategui hudson platanos ranelagh", "real": true}, {"id": "florenciovarela", "n": "IGI Florencio Varela", "ciudad": "Florencio Varela", "reg": "GBA Sur", "lat": -34.796, "lng": -58.276, "dir": "Dr. S. Sallarés N°283", "tel": "(15) 5804-6981", "wsp": "", "mail": "florenciovarela@igi-la.com", "kw": "florencio varela bosques zeballos", "real": true}, {"id": "montegrande", "n": "IGI Monte Grande", "ciudad": "Monte Grande", "reg": "GBA Sur", "lat": -34.82, "lng": -58.47, "dir": "L. N. Alem 271", "tel": "1168626830", "wsp": "", "mail": "montegrande@igi-la.com", "kw": "monte grande esteban echeverria canning el jaguel", "real": true}, {"id": "ezeiza", "n": "IGI Ezeiza", "ciudad": "Ezeiza", "reg": "GBA Sur", "lat": -34.854, "lng": -58.523, "dir": "Nicolás Avellaneda 223", "tel": "1169141052", "wsp": "", "mail": "ezeiza@igi-la.com", "kw": "ezeiza tristan suarez la union spegazzini", "real": true}, {"id": "laplata", "n": "IGI La Plata", "ciudad": "La Plata", "reg": "Prov. Bs. As.", "lat": -34.921, "lng": -57.955, "dir": "Diagonal 74 n°1515 e/ 10 y 48", "tel": "(0221) 489-6246", "wsp": "5492215678312", "mail": "laplata@igi-la.com", "kw": "la plata berisso ensenada gonnet city bell tolosa", "real": true}, {"id": "mardelplata", "n": "IGI Mar del Plata", "ciudad": "Mar del Plata", "reg": "Prov. Bs. As.", "lat": -38.005, "lng": -57.542, "dir": "San Martín 3180 esq. Independencia", "tel": "(0223) 493-4422", "wsp": "", "mail": "mardelplata@igi-la.com", "kw": "mar del plata batan costa atlantica", "real": true}, {"id": "bahiablanca", "n": "IGI Bahía Blanca", "ciudad": "Bahía Blanca", "reg": "Prov. Bs. As.", "lat": -38.72, "lng": -62.266, "dir": "Yrigoyen 243", "tel": "(0291) 451-6041", "wsp": "5492914429382", "mail": "bahiablanca@igi-la.com", "kw": "bahia blanca punta alta", "real": true}, {"id": "junin", "n": "IGI Junín", "ciudad": "Junín", "reg": "Prov. Bs. As.", "lat": -34.586, "lng": -60.945, "dir": "Belgrano 250", "tel": "0236-463-5000", "wsp": "", "mail": "junin@igi-la.com", "kw": "junin chacabuco", "real": true}, {"id": "zarate", "n": "IGI Zárate", "ciudad": "Zárate", "reg": "Prov. Bs. As.", "lat": -34.096, "lng": -59.028, "dir": "Dirección a confirmar", "tel": "—", "wsp": "", "mail": "zarate@igi-la.com", "kw": "zarate campana lima", "real": true, "prox": true}, {"id": "resistencia", "n": "IGI Resistencia", "ciudad": "Resistencia", "reg": "Chaco", "lat": -27.45, "lng": -58.99, "dir": "Av. Alberdi 465", "tel": "362-4433354", "wsp": "", "mail": "resistencia@igi-la.com", "kw": "resistencia barranqueras chaco", "real": true, "prov": "Chaco"}, {"id": "puertomadryn", "n": "IGI Puerto Madryn", "ciudad": "Puerto Madryn", "reg": "Chubut", "lat": -42.77, "lng": -65.04, "dir": "9 de Julio 84", "tel": "(0280) 154636529", "wsp": "", "mail": "puertomadryn@igi-la.com", "kw": "puerto madryn trelew rawson", "real": true, "prov": "Chubut"}, {"id": "comodororivadavia", "n": "IGI Comodoro Rivadavia", "ciudad": "Comodoro Rivadavia", "reg": "Chubut", "lat": -45.86, "lng": -67.48, "dir": "San Martín 1071", "tel": "0297-4440104", "wsp": "", "mail": "comodororivadavia@igi-la.com", "kw": "comodoro rivadavia rada tilly caleta olivia", "real": true, "prov": "Chubut"}, {"id": "cordoba", "n": "IGI Córdoba", "ciudad": "Córdoba", "reg": "Córdoba", "lat": -31.417, "lng": -64.183, "dir": "Tucumán 140, Centro", "tel": "(0351) 422-3349", "wsp": "5493516077636", "mail": "cordoba@igi-la.com", "kw": "cordoba capital nueva cordoba alberdi", "real": true, "prov": "Córdoba"}, {"id": "riocuarto", "n": "IGI Río Cuarto", "ciudad": "Río Cuarto", "reg": "Córdoba", "lat": -33.13, "lng": -64.35, "dir": "Vélez Sarsfield 142", "tel": "(0358) 4635510", "wsp": "", "mail": "riocuarto@igi-la.com", "kw": "rio cuarto", "real": true, "prov": "Córdoba"}, {"id": "villadolores", "n": "IGI Villa Dolores", "ciudad": "Villa Dolores", "reg": "Córdoba", "lat": -31.94, "lng": -65.19, "dir": "25 de Mayo 30", "tel": "03544-450728", "wsp": "", "mail": "villadolores@igi-la.com", "kw": "villa dolores traslasierra", "real": true, "prov": "Córdoba"}, {"id": "marcosjuarez", "n": "IGI Marcos Juárez", "ciudad": "Marcos Juárez", "reg": "Córdoba", "lat": -32.69, "lng": -62.1, "dir": "San Martín 1040", "tel": "(03472) 429156", "wsp": "", "mail": "marcosjuarez@igi-la.com", "kw": "marcos juarez", "real": true, "prov": "Córdoba"}, {"id": "villacarlospaz", "n": "IGI Villa Carlos Paz", "ciudad": "Villa Carlos Paz", "reg": "Córdoba", "lat": -31.42, "lng": -64.5, "dir": "Av. San Martín y Moreno", "tel": "3541-358807", "wsp": "", "mail": "villacarlospaz@igi-la.com", "kw": "carlos paz punilla cosquin", "real": true, "prov": "Córdoba"}, {"id": "corrientes", "n": "IGI Corrientes", "ciudad": "Corrientes", "reg": "Corrientes", "lat": -27.47, "lng": -58.83, "dir": "Rivadavia 1543", "tel": "0379-4974953", "wsp": "", "mail": "corrientes@igi-la.com", "kw": "corrientes capital", "real": true, "prov": "Corrientes"}, {"id": "parana", "n": "IGI Paraná", "ciudad": "Paraná", "reg": "Entre Ríos", "lat": -31.73, "lng": -60.53, "dir": "Andrés Pazos 81", "tel": "(0343) 4840633", "wsp": "", "mail": "parana@igi-la.com", "kw": "parana entre rios", "real": true, "prov": "Entre Ríos"}, {"id": "formosa", "n": "IGI Formosa", "ciudad": "Formosa", "reg": "Formosa", "lat": -26.18, "lng": -58.18, "dir": "Av. 9 de Julio 218", "tel": "(0370) 4432822", "wsp": "", "mail": "formosa@igi-la.com", "kw": "formosa capital", "real": true, "prov": "Formosa"}, {"id": "ssdejujuy", "n": "IGI S. S. de Jujuy", "ciudad": "S. S. de Jujuy", "reg": "Jujuy", "lat": -24.19, "lng": -65.3, "dir": "Güemes 1026", "tel": "(0388) 423-7137", "wsp": "", "mail": "ssdejujuy@igi-la.com", "kw": "jujuy san salvador palpala", "real": true, "prov": "Jujuy"}, {"id": "mendoza", "n": "IGI Mendoza", "ciudad": "Mendoza", "reg": "Mendoza", "lat": -32.889, "lng": -68.845, "dir": "Las Heras 55", "tel": "(0261) 660-6668", "wsp": "", "mail": "mendoza@igi-la.com", "kw": "mendoza godoy cruz guaymallen las heras cuyo", "real": true, "prov": "Mendoza"}, {"id": "posadas", "n": "IGI Posadas", "ciudad": "Posadas", "reg": "Misiones", "lat": -27.37, "lng": -55.9, "dir": "Félix de Azara 1236 c/ Roque Pérez", "tel": "3765225161", "wsp": "", "mail": "posadas@igi-la.com", "kw": "posadas garupa misiones", "real": true, "prov": "Misiones"}, {"id": "obera", "n": "IGI Oberá", "ciudad": "Oberá", "reg": "Misiones", "lat": -27.48, "lng": -55.12, "dir": "Av. Andresito 1012", "tel": "3755-346911", "wsp": "", "mail": "obera@igi-la.com", "kw": "obera misiones", "real": true, "prov": "Misiones"}, {"id": "neuquen", "n": "IGI Neuquén", "ciudad": "Neuquén", "reg": "Neuquén", "lat": -38.952, "lng": -68.059, "dir": "Gral. Manuel Belgrano 12, piso 1", "tel": "0299-4476103", "wsp": "5492995038687", "mail": "neuquen@igi-la.com", "kw": "neuquen cipolletti plottier centenario", "real": true, "prov": "Neuquén"}, {"id": "bariloche", "n": "IGI Bariloche", "ciudad": "Bariloche", "reg": "Río Negro", "lat": -41.13, "lng": -71.31, "dir": "Onelli 815", "tel": "(0294) 443-7855", "wsp": "", "mail": "bariloche@igi-la.com", "kw": "bariloche dina huapi patagonia", "real": true, "prov": "Río Negro"}, {"id": "salta", "n": "IGI Salta", "ciudad": "Salta", "reg": "Salta", "lat": -24.789, "lng": -65.41, "dir": "Peatonal Alberdi 195", "tel": "(0387) 4213161", "wsp": "5493872248957", "mail": "salta@igi-la.com", "kw": "salta capital cerrillos", "real": true, "prov": "Salta"}, {"id": "sanjuan", "n": "IGI San Juan", "ciudad": "San Juan", "reg": "San Juan", "lat": -31.54, "lng": -68.54, "dir": "Mitre 161 e/ Gral. Acha y Tucumán", "tel": "264-621-2789", "wsp": "", "mail": "sanjuan@igi-la.com", "kw": "san juan rivadavia rawson", "real": true, "prov": "San Juan"}, {"id": "merlosanluis", "n": "IGI Merlo (San Luis)", "ciudad": "Merlo (San Luis)", "reg": "San Luis", "lat": -32.34, "lng": -65.02, "dir": "Sobremonte 50", "tel": "(02656) 451030", "wsp": "", "mail": "merlosanluis@igi-la.com", "kw": "merlo san luis villa de merlo comechingones", "real": true, "prov": "San Luis"}, {"id": "santafe", "n": "IGI Santa Fe", "ciudad": "Santa Fe", "reg": "Santa Fe", "lat": -31.633, "lng": -60.7, "dir": "4 de Enero N°2502", "tel": "0342-4562407", "wsp": "", "mail": "santafe@igi-la.com", "kw": "santa fe capital santo tome", "real": true, "prov": "Santa Fe"}, {"id": "rosario", "n": "IGI Rosario", "ciudad": "Rosario", "reg": "Santa Fe", "lat": -32.947, "lng": -60.639, "dir": "1° de Mayo 1676 esq. Pellegrini", "tel": "(0341) 222-4009", "wsp": "", "mail": "rosario@igi-la.com", "kw": "rosario funes villa gobernador galvez", "real": true, "prov": "Santa Fe"}, {"id": "smdetucuman", "n": "IGI S. M. de Tucumán", "ciudad": "S. M. de Tucumán", "reg": "Tucumán", "lat": -26.824, "lng": -65.222, "dir": "Corrientes 717", "tel": "3814768412", "wsp": "", "mail": "smdetucuman@igi-la.com", "kw": "tucuman yerba buena tafi viejo", "real": true, "prov": "Tucumán"}], "PY": [{"id": "asuncion", "n": "IGI Asunción", "ciudad": "Asunción", "reg": "Paraguay", "lat": -25.28, "lng": -57.63, "dir": "Av. Mariscal López 2357 e/ Venezuela y Santa Rosa", "tel": "(021) 497-497", "wsp": "", "mail": "asuncion@igi-la.com", "kw": "asuncion", "real": true}, {"id": "ciudaddeleste", "n": "IGI Ciudad del Este", "ciudad": "Ciudad del Este", "reg": "Paraguay", "lat": -25.51, "lng": -54.61, "dir": "Av. San José casi Los Rosales", "tel": "(061) 578-190", "wsp": "", "mail": "ciudaddeleste@igi-la.com", "kw": "ciudad del este alto parana", "real": true}, {"id": "sanlorenzo", "n": "IGI San Lorenzo", "ciudad": "San Lorenzo", "reg": "Paraguay", "lat": -25.34, "lng": -57.51, "dir": "Miranda Cueto c/ Saturio Ríos", "tel": "(021) 570297", "wsp": "", "mail": "sanlorenzo@igi-la.com", "kw": "san lorenzo central", "real": true}, {"id": "luque", "n": "IGI Luque", "ciudad": "Luque", "reg": "Paraguay", "lat": -25.27, "lng": -57.48, "dir": "Cerro Corá c/ Carlos Antonio López", "tel": "(021) 643040", "wsp": "", "mail": "luque@igi-la.com", "kw": "luque central", "real": true}, {"id": "lambare", "n": "IGI Lambaré", "ciudad": "Lambaré", "reg": "Paraguay", "lat": -25.34, "lng": -57.62, "dir": "Av. Cacique Lambaré esq. Domingo M. de Irala", "tel": "+595 983 855 595", "wsp": "595983855595", "mail": "lambare@igi-la.com", "kw": "lambare central", "real": true}, {"id": "coroneloviedo", "n": "IGI Coronel Oviedo", "ciudad": "Coronel Oviedo", "reg": "Paraguay", "lat": -25.45, "lng": -56.44, "dir": "Juan León Mallorquín casi Cerro Corá", "tel": "0982 499 148", "wsp": "595982499148", "mail": "coroneloviedo@igi-la.com", "kw": "coronel oviedo caaguazu", "real": true}, {"id": "encarnacion", "n": "IGI Encarnación", "ciudad": "Encarnación", "reg": "Paraguay", "lat": -27.33, "lng": -55.87, "dir": "Dirección a confirmar", "tel": "—", "wsp": "", "mail": "encarnacion@igi-la.com", "kw": "encarnacion itapua", "real": true, "prox": true}], "BO": [{"id": "lapaz", "n": "IGI La Paz", "ciudad": "La Paz", "reg": "Bolivia", "lat": -16.5, "lng": -68.15, "dir": "Av. Busch 1774", "tel": "+591 77278156", "wsp": "59177278156", "mail": "lapaz@igi-la.com", "kw": "la paz miraflores", "real": true}, {"id": "santacruz", "n": "IGI Santa Cruz", "ciudad": "Santa Cruz", "reg": "Bolivia", "lat": -17.78, "lng": -63.18, "dir": "Dirección a confirmar", "tel": "—", "wsp": "", "mail": "santacruz@igi-la.com", "kw": "santa cruz de la sierra", "real": true, "prox": true}], "CL": [{"id": "santiagocentro", "n": "IGI Santiago Centro", "ciudad": "Santiago Centro", "reg": "Chile", "lat": -33.446, "lng": -70.65, "dir": "Av. L. B. O'Higgins 881", "tel": "226384558", "wsp": "56991285834", "mail": "santiagocentro@igi-la.com", "kw": "santiago centro alameda", "real": true}, {"id": "providencia", "n": "IGI Providencia", "ciudad": "Providencia", "reg": "Chile", "lat": -33.426, "lng": -70.615, "dir": "Av. Providencia 2427", "tel": "2 2969 4877", "wsp": "", "mail": "providencia@igi-la.com", "kw": "providencia santiago", "real": true}, {"id": "puentealto", "n": "IGI Puente Alto", "ciudad": "Puente Alto", "reg": "Chile", "lat": -33.61, "lng": -70.575, "dir": "José Luis Coo 0108", "tel": "2 2233 2954", "wsp": "", "mail": "puentealto@igi-la.com", "kw": "puente alto santiago", "real": true}], "CO": [{"id": "chapinerobogota", "n": "IGI Chapinero (Bogotá)", "ciudad": "Chapinero (Bogotá)", "reg": "Colombia", "lat": 4.653, "lng": -74.062, "dir": "Carrera 13 No. 65-11", "tel": "6952321", "wsp": "573024201350", "mail": "chapinerobogota@igi-la.com", "kw": "chapinero bogota", "real": true}, {"id": "restrepobogota", "n": "IGI Restrepo (Bogotá)", "ciudad": "Restrepo (Bogotá)", "reg": "Colombia", "lat": 4.593, "lng": -74.105, "dir": "Calle 22 Sur No. 12H-55", "tel": "2095358", "wsp": "573209271413", "mail": "restrepobogota@igi-la.com", "kw": "restrepo rafael uribe bogota sur", "real": true}, {"id": "chia", "n": "IGI Chía", "ciudad": "Chía", "reg": "Colombia", "lat": 4.86, "lng": -74.06, "dir": "Carrera 8 No. 16A-71", "tel": "8855995", "wsp": "573004027051", "mail": "chia@igi-la.com", "kw": "chia cundinamarca sabana", "real": true}], "BR": [{"id": "saopaulo", "n": "IGI Brasil", "ciudad": "Brasil", "reg": "Brasil", "dir": "Em breve", "tel": "—", "wsp": "", "mail": "brasil@igi-la.com", "prox": true}], "UY": [{"id": "pocitos", "n": "IGI Pocitos", "ciudad": "Pocitos", "reg": "Uruguay", "lat": -34.91, "lng": -56.15, "dir": "26 de Marzo 3483", "tel": "2622 9219", "wsp": "", "mail": "pocitos@igi-la.com", "kw": "pocitos montevideo", "real": true}, {"id": "centro", "n": "IGI Centro", "ciudad": "Centro", "reg": "Uruguay", "lat": -34.906, "lng": -56.19, "dir": "Convención 1379 esq. 18 de Julio", "tel": "093 453 054", "wsp": "59893453054", "mail": "centro@igi-la.com", "kw": "centro montevideo cordon 18 de julio", "real": true}]};
+const WSP_CENTRAL='5491168687801';
+
+/* ================= BANDERAS SVG (los emojis de bandera no se ven en Windows) ================= */
+const BANDERAS={
+ AR:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#74ACDF"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><circle cx="1.5" cy="1" r="0.22" fill="#F6B40E"/></svg>',
+ BO:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#F9E300"/><rect y="1.333" width="3" height="0.667" fill="#007934"/></svg>',
+ BR:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#009C3B"/><polygon points="1.5,0.2 2.8,1 1.5,1.8 0.2,1" fill="#FEDF00"/><circle cx="1.5" cy="1" r="0.4" fill="#002776"/></svg>',
+ CL:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#fff"/><rect y="1" width="3" height="1" fill="#D52B1E"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.2 0.57,0.42 0.8,0.42 0.62,0.57 0.69,0.8 0.5,0.66 0.31,0.8 0.38,0.57 0.2,0.42 0.43,0.42" fill="#fff"/></svg>',
+ CO:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#FCD116"/><rect y="1" width="3" height="0.5" fill="#003893"/><rect y="1.5" width="3" height="0.5" fill="#CE1126"/></svg>',
+ PY:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><rect y="1.333" width="3" height="0.667" fill="#0038A8"/><circle cx="1.5" cy="1" r="0.24" fill="none" stroke="#4c6b31" stroke-width="0.05"/><circle cx="1.5" cy="1" r="0.09" fill="#F6B40E"/></svg>',
+ UY:'<svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect y="0.222" width="3" height="0.222" fill="#0038A8"/><rect y="0.667" width="3" height="0.222" fill="#0038A8"/><rect y="1.111" width="3" height="0.222" fill="#0038A8"/><rect y="1.556" width="3" height="0.222" fill="#0038A8"/><rect width="1.2" height="0.889" fill="#fff"/><circle cx="0.55" cy="0.44" r="0.26" fill="#F6B40E"/></svg>'
+};
+function pintarBanderas(){
+  document.querySelectorAll('.fl').forEach(el=>{
+    const c=el.dataset.flag;
+    if(BANDERAS[c]&&!el.querySelector('svg'))el.innerHTML='<span class="bandera-svg">'+BANDERAS[c]+'</span>';
+  });
+}
+
+/* ================= HELPERS ================= */
+const $=s=>document.querySelector(s);
+function todasFiliales(){return Object.values(FILIALES).flat()}
+const PAIS_NOMBRE={AR:'Argentina',PY:'Paraguay',BO:'Bolivia',CL:'Chile',CO:'Colombia',UY:'Uruguay',BR:'Brasil'};
+function paisNombre(id){for(const c in FILIALES){if(FILIALES[c].some(f=>f.id===id))return PAIS_NOMBRE[c]}return 'Argentina'}
+function filialPorId(id){return todasFiliales().find(f=>f.id===id)}
+function wspLink(num,msg){return 'https://wa.me/'+(num||WSP_CENTRAL)+'?text='+encodeURIComponent(msg)}
+
+function cardPrograma(p){
+  const tag=p.tipo==='carrera'?'Carrera':(p.tipo==='kids'?'Para chicos':'Curso');
+  const srcF=(typeof FOTOS!=='undefined'&&FOTOS[p.id])?FOTOS[p.id]:((typeof FLYERS!=='undefined'&&FLYERS[p.id])?FLYERS[p.id]:null);
+  const esFoto=(typeof FOTOS!=='undefined'&&FOTOS[p.id]);
+  const foto = srcF ? '<img src="'+srcF+'" alt="'+p.nombre+'" loading="lazy"'+(esFoto?' style="object-position:center"':'')+'>' : p.emoji;
+  return `<div class="card" data-cat="${p.cat}" onclick="verPrograma('${p.id}')">
+    <div class="foto" style="background:${p.color}"><span class="tag">${tag}</span>${foto}</div>
+    <div class="cuerpo">
+      <h3>${p.nombre}</h3>
+      <div class="datos"><span class="chip">⏱ ${p.dur}</span><span class="chip">📍 ${p.mod}</span><span class="chip">🗓 ${p.frec}</span></div>
+      <p class="desc">${p.gancho?('<b style="color:var(--azul)">'+p.gancho+'</b> '):''}${p.desc.slice(0,80)}…</p>
+      <div class="pie"><span class="ver">Ver programa completo →</span>
+        <span class="wsp-mini" onclick="event.stopPropagation();wspPrograma('${p.id}')">💬</span></div>
+    </div></div>`;
+}
+
+/* ================= RENDER ================= */
+function renderHome(){
+  $('#home-carreras').innerHTML=PROGRAMAS.filter(p=>p.tipo==='carrera').map(cardPrograma).join('');
+  $('#home-cursos').innerHTML=PROGRAMAS.filter(p=>p.tipo!=='carrera').map(cardPrograma).join('');
+}
+function renderCatalogo(){$('#grid-catalogo').innerHTML=PROGRAMAS.map(cardPrograma).join('')}
+function filtrar(cat,btn){
+  document.querySelectorAll('.filtros .filtro').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+  document.querySelectorAll('#grid-catalogo .card').forEach(c=>{
+    c.style.display=(cat==='todos'||c.dataset.cat===cat)?'flex':'none';
+  });
+}
+
+function verPrograma(id){
+  const p=PROGRAMAS.find(x=>x.id===id); if(!p)return;
+  const mat=p.materias.map(m=>`<div class="anio"><h4>${m.t}</h4><ul>${m.items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('');
+  $('#v-programa').innerHTML=`
+  <div class="ficha-hero">
+    <div class="container">
+      <div class="migas"><a onclick="ir('home')">Inicio</a> › <a onclick="ir('catalogo','todos')">Carreras y cursos</a> › ${p.nombre}</div>
+      <h1>${p.emoji} ${p.nombre}</h1>
+      ${p.gancho?`<div style="color:var(--amarillo);font-weight:800;font-size:19px;margin:8px 0 4px">${p.gancho}</div>`:''}
+      <p class="lead">${p.desc}</p>
+      <div class="datos-duros">
+        <div class="dato"><div class="ic">🎓</div><b>${p.titulo}</b><span>Titulación</span></div>
+        <div class="dato"><div class="ic">⏱</div><b>${p.dur}</b><span>Duración</span></div>
+        <div class="dato"><div class="ic">🗓</div><b>${p.frec}</b><span>Cursada</span></div>
+        <div class="dato"><div class="ic">📍</div><b>${p.mod}</b><span>Modalidad</span></div>
+        ${p.cert.split('·').map(pt=>`<div class="dato"><div class="ic">🏅</div><b>${pt.trim()}</b><span>Certificación</span></div>`).join('')}
+      </div>
+    </div>
+  </div>
+  <div class="ficha-body">
+    <div class="container">
+      <div class="nota">💡 <b>Nota de propuesta:</b> banner de "datos duros" arriba de todo (patrón Basque Culinary Center). Acá falta lo que hoy IGI no publica y el benchmark recomienda sumar: <b>precio/cuotas en moneda local y próximas fechas de inicio por sede</b>.</div>
+      <div class="ficha-cols">
+        <div class="ficha-main">
+          ${p.resumen?`<p style="font-size:17px;color:var(--azul-2);font-weight:600;border-left:4px solid var(--amarillo);padding-left:12px;margin-bottom:18px">${p.resumen}</p>`:''}
+          ${p.razones?`<h2>Por qué elegirlo en IGI</h2><div class="razones">${p.razones.map(r=>`<div class="razon"><b>✔ ${r[0]}</b>${r[1]}</div>`).join('')}</div>`:''}
+          <h2>Objetivo del programa</h2>
+          <p>${p.objetivo}</p>
+          ${p.dirigido?`<h2>¿A quién está dirigido?</h2><p>${p.dirigido}</p>`:''}
+          <h2>Plan de estudios</h2>
+          <div class="materias">${mat}</div>
+          ${p.salidas?`<h2>${p.tipo==='kids'?'Lo que se llevan los chicos':'Tu salida laboral'}</h2><div class="salidas-pills">${p.salidas.map(s=>`<span class="salida-pill">${s}</span>`).join('')}</div>${p.tipo!=='kids'?'<p style="margin-top:10px;font-size:13.5px;color:var(--gris)">Tu formación IGI te respalda en toda la red: 7 países, más de 70 filiales y +240.000 egresados.</p>':''}`:''}
+          <h2>Todo esto está incluido</h2>
+          <div class="incluye">${p.incluye.map(i=>{const[ic,...r]=i.split(' ');return `<div class="inc-item"><span class="ic">${ic}</span>${r.join(' ')}</div>`}).join('')}</div>
+          <h2>¿Dónde puedo cursar ${p.nombre}?</h2>
+          <p>Disponible en las filiales IGI de Argentina. Consultá horarios y comisiones en tu sede más cercana.</p>
+          <p><a onclick="ir('filiales')" style="font-weight:700;cursor:pointer">📍 Ver todas las filiales →</a></p>
+          <h2>Preguntas frecuentes</h2>
+          <details class="faq-item"><summary>¿Necesito experiencia previa?</summary><div class="resp">No, el programa está pensado para comenzar desde cero. Solo necesitás ganas de aprender.</div></details>
+          <details class="faq-item"><summary>¿Qué certificación recibo?</summary><div class="resp">${p.cert}. Consultá en tu filial la validez y las certificaciones universitarias disponibles en tu país.</div></details>
+          <details class="faq-item"><summary>¿Qué incluye la cuota?</summary><div class="resp">Uniforme (según programa), manuales o apuntes según corresponda, recetarios, las materias primas de todas las clases prácticas y los derechos de examen.</div></details>
+        </div>
+        <aside class="panel">
+          ${(typeof FLYERS!=='undefined'&&FLYERS[p.id])?'<img class="folleto-img" src="'+FLYERS[p.id]+'" alt="Folleto oficial '+p.nombre+'" onclick="verFolleto(\''+p.id+'\')"><div class="folleto-cap">📄 Folleto oficial — tocá para ampliar</div>':''}
+          <h3>¿Te interesa ${p.nombre}?</h3>
+          <div class="sub">Te contactamos con la filial que elijas, sin compromiso.</div>
+          <button class="btn btn-wsp" onclick="abrirWsp('${p.nombre}')">💬 Consultar por WhatsApp</button>
+          <button class="btn btn-borde" onclick="alert('DEMO: acá se descarga el programa en PDF a cambio del email (lead magnet, patrón EAG).')">📄 Descargar programa (PDF)</button>
+          <form onsubmit="event.preventDefault();this.style.display='none';this.nextElementSibling.style.display='block'">
+            <input required placeholder="Nombre y apellido">
+            <input required type="tel" placeholder="WhatsApp">
+            <input required type="email" placeholder="Email">
+            <select required><option value="">Filial de interés…</option>${todasFiliales().map(f=>`<option>${f.n}</option>`).join('')}</select>
+            <button class="btn btn-naranja" type="submit">Quiero que me llamen</button>
+          </form>
+          <div class="ok-msg" style="margin-top:8px">✅ ¡Listo! (Demo) El lead llega a la filial elegida con el programa ya cargado.</div>
+          <div class="legal">Tus datos van directo a la filial elegida. Sin spam.</div>
+        </aside>
+      </div>
+    </div>
+  </div>`;
+  mostrar('v-programa');
+}
+
+let paisActual='AR', regActual='Todas', userLoc=null;
+function regionesAR(){
+  const fijas=['CABA','GBA Norte','GBA Sur','GBA Oeste','Prov. Bs. As.'];
+  const provs=[...new Set(FILIALES.AR.map(f=>f.prov).filter(Boolean))].sort();
+  return ['Todas',...fijas,...provs];
+}
+/* Localidades y barrios con coordenadas: si el usuario escribe una zona SIN filial propia,
+   le mostramos igual las más cercanas ordenadas por distancia (en el sitio real: Google Places). */
+const LOCALIDADES={
+ 'boedo':[-34.63,-58.417],'almagro':[-34.61,-58.42],'flores':[-34.628,-58.463],'floresta':[-34.628,-58.484],
+ 'villa crespo':[-34.599,-58.438],'recoleta':[-34.588,-58.393],'retiro':[-34.592,-58.375],'san telmo':[-34.621,-58.371],
+ 'la boca':[-34.635,-58.363],'barracas':[-34.649,-58.383],'parque patricios':[-34.636,-58.4],'pompeya':[-34.652,-58.413],
+ 'mataderos':[-34.657,-58.503],'liniers':[-34.644,-58.52],'villa urquiza':[-34.57,-58.487],'villa devoto':[-34.596,-58.513],
+ 'saavedra':[-34.554,-58.48],'nuñez':[-34.545,-58.463],'palermo':[-34.578,-58.426],'colegiales':[-34.573,-58.449],
+ 'chacarita':[-34.587,-58.454],'once':[-34.609,-58.406],'balvanera':[-34.61,-58.4],'monserrat':[-34.612,-58.38],
+ 'puerto madero':[-34.611,-58.362],'villa lugano':[-34.674,-58.474],'caballito':[-34.619,-58.442],'belgrano':[-34.562,-58.456],
+ 'avellaneda':[-34.66,-58.365],'lanus':[-34.7,-58.39],'lomas de zamora':[-34.76,-58.4],'banfield':[-34.744,-58.397],
+ 'temperley':[-34.774,-58.396],'adrogue':[-34.8,-58.384],'ezeiza':[-34.854,-58.523],'florencio varela':[-34.796,-58.276],
+ 'berazategui':[-34.763,-58.212],'san isidro':[-34.47,-58.527],'vicente lopez':[-34.526,-58.475],'olivos':[-34.507,-58.487],
+ 'martinez':[-34.49,-58.506],'san martin':[-34.573,-58.537],'caseros':[-34.606,-58.562],'hurlingham':[-34.588,-58.639],
+ 'ituzaingo':[-34.658,-58.667],'castelar':[-34.648,-58.642],'ramos mejia':[-34.641,-58.563],'san justo':[-34.677,-58.56],
+ 'la matanza':[-34.77,-58.625],'merlo':[-34.665,-58.728],'moreno':[-34.634,-58.79],'jose c paz':[-34.515,-58.765],
+ 'san miguel':[-34.543,-58.712],'tigre':[-34.426,-58.58],'pilar':[-34.459,-58.914],'escobar':[-34.348,-58.792],
+ 'zarate':[-34.096,-59.028],'campana':[-34.164,-58.959],'lujan':[-34.57,-59.105],'quilmes':[-34.72,-58.254],
+ 'la plata':[-34.921,-57.955],'tandil':[-37.32,-59.13],'olavarria':[-36.89,-60.32],'junin':[-34.586,-60.945],
+ 'pergamino':[-33.89,-60.57],'san nicolas':[-33.33,-60.21],'necochea':[-38.55,-58.74],'mar del plata':[-38.005,-57.542],
+ 'bahia blanca':[-38.72,-62.266],'santa rosa':[-36.62,-64.29],'parana':[-31.73,-60.53],'rafaela':[-31.25,-61.49],
+ 'venado tuerto':[-33.75,-61.97],'rio cuarto':[-33.13,-64.35],'villa maria':[-32.41,-63.24],'carlos paz':[-31.42,-64.5],
+ 'san juan':[-31.54,-68.54],'san luis':[-33.3,-66.34],'la rioja':[-29.41,-66.86],'catamarca':[-28.47,-65.79],
+ 'santiago del estero':[-27.78,-64.26],'jujuy':[-24.19,-65.3],'posadas':[-27.37,-55.9],'corrientes':[-27.47,-58.83],
+ 'resistencia':[-27.45,-58.99],'formosa':[-26.18,-58.18],'viedma':[-40.81,-63.0],'bariloche':[-41.13,-71.31],
+ 'comodoro rivadavia':[-45.86,-67.48],'rio gallegos':[-51.62,-69.22],'ushuaia':[-54.8,-68.3],'trelew':[-43.25,-65.31],
+ 'cipolletti':[-38.94,-68.0],'rosario':[-32.947,-60.639],'santa fe':[-31.633,-60.7],'cordoba':[-31.417,-64.183],
+ 'mendoza':[-32.889,-68.845],'tucuman':[-26.824,-65.222],'salta':[-24.789,-65.41],'neuquen':[-38.952,-68.059]
+};
+function buscarLocalidad(q){
+  if(q.length<3)return null;
+  for(const k of Object.keys(LOCALIDADES)){
+    const nk=normalizar(k);
+    if(nk===q||nk.startsWith(q)||q.startsWith(nk))return{nombre:k,lat:LOCALIDADES[k][0],lng:LOCALIDADES[k][1]};
+  }
+  return null;
+}
+function verPais(cod,btn){
+  paisActual=cod; regActual='Todas';
+  document.querySelectorAll('#tabs-paises .filtro').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+  const ra=$('#regiones-ar');
+  ra.innerHTML=(cod==='AR')?regionesAR().map((r,i)=>`<button class="filtro${i===0?' on':''}" onclick="filtrarRegion('${r}',this)">${r}</button>`).join(''):'';
+  renderFiliales();
+}
+function filtrarRegion(r,btn){
+  regActual=r;
+  document.querySelectorAll('#regiones-ar .filtro').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+  renderFiliales();
+}
+function distKm(a,b){
+  const R=6371,rad=x=>x*Math.PI/180;
+  const dLat=rad(b.lat-a.lat),dLng=rad(b.lng-a.lng);
+  const h=Math.sin(dLat/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLng/2)**2;
+  return R*2*Math.asin(Math.sqrt(h));
+}
+function normalizar(s){return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}
+function renderFiliales(){
+  let lista=FILIALES[paisActual].slice();
+  const q=normalizar(($('#buscar-filial')?$('#buscar-filial').value:'')||'').trim();
+  let refLoc=userLoc, tituloCerca='';
+  if(q){
+    const loc=(paisActual==='AR')?buscarLocalidad(q):null;
+    if(loc){
+      refLoc={lat:loc.lat,lng:loc.lng};
+      tituloCerca=loc.nombre;
+    }else{
+      lista=lista.filter(f=>normalizar(f.n+' '+f.ciudad+' '+(f.reg||'')+' '+(f.prov||'')+' '+f.dir+' '+(f.kw||'')).includes(q));
+    }
+  }
+  if(paisActual==='AR'&&regActual!=='Todas'&&!tituloCerca)lista=lista.filter(f=>f.reg===regActual||f.prov===regActual);
+  if(refLoc&&lista[0]&&lista[0].lat!==undefined){
+    lista.forEach(f=>f._km=Math.round(distKm(refLoc,f)));
+    lista.sort((a,b)=>a._km-b._km);
+    if(tituloCerca)lista=lista.slice(0,6);
+  }
+  const ge=$('#geo-estado');
+  if(tituloCerca&&ge)ge.innerHTML=`<b>✓</b> "${tituloCerca}" no tiene filial propia todavía — estas son las <b>más cercanas a ${tituloCerca}</b>, ordenadas por distancia:`;
+  else if(ge&&!userLoc&&!q)ge.innerHTML='';
+  const mostrarKm=!!refLoc;
+  $('#grid-filiales').innerHTML=lista.map(f=>`
+    <div class="filial-card" onclick="verSede('${f.id}')">
+      <h4>📍 ${f.n} ${f._km!==undefined&&mostrarKm?`<span class="km-chip">a ${f._km} km</span>`:''} ${f.reg?`<span class="reg-chip">${f.reg}</span>`:''} ${f.prox?'<span class="chip" style="background:#FFF2D9;color:#8a6a12">Próximamente</span>':''}</h4>
+      <div class="dir">${f.dir}</div>
+      <div class="canales">
+        <span class="canal w" title="WhatsApp" onclick="event.stopPropagation();wspSede('${f.id}','los cursos')">💬</span>
+        <span class="canal t" title="Teléfono">📞</span>
+        <span class="canal m" title="Email">✉️</span>
+      </div>
+      <span class="ver-sede">Ver página de la sede →</span>
+    </div>`).join('')
+    + (lista.length===0?`<div class="sin-cerca" style="grid-column:1/-1"><p>😕 No encontramos resultados para tu búsqueda. Probá escribiendo tu <b>barrio, ciudad o provincia</b> (ej.: Boedo, Tandil, Posadas) o tocá <b>📍 Usar mi ubicación</b>: aunque no haya una filial en tu zona, te mostramos las más cercanas.</p></div>`:'')
+    + (paisActual==='AR'?`<div class="sin-cerca" style="grid-column:1/-1">
+        <p><b>¿No hay una filial cerca tuyo?</b> Consultá por nuestros cursos en <b>modalidad online</b>, o dejanos tu localidad: te avisamos apenas abra una filial en tu zona (y es un dato que usamos para decidir dónde abrir la próxima).</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-wsp" onclick="abrirWsp('cursos online')">💬 Consultar online</button><button class="btn btn-borde" onclick="alert('DEMO: formulario corto localidad + email → base de demanda por zona para expansión de franquicias.')">🔔 Avisame cuando abra</button></div>
+      </div>`:'');
+}
+let geoResuelto=false;
+function geoFallback(motivo){
+  if(geoResuelto)return; geoResuelto=true;
+  userLoc={lat:-34.6037,lng:-58.3816};
+  $('#geo-estado').innerHTML=motivo+' <b>Modo demo:</b> simulamos que estás en el Obelisco (CABA) y ordenamos por distancia igual. También podés escribir tu barrio o localidad en el buscador. <span style="color:#9aa1af">(En el sitio real, publicado con HTTPS, el navegador sí comparte la ubicación; acá el visor de la demo la bloquea.)</span>';
+  renderFiliales();
+}
+function usarUbicacion(){
+  geoResuelto=false;
+  $('#geo-estado').innerHTML='📡 Buscando tu ubicación…';
+  try{
+    if(!navigator.geolocation){geoFallback('Tu navegador no permite geolocalización.');return}
+    setTimeout(()=>geoFallback('No obtuvimos respuesta de ubicación.'),5000);
+    navigator.geolocation.getCurrentPosition(
+      pos=>{if(geoResuelto)return; geoResuelto=true;
+        userLoc={lat:pos.coords.latitude,lng:pos.coords.longitude};
+        $('#geo-estado').innerHTML='<b>✓ Listo:</b> filiales ordenadas de la más cercana a la más lejana.';
+        renderFiliales();},
+      err=>geoFallback('No pudimos acceder a tu ubicación ('+(err&&err.code===1?'permiso denegado':'sin señal')+').'),
+      {timeout:4500,maximumAge:600000}
+    );
+  }catch(e){geoFallback('La ubicación está bloqueada en este visor.')}
+}
+
+function verSede(id){
+  const f=filialPorId(id); if(!f)return;
+  const progs=PROGRAMAS; // todas las carreras y cursos habilitados en el país
+  const pais=paisNombre(id);
+  const tieneDir=f.dir&&f.dir!=='Dirección a confirmar'&&f.dir!=='Em breve';
+  const qMapa=encodeURIComponent((tieneDir?f.dir+', ':'IGI Instituto Gastronómico Internacional, ')+f.ciudad+', '+pais);
+  const mapa=`<div class="mapa-sede">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=${qMapa}&output=embed" allowfullscreen title="Mapa de ${f.n}"></iframe>
+      <a class="btn btn-borde" style="justify-content:center" target="_blank" href="https://www.google.com/maps/search/?api=1&query=${qMapa}">🗺️ Abrir en Google Maps / Cómo llegar</a>
+    </div>`;
+  $('#v-sede').innerHTML=`
+  <section class="bloque gris">
+    <div class="container">
+      <div class="migas" style="font-size:12.5px;color:var(--gris);margin-bottom:14px"><a onclick="ir('home')">Inicio</a> › <a onclick="ir('filiales')">Filiales</a> › ${f.n}</div>
+      <div class="sede-head">
+        <div class="sede-info">
+          <h1>📍 ${f.n}</h1>
+          <div class="estado" ${f.prox?'style="color:#b8860b"':''}>● ${f.prox?'Apertura próximamente':'Inscripciones abiertas'} · ${pais}</div>
+          <div class="sede-datos">
+            <div><span class="ic">🏠</span> <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${qMapa}">${f.dir}</a></div>
+            <div><span class="ic">📞</span> <a href="tel:0">${f.tel}</a></div>
+            <div><span class="ic">💬</span> <a target="_blank" href="${wspLink(f.wsp,'Hola '+f.n+'! Quiero información sobre los cursos.')}">WhatsApp de la filial ${f.wsp?('+'+f.wsp):'(a cargar — usa el central en la demo)'}</a></div>
+            <div><span class="ic">✉️</span> <a href="mailto:${f.mail}">${f.mail}</a></div>
+            <div><span class="ic">🕒</span> Lun a Vie 9–21 h · Sáb 9–13 h (ejemplo)</div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn-wsp" onclick="window.open(wspLink('${f.wsp}','Hola ${f.n}! Quiero información sobre los cursos.'),'_blank')">💬 Hablar con esta filial</button>
+            <button class="btn btn-borde" onclick="ir('contacto')">Pedir info por formulario</button>
+          </div>
+        </div>
+        ${mapa}
+      </div>
+      <div class="nota">💡 Esta página es <b>el diferencial #1 de la propuesta</b>: ningún competidor la tiene. En el sitio real suma fotos reales de la sede, equipo docente, reseñas de Google de ESTA filial, horarios reales por curso y schema LocalBusiness — así IGI gana la búsqueda "escuela de cocina ${f.ciudad}".</div>
+      <h2 style="margin:34px 0 16px">Conocé la sede</h2>
+      <div class="galeria" style="margin-top:0">${(typeof FOTOS!=='undefined')?FOTOS.sedeGal.map(g=>'<div class="gal-item" style="background:#2B3245"><img src="'+g.src+'" loading="lazy" alt="Foto de la sede"></div>').join(''):''}</div>
+      <div class="nota">💡 Galería de ejemplo: acá van <b>fotos reales de esta sede</b> (cocinas, aulas, equipamiento). Foto real > foto de stock, siempre — es lo que más miran los padres y alumnos antes de decidir.</div>
+      <h2 style="margin:34px 0 16px">Qué podés estudiar en ${f.n}</h2>
+      <div class="grid c3">${progs.map(cardPrograma).join('')}</div>
+    </div>
+  </section>`;
+  mostrar('v-sede');
+  // Si el visor bloquea el iframe de Google Maps, mostrar aviso elegante (en el sitio real carga normal)
+  const ifr=document.querySelector('#v-sede .mapa-sede iframe');
+  if(ifr){
+    let cargado=false;
+    ifr.addEventListener('load',()=>{cargado=true});
+    setTimeout(()=>{ if(!cargado&&ifr.isConnected){
+      ifr.outerHTML='<div class="mapa-ph"><span class="pin">📍</span>Acá va el mapa de Google con la ubicación exacta de la sede<br><small>El visor de esta demo bloquea mapas embebidos. En el sitio real publicado se ve acá mismo — mientras tanto, usá el botón de abajo.</small></div>';
+    }},2800);
+  }
+}
+
+/* ================= NAVEGACIÓN ================= */
+function mostrar(id){
+  document.querySelectorAll('.vista').forEach(v=>v.classList.remove('activa'));
+  $('#'+id).classList.add('activa');
+  window.scrollTo({top:0});
+  document.getElementById('menu').classList.remove('abierto');
+}
+function ir(vista,arg){
+  if(vista==='home'){mostrar('v-home')}
+  else if(vista==='catalogo'){mostrar('v-catalogo');filtrar(arg||'todos',document.querySelector(`.filtros [data-f="${arg||'todos'}"]`))}
+  else if(vista==='filiales'){mostrar('v-filiales')}
+  else if(vista==='nosotros'){mostrar('v-nosotros')}
+  else if(vista==='certificados'){mostrar('v-certificados')}
+  else if(vista==='contacto'){mostrar('v-contacto')}
+}
+function alertPais(e,pais){e.preventDefault();alert('DEMO: acá se navega a la versión '+pais+' del sitio (misma estructura, contenido localizado: moneda, sedes, WhatsApp y títulos de ese país — con hreflang).')}
+
+/* ===== Puerta de país ===== */
+function abrirGate(){$('#gate').classList.remove('cerrada');window.scrollTo({top:0})}
+function elegirPaisGate(cod,nombre){
+  $('#gate').classList.add('cerrada');
+  if(cod!=='AR'){
+    const db=document.querySelector('.demo-bar');
+    let aviso=$('#aviso-pais');
+    if(!aviso){db.insertAdjacentHTML('afterend','<div id="aviso-pais" style="background:#FFF2D9;color:#6b5416;font-size:12.5px;padding:7px 14px;text-align:center"></div>');aviso=$('#aviso-pais')}
+    aviso.innerHTML='🌎 Elegiste <b>'+nombre+'</b> — en el sitio real entrarías a <b>igi.com/'+cod.toLowerCase()+'/</b> con sedes, WhatsApp, moneda y títulos de tu país'+(cod==='BR'?' (en portugués)':'')+'. En esta demo te mostramos Argentina como referencia. <span style="text-decoration:underline;cursor:pointer" onclick="this.parentElement.remove()">✕ cerrar</span>';
+  }
+}
+
+/* ================= WHATSAPP ================= */
+let cursoWspCtx='';
+function abrirWsp(curso){
+  cursoWspCtx=curso||'';
+  const sel=$('#wsp-sel');sel.classList.toggle('abierto');
+  const s=$('#wsp-filial');
+  s.innerHTML=todasFiliales().map(f=>`<option value="${f.id}">${f.n}</option>`).join('');
+}
+function lanzarWsp(){
+  const f=filialPorId($('#wsp-filial').value);
+  const msg='Hola '+f.n+'! Quiero información'+(cursoWspCtx?' sobre '+cursoWspCtx:' sobre los cursos')+'.';
+  window.open(wspLink(f.wsp,msg),'_blank');
+  $('#wsp-sel').classList.remove('abierto');
+}
+function wspSede(id,curso){const f=filialPorId(id);window.open(wspLink(f&&f.wsp,'Hola '+(f?f.n:'IGI')+'! Quiero info sobre '+curso+'.'),'_blank')}
+function wspPrograma(id){const p=PROGRAMAS.find(x=>x.id===id);window.open(wspLink('','Hola IGI! Quiero info sobre '+(p?p.nombre:'los cursos')+'.'),'_blank')}
+
+/* ================= FORM CONTACTO ================= */
+function enviarForm(e){e.preventDefault();$('#okmsg').style.display='block'}
+
+/* ================= CERTIFICADOS ================= */
+function validarCert(){
+  const v=$('#cod-cert').value.trim();
+  if(!v){alert('Ingresá un código de certificado (probá con IGI-AR-2026-04815).');return}
+  $('#cert-ok').style.display='block';
+}
+
+/* ================= LIGHTBOX FOLLETO ================= */
+function verFolleto(id){
+  if(typeof FLYERS==='undefined'||!FLYERS[id])return;
+  $('#lb-img').src=FLYERS[id];
+  $('#lightbox').classList.add('abierta');
+}
+function cerrarFolleto(){$('#lightbox').classList.remove('abierta')}
+
+/* ================= NOTAS ================= */
+function toggleNotas(){
+  document.body.classList.toggle('mostrar-notas');
+  $('#btnNotas').classList.toggle('on');
+}
+
+/* ================= FOTOS REALES ================= */
+function aplicarFotos(){
+  if(typeof FOTOS==='undefined')return;
+  const hb=$('#hero-bg'); if(hb)hb.src=FOTOS.hero;
+  setHeroVar('d');
+  if(typeof LOGO_H!=='undefined'){const lh=$('#logo-h');if(lh)lh.src=(typeof LOGO_H2!=='undefined')?LOGO_H2:LOGO_H;const lf=$('#logo-f');if(lf)lf.src=LOGO_F;const lg=$('#logo-gate');if(lg)lg.src=(typeof LOGO_GATE!=='undefined')?LOGO_GATE:LOGO_H}
+  const ku=$('#kit-uni'); if(ku)ku.innerHTML='<img src="'+FOTOS.uniforme+'" alt="Uniforme IGI">';
+  const gx=document.querySelector('#experiencia .galeria');
+  if(gx)gx.innerHTML=FOTOS.galx.map(g=>'<div class="gal-item" style="background:#2B3245"><img src="'+g.src+'" loading="lazy"><small>'+g.t+'</small></div>').join('');
+  document.querySelectorAll('.video-thumb').forEach((el,i)=>{ if(FOTOS.vt[i]) el.insertAdjacentHTML('afterbegin','<img src="'+FOTOS.vt[i]+'" loading="lazy">') });
+}
+
+/* ================= HERO ROTATIVO =================
+   El fondo rota entre carreras (crossfade suave) pero el titular y los CTAs quedan FIJOS:
+   movimiento sin sacrificar conversión. Con etiqueta clickeable hacia la carrera mostrada. */
+let heroIdx=0, heroTimer=null;
+function slidesHero(){
+  return [
+    {img:FOTOS.hero, t:'👨‍🍳 Carrera: Chef Internacional', id:'chef-internacional'},
+    {img:(typeof HEROS_EXTRA!=='undefined')?HEROS_EXTRA[0]:null, t:'🎨 Curso: Diseño de Tortas', id:'diseno-tortas'},
+    {img:(typeof HEROS_EXTRA!=='undefined')?HEROS_EXTRA[1]:null, t:'🍸 Bartender Internacional', id:'bartender'},
+    {img:(typeof HEROS_EXTRA!=='undefined')?HEROS_EXTRA[2]:null, t:'🥖 Curso: ABC Panadero', id:'abc-panadero'}
+  ].filter(s=>s.img);
+}
+/* ---- Variantes de portada A/B/C ---- */
+let heroVar='b', selIdx=0, selTimer=null;
+const MOSAICO_PROGS=PROGRAMAS.map(p=>p.id);          // los 14, Chef Internacional en grande
+const SEL_PROGS=PROGRAMAS.map(p=>p.id);              // los 14 en el selector
+function fotoDe(id){
+  if(typeof FOTOS!=='undefined'&&FOTOS[id])return FOTOS[id];
+  if(typeof FLYERS!=='undefined'&&FLYERS[id])return FLYERS[id];
+  return '';
+}
+const CAMINOS=[
+ {t:'🎓 Quiero ser profesional',e:'Carreras con título',ids:['chef-internacional','pastelero-internacional','maestro-pastelero']},
+ {t:'🍳 Quiero aprender desde cero',e:'Cursos ABC · 5 meses',ids:['abc-chef','abc-pastelero','abc-panadero','abc-tortas']},
+ {t:'✨ Quiero especializarme',e:'Perfeccionamiento y salida laboral',ids:['diseno-tortas','catering','mozo-maitre']},
+ {t:'☕🍸 Café y coctelería',e:'Barra profesional',ids:['bartender','barista','arte-latte']},
+ {t:'🧒 Para los más chicos',e:'Jugar y aprender',ids:['cocineritos']}
+];
+const AREAS=[
+ {t:'🍳 Cocina',ids:['chef-internacional','abc-chef']},
+ {t:'🍰 Pastelería y panadería',ids:['pastelero-internacional','maestro-pastelero','abc-pastelero','abc-panadero','abc-tortas','diseno-tortas']},
+ {t:'☕🍸 Café y bebidas',ids:['bartender','barista','arte-latte']},
+ {t:'🥂 Servicio y eventos',ids:['mozo-maitre','catering']},
+ {t:'🧒 Chicos',ids:['cocineritos']}
+];
+let muroTimer=null, areaIdx=0;
+function setHeroVar(v){
+  heroVar=v;
+  document.body.className=document.body.className.replace(/hero-[a-z]/g,'').trim();
+  document.body.classList.add('hero-'+v);
+  if(heroTimer){clearInterval(heroTimer);heroTimer=null}
+  if(selTimer){clearInterval(selTimer);selTimer=null}
+  if(muroTimer){clearInterval(muroTimer);muroTimer=null}
+  const muroPrev=document.querySelector('.muro'); if(muroPrev)muroPrev.remove();
+  const tagPrev=document.querySelector('.muro-tag'); if(tagPrev)tagPrev.remove();
+  const sel=$('#sel-hero'); if(sel&&sel.value!==v)sel.value=v;
+  const der=$('#hero-der');
+  if(v==='a'){der.innerHTML='';iniciarHeroRotativo();return}
+  if(v==='f'){
+    der.innerHTML='<div class="caminos">'+CAMINOS.map((c,i)=>
+      '<div class="camino'+(i===0?' abierto':'')+'" onclick="abrirCamino(this)"><div class="cam-head"><span>'+c.t+'</span><em>'+c.ids.length+(c.ids.length>1?' opciones':' opción')+'</em></div>'+
+      '<div class="cam-progs">'+c.ids.map(id=>{const p=PROGRAMAS.find(x=>x.id===id);
+        return '<button class="bh-pill" onclick="event.stopPropagation();verPrograma(\''+id+'\')">'+p.emoji+' '+p.nombre+'<em>'+p.dur+'</em></button>'}).join('')+'</div></div>').join('')+'</div>';
+    return;
+  }
+  if(v==='g'){
+    const hero=document.querySelector('.hero');
+    const tiles=PROGRAMAS.map(p=>'<div class="mt" data-id="'+p.id+'"><img src="'+fotoDe(p.id)+'" alt="'+p.nombre+'" loading="lazy"></div>').join('');
+    hero.insertAdjacentHTML('afterbegin','<div class="muro">'+tiles+'</div><div class="muro-tag" id="muro-tag"></div>');
+    der.innerHTML='';
+    let gi=0;
+    const paso=()=>{
+      document.querySelectorAll('.muro .mt').forEach(t=>t.classList.remove('brilla'));
+      const ts=document.querySelectorAll('.muro .mt');
+      const t=ts[gi%ts.length]; t.classList.add('brilla');
+      const p=PROGRAMAS.find(x=>x.id===t.dataset.id);
+      const tag=$('#muro-tag');
+      if(tag){tag.textContent=p.emoji+' '+p.nombre+' →';tag.onclick=()=>verPrograma(p.id)}
+      gi++;
+    };
+    paso();
+    if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))
+      muroTimer=setInterval(paso,2200);
+    return;
+  }
+  if(v==='h'){areaIdx=0;renderAreas();return}
+  if(v==='b'){
+    der.innerHTML='<div class="mosaico">'+MOSAICO_PROGS.map((id,i)=>{
+      const p=PROGRAMAS.find(x=>x.id===id);
+      const src=fotoDe(id);
+      return '<div class="mos-t'+(i===0?' grande':'')+'" onclick="verPrograma(\''+id+'\')">'+(src?'<img src="'+src+'" alt="'+p.nombre+'" loading="lazy">':'')+'<span>'+p.emoji+' '+p.nombre+'</span></div>';
+    }).join('')+'</div>';
+    return;
+  }
+  if(v==='d'){
+    const tiles=PROGRAMAS.map(p=>'<div class="cin-t" onclick="verPrograma(\''+p.id+'\')"><img src="'+fotoDe(p.id)+'" alt="'+p.nombre+'" loading="lazy"><span>'+p.emoji+' '+p.nombre+'</span></div>').join('');
+    der.innerHTML='<div class="cinta"><div class="cinta-track">'+tiles+tiles+'</div></div>';
+    return;
+  }
+  if(v==='e'){
+    der.innerHTML='<div class="busca-hero"><div class="bh-titulo">🔎 ¿Qué querés aprender?</div>'+
+      '<input id="bh-in" oninput="filtrarBH()" placeholder="Escribí: pastelería, café, tortas, coctelería, chicos…">'+
+      '<div class="bh-pills" id="bh-pills"></div></div>';
+    filtrarBH();
+    return;
+  }
+  // C: selector interactivo con auto-avance
+  renderSelCard();
+  selTimer=setInterval(()=>{selIdx=(selIdx+1)%SEL_PROGS.length;renderSelCard()},5500);
+}
+function abrirCamino(el){
+  const ya=el.classList.contains('abierto');
+  document.querySelectorAll('.camino').forEach(c=>c.classList.remove('abierto'));
+  if(!ya)el.classList.add('abierto');
+}
+function renderAreas(){
+  const a=AREAS[areaIdx];
+  $('#hero-der').innerHTML='<div style="width:100%"><div class="areas-tabs">'+AREAS.map((x,i)=>
+    '<button class="area-tab'+(i===areaIdx?' on':'')+'" onclick="areaIdx='+i+';renderAreas()">'+x.t+'</button>').join('')+'</div>'+
+    '<div class="area-grid">'+a.ids.map(id=>{const p=PROGRAMAS.find(x=>x.id===id);
+      return '<div class="area-card" onclick="verPrograma(\''+id+'\')"><img src="'+fotoDe(id)+'" alt="'+p.nombre+'" loading="lazy"><span>'+p.emoji+' '+p.nombre+'</span></div>'}).join('')+'</div></div>';
+}
+function filtrarBH(){
+  const q=normalizar(($('#bh-in')?$('#bh-in').value:'')||'').trim();
+  const extra={'barista':'cafe espresso','arte-latte':'cafe latte espuma','bartender':'coctel tragos bebidas','cocineritos':'chicos niños kids infantil','mozo-maitre':'salon servicio camarera mozo maitre','abc-tortas':'tortas famosas','diseno-tortas':'tortas decoracion fondant','abc-panadero':'pan panaderia','abc-pastelero':'postres dulce','pastelero-internacional':'pasteleria carrera','maestro-pastelero':'pasteleria carrera','chef-internacional':'cocina chef carrera','abc-chef':'cocina basico','catering':'eventos'};
+  const lista=PROGRAMAS.filter(p=>!q||normalizar(p.nombre+' '+p.titulo+' '+(extra[p.id]||'')).includes(q));
+  $('#bh-pills').innerHTML=lista.length
+    ? lista.map(p=>'<button class="bh-pill" onclick="verPrograma(\''+p.id+'\')">'+p.emoji+' '+p.nombre+'<em>'+p.dur+'</em></button>').join('')
+    : '<div class="bh-vacio">No encontramos eso, pero seguro te podemos ayudar: <b>escribinos por WhatsApp</b> 👉</div><button class="bh-pill" onclick="abrirWsp()">💬 Consultar por WhatsApp</button>';
+}
+function renderSelCard(){
+  const id=SEL_PROGS[selIdx];
+  const p=PROGRAMAS.find(x=>x.id===id);
+  const src=(typeof FOTOS!=='undefined'&&FOTOS[id])?FOTOS[id]:'';
+  $('#hero-der').innerHTML=`<div class="sel-wrap">
+    <div class="sel-card" onclick="verPrograma('${id}')">
+      <div class="foto-sel"><img src="${src}" alt="${p.nombre}"></div>
+      <div class="cuerpo-sel">
+        <h3>${p.emoji} ${p.nombre}</h3>
+        <div class="datos"><span class="chip">⏱ ${p.dur}</span><span class="chip">🗓 ${p.frec}</span></div>
+        <span class="ver-mas">Ver programa completo →</span>
+      </div>
+    </div>
+    <div class="sel-chips">${SEL_PROGS.map((sid,i)=>{
+      const sp=PROGRAMAS.find(x=>x.id===sid);
+      return '<button class="sel-chip'+(i===selIdx?' on':'')+'" onclick="elegirSel('+i+')">'+sp.emoji+' '+sp.nombre.replace(' Internacional','')+'</button>';
+    }).join('')}</div>
+    <div class="sel-barra"><i style="animation:selprog 5.5s linear"></i></div>
+  </div>`;
+}
+function elegirSel(i){
+  selIdx=i; renderSelCard();
+  if(selTimer){clearInterval(selTimer)}
+  selTimer=setInterval(()=>{selIdx=(selIdx+1)%SEL_PROGS.length;renderSelCard()},5500);
+}
+function iniciarHeroRotativo(){
+  const slides=slidesHero(); if(slides.length<2)return;
+  const tag=$('#hero-tag');
+  const setTag=s=>{if(tag){tag.textContent=s.t+' →';tag.onclick=()=>verPrograma(s.id)}};
+  setTag(slides[0]);
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const a=$('#hero-bg'), b=$('#hero-bg2');
+  let visibleA=true;
+  heroTimer=setInterval(()=>{
+    heroIdx=(heroIdx+1)%slides.length;
+    const s=slides[heroIdx];
+    const entra=visibleA?b:a, sale=visibleA?a:b;
+    entra.src=s.img;
+    requestAnimationFrame(()=>{entra.style.opacity=.34; sale.style.opacity=0});
+    setTag(s);
+    visibleA=!visibleA;
+  },6000);
+}
+
+/* ================= INIT ================= */
+function animarGate(){
+  const sh=$('#logo-shine');
+  if(sh&&typeof LOGO_GATE!=='undefined'){sh.style.webkitMaskImage='url('+LOGO_GATE+')';sh.style.maskImage='url('+LOGO_GATE+')'}
+  /* Onditas: cada bandera se corta en 14 franjas y una onda las recorre con desfase */
+  document.querySelectorAll('.gate-pais .bandera').forEach((el,idx)=>{
+    const cod=el.dataset.flag; if(!BANDERAS[cod])return;
+    const N=14,W=64,H=44,sw=W/N;
+    let s='<span class="ola" style="width:'+W+'px;height:'+H+'px">';
+    for(let i=0;i<N;i++){
+      s+='<span class="ola-s" style="width:'+sw+'px;animation-delay:'+(-(i*0.14)-idx*0.5).toFixed(2)+'s">'+
+         '<span class="ola-i" style="width:'+W+'px;margin-left:-'+(i*sw).toFixed(2)+'px">'+BANDERAS[cod]+'</span></span>';
+    }
+    el.innerHTML=s+'</span>';
+  });
+}
+const INICIOS=[
+  {f:'Lun 03 AGO',prog:'Chef Internacional',sedeN:'Belgrano',sedeId:'belgrano',hor:'Lu 18–23 h'},
+  {f:'Mar 04 AGO',prog:'Pastelero Internacional',sedeN:'Quilmes',sedeId:'quilmes',hor:'Ma 18–23 h'},
+  {f:'Mié 05 AGO',prog:'ABC Chef',sedeN:'Córdoba',sedeId:'cordoba',hor:'Mi 19–22 h'},
+  {f:'Jue 06 AGO',prog:'Barista Internacional',sedeN:'La Plata',sedeId:'laplata',hor:'Ju 19–21 h'},
+  {f:'Sáb 08 AGO',prog:'Cocineritos IGI',sedeN:'Belgrano',sedeId:'belgrano',hor:'Sá 10–12 h'},
+  {f:'Lun 10 AGO',prog:'ABC Pastelero',sedeN:'Rosario',sedeId:'rosario',hor:'Lu 18–20 h'},
+  {f:'Mar 11 AGO',prog:'Arte Latte',sedeN:'Palermo',sedeId:'palermo',hor:'Ma 19–21 h'},
+  {f:'Mié 12 AGO',prog:'Bartender Internacional',sedeN:'Mar del Plata',sedeId:'mardelplata',hor:'Mi 19–22 h'},
+  {f:'Jue 13 AGO',prog:'Maestro Pastelero',sedeN:'Belgrano',sedeId:'belgrano',hor:'Ju 18–22 h'},
+  {f:'Sáb 15 AGO',prog:'Diseño de Tortas',sedeN:'Caballito',sedeId:'caballito',hor:'Sá 10–13 h'},
+  {f:'Lun 17 AGO',prog:'ABC Panadero',sedeN:'Mendoza',sedeId:'mendoza',hor:'Lu 18–20 h'},
+  {f:'Mar 18 AGO',prog:'Organización de Catering',sedeN:'San Isidro',sedeId:'sanisidro',hor:'Ma 18–20 h'},
+  {f:'Mié 19 AGO',prog:'Mozo y Maître',sedeN:'Flores',sedeId:'flores',hor:'Mi 19–21 h'},
+  {f:'Jue 20 AGO',prog:'ABC Tortas',sedeN:'Tucumán',sedeId:'tucuman',hor:'Ju 18–20 h'},
+  {f:'Sáb 22 AGO',prog:'Chef Internacional',sedeN:'Córdoba',sedeId:'cordoba',hor:'Sá 9–14 h'},
+  {f:'Lun 24 AGO',prog:'Pastelero Internacional',sedeN:'La Plata',sedeId:'laplata',hor:'Lu 18–23 h'}
+];
+function esc(s){return String(s).replace(/'/g,"\\'")}
+function renderInicios(){
+  const t=document.getElementById('inicios-track'); if(!t)return;
+  const rows=INICIOS.map(i=>'<div class="ini-row"><span class="fecha-pill">'+i.f+'</span>'+
+    '<div class="ini-info"><b>'+i.prog+'</b><small>📍 '+i.sedeN+' · '+i.hor+'</small></div>'+
+    '<button class="btn btn-wsp ini-btn" onclick="wspSede(\''+esc(i.sedeId)+'\',\''+esc(i.prog)+'\')">💬 Consultar</button></div>').join('');
+  t.innerHTML=rows+rows;
+  const dur=Math.max(24,INICIOS.length*2.4);
+  t.style.animationDuration=dur+'s';
+}
+function renderInsta(){
+  const wrap=document.getElementById('ig-widget'); if(!wrap)return;
+  let loaded=false;
+  const load=function(){
+    if(loaded)return; loaded=true;
+    wrap.innerHTML='<iframe src="//lightwidget.com/widgets/d92b44ac9fae5c858fb0f93f802421ef.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;min-height:280px"></iframe>';
+    var s=document.createElement('script'); s.src='https://cdn.lightwidget.com/widgets/lightwidget.js'; s.async=true; document.body.appendChild(s);
+  };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();io.disconnect();}})},{rootMargin:'300px'});
+    io.observe(wrap);
+  } else { load(); }
+}
+aplicarFotos();renderHome();renderCatalogo();verPais('AR',document.querySelector('.paises-tabs .filtro'));pintarBanderas();animarGate();renderInicios();renderInsta();
+$('#sel-curso').innerHTML='<option value="">¿Qué querés estudiar?</option>'+PROGRAMAS.map(p=>`<option>${p.nombre}</option>`).join('');
+$('#sel-filial').innerHTML='<option value="">¿En qué filial te queda cómodo cursar?</option>'+todasFiliales().map(f=>`<option>${f.n}</option>`).join('');
+</script>
+</body>
+</html>
