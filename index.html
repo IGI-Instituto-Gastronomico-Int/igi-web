@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IGI — Instituto Gastronómico Internacional | DEMO de propuesta</title>
-<meta name="description" content="Demo de propuesta del nuevo sitio de IGI: carreras y cursos de gastronomía con filiales en 7 países.">
+<title>IGI — Instituto Gastronómico Internacional | Escuela de gastronomía en 7 países</title>
+<meta name="description" content="IGI — Instituto Gastronómico Internacional: carreras y cursos de gastronomía con más de 70 filiales en 7 países de Latinoamérica.">
 <link rel="canonical" href="https://web3.igionline.com.ar/">
 <!-- Open Graph (previsualización al compartir en Facebook / WhatsApp) -->
 <meta property="og:type" content="website">
@@ -89,11 +89,6 @@ footer .bandera-svg{width:26px;height:18px;margin-right:4px}
 @media(prefers-reduced-motion:reduce){.logo-wrap,.logo-shine,.gate-card h2,.gate-card p,.gate-pais,.gate-nota,.ola-s{animation:none!important}}
 @media(max-width:640px){.gate{align-items:flex-start;padding-top:24px;padding-bottom:24px}.gate-grid{grid-template-columns:repeat(2,1fr)}.gate-card img{height:min(150px,20vh)}.logo-wrap img{height:min(150px,20vh)}}
 
-/* ===== Barra demo ===== */
-.demo-bar{background:var(--azul);color:#cbd2e0;font-size:12.5px;padding:6px 0;text-align:center}
-.demo-bar b{color:var(--amarillo)}
-.demo-bar button{margin-left:10px;background:transparent;border:1px solid #556;color:#cbd2e0;border-radius:20px;padding:2px 10px;font-size:11.5px;cursor:pointer}
-.demo-bar button.on{background:var(--amarillo);color:var(--azul);border-color:var(--amarillo);font-weight:700}
 
 /* ===== Notas de propuesta ===== */
 .nota{display:none;background:#FFF7DC;border:1px dashed #E4C24A;color:#6b5b16;font-size:12.5px;padding:8px 12px;border-radius:8px;margin:10px 0}
@@ -517,9 +512,9 @@ footer a:hover{color:var(--naranja)}
 .validador{display:grid;grid-template-columns:1fr 340px;gap:32px;align-items:start}
 .val-form{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:26px}
 .val-form input{width:100%;padding:13px;border:1.5px solid #dfe3ea;border-radius:9px;font-size:15px;margin:10px 0;font-family:inherit;letter-spacing:1px}
-.cert-demo{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:24px;text-align:center;border-top:5px solid var(--naranja)}
-.cert-demo .sello{width:74px;height:74px;border-radius:50%;background:var(--naranja);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin:0 auto 10px;border:4px solid var(--azul)}
-.cert-demo img.qr{width:130px;height:130px;margin:12px auto;display:block;border:1px solid #eee;border-radius:8px}
+.cert-muestra{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:24px;text-align:center;border-top:5px solid var(--naranja)}
+.cert-muestra .sello{width:74px;height:74px;border-radius:50%;background:var(--naranja);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;margin:0 auto 10px;border:4px solid var(--azul)}
+.cert-muestra img.qr{width:130px;height:130px;margin:12px auto;display:block;border:1px solid #eee;border-radius:8px}
 .cert-ok{background:#E8F8EE;border:1px solid #9ADBB4;color:#166534;border-radius:10px;padding:12px;font-size:13.5px;font-weight:600;margin-top:12px;display:none}
 .pasos-val{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
 .paso-val{background:var(--gris-claro);border-radius:12px;padding:16px;font-size:13.5px}
@@ -610,27 +605,23 @@ footer a:hover{color:var(--naranja)}
       <button class="gate-pais" onclick="elegirPaisGate('PY','Paraguay')"><span class="bandera fl" data-flag="PY"></span>Paraguay</button>
       <button class="gate-pais" onclick="elegirPaisGate('UY','Uruguay')"><span class="bandera fl" data-flag="UY"></span>Uruguay</button>
     </div>
-    <div class="gate-nota">En esta demo solo está desarrollada la versión Argentina: al elegir otro país te lo mostramos igual, como referencia.<br>En el sitio real, tu elección se recuerda y entrás directo a tu país en las próximas visitas.</div>
+    <div class="gate-nota">Elegí tu país para ver las sedes, los WhatsApp y los cursos disponibles en tu zona.</div>
   </div>
 </div>
 
-<!-- Barra de demo -->
-<div class="demo-bar">🔧 <b>DEMO DE PROPUESTA</b> — Sitio nuevo de IGI (no es el sitio real; dirección provisoria de trabajo)
-  <button id="btnNotas" onclick="toggleNotas()">💡 Ver notas de la propuesta</button>
-</div>
 
 <header>
   <div class="top-strip">
     <div class="container">
       <div class="paises">
         <span class="lbl" style="cursor:pointer;font-weight:700" onclick="abrirGate()">🌎 Cambiar país:</span>
-        <a class="activo" href="#/"><span class="fl" data-flag="AR"></span> Argentina</a>
-        <a href="#/" onclick="alertPais(event,'Brasil')"><span class="fl" data-flag="BR"></span></a>
-        <a href="#/" onclick="alertPais(event,'Bolivia')"><span class="fl" data-flag="BO"></span></a>
-        <a href="#/" onclick="alertPais(event,'Chile')"><span class="fl" data-flag="CL"></span></a>
-        <a href="#/" onclick="alertPais(event,'Colombia')"><span class="fl" data-flag="CO"></span></a>
-        <a href="#/" onclick="alertPais(event,'Paraguay')"><span class="fl" data-flag="PY"></span></a>
-        <a href="#/" onclick="alertPais(event,'Uruguay')"><span class="fl" data-flag="UY"></span></a>
+        <a class="activo" href="#/" onclick="irPais(event,'AR')"><span class="fl" data-flag="AR"></span> Argentina</a>
+        <a href="#/" onclick="irPais(event,'BR')"><span class="fl" data-flag="BR"></span></a>
+        <a href="#/" onclick="irPais(event,'BO')"><span class="fl" data-flag="BO"></span></a>
+        <a href="#/" onclick="irPais(event,'CL')"><span class="fl" data-flag="CL"></span></a>
+        <a href="#/" onclick="irPais(event,'CO')"><span class="fl" data-flag="CO"></span></a>
+        <a href="#/" onclick="irPais(event,'PY')"><span class="fl" data-flag="PY"></span></a>
+        <a href="#/" onclick="irPais(event,'UY')"><span class="fl" data-flag="UY"></span></a>
       </div>
       <div class="top-links">
         <a href="#/">Campus virtual</a>
@@ -692,7 +683,6 @@ footer a:hover{color:var(--naranja)}
         <div class="cifra"><b>+240.000</b><span>egresados</span></div>
         <div class="cifra"><b>+10.500</b><span>egresan cada año</span></div>
       </div>
-      <div class="nota">💡 <b>Nota de propuesta:</b> el hero replica el patrón ganador del benchmark (Le Cordon Bleu / ISMM): promesa + cifras de confianza + 3 CTAs (catálogo, WhatsApp, filial). Las cifras son de ejemplo: hay que cargar las reales.</div>
     </div>
   </div>
 
@@ -704,7 +694,6 @@ footer a:hover{color:var(--naranja)}
         <p>Convertite en un profesional de la gastronomía en <b>1 o 2 años</b>, con <b>título privado y certificaciones universitarias</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.</p>
       </div>
       <div class="grid c3" id="home-carreras"></div>
-      <div class="nota">💡 Cada card lleva a una <b>ficha completa</b> (patrón BCC/IAG): datos duros arriba, materias por año, qué incluye, FAQs y conversión al costado. En el sitio real cada ficha tendrá además su versión por sede (patrón ICE: /carreras/chef-internacional/cordoba/).</div>
     </div>
   </section>
 
@@ -731,7 +720,6 @@ footer a:hover{color:var(--naranja)}
         <div class="dif"><span class="pais-tag"><span class="fl" data-flag="AR"></span> Argentina</span><div class="ic">🎓</div><h4>Certificaciones universitarias optativas</h4><p>En Argentina podés sumar a tu título de IGI certificaciones universitarias optativas que potencian tu CV y respaldan tu formación.</p><a onclick="abrirWsp('Certificaciones universitarias')">Saber más →</a></div>
         <div class="dif"><span class="pais-tag">💻 Online</span><div class="ic">🔐</div><h4>Certificados verificables con QR</h4><p>Cada certificado IGI lleva un código QR único. Descargá tus certificaciones cuando quieras y cualquier empleador puede validarlas online al instante.</p><a onclick="ir('certificados')">Validar un certificado →</a></div>
       </div>
-      <div class="nota">💡 <b>Nota de propuesta:</b> estos 4 diferenciales son ORO y hoy no están en el sitio actual. Las pasantías rentadas responden directo al gancho "Francia y España" de IGA (competidor directo); el QR verificable es un diferencial de confianza que ningún competidor regional tiene (solo Mausi Sebess). Cada uno merece además su página propia indexable.</div>
     </div>
   </section>
 
@@ -759,7 +747,6 @@ footer a:hover{color:var(--naranja)}
         <div class="gal-item" style="background:linear-gradient(135deg,#5C3A21,#96633C)">🍽️<small>Platos finalistas</small></div>
         <div class="gal-item" style="background:linear-gradient(135deg,#3B2A78,#6C55B8)">🎉<small>Festejo</small></div>
       </div>
-      <div class="nota">💡 Seleccionamos <b>4 videos clave</b> del Torneo InterIGI y de los actos de colación para una home ágil (en PC se ven los 4 en una fila; en celular se acomodan solos). El resto del material irá en las páginas internas de cada evento. Embebidos de Facebook con carga diferida para no frenar el sitio. La galería de abajo sigue como ejemplo: ahí van fotos reales. Este contenido emocional es el que mejor convierte y el que nadie más tiene: es material propio, imposible de copiar.</div>
     </div>
   </section>
 
@@ -774,7 +761,6 @@ footer a:hover{color:var(--naranja)}
         <div class="inicios-head"><span>Inicio</span><span>Programa · Filial · Horario</span><span></span></div>
         <div class="inicios-viewport"><div class="inicios-track" id="inicios-track"></div></div>
       </div>
-      <div class="nota">💡 El <b>calendario de próximos inicios</b> es el mejor patrón de urgencia del benchmark (Mariano Moreno). El listado <b>rota automáticamente</b> mostrando todos los inicios; pasá el mouse por encima para pausarlo. Fechas de ejemplo — en el sitio real se cargan desde el sistema académico y cada fila enlaza al WhatsApp de la sede.</div>
     </div>
   </section>
 
@@ -837,7 +823,6 @@ footer a:hover{color:var(--naranja)}
         <div class="testi"><div class="estrellas">★★★★★</div><div class="txt">"La carrera de Chef Internacional me abrió las puertas de un hotel 5 estrellas. La cursada es 100% práctica, cocinás desde el día uno."</div><div class="quien"><div class="ava">J</div><div><b>Julián T.</b><span>Chef Internacional · IGI Belgrano</span></div></div></div>
         <div class="testi"><div class="estrellas">★★★★★</div><div class="txt">"Hice Pastelero Internacional y después Diseño de Tortas. Hoy vivo de mis tortas de boda. IGI me cambió la vida."</div><div class="quien"><div class="ava">S</div><div><b>Sofía L.</b><span>Pastelera · IGI Córdoba</span></div></div></div>
       </div>
-      <div class="nota">💡 Arriba van <b>4 videos reales de testimonios de alumnos</b> (embebidos de Facebook con carga diferida), en la misma fila prolija que la sección de eventos. Los tres testimonios en texto de abajo siguen como ejemplo: en el sitio real conviene sumar egresados <b>reales, con nombre, sede y logro verificable</b>. Es lo que más citan las IAs y lo que más convence.</div>
     </div>
   </section>
 
@@ -857,7 +842,6 @@ footer a:hover{color:var(--naranja)}
       <details class="faq-item"><summary>¿Hay planes de pago?</summary><div class="resp">Sí, podés abonar en cuotas mensuales y sin costos ocultos: la cuota ya incluye el uniforme, el material de estudio, los recetarios y las materias primas. Consultá los medios y planes de pago disponibles en tu sede.</div></details>
       <details class="faq-item"><summary>¿Cuándo puedo empezar?</summary><div class="resp">Hay inicios durante todo el año, así que casi siempre estás a tiempo de la próxima comisión. Los cupos son limitados: cuanto antes reserves tu lugar, mejor. Escribinos por WhatsApp y te pasamos la próxima fecha para tu programa.</div></details>
       <details class="faq-item"><summary>¿Cómo me inscribo?</summary><div class="resp">Es muy fácil y te acompañamos en cada paso: escribinos por WhatsApp o dejá tus datos en el formulario, elegí tu programa y tu sede, y un asesor te guía con la inscripción y las fechas de inicio.</div></details>
-      <div class="nota">💡 FAQs visibles y con respuesta directa en la primera oración: clave para que ChatGPT/Gemini/Perplexity citen a IGI (GEO). En el sitio real, cada ficha de curso y de sede tendrá sus propias FAQs.</div>
     </div>
   </section>
 
@@ -875,7 +859,6 @@ footer a:hover{color:var(--naranja)}
         </div>
       </div>
       <div id="ig-widget" class="ig-widget-wrap"><div class="ig-loading">📷 Cargando las últimas publicaciones de @igi.argentina…</div></div>
-      <div class="nota">💡 Esta grilla trae <b>automáticamente las últimas publicaciones reales de @igi.argentina</b> de forma liviana (sin frenar la página ni afectar el posicionamiento). La dejamos en <b>vista compacta</b> para no alargar la home; con el botón "Seguir en Instagram" el visitante ve el perfil completo. Idea a futuro: mostrar el feed del país que elige el visitante.</div>
     </div>
   </section>
 </div>
@@ -897,7 +880,6 @@ footer a:hover{color:var(--naranja)}
         <button class="filtro" data-f="kids" onclick="filtrar('kids',this)">🧒 Cocineritos</button>
       </div>
       <div class="grid c3" id="grid-catalogo"></div>
-      <div class="nota">💡 En el sitio real este catálogo suma un segundo filtro por <b>sede y modalidad</b> (patrón Le Cordon Bleu: categoría × sede), y cada programa tiene URL propia indexable.</div>
     </div>
   </section>
 </div>
@@ -930,7 +912,6 @@ footer a:hover{color:var(--naranja)}
       </div>
       <div class="paises-tabs" id="regiones-ar"></div>
       <div class="grid-filiales" id="grid-filiales"></div>
-      <div class="nota">💡 <b>Cómo encuentra cada uno su filial más próxima (propuesta completa):</b> ① buscador tolerante a acentos que entiende barrios y zonas ("Palermo" encuentra Belgrano, "Tigre" encuentra Pacheco — cada filial lleva palabras clave de su zona de influencia); ② botón "Usar mi ubicación" que ordena por distancia real en km (probalo); ③ filtros por región CABA/GBA/Provincia/Interior; ④ el bloque "¿No hay una filial cerca?" rescata al que quedó lejos (online + aviso de apertura = base de demanda para franquicias). En el sitio real se suma: mapa interactivo con pins, autocompletado con Google Places, sugerencia por IP ("¿Estás en Rosario?"), y — clave — <b>Google Business Profile por filial</b>, porque la mitad de la gente busca "escuela de cocina cerca" directo en Google Maps y hoy esas búsquedas no las gana nadie. Datos reales del directorio oficial (73 sedes, jul 2026).</div>
     </div>
   </section>
 </div>
@@ -953,23 +934,22 @@ footer a:hover{color:var(--naranja)}
             <b>🔎 Ingresá el código del certificado</b>
             <input id="cod-cert" placeholder="Ej.: IGI-AR-2026-04815" maxlength="20">
             <button class="btn btn-naranja" onclick="validarCert()">Validar certificado</button>
-            <div class="cert-ok" id="cert-ok">✅ <b>Certificado válido.</b> (Demo) Chef Internacional — Egresado 2026 · IGI Belgrano, Argentina. Emitido por Instituto Gastronómico Internacional.<br><span style="font-weight:400">En el sitio real, esta consulta pega contra la base académica de IGI y muestra el certificado oficial descargable.</span></div>
+            <div class="cert-ok" id="cert-ok">✅ Recibimos tu consulta. Para confirmar la validez de un certificado, escribinos el código por WhatsApp y te respondemos con el detalle oficial.</div>
           </div>
           <div class="pasos-val">
             <div class="paso-val"><b>1</b>Al recibirte, tu certificado se emite con un QR y un código único.</div>
             <div class="paso-val"><b>2</b>Entrás a tu cuenta de alumno y descargás tus certificaciones cuando quieras, desde donde quieras.</div>
             <div class="paso-val"><b>3</b>Cualquier empleador escanea el QR o carga el código acá, y verifica tu título al instante.</div>
           </div>
-          <div class="nota">💡 <b>Nota de propuesta:</b> el validador con QR es un diferencial enorme de confianza (solo Mausi Sebess tiene algo así en la región). Además genera visitas de EMPLEADORES al sitio — una audiencia nueva. Recomendación: URL corta tipo <b>igi.com/validar</b> impresa en cada certificado, y que el "registro de certificaciones" del alumno viva en el mismo login del campus.</div>
         </div>
-        <div class="cert-demo">
+        <div class="cert-muestra">
           <div class="sello">IGI</div>
           <b>CERTIFICADO OFICIAL</b>
           <div style="font-size:13px;color:var(--gris);margin:6px 0">Chef Internacional<br>María Ejemplo · Egresada 2026<br>IGI Belgrano · Argentina</div>
           <img class="qr" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAIAAADdBSngAAAE9klEQVR4nO3dy60bNwBA0ThwIdm4APdfRArIxp0oe48RMAQ/V/I5y+Dp4+iCAIcz5JfX6/UH9Px5+wvAr0mTKGkSJU2ipEmUNImSJlHSJEqaREmTKGkS9XXkj/769n339/gPP/75+6f/su/7PD9rxPP77PvOI+888q+o/aZPRk2ipEmUNImSJlHSJGpohv40N5MdcXImO2LV/Hffq1a9T+03NWoSJU2ipEmUNImSJlGTM/SnuVnY3KxwZPa9aj4+9zf7ZrsnP+vkb/pk1CRKmkRJkyhpEiVNopbN0E+6O0c+eU/7vjsK+oyaREmTKGkSJU2ipEnUW87QVz1nPfdM99yrVq1H331+/CSjJlHSJEqaREmTKGkStWyGXlul3Xf//Jy5d767C9zd39SoSZQ0iZImUdIkSppETc7Q767kzq1Zr9oFfd9ce993HlFbnTdqEiVNoqRJlDSJkiZRX16v1+3v8L/tW1l+xxXq2s51qxg1iZImUdIkSppESZOoyfPQ59aRTz6dPfL8+Ij+3QJPd8+DW3XFwKhJlDSJkiZR0iRKmkQdvcv95Cx+7tOf9s1b992vPufunP3JqEmUNImSJlHSJEqaRE3O0Pc9Q73qRPKTe6ztW0e+6+4VFaMmUdIkSppESZMoaRK17Dn0faeb1Wa7d9e+T57Gfvf3MmoSJU2ipEmUNImSJlGTz6E/rbqv++QM9O73WXUe3L5X3d0Tz6hJlDSJkiZR0iRKmkQtu8t97m/2nXd2cl173736I5819zdPJ6+NjDBqEiVNoqRJlDSJkiZRG3eKu7seXbs3fsS+ndlq1xBGGDWJkiZR0iRKmkRJk6jJ59BXzRPn7Ls+sOqzRpx8WvzkO5uh8+GkSZQ0iZImUdIkauN56Hf3Gdt3dtick3vLz7l7T/uTUZMoaRIlTaKkSZQ0iRqaoZ9cI767L/q+V+2bj9+dR++77mHUJEqaREmTKGkSJU2ilq2h311rnlM7p2zfZ43Yd/q5vdz5KNIkSppESZMoaRK17Dz0fe7e9z5n33P6n/qqJ6MmUdIkSppESZMoaRK1cYZe2wlt37r2vmsII2rPBaz6/2zUJEqaREmTKGkSJU2iJu9yfzp5z/bdM9pWqZ0/Pmff9QGjJlHSJEqaREmTKGkStXGnuLl3PjnXvnuqe+1VJ8/CG2HUJEqaREmTKGkSJU2ilp2H/nR3Bvr0+5zj9nRyT7xVjJpESZMoaRIlTaKkSdTG89BH7Ns/be6zRt757jnmc7/F3fm459D5KNIkSppESZMoaRL1Bnu5P508kbx2LWJEbQe8OUZNoqRJlDSJkiZR0iRq2U5x+9x9PnrfuWlzn77K3Hd22hpIkyppEiVNoqRJ1NAM/enkSeIj3nHWfPI5/ZH3GXHyWo1RkyhpEiVNoqRJlDSJmpyhP52cJ/b3V5+zbz+32tn0I4yaREmTKGkSJU2ipEnUshn6SSdXcvftC7fqrvJVr1p118Gq+xmMmkRJkyhpEiVNoqRJ1FvO0EfUzjqfs+9kt1VP5Y/wHDofRZpESZMoaRIlTaKG9nLf90z3vs/at85+d3f3fdcHTr6zNXTemDSJkiZR0iRKmkRNrqHf3d19ZMa37xT1VVbtEn/3GfNVv8WTUZMoaRIlTaKkSZQ0iXrL89D5HRg1iZImUdIkSppESZMoaRIlTaKkSZQ0iZImUdIk6l83ANczk1vP9QAAAABJRU5ErkJggg==" alt="QR de validación">
           <div style="font-size:12px;letter-spacing:1.5px;font-weight:700">IGI-AR-2026-04815</div>
           <div style="font-size:11px;color:#9aa1af;margin-top:8px">Escaneá el QR para validar online<br>certificados.igi-la.com</div>
-          <button class="btn btn-borde" style="margin-top:12px" onclick="alert('DEMO: acá el alumno logueado descarga su certificado en PDF.')">⬇️ Descargar mi certificado</button>
+          <button class="btn btn-borde" style="margin-top:12px" onclick="abrirWsp('mi certificado')">⬇️ Solicitar mi certificado</button>
         </div>
       </div>
     </div>
@@ -999,7 +979,6 @@ footer a:hover{color:var(--naranja)}
         <div class="cifra"><b style="color:var(--naranja-osc)">+10.500</b><span>egresados por año</span></div>
         <div class="cifra"><b style="color:var(--naranja-osc)">14</b><span>programas</span></div>
       </div>
-      <div class="nota">💡 Página "Sobre IGI" con <b>datos duros y citables</b> (año, países, filiales, egresados): es la que usan las IAs para recomendar. Cifras de ejemplo a confirmar. En el sitio real suma: historia, equipo directivo, acreditaciones por país, prensa.</div>
     </div>
   </section>
 </div>
@@ -1024,10 +1003,9 @@ footer a:hover{color:var(--naranja)}
           <button class="btn btn-naranja" type="submit">Enviar consulta</button>
           <button class="btn btn-wsp" type="button" onclick="abrirWsp()">💬 Prefiero WhatsApp</button>
         </div>
-        <div class="ok-msg" id="okmsg">✅ ¡Gracias! (Demo) En el sitio real, este lead llega directo al WhatsApp/CRM de la filial elegida, con el curso de interés ya cargado.</div>
+        <div class="ok-msg" id="okmsg">✅ ¡Gracias! Te contactaremos a la brevedad. Si preferís, escribinos directamente por WhatsApp a tu filial.</div>
         <div class="full" style="font-size:11.5px;color:#9aa1af">Al enviar aceptás nuestra política de privacidad. Tus datos van directo a la filial que elegiste.</div>
       </form>
-      <div class="nota">💡 Formulario corto pero calificador (patrón ICE): pide <b>curso + filial</b>, así el lead se rutea solo a la sede correcta. Nada de dropdowns con 40 filiales sueltas: primero país/provincia, después sede (en la demo está simplificado).</div>
     </div>
   </section>
 </div>
@@ -1072,7 +1050,7 @@ footer a:hover{color:var(--naranja)}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2003–2026 IGI — Instituto Gastronómico Internacional · DEMO de propuesta (no es el sitio oficial)</span>
+      <span>© 2003–2026 IGI — Instituto Gastronómico Internacional</span>
       <div class="social-links">
         <a href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener" aria-label="Instagram de IGI Argentina" title="@igi.argentina"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84m0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4m6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/></svg> <b>@igi.argentina</b></a>
         <a href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener" aria-label="Facebook de IGI" title="Facebook /Institutos.IGI"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.68 4.53-4.68 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.24h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07"/></svg> <b>Institutos.IGI</b></a>
@@ -1319,7 +1297,6 @@ function verPrograma(id){
   </div>
   <div class="ficha-body">
     <div class="container">
-      <div class="nota">💡 <b>Nota de propuesta:</b> banner de "datos duros" arriba de todo (patrón Basque Culinary Center). Acá falta lo que hoy IGI no publica y el benchmark recomienda sumar: <b>precio/cuotas en moneda local y próximas fechas de inicio por sede</b>.</div>
       <div class="ficha-cols">
         <div class="ficha-main">
           ${p.resumen?`<p style="font-size:17px;color:var(--azul-2);font-weight:600;border-left:4px solid var(--amarillo);padding-left:12px;margin-bottom:18px">${p.resumen}</p>`:''}
@@ -1345,7 +1322,7 @@ function verPrograma(id){
           <h3>¿Te interesa ${p.nombre}?</h3>
           <div class="sub">Te contactamos con la filial que elijas, sin compromiso.</div>
           <button class="btn btn-wsp" onclick="abrirWsp('${p.nombre}')">💬 Consultar por WhatsApp</button>
-          <button class="btn btn-borde" onclick="alert('DEMO: acá se descarga el programa en PDF a cambio del email (lead magnet, patrón EAG).')">📄 Descargar programa (PDF)</button>
+          <button class="btn btn-borde" onclick="abrirWsp('el programa completo')">📄 Pedir el programa por WhatsApp</button>
           <form onsubmit="event.preventDefault();this.style.display='none';this.nextElementSibling.style.display='block'">
             <input required placeholder="Nombre y apellido">
             <input required type="tel" placeholder="WhatsApp">
@@ -1353,7 +1330,7 @@ function verPrograma(id){
             <select required><option value="">Filial de interés…</option>${todasFiliales().map(f=>`<option>${f.n}</option>`).join('')}</select>
             <button class="btn btn-naranja" type="submit">Quiero que me llamen</button>
           </form>
-          <div class="ok-msg" style="margin-top:8px">✅ ¡Listo! (Demo) El lead llega a la filial elegida con el programa ya cargado.</div>
+          <div class="ok-msg" style="margin-top:8px">✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.</div>
           <div class="legal">Tus datos van directo a la filial elegida. Sin spam.</div>
         </aside>
       </div>
@@ -1369,7 +1346,7 @@ function regionesAR(){
   return ['Todas',...fijas,...provs];
 }
 /* Localidades y barrios con coordenadas: si el usuario escribe una zona SIN filial propia,
-   le mostramos igual las más cercanas ordenadas por distancia (en el sitio real: Google Places). */
+   le mostramos igual las más cercanas ordenadas por distancia. */
 const LOCALIDADES={
  'boedo':[-34.63,-58.417],'almagro':[-34.61,-58.42],'flores':[-34.628,-58.463],'floresta':[-34.628,-58.484],
  'villa crespo':[-34.599,-58.438],'recoleta':[-34.588,-58.393],'retiro':[-34.592,-58.375],'san telmo':[-34.621,-58.371],
@@ -1463,14 +1440,14 @@ function renderFiliales(){
     + (lista.length===0?`<div class="sin-cerca" style="grid-column:1/-1"><p>😕 No encontramos resultados para tu búsqueda. Probá escribiendo tu <b>barrio, ciudad o provincia</b> (ej.: Boedo, Tandil, Posadas) o tocá <b>📍 Usar mi ubicación</b>: aunque no haya una filial en tu zona, te mostramos las más cercanas.</p></div>`:'')
     + (paisActual==='AR'?`<div class="sin-cerca" style="grid-column:1/-1">
         <p><b>¿No hay una filial cerca tuyo?</b> Consultá por nuestros cursos en <b>modalidad online</b>, o dejanos tu localidad: te avisamos apenas abra una filial en tu zona (y es un dato que usamos para decidir dónde abrir la próxima).</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-wsp" onclick="abrirWsp('cursos online')">💬 Consultar online</button><button class="btn btn-borde" onclick="alert('DEMO: formulario corto localidad + email → base de demanda por zona para expansión de franquicias.')">🔔 Avisame cuando abra</button></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-wsp" onclick="abrirWsp('cursos online')">💬 Consultar online</button><button class="btn btn-borde" onclick="abrirWsp('cursos online / apertura en mi zona')">🔔 Consultar por mi zona</button></div>
       </div>`:'');
 }
 let geoResuelto=false;
 function geoFallback(motivo){
   if(geoResuelto)return; geoResuelto=true;
   userLoc={lat:-34.6037,lng:-58.3816};
-  $('#geo-estado').innerHTML=motivo+' <b>Modo demo:</b> simulamos que estás en el Obelisco (CABA) y ordenamos por distancia igual. También podés escribir tu barrio o localidad en el buscador. <span style="color:#9aa1af">(En el sitio real, publicado con HTTPS, el navegador sí comparte la ubicación; acá el visor de la demo la bloquea.)</span>';
+  $('#geo-estado').innerHTML=motivo+' Escribí tu barrio o localidad en el buscador y te mostramos las sedes más cercanas.';
   renderFiliales();
 }
 function usarUbicacion(){
@@ -1511,7 +1488,7 @@ function verSede(id){
           <div class="sede-datos">
             <div><span class="ic">🏠</span> <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${qMapa}">${f.dir}</a></div>
             <div><span class="ic">📞</span> <a href="tel:0">${f.tel}</a></div>
-            <div><span class="ic">💬</span> <a target="_blank" href="${wspLink(f.wsp,'Hola '+f.n+'! Quiero información sobre los cursos.')}">WhatsApp de la filial ${f.wsp?('+'+f.wsp):'(a cargar — usa el central en la demo)'}</a></div>
+            <div><span class="ic">💬</span> <a target="_blank" href="${wspLink(f.wsp,'Hola '+f.n+'! Quiero información sobre los cursos.')}">WhatsApp de la filial ${f.wsp?('+'+f.wsp):''}</a></div>
             <div><span class="ic">✉️</span> <a href="mailto:${f.mail}">${f.mail}</a></div>
             <div><span class="ic">🕒</span> Lun a Vie 9–21 h · Sáb 9–13 h (ejemplo)</div>
           </div>
@@ -1522,22 +1499,20 @@ function verSede(id){
         </div>
         ${mapa}
       </div>
-      <div class="nota">💡 Esta página es <b>el diferencial #1 de la propuesta</b>: ningún competidor la tiene. En el sitio real suma fotos reales de la sede, equipo docente, reseñas de Google de ESTA filial, horarios reales por curso y schema LocalBusiness — así IGI gana la búsqueda "escuela de cocina ${f.ciudad}".</div>
       <h2 style="margin:34px 0 16px">Conocé la sede</h2>
       <div class="galeria" style="margin-top:0">${(typeof FOTOS!=='undefined')?FOTOS.sedeGal.map(g=>'<div class="gal-item" style="background:#2B3245"><img src="'+g.src+'" loading="lazy" alt="Foto de la sede"></div>').join(''):''}</div>
-      <div class="nota">💡 Galería de ejemplo: acá van <b>fotos reales de esta sede</b> (cocinas, aulas, equipamiento). Foto real > foto de stock, siempre — es lo que más miran los padres y alumnos antes de decidir.</div>
       <h2 style="margin:34px 0 16px">Qué podés estudiar en ${f.n}</h2>
       <div class="grid c3">${progs.map(cardPrograma).join('')}</div>
     </div>
   </section>`;
   mostrar('v-sede');
-  // Si el visor bloquea el iframe de Google Maps, mostrar aviso elegante (en el sitio real carga normal)
+  // Si el visor bloquea el iframe de Google Maps, mostrar aviso elegante
   const ifr=document.querySelector('#v-sede .mapa-sede iframe');
   if(ifr){
     let cargado=false;
     ifr.addEventListener('load',()=>{cargado=true});
     setTimeout(()=>{ if(!cargado&&ifr.isConnected){
-      ifr.outerHTML='<div class="mapa-ph"><span class="pin">📍</span>Acá va el mapa de Google con la ubicación exacta de la sede<br><small>El visor de esta demo bloquea mapas embebidos. En el sitio real publicado se ve acá mismo — mientras tanto, usá el botón de abajo.</small></div>';
+      ifr.outerHTML='<div class="mapa-ph"><span class="pin">📍</span>Acá va el mapa de Google con la ubicación exacta de la sede<br><small>No pudimos cargar el mapa embebido. Usá el botón de abajo para abrirlo en Google Maps.</small></div>';
     }},2800);
   }
 }
@@ -1557,18 +1532,21 @@ function ir(vista,arg){
   else if(vista==='certificados'){mostrar('v-certificados')}
   else if(vista==='contacto'){mostrar('v-contacto')}
 }
-function alertPais(e,pais){e.preventDefault();alert('DEMO: acá se navega a la versión '+pais+' del sitio (misma estructura, contenido localizado: moneda, sedes, WhatsApp y títulos de ese país — con hreflang).')}
+function irPais(e,cod){ if(e&&e.preventDefault)e.preventDefault(); paisActual=cod; regActual='Todas';
+  document.querySelectorAll('.paises a').forEach(function(a){a.classList.remove('activo');});
+  var hb=[].slice.call(document.querySelectorAll('.paises a')).find(function(a){var x=a.querySelector('.fl');return x&&x.dataset.flag===cod;});
+  if(hb)hb.classList.add('activo');
+  ir('filiales');
+  var btn=[].slice.call(document.querySelectorAll('#tabs-paises .filtro')).find(function(b){var x=b.querySelector('.fl');return x&&x.dataset.flag===cod;});
+  if(typeof verPais==='function')verPais(cod, btn||null);
+  window.scrollTo({top:0});
+}
 
 /* ===== Puerta de país ===== */
 function abrirGate(){$('#gate').classList.remove('cerrada');window.scrollTo({top:0})}
 function elegirPaisGate(cod,nombre){
   $('#gate').classList.add('cerrada');
-  if(cod!=='AR'){
-    const db=document.querySelector('.demo-bar');
-    let aviso=$('#aviso-pais');
-    if(!aviso){db.insertAdjacentHTML('afterend','<div id="aviso-pais" style="background:#FFF2D9;color:#6b5416;font-size:12.5px;padding:7px 14px;text-align:center"></div>');aviso=$('#aviso-pais')}
-    aviso.innerHTML='🌎 Elegiste <b>'+nombre+'</b> — en el sitio real entrarías a <b>igi.com/'+cod.toLowerCase()+'/</b> con sedes, WhatsApp, moneda y títulos de tu país'+(cod==='BR'?' (en portugués)':'')+'. En esta demo te mostramos Argentina como referencia. <span style="text-decoration:underline;cursor:pointer" onclick="this.parentElement.remove()">✕ cerrar</span>';
-  }
+  irPais(null, cod);
 }
 
 /* ================= WHATSAPP ================= */
@@ -1606,11 +1584,6 @@ function verFolleto(id){
 }
 function cerrarFolleto(){$('#lightbox').classList.remove('abierta')}
 
-/* ================= NOTAS ================= */
-function toggleNotas(){
-  document.body.classList.toggle('mostrar-notas');
-  $('#btnNotas').classList.toggle('on');
-}
 
 /* ================= FOTOS REALES ================= */
 function aplicarFotos(){
