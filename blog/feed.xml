@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Centro de Conocimiento Gastronómico IGI</title>
+  <link>https://web3.igionline.com.ar/blog/</link>
+  <description>Artículos y guías sobre educación gastronómica, cocina, pastelería, barismo, bartender, panadería y profesión gastronómica del Instituto Gastronómico Internacional (IGI).</description>
+  <language>es-AR</language>
+  <atom:link href="https://web3.igionline.com.ar/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <lastBuildDate>Mon, 04 Aug 2026 12:00:00 -0300</lastBuildDate>
+  <item>
+    <title>¿Dónde estudiar gastronomía en Argentina? Guía para elegir una escuela de cocina</title>
+    <link>https://web3.igionline.com.ar/blog/donde-estudiar-gastronomia-argentina/</link>
+    <guid isPermaLink="true">https://web3.igionline.com.ar/blog/donde-estudiar-gastronomia-argentina/</guid>
+    <pubDate>Fri, 01 Aug 2026 09:00:00 -0300</pubDate>
+    <category>Estudiar Gastronomía</category>
+    <description>Qué evaluar antes de elegir una escuela de gastronomía en Argentina: práctica, programa, docentes, instalaciones, certificación, duración, ubicación y salida laboral.</description>
+  </item>
+</channel>
+</rss>
