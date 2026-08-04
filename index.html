@@ -1272,7 +1272,7 @@ function cardPrograma(p){
   const tag=p.tipo==='carrera'?'Carrera':(p.tipo==='kids'?'Para chicos':'Curso');
   const srcF=(typeof FOTOS!=='undefined'&&FOTOS[p.id])?FOTOS[p.id]:((typeof FLYERS!=='undefined'&&FLYERS[p.id])?FLYERS[p.id]:null);
   const esFoto=(typeof FOTOS!=='undefined'&&FOTOS[p.id]);
-  const foto = srcF ? '<img src="'+srcF+'" alt="'+p.nombre+'" loading="lazy"'+(esFoto?' style="object-position:center"':'')+'>' : p.emoji;
+  const foto = srcF ? '<img src="'+srcF+'" alt="'+p.nombre+'" loading="lazy"'+(esFoto?' style="object-position:center 62%"':'')+'>' : p.emoji;
   return `<div class="card" data-cat="${p.cat}" onclick="verPrograma('${p.id}')">
     <div class="foto" style="background:${p.color}"><span class="tag">${tag}</span>${foto}</div>
     <div class="cuerpo">
