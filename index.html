@@ -248,7 +248,8 @@ section.bloque.gris{background:linear-gradient(180deg,#FDF1E3,#FBEEDF)}
 .kit-bloque::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.09);top:-160px;right:-120px}
 .kit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;z-index:1}
 .kit-item{background:#fff;border-radius:14px;padding:20px;text-align:center;box-shadow:0 8px 22px rgba(120,60,0,.22);position:relative}
-.kit-visual{font-size:52px;height:92px;display:flex;align-items:center;justify-content:center}
+.kit-visual{font-size:52px;height:92px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:10px}
+.kit-visual img{width:100%;height:92px;object-fit:cover;border-radius:10px}
 .kit-item h4{font-size:15.5px;margin-bottom:6px}
 .kit-item ul{list-style:none;font-size:12.5px;color:var(--gris)}
 .kit-item li{padding:2px 0}
@@ -792,32 +793,25 @@ footer a:hover{color:var(--naranja)}
           <span class="kit-tag">DE REGALO</span>
         </div>
         <div class="kit-item">
-          <div class="kit-libros">
-            <div class="libro" style="background:linear-gradient(#F58220,#C96208)"><span>COCINA</span></div>
-            <div class="libro" style="background:linear-gradient(#2BAE8E,#0E7C61)"><span>PASTELERÍA</span></div>
-            <div class="libro" style="background:linear-gradient(#4FA3D8,#1273B5)"><span>PANADERÍA</span></div>
-            <div class="libro" style="background:linear-gradient(#E85D75,#C42847)"><span>BEBIDAS</span></div>
-            <div class="libro" style="background:linear-gradient(#8b93a8,#5a6478)"><span>SERVICIO</span></div>
-          </div>
+          <div class="kit-visual"><img src="/kit-libros.jpg" alt="Libros y manuales de edición propia de IGI"></div>
           <h4>Libros y manuales</h4>
           <ul><li>Libros impresos de edición propia, exclusivos de IGI (carreras)</li><li>Apuntes de estudio en los cursos</li></ul>
           <span class="kit-tag">DE REGALO</span>
         </div>
         <div class="kit-item">
-          <div class="kit-visual">📖</div>
+          <div class="kit-visual"><img src="/kit-recetarios.jpg" alt="Recetarios con todas las recetas de cada clase en IGI"></div>
           <h4>Recetarios</h4>
           <ul><li>Todas las recetas de cada clase</li><li>Para siempre, tuyos</li></ul>
           <span class="kit-tag">INCLUIDO</span>
         </div>
         <div class="kit-item">
-          <div class="kit-visual">🥕</div>
+          <div class="kit-visual"><img src="/kit-materias-primas.jpg" alt="Materias primas e ingredientes incluidos en las clases de IGI"></div>
           <h4>Materias primas</h4>
           <ul><li>Los ingredientes de todas las prácticas</li><li>No comprás nada aparte</li></ul>
           <span class="kit-tag">INCLUIDO</span>
         </div>
       </div>
       <div style="text-align:center;margin-top:26px"><button class="btn btn-oscuro" onclick="ir('catalogo','todos')">Ver toda la oferta</button></div>
-      <div class="nota">💡 En el sitio real, los visuales del kit se reemplazan por <b>fotos reales</b>: un alumno con el uniforme puesto, la pila de manuales (como en los folletos) y las mesadas con ingredientes. Es el argumento de venta más tangible de IGI: merece fotos propias, no íconos.</div>
     </div>
   </section>
 
