@@ -1837,11 +1837,14 @@ async function cargarDesdeAPI(){
     var res=await Promise.all([ fJson(API_BACKEND+'?r=filiales'), fJson(API_BACKEND+'?r=inicios') ]);
     var fApi=res[0], iApi=res[1];
     if(Array.isArray(fApi) && fApi.length){
+      // Zonas finas (CABA, GBA Norte, GBA Sur, etc.) desde los datos originales, emparejando por email
+      var ZONAS={}; try{ Object.keys(FILIALES).forEach(function(c){ (FILIALES[c]||[]).forEach(function(o){ if(o.mail) ZONAS[(''+o.mail).toLowerCase()]={reg:o.reg,prov:o.prov}; }); }); }catch(e){}
       var nuevo={AR:[],PY:[],BO:[],CL:[],CO:[],BR:[],UY:[]};
       fApi.forEach(function(f){
         var cod=PAIS2COD[f.pais]||'AR'; if(!nuevo[cod])nuevo[cod]=[];
+        var z=ZONAS[(''+(f.email||'')).toLowerCase()]||{};
         nuevo[cod].push({ id:'f'+f.id, n:f.nombre||('IGI '+f.ciudad), ciudad:f.ciudad,
-          reg:f.provincia||f.pais, prov:f.provincia||'',
+          reg:(z.reg||f.provincia||f.pais), prov:(z.prov||''),
           lat:(f.lat!=null&&f.lat!=='')?parseFloat(f.lat):undefined,
           lng:(f.lng!=null&&f.lng!=='')?parseFloat(f.lng):undefined,
           dir:f.direccion||'', tel:f.telefono||'—', wsp:f.whatsapp||'',
