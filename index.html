@@ -1777,7 +1777,7 @@ function animarGate(){
     el.innerHTML=s+'</span>';
   });
 }
-const INICIOS=[
+let INICIOS=[
   {f:'Lun 03 AGO',prog:'Chef Internacional',sedeN:'Belgrano',sedeId:'belgrano',hor:'Lu 18–23 h'},
   {f:'Mar 04 AGO',prog:'Pastelero Internacional',sedeN:'Quilmes',sedeId:'quilmes',hor:'Ma 18–23 h'},
   {f:'Mié 05 AGO',prog:'ABC Chef',sedeN:'Córdoba',sedeId:'cordoba',hor:'Mi 19–22 h'},
@@ -1818,7 +1818,41 @@ function renderInsta(){
     io.observe(wrap);
   } else { load(); }
 }
+/* ===== Fase 4: filiales y próximos inicios dinámicos desde la API del panel (con respaldo) ===== */
+const API_BACKEND='https://panel.igionline.com.ar/api/api.php';
+const PAIS2COD={Argentina:'AR',Paraguay:'PY',Bolivia:'BO',Chile:'CL',Colombia:'CO',Brasil:'BR',Uruguay:'UY'};
+function _fmtFechaINI(d){ if(!d)return ''; var p=(''+d).split('-'); if(p.length!==3)return d;
+  var meses=['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+  var dias=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  var dt=new Date(+p[0], +p[1]-1, +p[2]);
+  return isNaN(dt)?(p[2]+'/'+p[1]):(dias[dt.getDay()]+' '+p[2]+' '+meses[+p[1]-1]); }
+async function cargarDesdeAPI(){
+  try{
+    var fJson=function(u){ return fetch(u).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}); };
+    var res=await Promise.all([ fJson(API_BACKEND+'?r=filiales'), fJson(API_BACKEND+'?r=inicios') ]);
+    var fApi=res[0], iApi=res[1];
+    if(Array.isArray(fApi) && fApi.length){
+      var nuevo={AR:[],PY:[],BO:[],CL:[],CO:[],BR:[],UY:[]};
+      fApi.forEach(function(f){
+        var cod=PAIS2COD[f.pais]||'AR'; if(!nuevo[cod])nuevo[cod]=[];
+        nuevo[cod].push({ id:'f'+f.id, n:f.nombre||('IGI '+f.ciudad), ciudad:f.ciudad,
+          reg:f.provincia||f.pais, prov:f.provincia||'',
+          lat:(f.lat!=null&&f.lat!=='')?parseFloat(f.lat):undefined,
+          lng:(f.lng!=null&&f.lng!=='')?parseFloat(f.lng):undefined,
+          dir:f.direccion||'', tel:f.telefono||'—', wsp:f.whatsapp||'',
+          mail:f.email||'', kw:f.keywords||'', real:true, prox:(f.proximamente==1) });
+      });
+      for(var c in nuevo){ if(nuevo[c].length) FILIALES[c]=nuevo[c]; }
+    }
+    if(Array.isArray(iApi) && iApi.length){
+      INICIOS=iApi.map(function(i){ return { f:_fmtFechaINI(i.fecha_inicio), prog:i.programa_nombre||'',
+        sedeN:(i.filial_nombre||('IGI '+(i.filial_ciudad||''))), hor:i.turno||'', sedeId:'f'+i.filial_id }; });
+    }
+  }catch(e){}
+}
 aplicarFotos();renderHome();renderCatalogo();verPais('AR',document.querySelector('.paises-tabs .filtro'));pintarBanderas();animarGate();renderInicios();renderInsta();
+cargarDesdeAPI().then(function(){ try{ renderFiliales(); renderInicios();
+  if($('#sel-filial')) $('#sel-filial').innerHTML='<option value="">¿En qué filial te queda cómodo cursar?</option>'+todasFiliales().map(function(f){return '<option>'+f.n+'</option>';}).join(''); }catch(e){} });
 $('#sel-curso').innerHTML='<option value="">¿Qué querés estudiar?</option>'+PROGRAMAS.map(p=>`<option>${p.nombre}</option>`).join('');
 $('#sel-filial').innerHTML='<option value="">¿En qué filial te queda cómodo cursar?</option>'+todasFiliales().map(f=>`<option>${f.n}</option>`).join('');
 /* Deep-links desde el blog: /#carreras /#cursos /#catalogo /#filiales /#contacto /#nosotros /#certificados /#wsp /#prog=<id> */
