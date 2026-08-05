@@ -1892,5 +1892,138 @@ $('#sel-filial').innerHTML='<option value="">¿En qué filial te queda cómodo c
   window.addEventListener('hashchange', rutaHash);
 })();
 </script>
+<script>
+/* ================= EDITOR DE IMÁGENES · modo edición (?editar=igi) =================
+   Ajustá posición y zoom de cada imagen, o reemplazala para probar otras.
+   Los ajustes se guardan en tu navegador (localStorage). Al tocar "Guardar",
+   te muestra el objeto para dejarlo fijo en el sitio (IMG_AJUSTES_FIJOS). */
+(function(){
+  var CLAVE='igi';
+  var params=new URLSearchParams(location.search);
+  var EDIT = params.get('editar')===CLAVE;
+  var PREVIEW = params.get('preview')==='1';   // vista celular dentro de iframe (sin panel)
+
+  // >>> Ajustes fijos: cuando el usuario guarda, pego acá el objeto para que sea permanente <<<
+  var FIJOS = (window.IMG_AJUSTES_FIJOS)||{};
+
+  function LSget(){ try{return JSON.parse(localStorage.getItem('igi_img_ajustes')||'{}')}catch(e){return {}} }
+  function LSset(o){ try{localStorage.setItem('igi_img_ajustes',JSON.stringify(o));return true}catch(e){alert('No entra en memoria (muchas fotos pesadas). Guardá lo que probaste y avisame.');return false} }
+  function keyOf(img){ if(img.__k)return img.__k; var s=(img.getAttribute('data-imgkey')||img.getAttribute('src')||''); return s.split('?')[0].split('#')[0].split('/').pop(); }
+  function activos(){ var b=Object.assign({},FIJOS); if(EDIT||PREVIEW){var l=LSget(); for(var k in l)b[k]=l[k];} return b; }
+  function apto(img){ if(!img||!img.getAttribute)return false; var c=(img.className||'')+''; if(/logo|bandera|\bfl\b|qr|icon/i.test(c))return false; var r=img.getBoundingClientRect(); return r.width>=90&&r.height>=70; }
+
+  function aplicarA(img,a){
+    if(!a)return; var fr=img.parentElement; if(fr){fr.style.overflow='hidden'}
+    if(a.src && img.getAttribute('src')!==a.src){ img.__k=img.__k||keyOf(img); img.src=a.src; }
+    var mob=(window.innerWidth<700 && a.movil)?a.movil:a;
+    var posY=(mob.posY!=null)?mob.posY:50, zoom=(mob.zoom!=null)?mob.zoom:1;
+    img.style.objectFit='cover';
+    img.style.objectPosition='50% '+posY+'%';
+    img.style.transform= (zoom&&zoom!==1)?('scale('+zoom+')'):'';
+    img.style.transformOrigin='50% '+posY+'%';
+  }
+  function aplicarTodo(){ var a=activos(); var imgs=document.querySelectorAll('img'); for(var i=0;i<imgs.length;i++){ var k=keyOf(imgs[i]); if(a[k]) aplicarA(imgs[i],a[k]); } }
+  window.__igiAplicarImg=aplicarTodo;
+  aplicarTodo();
+  // Reaplicar cuando el sitio agrega imágenes (cambios de vista/país/catálogo)
+  try{ var mo=new MutationObserver(function(){ clearTimeout(window.__igiT); window.__igiT=setTimeout(aplicarTodo,120); }); mo.observe(document.body,{childList:true,subtree:true}); }catch(e){ setInterval(aplicarTodo,1500); }
+
+  if(!EDIT || PREVIEW) return; // el panel solo con la clave y fuera del preview
+
+  /* ---------- UI del editor ---------- */
+  var sel=null, editandoMovil=false;
+  var css=document.createElement('style');
+  css.textContent=''
+   +'.igi-ed-sel{outline:3px solid #F58220 !important; outline-offset:2px; cursor:pointer}'
+   +'#igiEdBar{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#141824;color:#fff;font-family:system-ui,Arial;box-shadow:0 -6px 24px rgba(0,0,0,.4)}'
+   +'#igiEdBar *{box-sizing:border-box}'
+   +'#igiEdBar .in{max-width:920px;margin:0 auto;padding:12px 16px}'
+   +'#igiEdBar h4{margin:0 0 8px;font-size:14px;color:#F58220}'
+   +'#igiEdBar .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}'
+   +'#igiEdBar label{font-size:12px;color:#cdd3df;display:flex;flex-direction:column;gap:4px;min-width:180px}'
+   +'#igiEdBar input[type=range]{width:220px}'
+   +'#igiEdBar button{background:#F58220;color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700;cursor:pointer;font-size:13px}'
+   +'#igiEdBar button.sec{background:#2a3040}'
+   +'#igiEdBar .hint{color:#9aa1af;font-size:12px}'
+   +'#igiEdMob{position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;flex-direction:column;gap:10px}'
+   +'#igiEdMob iframe{width:390px;height:760px;max-height:85vh;border:10px solid #111;border-radius:28px;background:#fff}'
+   +'#igiEdMob .mb{display:flex;gap:10px}';
+  document.head.appendChild(css);
+
+  var bar=document.createElement('div'); bar.id='igiEdBar';
+  bar.innerHTML=''
+   +'<div class="in">'
+   +'<h4>🎛️ Modo edición de imágenes</h4>'
+   +'<div id="igiEdMsg" class="hint">Hacé clic en cualquier imagen del sitio para ajustarla.</div>'
+   +'<div id="igiEdCtrls" style="display:none;margin-top:8px">'
+   +'  <div class="row">'
+   +'    <label>Subir / Bajar<input id="igiPos" type="range" min="0" max="100" step="1" value="50"></label>'
+   +'    <label>Zoom (acercar / reducir)<input id="igiZoom" type="range" min="1" max="2.5" step="0.02" value="1"></label>'
+   +'    <label style="min-width:auto;flex-direction:row;align-items:center;gap:6px"><input id="igiMovil" type="checkbox"> Ajuste distinto para celular</label>'
+   +'  </div>'
+   +'  <div class="row" style="margin-top:10px">'
+   +'    <button id="igiCambiar">🖼️ Cambiar imagen</button>'
+   +'    <button id="igiVerMovil" class="sec">📱 Ver como celular</button>'
+   +'    <button id="igiReset" class="sec">↩️ Restablecer esta</button>'
+   +'    <button id="igiGuardar">💾 Guardar ajustes</button>'
+   +'    <span id="igiSelName" class="hint"></span>'
+   +'  </div>'
+   +'</div></div>'
+   +'<input id="igiFile" type="file" accept="image/*" style="display:none">';
+  document.body.appendChild(bar);
+
+  var mob=document.createElement('div'); mob.id='igiEdMob';
+  mob.innerHTML='<div class="mb"><button id="igiMobRefresh">🔄 Actualizar</button><button id="igiMobClose" class="sec">✖ Cerrar</button></div><iframe id="igiMobFrame"></iframe>';
+  document.body.appendChild(mob);
+
+  function curEntry(){ var l=LSget(); var k=sel? keyOf(sel):null; return {l:l,k:k,a:(k?(l[k]||{}):{})}; }
+  function target(a){ if(editandoMovil){ a.movil=a.movil||{}; return a.movil; } return a; }
+  function refreshInputs(){
+    if(!sel){return}
+    var e=curEntry(), t=target(e.a);
+    document.getElementById('igiPos').value=(t.posY!=null)?t.posY:50;
+    document.getElementById('igiZoom').value=(t.zoom!=null)?t.zoom:1;
+    document.getElementById('igiSelName').textContent='('+e.k+')'+(editandoMovil?' · celular':'');
+  }
+  function commit(mut){ var e=curEntry(); var a=Object.assign({},e.a); mut(a); e.l[e.k]=a; LSset(e.l); aplicarTodo(); }
+
+  document.addEventListener('click',function(ev){
+    var img=ev.target; if(img.tagName!=='IMG'||!apto(img))return;
+    if(ev.target.closest('#igiEdBar'))return;
+    ev.preventDefault(); ev.stopPropagation();
+    if(sel)sel.classList.remove('igi-ed-sel');
+    sel=img; sel.classList.add('igi-ed-sel'); sel.__k=sel.__k||keyOf(sel);
+    document.getElementById('igiEdCtrls').style.display='block';
+    document.getElementById('igiEdMsg').textContent='Ajustá esta imagen (o cambiala). Clic en otra para cambiar de foto.';
+    editandoMovil=false; document.getElementById('igiMovil').checked=false;
+    refreshInputs();
+  },true);
+
+  document.getElementById('igiPos').addEventListener('input',function(){ if(!sel)return; commit(function(a){ target(a).posY=+document.getElementById('igiPos').value; }); });
+  document.getElementById('igiZoom').addEventListener('input',function(){ if(!sel)return; commit(function(a){ target(a).zoom=+document.getElementById('igiZoom').value; }); });
+  document.getElementById('igiMovil').addEventListener('change',function(){ editandoMovil=this.checked; refreshInputs(); });
+  document.getElementById('igiReset').addEventListener('click',function(){ if(!sel)return; var e=curEntry(); delete e.l[e.k]; LSset(e.l); sel.style.cssText=sel.style.cssText.replace(/object-position[^;]*;?|transform[^;]*;?|object-fit[^;]*;?/g,''); aplicarTodo(); refreshInputs(); });
+  document.getElementById('igiCambiar').addEventListener('click',function(){ if(!sel){alert('Primero hacé clic en una imagen.');return} document.getElementById('igiFile').click(); });
+  document.getElementById('igiFile').addEventListener('change',function(){
+    var f=this.files&&this.files[0]; if(!f||!sel)return;
+    var rd=new FileReader(); rd.onload=function(){ commit(function(a){ a.src=rd.result; }); }; rd.readAsDataURL(f); this.value='';
+  });
+  document.getElementById('igiVerMovil').addEventListener('click',function(){
+    var url=location.pathname+'?editar='+CLAVE+'&preview=1';
+    document.getElementById('igiMobFrame').src=url; document.getElementById('igiEdMob').style.display='flex';
+  });
+  document.getElementById('igiMobRefresh').addEventListener('click',function(){ var f=document.getElementById('igiMobFrame'); f.src=f.src; });
+  document.getElementById('igiMobClose').addEventListener('click',function(){ document.getElementById('igiEdMob').style.display='none'; });
+  document.getElementById('igiGuardar').addEventListener('click',function(){
+    var l=LSget(); var cnt=Object.keys(l).length;
+    var reemplazadas=Object.keys(l).filter(function(k){return l[k].src}).length;
+    var txt='Ajustes guardados: '+cnt+' imagen(es)'+(reemplazadas?(' · '+reemplazadas+' con foto nueva'):'')+'.\n\n'
+      +'Ahora avisame a mí (Claude) que terminaste'+(reemplazadas?(' y pasame las '+reemplazadas+' foto(s) nueva(s) que elegiste'):'')+', y las dejo fijas en el sitio para todos.\n\n'
+      +'(Técnico, por si lo querés: el detalle está guardado en tu navegador.)';
+    alert(txt);
+  });
+})();
+</script>
+
 </body>
 </html>
