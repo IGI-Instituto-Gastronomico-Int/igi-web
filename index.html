@@ -1843,8 +1843,13 @@ async function cargarDesdeAPI(){
       fApi.forEach(function(f){
         var cod=PAIS2COD[f.pais]||'AR'; if(!nuevo[cod])nuevo[cod]=[];
         var z=ZONAS[(''+(f.email||'')).toLowerCase()]||{};
+        var _prov=f.provincia||'', _reg, _provChip;
+        if(z.reg){ _reg=z.reg; _provChip=z.prov||''; }
+        else if(/buenos aires/i.test(_prov)){ _reg='Prov. Bs. As.'; _provChip=''; }
+        else if(/capital|caba|ciudad aut/i.test(_prov)){ _reg='CABA'; _provChip=''; }
+        else { _reg=(_prov||f.pais); _provChip=(_prov||''); }
         nuevo[cod].push({ id:'f'+f.id, n:f.nombre||('IGI '+f.ciudad), ciudad:f.ciudad,
-          reg:(z.reg||f.provincia||f.pais), prov:(z.prov||''),
+          reg:_reg, prov:_provChip,
           lat:(f.lat!=null&&f.lat!=='')?parseFloat(f.lat):undefined,
           lng:(f.lng!=null&&f.lng!=='')?parseFloat(f.lng):undefined,
           dir:f.direccion||'', tel:f.telefono||'—', wsp:f.whatsapp||'',
