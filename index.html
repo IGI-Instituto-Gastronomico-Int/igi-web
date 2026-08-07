@@ -717,7 +717,7 @@ footer a:hover{color:var(--naranja)}
       <div class="difs">
         <div class="dif"><span class="pais-tag">🌎 Regional</span><div class="ic">🏆</div><h4>Torneo InterIGI</h4><p>Hace más de 20 años, los mejores alumnos de todas las filiales compiten en el torneo gastronómico educativo más importante de Latinoamérica. Una experiencia única de nivel profesional.</p><a onclick="document.getElementById('experiencia').scrollIntoView({behavior:'smooth'})">Ver videos del torneo →</a></div>
         <div class="dif"><span class="pais-tag">🌎 Internacional</span><div class="ic">✈️</div><h4>Pasantías rentadas en USA y Europa</h4><p>Nuestros alumnos acceden a pasantías rentadas en Estados Unidos y Europa: experiencia internacional real, con ingresos, antes de recibirse.</p><a onclick="abrirWsp('Pasantías rentadas')">Consultar requisitos →</a></div>
-        <div class="dif"><span class="pais-tag"><span class="fl" data-flag="AR"></span> Argentina</span><div class="ic">🎓</div><h4>Certificaciones universitarias optativas</h4><p>En Argentina podés sumar a tu título de IGI certificaciones universitarias optativas que potencian tu CV y respaldan tu formación.</p><a onclick="abrirWsp('Certificaciones universitarias')">Saber más →</a></div>
+        <div class="dif" id="dif-cert"><span class="pais-tag"><span class="fl" data-flag="AR"></span> Argentina</span><div class="ic">🎓</div><h4>Certificaciones universitarias optativas</h4><p>En Argentina podés sumar a tu título de IGI certificaciones universitarias optativas que potencian tu CV y respaldan tu formación.</p><a onclick="abrirWsp('Certificaciones universitarias')">Saber más →</a></div>
         <div class="dif"><span class="pais-tag">💻 Online</span><div class="ic">🔐</div><h4>Certificados verificables con QR</h4><p>Cada certificado IGI lleva un código QR único. Descargá tus certificaciones cuando quieras y cualquier empleador puede validarlas online al instante.</p><a onclick="ir('certificados')">Validar un certificado →</a></div>
       </div>
     </div>
@@ -754,7 +754,7 @@ footer a:hover{color:var(--naranja)}
     <div class="container">
       <div class="enc">
         <div class="mini">Inscripciones abiertas</div>
-        <h2>Próximos inicios en Argentina</h2>
+        <h2 id="inicios-titulo">Próximos inicios en Argentina</h2>
         <p>Elegí tu programa, tu sede y tu horario. Cupos limitados por comisión.</p>
       </div>
       <div class="inicios-board">
@@ -1692,8 +1692,25 @@ function refrescarPais(cod){
   setCatPais(cod);
   try{ renderHome(); }catch(e){}
   try{ renderCatalogo(); }catch(e){}
+  try{ if(typeof renderInicios==='function') renderInicios(); }catch(e){}
   try{ if(typeof setHeroVar==='function') setHeroVar(heroVar); }catch(e){}
   try{ var mini=document.querySelector('#v-catalogo .enc .mini'); if(mini) mini.textContent=(PAIS_NOMBRE[cod]||'Argentina'); }catch(e){}
+  try{ var it=document.getElementById('inicios-titulo'); if(it) it.textContent='Próximos inicios en '+(PAIS_NOMBRE[cod]||'Argentina'); }catch(e){}
+  try{
+    var dc=document.getElementById('dif-cert');
+    if(dc){
+      if(cod==='BO'){
+        dc.querySelector('.pais-tag').innerHTML='<span class="fl" data-flag="BO"></span> Bolivia';
+        dc.querySelector('h4').textContent='Título oficial y Diploma Internacional';
+        dc.querySelector('p').textContent='En Bolivia, el Técnico Superior en Gastronomía cuenta con R.M. 0882/2022 y convalidación IGI (Diploma Internacional) que respalda tu formación.';
+      } else {
+        dc.querySelector('.pais-tag').innerHTML='<span class="fl" data-flag="AR"></span> Argentina';
+        dc.querySelector('h4').textContent='Certificaciones universitarias optativas';
+        dc.querySelector('p').textContent='En Argentina podés sumar a tu título de IGI certificaciones universitarias optativas que potencian tu CV y respaldan tu formación.';
+      }
+      if(typeof pintarBanderas==='function') pintarBanderas();
+    }
+  }catch(e){}
   try{ var sc=$('#sel-curso'); if(sc) sc.innerHTML='<option value="">¿Qué querés estudiar?</option>'+PROGS.map(p=>'<option>'+p.nombre+'</option>').join(''); }catch(e){}
 }
 function abrirGate(){$('#gate').classList.remove('cerrada');window.scrollTo({top:0})}
@@ -1970,14 +1987,30 @@ let INICIOS=[
   {f:'Sáb 22 AGO',prog:'Chef Internacional',sedeN:'Córdoba',sedeId:'cordoba',hor:'Sá 9–14 h'},
   {f:'Lun 24 AGO',prog:'Pastelero Internacional',sedeN:'La Plata',sedeId:'laplata',hor:'Lu 18–23 h'}
 ];
+/* Próximos inicios de referencia para Bolivia (filiales y programas de Bolivia). */
+let INICIOS_BO=[
+  {f:'Lun 03 AGO',prog:'Técnico Superior en Gastronomía',sedeN:'La Paz',sedeId:'lapaz',hor:'Lu a Vie · mañana/tarde/noche'},
+  {f:'Mar 04 AGO',prog:'Chef Internacional',sedeN:'La Paz',sedeId:'lapaz',hor:'Ma 18–23 h'},
+  {f:'Mié 05 AGO',prog:'Pastelero Internacional',sedeN:'La Paz',sedeId:'lapaz',hor:'Mi 18–23 h'},
+  {f:'Jue 06 AGO',prog:'Bartender Internacional',sedeN:'La Paz',sedeId:'lapaz',hor:'Ju 19–21 h'},
+  {f:'Sáb 08 AGO',prog:'Barista Internacional',sedeN:'La Paz',sedeId:'lapaz',hor:'Sá 10–12 h'},
+  {f:'Lun 10 AGO',prog:'ABC Chef',sedeN:'La Paz',sedeId:'lapaz',hor:'Lu 18–20 h'},
+  {f:'Mar 11 AGO',prog:'Diseño de Tortas',sedeN:'La Paz',sedeId:'lapaz',hor:'Ma 18–21 h'},
+  {f:'Mié 12 AGO',prog:'Parrillas y Fuegos',sedeN:'La Paz',sedeId:'lapaz',hor:'Mi 19–22 h'},
+  {f:'Jue 13 AGO',prog:'Sushi',sedeN:'La Paz',sedeId:'lapaz',hor:'Ju 18–20 h'},
+  {f:'Sáb 15 AGO',prog:'Cocineritos IGI',sedeN:'La Paz',sedeId:'lapaz',hor:'Sá 10–12 h'},
+  {f:'Lun 17 AGO',prog:'Master en Pastelería',sedeN:'La Paz',sedeId:'lapaz',hor:'Consultá horarios'},
+  {f:'Mar 18 AGO',prog:'Catering para Eventos',sedeN:'La Paz',sedeId:'lapaz',hor:'Ma 18–20 h'}
+];
 function esc(s){return String(s).replace(/'/g,"\\'")}
 function renderInicios(){
   const t=document.getElementById('inicios-track'); if(!t)return;
-  const rows=INICIOS.map(i=>'<div class="ini-row"><span class="fecha-pill">'+i.f+'</span>'+
+  const lista=(paisActual==='BO')?INICIOS_BO:INICIOS;
+  const rows=lista.map(i=>'<div class="ini-row"><span class="fecha-pill">'+i.f+'</span>'+
     '<div class="ini-info"><b>'+i.prog+'</b><small>📍 '+i.sedeN+' · '+i.hor+'</small></div>'+
     '<button class="btn btn-wsp ini-btn" onclick="wspSede(\''+esc(i.sedeId)+'\',\''+esc(i.prog)+'\')">💬 Consultar</button></div>').join('');
   t.innerHTML=rows+rows;
-  const dur=Math.max(24,INICIOS.length*2.4);
+  const dur=Math.max(24,lista.length*2.4);
   t.style.animationDuration=dur+'s';
 }
 function renderInsta(){
