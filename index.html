@@ -525,6 +525,8 @@ footer a:hover{color:var(--naranja)}
 /* Folleto en ficha */
 .folleto-img{width:100%;border-radius:10px;border:1px solid #e8eaf0;margin-bottom:12px;cursor:zoom-in;display:block}
 .folleto-cap{font-size:11.5px;color:#9aa1af;text-align:center;margin:-6px 0 12px}
+.folleto-dl{display:flex;flex-direction:column;gap:8px;margin:2px 0 14px}
+.folleto-dl .btn{width:100%;text-align:center}
 .card .foto{position:relative;overflow:hidden}
 .card .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
 .card .foto .tag{z-index:2}
@@ -1504,6 +1506,16 @@ const PROGRAMAS_PY = [
   incluye:['👔 Uniforme y manuales de regalo','📚 Recetarios','🥕 Materias primas'],
   razones:[['Carrera con autorización oficial','Autorización MEC y MSPBS (Res. 148/2020) para el dictado presencial.'],['Plan completo en 3 años','De las técnicas culinarias a la cocina molecular, el management y los eventos.'],['Cocina paraguaya e internacional','Formación con identidad local y proyección internacional.'],['Práctica profesional real','La carrera cierra con la práctica profesional y una monografía.']],
   salidas:['Chef y jefe de cocina en hoteles y restaurantes','Repostería, pastelería y panadería','Eventos y catering','Tu propio emprendimiento gastronómico']},
+ {id:'py-tecnologia-alimentos',tipo:'carrera',cat:'carrera',emoji:'🔬',color:'linear-gradient(120deg,#0E7C61,#1F7A8C)',nombre:'Tecnicatura Superior en Tecnología de Alimentos',titulo:'Técnico Superior en Tecnología de Alimentos',dur:'2 años · 4 semestres',frec:'Cursada por semestres',mod:'Presencial, semipresencial o virtual',cert:'Título de Técnico Superior · Resolución MEC Nº 825/2022',
+  gancho:'La tecnicatura superior en tecnología de alimentos, con título oficial del MEC.',
+  desc:'Una tecnicatura superior orientada a la industria de los alimentos: te forma para ejecutar y supervisar operaciones de industrialización, control de calidad e inocuidad, desde el emprendimiento hasta la escala industrial. Carrera reconocida por Resolución MEC Nº 825/2022.',
+  objetivo:'Formar un Técnico Superior con competencia para ejecutar y supervisar operaciones de industrialización de alimentos, utilizando las tecnologías apropiadas en cada proceso, atendiendo un sistema de control de calidad, participando en la optimización de procesos, asesorando en las normas de manipulación segura y actuando con responsabilidad y sentido ético.',
+  dirigido:'Bachilleres (bachillerato concluido) que quieran una tecnicatura superior orientada a la industria alimentaria, con título oficial (Resolución MEC Nº 825/2022).',
+  materias:[{t:'1er año',items:['Química culinaria','Nutrición','Química','Comunicación oral y escrita','Higiene y seguridad de los alimentos','Matemática','Biología','Recursos alimenticios del Paraguay','Microbiología general','Ciencias de los Alimentos','Procesos Industriales','Ética profesional','Legislación laboral']},{t:'2do año',items:['Microbiología de los Alimentos','Análisis de los Alimentos','Tecnología de Vegetales','Tecnología de Carne y Derivados','Tecnología de Lácteos y Derivados','Tecnología de vegetales, aceites y derivados','Química y Bioquímica de los alimentos','Toxicología de alimentos','Gestión de calidad','Envases y embalajes','Metodología de Investigación']}],
+  incluye:['🎓 Título oficial de Técnico Superior','📋 Resolución MEC Nº 825/2022','💻 Cursada presencial, semipresencial o virtual'],
+  razones:[['Título oficial (MEC)','Resolución MEC Nº 825/2022: Técnico Superior en Tecnología de Alimentos.'],['Para la industria alimentaria','Control de calidad, inocuidad y procesos, del emprendimiento a la escala industrial.'],['Cursada flexible','Presencial, semipresencial o virtual.'],['Gran salida laboral','Industrias, laboratorios, certificadoras, I+D y control bromatológico.']],
+  salidas:['Industrias de alimentos y bebidas','Empresas de empaque y embalaje','Logística, distribución y comercialización','Laboratorios de análisis (planta o laboratorio)','Investigación y desarrollo (I+D)','Empresas certificadoras · auditorías de calidad','Control bromatológico en instituciones públicas','Emprendimiento propio'],
+  folletoPdf:'/folletos/py-tecnologia-alimentos-folleto.pdf',descriptorPdf:'/folletos/py-tecnologia-alimentos-descriptor.pdf'},
  {id:'py-chef',tipo:'carrera',cat:'carrera',emoji:'👨‍🍳',color:'linear-gradient(120deg,#E24E1B,#F58220)',nombre:'Chef Internacional',titulo:'Profesional Gastronómico',dur:'2 años lectivos',frec:'5 horas semanales',mod:'Presencial',cert:'Título privado · Certificación universitaria',
   gancho:'De cero a chef profesional en 2 años.',
   desc:'Una carrera profesional, basada en las técnicas de la cocina moderna nacional e internacional, para quienes quieran introducirse en todos los secretos del arte culinario. Pensada como puntapié inicial de una formación con proyección internacional.',
@@ -1835,6 +1847,7 @@ function verPrograma(id){
         </div>
         <aside class="panel">
           ${(typeof FLYERS!=='undefined'&&FLYERS[p.id])?'<img class="folleto-img" src="'+FLYERS[p.id]+'" alt="Folleto oficial '+p.nombre+'" onclick="verFolleto(\''+p.id+'\')"><div class="folleto-cap">📄 Folleto oficial — tocá para ampliar</div>':''}
+          ${(p.folletoPdf||p.descriptorPdf)?`<div class="folleto-dl">${p.folletoPdf?`<a class="btn btn-naranja" href="${p.folletoPdf}" target="_blank" rel="noopener" download style="justify-content:center">⬇️ ${L('Descargar folleto (PDF)','Baixar folheto (PDF)')}</a>`:''}${p.descriptorPdf?`<a class="btn btn-borde" href="${p.descriptorPdf}" target="_blank" rel="noopener" download style="justify-content:center">📋 ${L('Descargar plan de estudios (PDF)','Baixar grade curricular (PDF)')}</a>`:''}</div>`:''}
           <h3>${L('¿Te interesa','Tem interesse em')} ${p.nombre}?</h3>
           <div class="sub">Te contactamos con la filial que elijas, sin compromiso.</div>
           <button class="btn btn-wsp" onclick="abrirWsp('${p.nombre}')">💬 Consultar por WhatsApp</button>
@@ -2343,7 +2356,7 @@ const AREAS_BO=[
 ];
 /* Versiones para Paraguay (ids del catálogo paraguayo). */
 const CAMINOS_PY=[
- {t:'🎓 Quiero ser profesional',e:'Carreras con título',ids:['py-tecnico-superior','py-chef','py-pastelero','py-maestro-pastelero']},
+ {t:'🎓 Quiero ser profesional',e:'Carreras con título',ids:['py-tecnico-superior','py-tecnologia-alimentos','py-chef','py-pastelero','py-maestro-pastelero']},
  {t:'🍳 Quiero aprender desde cero',e:'Cursos ABC',ids:['py-abc-chef','py-abc-panadero','py-abc-pastelero','py-abc-tortas']},
  {t:'✨ Quiero especializarme',e:'Perfeccionamiento y salida laboral',ids:['py-diseno-tortas','py-catering','py-maestro-pizzero','py-parrillas','py-mozo-maitre']},
  {t:'☕🍸 Café y coctelería',e:'Barra profesional',ids:['py-bartender','py-barista']},
