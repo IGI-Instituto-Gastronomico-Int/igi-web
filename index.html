@@ -2252,6 +2252,7 @@ function refrescarPais(cod){
   }catch(e){}
   try{ var sc=$('#sel-curso'); if(sc) sc.innerHTML='<option value="">¿Qué querés estudiar?</option>'+PROGS.map(p=>'<option>'+p.nombre+'</option>').join(''); }catch(e){}
   try{ marcarPaisTop(cod); }catch(e){}
+  try{ if(typeof renderInsta==='function') renderInsta(); }catch(e){}
   try{ aplicarIdioma(cod); }catch(e){}
 }
 function abrirGate(){$('#gate').classList.remove('cerrada');window.scrollTo({top:0})}
@@ -2618,11 +2619,22 @@ function renderInicios(){
   const dur=Math.max(24,lista.length*2.4);
   t.style.animationDuration=dur+'s';
 }
+/* Cuenta de Instagram por país. Si un país no tiene cuenta propia cargada,
+   se usa la principal de la red (Argentina). Agregar acá el usuario real
+   de cada país a medida que estén disponibles. */
+const INSTA_PAIS={
+  AR:'igi.argentina',
+  PY:'igi.paraguay.oficial'
+  /* BO, BR, CO, CL, UY: pendientes → usan la cuenta principal (AR) */
+};
+function instaUserDePais(cod){ return INSTA_PAIS[cod] || INSTA_PAIS.AR; }
 function renderInsta(){
   const wrap=document.getElementById('ig-widget'); if(!wrap)return;
-  wrap.innerHTML='<a class="ig-cta" href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener">'
+  var cod=(typeof paisActual!=='undefined'&&paisActual)?paisActual:'AR';
+  var user=instaUserDePais(cod);
+  wrap.innerHTML='<a class="ig-cta" href="https://www.instagram.com/'+user+'/" target="_blank" rel="noopener">'
     +'<span class="ig-cta-ic">📸</span>'
-    +'<span class="ig-cta-body"><b>@igi.argentina</b>'
+    +'<span class="ig-cta-body"><b>@'+user+'</b>'
     +'<span class="ig-cta-desc">Seguinos en Instagram y mirá el torneo InterIGI, las colaciones, las clases y los platos de nuestros alumnos, todos los días.</span>'
     +'<span class="ig-cta-btn">Abrir Instagram →</span></span></a>';
 }
