@@ -102,6 +102,9 @@ header{position:sticky;top:0;z-index:50;background:var(--blanco);box-shadow:0 2p
 .paises span.lbl{color:var(--gris)}
 .paises a{color:var(--azul);opacity:.55;font-weight:600}
 .paises a.activo{opacity:1;color:var(--naranja-osc);border-bottom:2px solid var(--naranja)}
+.paises a .pnom{display:none;margin-left:5px}
+.paises a.activo .pnom{display:inline}
+.paises a{display:inline-flex;align-items:center}
 .top-links{display:flex;gap:14px}
 .top-links a{color:var(--gris)}
 .navbar .container{display:flex;align-items:center;gap:26px;height:108px}
@@ -615,13 +618,13 @@ footer a:hover{color:var(--naranja)}
     <div class="container">
       <div class="paises">
         <span class="lbl" style="cursor:pointer;font-weight:700" onclick="abrirGate()">🌎 Cambiar país:</span>
-        <a class="activo" href="#/" onclick="irPais(event,'AR')"><span class="fl" data-flag="AR"></span> Argentina</a>
-        <a href="#/" onclick="irPais(event,'BR')"><span class="fl" data-flag="BR"></span></a>
-        <a href="#/" onclick="irPais(event,'BO')"><span class="fl" data-flag="BO"></span></a>
-        <a href="#/" onclick="irPais(event,'CL')"><span class="fl" data-flag="CL"></span></a>
-        <a href="#/" onclick="irPais(event,'CO')"><span class="fl" data-flag="CO"></span></a>
-        <a href="#/" onclick="irPais(event,'PY')"><span class="fl" data-flag="PY"></span></a>
-        <a href="#/" onclick="irPais(event,'UY')"><span class="fl" data-flag="UY"></span></a>
+        <a class="activo" href="#/" onclick="irPais(event,'AR')"><span class="fl" data-flag="AR"></span><span class="pnom">Argentina</span></a>
+        <a href="#/" onclick="irPais(event,'BR')"><span class="fl" data-flag="BR"></span><span class="pnom">Brasil</span></a>
+        <a href="#/" onclick="irPais(event,'BO')"><span class="fl" data-flag="BO"></span><span class="pnom">Bolivia</span></a>
+        <a href="#/" onclick="irPais(event,'CL')"><span class="fl" data-flag="CL"></span><span class="pnom">Chile</span></a>
+        <a href="#/" onclick="irPais(event,'CO')"><span class="fl" data-flag="CO"></span><span class="pnom">Colombia</span></a>
+        <a href="#/" onclick="irPais(event,'PY')"><span class="fl" data-flag="PY"></span><span class="pnom">Paraguay</span></a>
+        <a href="#/" onclick="irPais(event,'UY')"><span class="fl" data-flag="UY"></span><span class="pnom">Uruguay</span></a>
       </div>
       <div class="top-links">
         <a href="#/">Campus virtual</a>
@@ -1975,13 +1978,18 @@ function ir(vista,arg){
   else if(vista==='certificados'){mostrar('v-certificados')}
   else if(vista==='contacto'){mostrar('v-contacto')}
 }
+function marcarPaisTop(cod){
+  try{
+    document.querySelectorAll('.paises a').forEach(function(a){
+      var fl=a.querySelector('.fl'); a.classList.toggle('activo', !!(fl&&fl.dataset.flag===cod));
+    });
+  }catch(e){}
+}
 function irPais(e,cod){ if(e&&e.preventDefault)e.preventDefault(); paisActual=cod; regActual='Todas';
-  document.querySelectorAll('.paises a').forEach(function(a){a.classList.remove('activo');});
-  var hb=[].slice.call(document.querySelectorAll('.paises a')).find(function(a){var x=a.querySelector('.fl');return x&&x.dataset.flag===cod;});
-  if(hb)hb.classList.add('activo');
-  ir('filiales');
+  marcarPaisTop(cod);
   var btn=[].slice.call(document.querySelectorAll('#tabs-paises .filtro')).find(function(b){var x=b.querySelector('.fl');return x&&x.dataset.flag===cod;});
   if(typeof verPais==='function')verPais(cod, btn||null);
+  ir('home');
   window.scrollTo({top:0});
 }
 
@@ -2145,6 +2153,7 @@ function refrescarPais(cod){
     }
   }catch(e){}
   try{ var sc=$('#sel-curso'); if(sc) sc.innerHTML='<option value="">¿Qué querés estudiar?</option>'+PROGS.map(p=>'<option>'+p.nombre+'</option>').join(''); }catch(e){}
+  try{ marcarPaisTop(cod); }catch(e){}
   try{ aplicarIdioma(cod); }catch(e){}
 }
 function abrirGate(){$('#gate').classList.remove('cerrada');window.scrollTo({top:0})}
