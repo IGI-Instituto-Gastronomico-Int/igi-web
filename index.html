@@ -1023,6 +1023,131 @@ footer a:hover{color:var(--naranja)}
   </section>
 </div>
 
+<style>
+#v-trabaja .tj-hero{background:linear-gradient(135deg,var(--azul),var(--azul-2));color:#fff;border-radius:var(--radius);padding:38px 34px;margin-bottom:32px;box-shadow:var(--sombra)}
+#v-trabaja .tj-hero h2{color:#fff;font-size:clamp(24px,4vw,34px);margin-bottom:10px}
+#v-trabaja .tj-hero p{color:#d3d8e4;max-width:730px;font-size:16px}
+#v-trabaja .tj-stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:22px}
+#v-trabaja .tj-stats b{color:var(--naranja);font-size:26px;display:block;line-height:1}
+#v-trabaja .tj-stats span{font-size:12.5px;color:#aeb4c4}
+#v-trabaja .enc.izq{text-align:left;margin-bottom:8px}
+.valores-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:6px 0 34px}
+.valor-card{background:#fff;border:1px solid #eceef2;border-radius:12px;padding:18px;box-shadow:var(--sombra)}
+.valor-card .vi{font-size:26px}
+.valor-card h4{font-size:15px;margin:9px 0 4px}
+.valor-card p{font-size:13px;color:var(--gris)}
+.puestos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:6px 0 12px}
+.puesto-card{background:#fff;border:1px solid #eceef2;border-left:4px solid var(--naranja);border-radius:12px;padding:18px 18px 16px}
+.puesto-card .pe{font-size:26px}
+.puesto-card h4{font-size:15.5px;margin:8px 0 4px}
+.puesto-card p{font-size:13px;color:var(--gris)}
+.form-postulacion{background:#fff;border-radius:var(--radius);box-shadow:var(--sombra);padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:840px;margin:0 auto}
+.form-postulacion .full{grid-column:1/-1}
+.form-postulacion input,.form-postulacion select,.form-postulacion textarea{width:100%;padding:11px 13px;border:1.5px solid #dfe3ea;border-radius:9px;font-size:14px;font-family:inherit;background:#fff}
+.form-postulacion input:focus,.form-postulacion select:focus,.form-postulacion textarea:focus{outline:2px solid var(--naranja);border-color:transparent}
+.form-postulacion label.fld{font-size:12.5px;font-weight:700;color:var(--azul-2);margin-bottom:6px;display:block}
+.areas-check{display:flex;flex-wrap:wrap;gap:9px}
+.areas-check label{display:inline-flex;align-items:center;gap:7px;border:1.5px solid #dfe3ea;border-radius:22px;padding:8px 13px;font-size:13.5px;cursor:pointer;user-select:none}
+.areas-check label:hover{border-color:var(--naranja)}
+.areas-check label.on{border-color:var(--naranja);background:#FFF4EA}
+.areas-check input{width:auto;accent-color:var(--naranja)}
+.fil-checks{display:flex;flex-wrap:wrap;gap:8px;max-height:180px;overflow:auto;border:1.5px solid #eceef2;border-radius:10px;padding:11px;background:#fbfbfc;margin-top:9px}
+.fil-checks label{display:inline-flex;align-items:center;gap:6px;font-size:13px;background:#fff;border:1px solid #e6e8ee;border-radius:8px;padding:6px 10px;cursor:pointer}
+.fil-checks input{width:auto;accent-color:var(--naranja)}
+.pos-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px}
+.pos-chip{display:inline-flex;align-items:center;gap:8px;background:var(--azul);color:#fff;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:20px}
+.pos-chip .x{cursor:pointer;opacity:.85;font-weight:700}
+.pos-chip .x:hover{opacity:1}
+.consent{display:flex;align-items:flex-start;gap:9px;font-size:12.5px;color:var(--gris)}
+.consent input{width:auto;margin-top:2px;accent-color:var(--naranja)}
+.tj-err{display:none;background:#FDECEC;border:1px solid #F3B4B4;color:#B42318;padding:11px 13px;border-radius:9px;font-size:13px;font-weight:600}
+.cv-nota{font-size:12.5px;color:var(--azul-2);background:#F4F5F7;border-radius:9px;padding:12px 14px}
+@media(max-width:820px){.valores-grid{grid-template-columns:1fr 1fr}.form-postulacion{grid-template-columns:1fr}}
+@media(max-width:520px){.valores-grid{grid-template-columns:1fr}}
+</style>
+<div class="vista" id="v-trabaja">
+  <section class="bloque">
+    <div class="container">
+      <div class="tj-hero">
+        <div class="mini" style="color:var(--naranja)">Trabajá con nosotros</div>
+        <h2>Sumate al equipo de IGI</h2>
+        <p>Somos la red educativa de gastronomía más grande de Latinoamérica y seguimos creciendo. Buscamos personas apasionadas por la gastronomía y la educación para sumarse a nuestras filiales en toda la región. Postulate y contanos dónde y en qué te gustaría trabajar.</p>
+        <div class="tj-stats">
+          <div><b>2003</b><span>desde</span></div>
+          <div><b>7</b><span>países</span></div>
+          <div><b>+70</b><span>filiales</span></div>
+        </div>
+      </div>
+
+      <div class="enc izq">
+        <div class="mini">Por qué IGI</div>
+        <h3>Por qué trabajar con nosotros</h3>
+      </div>
+      <div class="valores-grid">
+        <div class="valor-card"><div class="vi">🚀</div><h4>Red en expansión</h4><p>Sumate a un proyecto que crece cada año en 7 países y más de 70 filiales.</p></div>
+        <div class="valor-card"><div class="vi">🎯</div><h4>Dejás huella</h4><p>Formás y acompañás a la próxima generación de chefs de Latinoamérica.</p></div>
+        <div class="valor-card"><div class="vi">📈</div><h4>Crecé con nosotros</h4><p>Oportunidades de desarrollo y crecimiento dentro de la red.</p></div>
+        <div class="valor-card"><div class="vi">❤️</div><h4>Pasión compartida</h4><p>Un equipo que ama la gastronomía y la enseñanza, en un ambiente cercano.</p></div>
+      </div>
+
+      <div class="enc izq">
+        <div class="mini">Puestos</div>
+        <h3>Qué perfiles buscamos</h3>
+      </div>
+      <div class="puestos-grid">
+        <div class="puesto-card"><div class="pe">🎓</div><h4>Asesores Educativos</h4><p>Orientás a los futuros alumnos y los acompañás en la elección de su carrera y su inscripción.</p></div>
+        <div class="puesto-card"><div class="pe">🗂️</div><h4>Personal Administrativo</h4><p>Gestión, atención y coordinación del día a día de la filial.</p></div>
+        <div class="puesto-card"><div class="pe">👨‍🍳</div><h4>Instructores de Gastronomía</h4><p>Formás a los alumnos en cocina, pastelería, panadería, coctelería y más.</p></div>
+        <div class="puesto-card"><div class="pe">🧹</div><h4>Maestranza</h4><p>Mantenimiento y cuidado de las instalaciones y las aulas.</p></div>
+        <div class="puesto-card"><div class="pe">✨</div><h4>Otros perfiles</h4><p>¿Tenés otro perfil? Contanos en qué te gustaría sumar a la red IGI.</p></div>
+      </div>
+
+      <div class="enc" style="margin:34px 0 16px">
+        <div class="mini">Postulación</div>
+        <h3>Dejá tu postulación</h3>
+        <p>Elegí las áreas y las filiales que te interesan (podés elegir más de una) y completá tus datos.</p>
+      </div>
+
+      <form class="form-postulacion" onsubmit="enviarPostulacion(event)">
+        <div class="full tj-err" id="tj-err"></div>
+
+        <div><label class="fld">Nombre y apellido *</label><input id="pos-nom" required placeholder="Tu nombre y apellido"></div>
+        <div><label class="fld">Email *</label><input id="pos-email" type="email" required placeholder="tucorreo@email.com"></div>
+        <div><label class="fld">Teléfono / WhatsApp *</label><input id="pos-tel" type="tel" required placeholder="Con código de país"></div>
+        <div><label class="fld">LinkedIn o portfolio (opcional)</label><input id="pos-link" placeholder="Link, si tenés"></div>
+
+        <div class="full"><label class="fld">Áreas en las que te querés postular * (una o varias)</label>
+          <div class="areas-check" id="pos-areas">
+            <label><input type="checkbox" value="Asesor Educativo"> 🎓 <span>Asesor Educativo</span></label>
+            <label><input type="checkbox" value="Personal Administrativo"> 🗂️ <span>Personal Administrativo</span></label>
+            <label><input type="checkbox" value="Instructor de Gastronomía"> 👨‍🍳 <span>Instructor de Gastronomía</span></label>
+            <label><input type="checkbox" value="Maestranza"> 🧹 <span>Maestranza</span></label>
+            <label><input type="checkbox" value="Otro" id="pos-otro-chk"> ✨ <span>Otro</span></label>
+          </div>
+          <input id="pos-otro-txt" style="display:none;margin-top:10px" placeholder="¿Qué otro puesto te interesa?">
+        </div>
+
+        <div class="full"><label class="fld">País y filial(es) * (podés elegir varias, incluso de distintos países)</label>
+          <select id="pos-pais"></select>
+          <div class="fil-checks" id="pos-filiales"></div>
+          <div class="pos-chips" id="pos-chips"></div>
+        </div>
+
+        <div class="full"><label class="fld">Contanos sobre vos (opcional)</label><textarea id="pos-msg" rows="3" placeholder="Tu experiencia, tu disponibilidad, por qué te gustaría trabajar en IGI…"></textarea></div>
+
+        <div class="full cv-nota">📎 Al enviar se abre WhatsApp con tu postulación cargada. <b>Adjuntá tu CV (PDF) en ese mismo chat</b> para completar el proceso.</div>
+
+        <label class="full consent"><input type="checkbox" id="pos-consent"> <span>Acepto que IGI trate mis datos personales con el fin de evaluar mi postulación, según su política de privacidad.</span></label>
+
+        <div class="full" style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-wsp" type="submit">💬 Enviar postulación</button>
+        </div>
+        <div class="ok-msg" id="pos-okmsg">✅ ¡Gracias por postularte! Se abrió WhatsApp con tus datos. No te olvides de adjuntar tu CV en el chat.</div>
+      </form>
+    </div>
+  </section>
+</div>
+
 <footer>
   <div class="container">
     <div class="grid-footer">
@@ -1047,7 +1172,7 @@ footer a:hover{color:var(--naranja)}
         <ul>
           <li><a onclick="ir('nosotros')">Sobre IGI</a></li>
           <li><a href="#/">Franquicias</a></li>
-          <li><a href="#/">Trabajá con nosotros</a></li>
+          <li><a onclick="ir('trabaja')" style="cursor:pointer">Trabajá con nosotros</a></li>
           <li><a href="#/">Campus virtual</a></li>
           <li><a href="/blog/">Centro de Conocimiento</a></li>
         </ul>
@@ -2070,6 +2195,7 @@ function ir(vista,arg){
   else if(vista==='nosotros'){mostrar('v-nosotros')}
   else if(vista==='certificados'){mostrar('v-certificados')}
   else if(vista==='contacto'){mostrar('v-contacto')}
+  else if(vista==='trabaja'){mostrar('v-trabaja');try{abrirTrabaja();}catch(e){}}
 }
 function marcarPaisTop(cod){
   try{
@@ -2155,6 +2281,32 @@ const TR_BR = {
  "La red de capacitación gastronómica más grande de Latinoamérica. Desde 2003. 7 países. +70 filiales.":"A maior rede de capacitação gastronômica da América Latina. Desde 2003. 7 países. +70 filiais.",
  "Quiero estudiar":"Quero estudar","Cursos cortos":"Cursos curtos","Cocineritos":"Cozinheirinhos","Buscar filial":"Encontrar unidade","Pedir información":"Pedir informações","Validá tu certificado":"Valide seu certificado",
  "Institucional":"Institucional","Sobre IGI":"Sobre o IGI","Trabajá con nosotros":"Trabalhe conosco","Centro de Conocimiento":"Central de Conhecimento",
+ // Trabajá con nosotros (postulaciones)
+ "Sumate al equipo de IGI":"Faça parte da equipe do IGI",
+ "Somos la red educativa de gastronomía más grande de Latinoamérica y seguimos creciendo. Buscamos personas apasionadas por la gastronomía y la educación para sumarse a nuestras filiales en toda la región. Postulate y contanos dónde y en qué te gustaría trabajar.":"Somos a maior rede educacional de gastronomia da América Latina e seguimos crescendo. Buscamos pessoas apaixonadas por gastronomia e educação para se juntar às nossas filiais em toda a região. Candidate-se e conte para a gente onde e em que você gostaria de trabalhar.",
+ "desde":"desde",
+ "Por qué trabajar con nosotros":"Por que trabalhar com a gente",
+ "Red en expansión":"Rede em expansão","Sumate a un proyecto que crece cada año en 7 países y más de 70 filiales.":"Junte-se a um projeto que cresce a cada ano em 7 países e mais de 70 filiais.",
+ "Dejás huella":"Você deixa sua marca","Formás y acompañás a la próxima generación de chefs de Latinoamérica.":"Você forma e acompanha a próxima geração de chefs da América Latina.",
+ "Crecé con nosotros":"Cresça com a gente","Oportunidades de desarrollo y crecimiento dentro de la red.":"Oportunidades de desenvolvimento e crescimento dentro da rede.",
+ "Pasión compartida":"Paixão compartilhada","Un equipo que ama la gastronomía y la enseñanza, en un ambiente cercano.":"Uma equipe que ama a gastronomia e o ensino, em um ambiente acolhedor.",
+ "Puestos":"Vagas","Qué perfiles buscamos":"Que perfis buscamos",
+ "Asesores Educativos":"Assessores Educacionais","Orientás a los futuros alumnos y los acompañás en la elección de su carrera y su inscripción.":"Você orienta os futuros alunos e os acompanha na escolha do curso e na matrícula.",
+ "Personal Administrativo":"Pessoal Administrativo","Gestión, atención y coordinación del día a día de la filial.":"Gestão, atendimento e coordenação do dia a dia da filial.",
+ "Instructores de Gastronomía":"Instrutores de Gastronomia","Formás a los alumnos en cocina, pastelería, panadería, coctelería y más.":"Você forma os alunos em cozinha, confeitaria, panificação, coquetelaria e mais.",
+ "Maestranza":"Serviços Gerais","Mantenimiento y cuidado de las instalaciones y las aulas.":"Manutenção e cuidado das instalações e das salas.",
+ "Otros perfiles":"Outros perfis","¿Tenés otro perfil? Contanos en qué te gustaría sumar a la red IGI.":"Tem outro perfil? Conte para a gente em que você gostaria de contribuir na rede IGI.",
+ "Postulación":"Candidatura","Dejá tu postulación":"Deixe sua candidatura","Elegí las áreas y las filiales que te interesan (podés elegir más de una) y completá tus datos.":"Escolha as áreas e as filiais que te interessam (você pode escolher mais de uma) e preencha seus dados.",
+ "Nombre y apellido *":"Nome e sobrenome *","Email *":"Email *","Teléfono / WhatsApp *":"Telefone / WhatsApp *","LinkedIn o portfolio (opcional)":"LinkedIn ou portfólio (opcional)",
+ "Áreas en las que te querés postular * (una o varias)":"Áreas para as quais você quer se candidatar * (uma ou várias)",
+ "Asesor Educativo":"Assessor Educacional","Instructor de Gastronomía":"Instrutor de Gastronomia","Otro":"Outro",
+ "País y filial(es) * (podés elegir varias, incluso de distintos países)":"País e filial(is) * (você pode escolher várias, inclusive de países diferentes)",
+ "Contanos sobre vos (opcional)":"Conte sobre você (opcional)",
+ "📎 Al enviar se abre WhatsApp con tu postulación cargada. <b>Adjuntá tu CV (PDF) en ese mismo chat</b> para completar el proceso.":"📎 Ao enviar, abre o WhatsApp com sua candidatura preenchida. <b>Anexe seu currículo (PDF) nesse mesmo chat</b> para completar o processo.",
+ "Acepto que IGI trate mis datos personales con el fin de evaluar mi postulación, según su política de privacidad.":"Autorizo o IGI a tratar meus dados pessoais para avaliar minha candidatura, conforme sua política de privacidade.",
+ "💬 Enviar postulación":"💬 Enviar candidatura",
+ "✅ ¡Gracias por postularte! Se abrió WhatsApp con tus datos. No te olvides de adjuntar tu CV en el chat.":"✅ Obrigado por se candidatar! O WhatsApp abriu com seus dados. Não esqueça de anexar seu currículo no chat.",
+ "Tu nombre y apellido":"Seu nome e sobrenome","Con código de país":"Com código do país","Link, si tenés":"Link, se tiver","¿Qué otro puesto te interesa?":"Qual outra vaga te interessa?","Tu experiencia, tu disponibilidad, por qué te gustaría trabajar en IGI…":"Sua experiência, disponibilidade, por que gostaria de trabalhar no IGI…",
  "Nuestra red · 7 países":"Nossa rede · 7 países","<b>📍 Todas las filiales, con su WhatsApp, teléfono y mail →</b>":"<b>📍 Todas as filiais, com WhatsApp, telefone e e-mail →</b>","Todas las sedes de la red ofrecen la misma calidad y los mismos programas.":"Todas as unidades da rede oferecem a mesma qualidade e os mesmos programas.",
  // Catálogo
  "Carreras y cursos":"Carreiras e cursos","Filtrá por tipo de programa. Cada ficha tiene el detalle completo de materias, duración y qué incluye.":"Filtre por tipo de programa. Cada ficha tem o detalhe completo de matérias, duração e o que inclui.",
@@ -2192,7 +2344,7 @@ const TR_BR = {
 };
 function _trKey(el){ return (el.children.length ? el.innerHTML : el.textContent).trim(); }
 function _trSet(el,val){ if(el.children.length) el.innerHTML=val; else el.textContent=val; }
-const _SEL_TR='h1,h2,h3,h4,h5,p,span,button,a,summary,li,option,figcaption,small,div.mini,div.kicker,div.gate-nota,div.paso-val,div.lbl,div.folleto-cap,div.sub,div.legal,div.resp,div.txt,div.reel-cap,div.ig-loading,div.cert-ok,div.ok-msg,div.bh-titulo,div.ver-sede';
+const _SEL_TR='h1,h2,h3,h4,h5,p,span,button,a,summary,li,option,figcaption,small,label.fld,div.mini,div.kicker,div.gate-nota,div.paso-val,div.lbl,div.folleto-cap,div.sub,div.legal,div.resp,div.txt,div.reel-cap,div.ig-loading,div.cert-ok,div.ok-msg,div.cv-nota,div.bh-titulo,div.ver-sede';
 function aplicarIdioma(cod){
   const pt=(cod==='BR');
   try{ document.documentElement.lang = pt?'pt-BR':'es-AR'; }catch(e){}
@@ -2641,6 +2793,84 @@ function renderInsta(){
     +'<span class="ig-cta-body"><b>@'+user+'</b>'
     +'<span class="ig-cta-desc">Seguinos en Instagram y mirá el torneo InterIGI, las colaciones, las clases y los platos de nuestros alumnos, todos los días.</span>'
     +'<span class="ig-cta-btn">Abrir Instagram →</span></span></a>';
+}
+/* ===== Trabajá con nosotros: postulaciones ===== */
+/* Interino: la postulación se envía por WhatsApp al número central (con el CV adjunto en el chat).
+   Cuando exista el endpoint del panel, definir POSTULACIONES_ENDPOINT (POST JSON) y se usará en su lugar. */
+const POSTULACIONES_ENDPOINT='';
+const POS_SEL=new Set();
+let posPaisTouched=false;
+function filialPaisCod(id){ for(const c in FILIALES){ if(FILIALES[c].some(f=>f.id===id)) return c; } return 'AR'; }
+function abrirTrabaja(){
+  var sel=document.getElementById('pos-pais'); if(!sel)return;
+  if(!sel.options.length){
+    var orden=['AR','PY','BO','CL','CO','UY','BR'];
+    sel.innerHTML=orden.map(function(c){return '<option value="'+c+'">'+(PAIS_NOMBRE[c]||c)+'</option>';}).join('');
+    sel.onchange=function(){ posPaisTouched=true; renderPosFiliales(); };
+    document.querySelectorAll('#pos-areas label input').forEach(function(inp){
+      inp.addEventListener('change',function(){
+        inp.closest('label').classList.toggle('on',inp.checked);
+        if(inp.id==='pos-otro-chk'){ var t=document.getElementById('pos-otro-txt'); if(t) t.style.display=inp.checked?'block':'none'; }
+      });
+    });
+  }
+  if(!posPaisTouched){ sel.value=(typeof paisActual!=='undefined'&&paisActual)?paisActual:'AR'; }
+  renderPosFiliales();
+}
+function renderPosFiliales(){
+  var sel=document.getElementById('pos-pais'), cont=document.getElementById('pos-filiales'); if(!sel||!cont)return;
+  var cod=sel.value||'AR'; var lista=FILIALES[cod]||[];
+  cont.innerHTML=lista.map(function(f){
+    var ck=POS_SEL.has(f.id)?' checked':''; var px=f.prox?' (próx.)':'';
+    return '<label><input type="checkbox" value="'+f.id+'"'+ck+' onchange="togglePosFilial(this)"> '+f.n+px+'</label>';
+  }).join('') || '<span style="font-size:12.5px;color:#9aa1af">Sin filiales cargadas.</span>';
+}
+function togglePosFilial(inp){ if(inp.checked)POS_SEL.add(inp.value); else POS_SEL.delete(inp.value); renderPosChips(); }
+function renderPosChips(){
+  var cont=document.getElementById('pos-chips'); if(!cont)return;
+  cont.innerHTML=[...POS_SEL].map(function(id){
+    var f=filialPorId(id); if(!f)return ''; var cod=filialPaisCod(id);
+    return '<span class="pos-chip">'+f.n+' · '+(PAIS_NOMBRE[cod]||'')+' <span class="x" onclick="quitarPosFilial(\''+id+'\')">✕</span></span>';
+  }).join('');
+}
+function quitarPosFilial(id){ POS_SEL.delete(id);
+  var box=document.querySelector('#pos-filiales input[value="'+id+'"]'); if(box)box.checked=false;
+  renderPosChips();
+}
+function enviarPostulacion(e){
+  e.preventDefault();
+  var err=document.getElementById('tj-err');
+  function fail(m){ if(err){err.textContent='⚠️ '+m;err.style.display='block'; window.scrollTo({top:err.getBoundingClientRect().top+window.scrollY-90,behavior:'smooth'});} }
+  var nom=(document.getElementById('pos-nom').value||'').trim();
+  var email=(document.getElementById('pos-email').value||'').trim();
+  var tel=(document.getElementById('pos-tel').value||'').trim();
+  var link=(document.getElementById('pos-link').value||'').trim();
+  var msg=(document.getElementById('pos-msg').value||'').trim();
+  var areas=[...document.querySelectorAll('#pos-areas label input:checked')].map(function(i){return i.value;});
+  if(document.getElementById('pos-otro-chk').checked){
+    var ot=(document.getElementById('pos-otro-txt').value||'').trim();
+    areas=areas.filter(function(a){return a!=='Otro';}); areas.push('Otro'+(ot?': '+ot:''));
+  }
+  if(!nom||!email||!tel) return fail('Completá tu nombre, email y teléfono.');
+  if(!areas.length) return fail('Elegí al menos un área en la que te querés postular.');
+  if(!POS_SEL.size) return fail('Elegí al menos una filial.');
+  if(!document.getElementById('pos-consent').checked) return fail('Necesitamos tu consentimiento para tratar tus datos.');
+  if(err)err.style.display='none';
+  var fils=[...POS_SEL].map(function(id){var f=filialPorId(id);var c=filialPaisCod(id);return (f?f.n:id)+' ('+(PAIS_NOMBRE[c]||'')+')';});
+  if(POSTULACIONES_ENDPOINT){
+    var payload={nombre:nom,email:email,telefono:tel,linkedin:link,areas:areas,filiales:[...POS_SEL],filiales_nombres:fils,mensaje:msg};
+    fetch(POSTULACIONES_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){});
+    document.getElementById('pos-okmsg').style.display='block'; return;
+  }
+  var t='Hola IGI 👋 Quiero postularme para trabajar con ustedes.\n\n'
+    +'*Nombre:* '+nom+'\n*Email:* '+email+'\n*Tel/WhatsApp:* '+tel+'\n'
+    +(link?('*LinkedIn/Portfolio:* '+link+'\n'):'')
+    +'*Áreas:* '+areas.join(', ')+'\n'
+    +'*Filiales de interés:* '+fils.join(' · ')+'\n'
+    +(msg?('*Sobre mí:* '+msg+'\n'):'')
+    +'\n(Adjunto mi CV en este chat.)';
+  window.open(wspLink(WSP_CENTRAL,t),'_blank');
+  document.getElementById('pos-okmsg').style.display='block';
 }
 /* ===== Fase 4: filiales y próximos inicios dinámicos desde la API del panel (con respaldo) ===== */
 const API_BACKEND='https://panel.igionline.com.ar/api/api.php';
