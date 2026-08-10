@@ -2624,8 +2624,11 @@ function renderInicios(){
    de cada país a medida que estén disponibles. */
 const INSTA_PAIS={
   AR:'igi.argentina',
-  PY:'igi.paraguay.oficial'
-  /* BO, BR, CO, CL, UY: pendientes → usan la cuenta principal (AR) */
+  PY:'igi.paraguay.oficial',
+  UY:'igicentro',
+  CL:'igichile',
+  BO:'igi_la_paz'
+  /* BR, CO: pendientes → usan la cuenta principal (AR) */
 };
 function instaUserDePais(cod){ return INSTA_PAIS[cod] || INSTA_PAIS.AR; }
 function renderInsta(){
