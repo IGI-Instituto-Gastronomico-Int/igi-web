@@ -704,7 +704,7 @@ footer a:hover{color:var(--naranja)}
       <div class="enc">
         <div class="mini">Formación profesional</div>
         <h2>Nuestras carreras</h2>
-        <p>Convertite en un profesional de la gastronomía en <b>1 o 2 años</b>, con <b>título privado y certificaciones universitarias</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.</p>
+        <p id="carreras-intro">Convertite en un profesional de la gastronomía en <b>1 o 2 años</b>, con <b>título privado y certificaciones universitarias</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.</p>
       </div>
       <div class="grid c3" id="home-carreras"></div>
     </div>
@@ -2416,6 +2416,17 @@ function refrescarPais(cod){
     if(hs){
       if(cod==='BR'){ hs.textContent='Carreiras e cursos com certificações universitárias, uniforme e material de estudo incluídos, em mais de 70 filiais de 7 países. Encontre sua unidade mais próxima e comece hoje.'; }
       else { var cert=(cod==='BO'||cod==='PY'||cod==='CO')?'oficiales':'universitarias'; hs.textContent='Carreras y cursos con certificaciones '+cert+', uniforme y material de estudio incluidos, en más de 70 filiales de 7 países. Encontrá tu sede más cercana y empezá hoy.'; }
+    }
+  }catch(e){}
+  /* Intro de "Nuestras carreras" por país (Paraguay tiene texto propio: 1/2/3 años, MEC).
+     Se controlan los 3 idiomas acá para no depender de aplicarIdioma. */
+  try{
+    var ci=document.getElementById('carreras-intro');
+    if(ci){
+      var CI_ES='Convertite en un profesional de la gastronomía en <b>1 o 2 años</b>, con <b>título privado y certificaciones universitarias</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.';
+      var CI_PT='Torne-se um profissional da gastronomia em <b>1 ou 2 anos</b>, com <b>título privado e certificações universitárias</b> que respaldam sua carreira. Você estuda <b>100% prático</b> desde a primeira aula —com uniforme, manuais, livros de receitas e insumos <b>incluídos</b>— e compete nos <b>torneios gastronômicos mais reconhecidos da América Latina</b>. Seu futuro na cozinha começa hoje.';
+      var CI_PY='Convertite en un profesional de la gastronomía en <b>1, 2 o 3 años</b>, con <b>títulos reconocidos Internacionalmente y por el MEC</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más prestigiosos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.';
+      ci.innerHTML = (cod==='PY') ? CI_PY : (cod==='BR' ? CI_PT : CI_ES);
     }
   }catch(e){}
 }
