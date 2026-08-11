@@ -1114,7 +1114,7 @@ footer a:hover{color:var(--naranja)}
         <div><label class="fld">Nombre y apellido *</label><input id="pos-nom" required placeholder="Tu nombre y apellido"></div>
         <div><label class="fld">Email *</label><input id="pos-email" type="email" required placeholder="tucorreo@email.com"></div>
         <div><label class="fld">Teléfono / WhatsApp *</label><input id="pos-tel" type="tel" required placeholder="Con código de país"></div>
-        <div><label class="fld">LinkedIn, portfolio o link a tu CV (opcional)</label><input id="pos-link" placeholder="Pegá el link acá"></div>
+        <div><label class="fld">LinkedIn o portfolio (opcional)</label><input id="pos-link" placeholder="Pegá el link acá"></div>
 
         <div class="full"><label class="fld">Áreas en las que te querés postular * (una o varias)</label>
           <div class="areas-check" id="pos-areas">
@@ -1135,7 +1135,10 @@ footer a:hover{color:var(--naranja)}
 
         <div class="full"><label class="fld">Contanos sobre vos (opcional)</label><textarea id="pos-msg" rows="3" placeholder="Tu experiencia, tu disponibilidad, por qué te gustaría trabajar en IGI…"></textarea></div>
 
-        <div class="full cv-nota">📎 ¿Tenés tu CV en Google Drive, Dropbox o LinkedIn? Pegá el link en el campo de arriba. Si preferís enviarlo como archivo, un asesor te lo pedirá al contactarte.</div>
+        <div class="full"><label class="fld">Adjuntá tu CV (PDF o Word, opcional)</label>
+          <input id="pos-cv" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+          <div class="cv-nota" style="margin-top:8px">📎 Subí tu CV como archivo (hasta 8 MB) o dejá un link arriba. Tus datos llegan directo a IGI.</div>
+        </div>
 
         <label class="full consent"><input type="checkbox" id="pos-consent"> <span>Acepto que IGI trate mis datos personales con el fin de evaluar mi postulación, según su política de privacidad.</span></label>
 
@@ -2297,12 +2300,12 @@ const TR_BR = {
  "Maestranza":"Serviços Gerais","Mantenimiento y cuidado de las instalaciones y las aulas.":"Manutenção e cuidado das instalações e das salas.",
  "Otros perfiles":"Outros perfis","¿Tenés otro perfil? Contanos en qué te gustaría sumar a la red IGI.":"Tem outro perfil? Conte para a gente em que você gostaria de contribuir na rede IGI.",
  "Postulación":"Candidatura","Dejá tu postulación":"Deixe sua candidatura","Elegí las áreas y las filiales que te interesan (podés elegir más de una) y completá tus datos.":"Escolha as áreas e as filiais que te interessam (você pode escolher mais de uma) e preencha seus dados.",
- "Nombre y apellido *":"Nome e sobrenome *","Email *":"Email *","Teléfono / WhatsApp *":"Telefone / WhatsApp *","LinkedIn, portfolio o link a tu CV (opcional)":"LinkedIn, portfólio ou link do seu currículo (opcional)",
+ "Nombre y apellido *":"Nome e sobrenome *","Email *":"Email *","Teléfono / WhatsApp *":"Telefone / WhatsApp *","LinkedIn o portfolio (opcional)":"LinkedIn ou portfólio (opcional)","Adjuntá tu CV (PDF o Word, opcional)":"Anexe seu currículo (PDF ou Word, opcional)",
  "Áreas en las que te querés postular * (una o varias)":"Áreas para as quais você quer se candidatar * (uma ou várias)",
  "Asesor Educativo":"Assessor Educacional","Instructor de Gastronomía":"Instrutor de Gastronomia","Otro":"Outro",
  "País y filial(es) * (podés elegir varias, incluso de distintos países)":"País e filial(is) * (você pode escolher várias, inclusive de países diferentes)",
  "Contanos sobre vos (opcional)":"Conte sobre você (opcional)",
- "📎 ¿Tenés tu CV en Google Drive, Dropbox o LinkedIn? Pegá el link en el campo de arriba. Si preferís enviarlo como archivo, un asesor te lo pedirá al contactarte.":"📎 Tem seu currículo no Google Drive, Dropbox ou LinkedIn? Cole o link no campo acima. Se preferir enviá-lo como arquivo, um consultor vai solicitá-lo ao entrar em contato.",
+ "📎 Subí tu CV como archivo (hasta 8 MB) o dejá un link arriba. Tus datos llegan directo a IGI.":"📎 Envie seu currículo como arquivo (até 8 MB) ou deixe um link acima. Seus dados chegam direto ao IGI.",
  "Acepto que IGI trate mis datos personales con el fin de evaluar mi postulación, según su política de privacidad.":"Autorizo o IGI a tratar meus dados pessoais para avaliar minha candidatura, conforme sua política de privacidade.",
  "Enviar postulación":"Enviar candidatura",
  "✅ ¡Gracias por postularte! Recibimos tu postulación y te vamos a contactar a la brevedad.":"✅ Obrigado por se candidatar! Recebemos sua candidatura e entraremos em contato em breve.",
@@ -2795,10 +2798,8 @@ function renderInsta(){
     +'<span class="ig-cta-btn">Abrir Instagram →</span></span></a>';
 }
 /* ===== Trabajá con nosotros: postulaciones ===== */
-/* Interino: la postulación se reenvía por email (FormSubmit) a la casilla de RRHH.
-   Cuando exista el endpoint del panel, definir POSTULACIONES_ENDPOINT (POST JSON) y se usará en su lugar. */
-const POSTULACIONES_ENDPOINT='';
-const FORM_ENDPOINT='https://formsubmit.co/ajax/RRHHCENTRAL@igi-la.com';
+/* Las postulaciones se envían al panel IGI (backend MySQL). El CV va como archivo adjunto. */
+const POSTULACIONES_ENDPOINT='https://panel.igionline.com.ar/api/postulaciones.php';
 const POS_SEL=new Set();
 let posPaisTouched=false;
 function filialPaisCod(id){ for(const c in FILIALES){ if(FILIALES[c].some(f=>f.id===id)) return c; } return 'AR'; }
@@ -2857,23 +2858,21 @@ function enviarPostulacion(e){
   if(!POS_SEL.size) return fail('Elegí al menos una filial.');
   if(!document.getElementById('pos-consent').checked) return fail('Necesitamos tu consentimiento para tratar tus datos.');
   if(err)err.style.display='none';
+  var filObjs=[...POS_SEL].map(function(id){var f=filialPorId(id);var c=filialPaisCod(id);return {ciudad:(f?f.ciudad:''),pais:(PAIS_NOMBRE[c]||'')};});
   var fils=[...POS_SEL].map(function(id){var f=filialPorId(id);var c=filialPaisCod(id);return (f?f.n:id)+' ('+(PAIS_NOMBRE[c]||'')+')';});
   var btn=e.target.querySelector('button[type=submit]');
-  var url, body;
-  if(POSTULACIONES_ENDPOINT){
-    url=POSTULACIONES_ENDPOINT;
-    body=JSON.stringify({nombre:nom,email:email,telefono:tel,linkedin:link,areas:areas,filiales:[...POS_SEL],filiales_nombres:fils,mensaje:msg});
-  } else {
-    url=FORM_ENDPOINT;
-    body=JSON.stringify({
-      _subject:'Nueva postulación — Trabajá con nosotros', _template:'table', _captcha:'false', _honey:'',
-      'Nombre':nom, 'Email':email, 'Teléfono':tel, 'LinkedIn/CV':link||'—',
-      'Áreas':areas.join(', '), 'Filiales de interés':fils.join(' · '), 'Mensaje':msg||'—'
-    });
-  }
+  var fd=new FormData();
+  fd.append('nombre',nom); fd.append('email',email); fd.append('telefono',tel);
+  fd.append('linkedin',link); fd.append('mensaje',msg);
+  fd.append('areas',JSON.stringify(areas));
+  fd.append('filiales',JSON.stringify(filObjs));
+  fd.append('filiales_nombres',JSON.stringify(fils));
+  fd.append('_hp','');
+  var cvInput=document.getElementById('pos-cv');
+  if(cvInput && cvInput.files && cvInput.files[0]) fd.append('cv', cvInput.files[0]);
   if(btn){ btn.disabled=true; btn.dataset.t=btn.textContent; btn.textContent='Enviando…'; }
-  fetch(url,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:body})
-    .then(function(r){ return r.ok?r.json():Promise.reject(); })
+  fetch(POSTULACIONES_ENDPOINT,{method:'POST',body:fd})
+    .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ if(!r.ok||j.error) throw (j.error||'Error'); return j; }); })
     .then(function(){
       document.getElementById('pos-okmsg').style.display='block';
       resetPostulacion();
@@ -2887,7 +2886,7 @@ function enviarPostulacion(e){
 }
 function resetPostulacion(){
   try{
-    ['pos-nom','pos-email','pos-tel','pos-link','pos-msg','pos-otro-txt'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
+    ['pos-nom','pos-email','pos-tel','pos-link','pos-msg','pos-otro-txt','pos-cv'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
     document.querySelectorAll('#pos-areas input:checked').forEach(function(i){i.checked=false;var l=i.closest('label');if(l)l.classList.remove('on');});
     var ot=document.getElementById('pos-otro-txt'); if(ot)ot.style.display='none';
     POS_SEL.clear(); renderPosFiliales(); renderPosChips();
