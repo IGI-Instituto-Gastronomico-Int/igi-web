@@ -2520,10 +2520,12 @@ function enviarConsulta(e, programa, origen){
   var filVal=sel?sel.value:'';
   var fname=(sel&&sel.selectedOptions&&sel.selectedOptions[0])?sel.selectedOptions[0].textContent.trim():'';
   var fid=''; var mm=(''+filVal).match(/^f?(\d+)$/); if(mm) fid=mm[1];
+  var fobj=null; try{ fobj=todasFiliales().filter(function(x){return String(x.id)===String(filVal);})[0]||null; }catch(e){}
+  var femail=(fobj&&fobj.mail)?fobj.mail:'';
   var nombre=g('nombre'), email=g('email'), telefono=g('telefono');
   if(!nombre || (!email && !telefono)){ alert('Completá tu nombre y un email o teléfono.'); return; }
   var payload={ nombre:nombre, email:email, telefono:telefono,
-    programa:(programa||g('programa')||''), filial_id:fid, filial_nombre:(fname||filVal||''),
+    programa:(programa||g('programa')||''), filial_id:fid, filial_email:femail, filial_slug:filVal, filial_nombre:(fname||filVal||''),
     mensaje:g('mensaje'), origen:(origen||'web'), _hp:'' };
   var btn=form.querySelector('button[type="submit"]'); var prev=btn?btn.textContent:'';
   if(btn){ btn.disabled=true; btn.textContent='Enviando…'; }
