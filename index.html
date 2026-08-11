@@ -680,7 +680,7 @@ footer a:hover{color:var(--naranja)}
         <div class="hero-izq">
           <div class="kicker">¿Querés ser chef? Serás el mejor.</div>
           <h1>Estudiá gastronomía en la red educativa <em>más grande de Latinoamérica</em></h1>
-          <p class="sub">Carreras y cursos con certificaciones universitarias, uniforme y material de estudio incluidos, en más de 70 filiales de 7 países. Encontrá tu sede más cercana y empezá hoy.</p>
+          <p class="sub" id="hero-sub">Carreras y cursos con certificaciones universitarias, uniforme y material de estudio incluidos, en más de 70 filiales de 7 países. Encontrá tu sede más cercana y empezá hoy.</p>
           <div class="acciones">
             <button class="btn btn-naranja" onclick="ir('catalogo','todos')">Descubrí carreras y cursos</button>
             <button class="btn btn-wsp" onclick="abrirWsp()">💬 Escribinos por WhatsApp</button>
@@ -2372,6 +2372,13 @@ function aplicarIdioma(cod){
 
 function refrescarPais(cod){
   setCatPais(cod);
+  try{
+    var hs=document.getElementById('hero-sub');
+    if(hs){
+      if(cod==='BR'){ hs.textContent='Carreiras e cursos com certificações universitárias, uniforme e material de estudo incluídos, em mais de 70 filiais de 7 países. Encontre sua unidade mais próxima e comece hoje.'; }
+      else { var cert=(cod==='BO'||cod==='PY'||cod==='CO')?'oficiales':'universitarias'; hs.textContent='Carreras y cursos con certificaciones '+cert+', uniforme y material de estudio incluidos, en más de 70 filiales de 7 países. Encontrá tu sede más cercana y empezá hoy.'; }
+    }
+  }catch(e){}
   try{ renderHome(); }catch(e){}
   try{ renderCatalogo(); }catch(e){}
   try{ if(typeof renderInicios==='function') renderInicios(); }catch(e){}
