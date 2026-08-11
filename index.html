@@ -1633,7 +1633,7 @@ const PROGRAMAS_BR = [
    Coronel Oviedo, Encarnación), tomada de los folletos oficiales. Se usa solo cuando el
    país activo es 'PY'. Mismos ids con prefijo py-; imágenes reutilizadas donde coinciden. */
 const PROGRAMAS_PY = [
- {id:'py-tecnico-superior',tipo:'carrera',cat:'carrera',emoji:'🎓',color:'linear-gradient(120deg,#5B2A63,#93549E)',nombre:'Técnico Superior en Gastronomía',titulo:'Técnico Superior en Gastronomía',dur:'3 años lectivos',frec:'5 horas semanales',mod:'Presencial',cert:'Título privado · Autorización MEC y MSPBS (Res. 148/2020)',
+ {id:'py-tecnico-superior',tipo:'carrera',cat:'carrera',emoji:'🎓',color:'linear-gradient(120deg,#5B2A63,#93549E)',nombre:'Tecnicatura Superior en Gastronomía',titulo:'Técnico Superior en Gastronomía',dur:'3 años lectivos',frec:'5 horas semanales',mod:'Presencial',cert:'Título de Técnico Superior',
   gancho:'La carrera técnica superior de gastronomía del IGI en Paraguay.',
   desc:'Esta carrera está orientada al futuro profesional que desea incursionar en el maravilloso mundo de la gastronomía; los conocimientos van desde lo más sencillo hasta los de nivel internacional más sofisticados. Autorización para el dictado de clases presenciales conforme al protocolo vigente del MEC y MSPBS (Resolución 148/2020).',
   objetivo:'Cerrar con la práctica profesional abordando temas especiales que se requieren hoy para contar con las herramientas necesarias para enfrentar el mercado laboral: menú degustación, cocina fusión, deconstrucción de platos, técnicas de embutidos y chacinados, conservas, mariscos, pescados, carnes de caza y nociones de cocina molecular.',
@@ -1642,7 +1642,7 @@ const PROGRAMAS_PY = [
   incluye:['👔 Uniforme y manuales de regalo','📚 Recetarios','🥕 Materias primas'],
   razones:[['Carrera con autorización oficial','Autorización MEC y MSPBS (Res. 148/2020) para el dictado presencial.'],['Plan completo en 3 años','De las técnicas culinarias a la cocina molecular, el management y los eventos.'],['Cocina paraguaya e internacional','Formación con identidad local y proyección internacional.'],['Práctica profesional real','La carrera cierra con la práctica profesional y una monografía.']],
   salidas:['Chef y jefe de cocina en hoteles y restaurantes','Repostería, pastelería y panadería','Eventos y catering','Tu propio emprendimiento gastronómico']},
- {id:'py-tecnologia-alimentos',tipo:'carrera',cat:'carrera',emoji:'🔬',color:'linear-gradient(120deg,#0E7C61,#1F7A8C)',nombre:'Tecnicatura Superior en Tecnología de Alimentos',titulo:'Técnico Superior en Tecnología de Alimentos',dur:'2 años · 4 semestres',frec:'Cursada por semestres',mod:'Presencial, semipresencial o virtual',cert:'Título de Técnico Superior · Resolución MEC Nº 825/2022',
+ {id:'py-tecnologia-alimentos',tipo:'carrera',cat:'carrera',emoji:'🔬',color:'linear-gradient(120deg,#0E7C61,#1F7A8C)',nombre:'Tecnicatura Superior en Tecnología de Alimentos',titulo:'Técnico Superior en Tecnología de Alimentos',dur:'2 años lectivos',frec:'',mod:'Presencial',cert:'Título de Técnico Superior · Resolución MEC Nº 825/2022',
   gancho:'La tecnicatura superior en tecnología de alimentos, con título oficial del MEC.',
   desc:'Una tecnicatura superior orientada a la industria de los alimentos: te forma para ejecutar y supervisar operaciones de industrialización, control de calidad e inocuidad, desde el emprendimiento hasta la escala industrial. Carrera reconocida por Resolución MEC Nº 825/2022.',
   objetivo:'Formar un Técnico Superior con competencia para ejecutar y supervisar operaciones de industrialización de alimentos, utilizando las tecnologías apropiadas en cada proceso, atendiendo un sistema de control de calidad, participando en la optimización de procesos, asesorando en las normas de manipulación segura y actuando con responsabilidad y sentido ético.',
@@ -1919,7 +1919,7 @@ function cardPrograma(p){
     <div class="foto" style="background:${p.color}"><span class="tag">${tag}</span>${foto}</div>
     <div class="cuerpo">
       <h3>${p.nombre}</h3>
-      <div class="datos"><span class="chip">⏱ ${p.dur}</span><span class="chip">📍 ${p.mod}</span><span class="chip">🗓 ${p.frec}</span></div>
+      <div class="datos"><span class="chip">⏱ ${p.dur}</span><span class="chip">📍 ${p.mod}</span>${p.frec?`<span class="chip">🗓 ${p.frec}</span>`:''}</div>
       <p class="desc">${p.gancho?('<b style="color:var(--azul)">'+p.gancho+'</b> '):''}${p.desc.slice(0,80)}…</p>
       <div class="pie"><span class="ver">Ver programa completo →</span>
         <span class="wsp-mini" onclick="event.stopPropagation();wspPrograma('${p.id}')">💬</span></div>
@@ -1953,7 +1953,7 @@ function verPrograma(id){
       <div class="datos-duros">
         <div class="dato"><div class="ic">🎓</div><b>${p.titulo}</b><span>Titulación</span></div>
         <div class="dato"><div class="ic">⏱</div><b>${p.dur}</b><span>Duración</span></div>
-        <div class="dato"><div class="ic">🗓</div><b>${p.frec}</b><span>Cursada</span></div>
+        ${p.frec?`<div class="dato"><div class="ic">🗓</div><b>${p.frec}</b><span>Cursada</span></div>`:''}
         <div class="dato"><div class="ic">📍</div><b>${p.mod}</b><span>Modalidad</span></div>
         ${p.cert.split('·').map(pt=>`<div class="dato"><div class="ic">🏅</div><b>${pt.trim()}</b><span>Certificación</span></div>`).join('')}
       </div>
@@ -1996,7 +1996,7 @@ function verPrograma(id){
             <button class="btn btn-naranja" type="submit">Quiero que me llamen</button>
           </form>
           <div class="ok-msg" style="margin-top:8px">✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.</div>
-          <div class="legal">Tus datos van directo a la filial elegida. Sin spam.</div>
+          <div class="legal">Tus datos van directo a la filial elegida.</div>
         </aside>
       </div>
     </div>
@@ -2337,7 +2337,7 @@ const TR_BR = {
  "¿Necesito experiencia previa?":"Preciso de experiência prévia?","No, el programa está pensado para comenzar desde cero. Solo necesitás ganas de aprender.":"Não, o programa é pensado para começar do zero. Você só precisa de vontade de aprender.",
  "¿Qué certificación recibo?":"Que certificação eu recebo?",
  "Te contactamos con la filial que elijas, sin compromiso.":"Entramos em contato com a unidade que você escolher, sem compromisso.",
- "💬 Consultar por WhatsApp":"💬 Falar pelo WhatsApp","📄 Pedir el programa por WhatsApp":"📄 Pedir o programa pelo WhatsApp","Quiero que me llamen":"Quero que me liguem","✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.":"✅ Pronto! Entraremos em contato em breve com as informações do programa.","Tus datos van directo a la filial elegida. Sin spam.":"Seus dados vão direto para a unidade escolhida. Sem spam.","📄 Folleto oficial — tocá para ampliar":"📄 Folheto oficial — toque para ampliar",
+ "💬 Consultar por WhatsApp":"💬 Falar pelo WhatsApp","📄 Pedir el programa por WhatsApp":"📄 Pedir o programa pelo WhatsApp","Quiero que me llamen":"Quero que me liguem","✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.":"✅ Pronto! Entraremos em contato em breve com as informações do programa.","Tus datos van directo a la filial elegida.":"Seus dados vão direto para a unidade escolhida.","📄 Folleto oficial — tocá para ampliar":"📄 Folheto oficial — toque para ampliar",
  // Ficha filial
  "🗺️ Abrir en Google Maps / Cómo llegar":"🗺️ Abrir no Google Maps / Como chegar","Apertura próximamente":"Abertura em breve","💬 Hablar con esta filial":"💬 Falar com esta unidade","Pedir info por formulario":"Pedir info por formulário","Conocé la sede":"Conheça a unidade","Próximamente":"Em breve","Ver página de la sede →":"Ver página da unidade →","Teléfono":"Telefone",
  // Inicios / opciones select
@@ -2665,7 +2665,7 @@ function renderSelCard(){
       <div class="foto-sel"><img src="${src}" alt="${p.nombre}"></div>
       <div class="cuerpo-sel">
         <h3>${p.emoji} ${p.nombre}</h3>
-        <div class="datos"><span class="chip">⏱ ${p.dur}</span><span class="chip">🗓 ${p.frec}</span></div>
+        <div class="datos"><span class="chip">⏱ ${p.dur}</span>${p.frec?`<span class="chip">🗓 ${p.frec}</span>`:''}</div>
         <span class="ver-mas">Ver programa completo →</span>
       </div>
     </div>
