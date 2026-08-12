@@ -1986,6 +1986,46 @@ function filtrar(cat,btn){
   });
 }
 
+/* Bloque de consulta del aside de la ficha. En Chef Internacional (Argentina) ofrece
+   recibir el programa por mail al instante (envía el lead a la filial + mail con el PDF). */
+function fichaConsulta(p){
+  var filOpts='<option value="">Filial de interés…</option>'+todasFiliales().map(function(f){return '<option value="'+f.id+'">'+f.n+'</option>';}).join('');
+  var hp='<input name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">';
+  var progAttr=(p.nombre||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+  var esAR=(typeof paisActual!=='undefined'&&paisActual==='AR');
+  if(p.id==='chef-internacional' && esAR){
+    return '<div style="display:inline-block;background:#fff2e8;color:#b8460f;border:1px solid #ffd6bd;border-radius:8px;padding:4px 9px;font-size:11.5px;font-weight:800;margin-bottom:8px">📩 Programa al instante por mail</div>'
+      + '<h3>Recibí el programa completo de '+progAttr+'</h3>'
+      + '<div class="sub">Completá tus datos y te lo enviamos ahora mismo por mail.</div>'
+      + '<form onsubmit="enviarConsulta(event, \'\', \'programa\')">'
+      +   '<input type="hidden" name="programa" value="'+progAttr+'">'
+      +   '<input type="hidden" name="programa_pdf" value="chef-internacional">'
+      +   '<input name="nombre" required placeholder="Nombre y apellido">'
+      +   '<input name="telefono" required type="tel" placeholder="WhatsApp">'
+      +   '<input name="email" required type="email" placeholder="Email (te enviamos el programa acá)">'
+      +   '<select name="filial" required>'+filOpts+'</select>'+hp
+      +   '<button class="btn btn-naranja" type="submit">📩 Enviarme el programa por mail</button>'
+      + '</form>'
+      + '<div class="ok-msg" style="margin-top:8px">✅ ¡Listo! Te enviamos el programa a tu mail. Revisá tu casilla (y el spam por las dudas).</div>'
+      + '<div class="legal">Llegará ahora mismo a tu mail.</div>'
+      + '<div style="text-align:center;color:var(--gris);font-size:12px;margin:12px 0 8px">— o si preferís hablar ahora —</div>'
+      + '<button class="btn btn-wsp" onclick="abrirWsp(\''+(p.nombre||'')+'\')">💬 Consultar por WhatsApp</button>';
+  }
+  return '<h3>'+L('¿Te interesa','Tem interesse em')+' '+(p.nombre||'')+'?</h3>'
+    + '<div class="sub">Te contactamos con la filial que elijas, sin compromiso.</div>'
+    + '<button class="btn btn-wsp" onclick="abrirWsp(\''+(p.nombre||'')+'\')">💬 Consultar por WhatsApp</button>'
+    + '<button class="btn btn-borde" onclick="abrirWsp(\'el programa completo\')">📄 Pedir el programa por WhatsApp</button>'
+    + '<form onsubmit="enviarConsulta(event, \'\', \'ficha\')">'
+    +   '<input type="hidden" name="programa" value="'+progAttr+'">'
+    +   '<input name="nombre" required placeholder="Nombre y apellido">'
+    +   '<input name="telefono" required type="tel" placeholder="WhatsApp">'
+    +   '<input name="email" required type="email" placeholder="Email">'
+    +   '<select name="filial" required>'+filOpts+'</select>'+hp
+    +   '<button class="btn btn-naranja" type="submit">Quiero que me llamen</button>'
+    + '</form>'
+    + '<div class="ok-msg" style="margin-top:8px">✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.</div>'
+    + '<div class="legal">Tus datos van directo a la filial elegida.</div>';
+}
 function verPrograma(id){
   const p=progById(id); if(!p)return;
   const mat=p.materias.map(m=>`<div class="anio"><h4>${m.t}</h4><ul>${m.items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('');
@@ -2030,21 +2070,7 @@ function verPrograma(id){
         <aside class="panel">
           ${(typeof FLYERS!=='undefined'&&FLYERS[p.id])?'<img class="folleto-img" src="'+FLYERS[p.id]+'" alt="Folleto oficial '+p.nombre+'" onclick="verFolleto(\''+p.id+'\')"><div class="folleto-cap">📄 Folleto oficial — tocá para ampliar</div>':''}
           ${(p.folletoPdf||p.descriptorPdf)?`<div class="folleto-dl">${p.folletoPdf?`<a class="btn btn-naranja" href="${p.folletoPdf}" target="_blank" rel="noopener" download style="justify-content:center">⬇️ ${L('Descargar folleto (PDF)','Baixar folheto (PDF)')}</a>`:''}${p.descriptorPdf?`<a class="btn btn-borde" href="${p.descriptorPdf}" target="_blank" rel="noopener" download style="justify-content:center">📋 ${L('Descargar plan de estudios (PDF)','Baixar grade curricular (PDF)')}</a>`:''}</div>`:''}
-          <h3>${L('¿Te interesa','Tem interesse em')} ${p.nombre}?</h3>
-          <div class="sub">Te contactamos con la filial que elijas, sin compromiso.</div>
-          <button class="btn btn-wsp" onclick="abrirWsp('${p.nombre}')">💬 Consultar por WhatsApp</button>
-          <button class="btn btn-borde" onclick="abrirWsp('el programa completo')">📄 Pedir el programa por WhatsApp</button>
-          <form onsubmit="enviarConsulta(event, '', 'ficha')">
-            <input type="hidden" name="programa" value="${(p.nombre||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;')}">
-            <input name="nombre" required placeholder="Nombre y apellido">
-            <input name="telefono" required type="tel" placeholder="WhatsApp">
-            <input name="email" required type="email" placeholder="Email">
-            <select name="filial" required><option value="">Filial de interés…</option>${todasFiliales().map(f=>`<option value="${f.id}">${f.n}</option>`).join('')}</select>
-            <input name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-            <button class="btn btn-naranja" type="submit">Quiero que me llamen</button>
-          </form>
-          <div class="ok-msg" style="margin-top:8px">✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.</div>
-          <div class="legal">Tus datos van directo a la filial elegida.</div>
+          ${fichaConsulta(p)}
         </aside>
       </div>
     </div>
@@ -2560,7 +2586,7 @@ function enviarConsulta(e, programa, origen){
   if(!nombre || (!email && !telefono)){ alert('Completá tu nombre y un email o teléfono.'); return; }
   var payload={ nombre:nombre, email:email, telefono:telefono,
     programa:(programa||g('programa')||''), filial_id:fid, filial_email:femail, filial_slug:filVal, filial_nombre:(fname||filVal||''),
-    mensaje:g('mensaje'), origen:(origen||'web'), _hp:'' };
+    mensaje:g('mensaje'), origen:(origen||'web'), programa_pdf:g('programa_pdf'), _hp:'' };
   var btn=form.querySelector('button[type="submit"]'); var prev=btn?btn.textContent:'';
   if(btn){ btn.disabled=true; btn.textContent='Enviando…'; }
   fetch(CONSULTAS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
