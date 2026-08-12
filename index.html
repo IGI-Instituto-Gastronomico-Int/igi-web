@@ -2493,11 +2493,29 @@ function elegirPaisGate(cod,nombre){
 
 /* ================= WHATSAPP ================= */
 let cursoWspCtx='';
+/* Filiales para el selector de WhatsApp: las del país actual, sin las "próximamente".
+   En Argentina se ordenan por región (CABA, GBA Norte, GBA Oeste, GBA Sur, Prov. Bs. As.,
+   y luego las provincias alfabéticamente); en el resto de países, alfabético por ciudad. */
+function filialesWspSelector(){
+  const cod=(typeof paisActual!=='undefined'&&paisActual)?paisActual:'AR';
+  let lista=(FILIALES[cod]||[]).filter(f=>!f.prox);
+  if(cod==='AR'){
+    const SP=['CABA','GBA Norte','GBA Oeste','GBA Sur','Prov. Bs. As.'];
+    const rk=r=>{const i=SP.indexOf(r);return i<0?5:i;};
+    lista.sort((a,b)=>{ const ra=rk(a.reg),rb=rk(b.reg);
+      if(ra!==rb)return ra-rb;
+      if(ra===5&&a.reg!==b.reg)return (a.reg||'').localeCompare(b.reg||'','es');
+      return (a.ciudad||'').localeCompare(b.ciudad||'','es'); });
+  }else{
+    lista.sort((a,b)=>(a.ciudad||'').localeCompare(b.ciudad||'','es'));
+  }
+  return lista;
+}
 function abrirWsp(curso){
   cursoWspCtx=curso||'';
   const sel=$('#wsp-sel');sel.classList.toggle('abierto');
   const s=$('#wsp-filial');
-  s.innerHTML=todasFiliales().map(f=>`<option value="${f.id}">${f.n}</option>`).join('');
+  s.innerHTML=filialesWspSelector().map(f=>`<option value="${f.id}">${f.n}${f.reg==='San Luis'?' (San Luis)':''}</option>`).join('');
 }
 function lanzarWsp(){
   const f=filialPorId($('#wsp-filial').value);
