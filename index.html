@@ -1989,7 +1989,7 @@ function filtrar(cat,btn){
 /* Bloque de consulta del aside de la ficha. En Chef Internacional (Argentina) ofrece
    recibir el programa por mail al instante (envía el lead a la filial + mail con el PDF). */
 function fichaConsulta(p){
-  var filOpts='<option value="">Filial de interés…</option>'+todasFiliales().map(function(f){return '<option value="'+f.id+'">'+f.n+'</option>';}).join('');
+  var filOpts='<option value="">Filial de interés…</option>'+wspSelectorHTML();
   var hp='<input name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">';
   var progAttr=(p.nombre||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;');
   var esAR=(typeof paisActual!=='undefined'&&paisActual==='AR');
