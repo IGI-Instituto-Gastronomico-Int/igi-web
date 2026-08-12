@@ -2511,11 +2511,27 @@ function filialesWspSelector(){
   }
   return lista;
 }
+/* Etiquetas lindas para los grupos del selector (Argentina). */
+const WSP_GRUPO={'CABA':'Ciudad de Buenos Aires','Prov. Bs. As.':'Provincia de Buenos Aires'};
+function wspSelectorHTML(){
+  const cod=(typeof paisActual!=='undefined'&&paisActual)?paisActual:'AR';
+  const lista=filialesWspSelector();
+  const opt=f=>`<option value="${f.id}">${f.n}${f.reg==='San Luis'?' (San Luis)':''}</option>`;
+  if(cod!=='AR') return lista.map(opt).join('');
+  // Argentina: agrupar con <optgroup> como separadores por región.
+  let html='', cur=null;
+  lista.forEach(f=>{
+    if(f.reg!==cur){ if(cur!==null)html+='</optgroup>'; cur=f.reg; html+=`<optgroup label="${WSP_GRUPO[cur]||cur}">`; }
+    html+=opt(f);
+  });
+  if(cur!==null)html+='</optgroup>';
+  return html;
+}
 function abrirWsp(curso){
   cursoWspCtx=curso||'';
   const sel=$('#wsp-sel');sel.classList.toggle('abierto');
   const s=$('#wsp-filial');
-  s.innerHTML=filialesWspSelector().map(f=>`<option value="${f.id}">${f.n}${f.reg==='San Luis'?' (San Luis)':''}</option>`).join('');
+  s.innerHTML=wspSelectorHTML();
 }
 function lanzarWsp(){
   const f=filialPorId($('#wsp-filial').value);
