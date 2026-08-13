@@ -702,8 +702,8 @@ footer a:hover{color:var(--naranja)}
   <section class="bloque">
     <div class="container">
       <div class="enc">
-        <div class="mini">Formación profesional</div>
-        <h2>Nuestras carreras</h2>
+        <div class="mini" id="carreras-mini">Formación profesional</div>
+        <h2 id="carreras-h2">Nuestras carreras</h2>
         <p id="carreras-intro">Convertite en un profesional de la gastronomía en <b>1 o 2 años</b>, con <b>título privado y certificaciones universitarias</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.</p>
       </div>
       <div class="grid c3" id="home-carreras"></div>
@@ -713,9 +713,9 @@ footer a:hover{color:var(--naranja)}
   <section class="bloque gris">
     <div class="container">
       <div class="enc">
-        <div class="mini">Cursos y talleres</div>
-        <h2>Todos nuestros cursos</h2>
-        <p>De 3 a 6 meses: cocina, pastelería, panadería, tortas, catering, servicio de salón, coctelería, café, arte latte y cocina para chicos. Todos con su ficha completa.</p>
+        <div class="mini" id="cursos-mini">Cursos y talleres</div>
+        <h2 id="cursos-h2">Todos nuestros cursos</h2>
+        <p id="cursos-intro">De 3 a 6 meses: cocina, pastelería, panadería, tortas, catering, servicio de salón, coctelería, café, arte latte y cocina para chicos. Todos con su ficha completa.</p>
       </div>
       <div class="grid c4" id="home-cursos"></div>
     </div>
@@ -766,9 +766,9 @@ footer a:hover{color:var(--naranja)}
   <section class="bloque">
     <div class="container">
       <div class="enc">
-        <div class="mini">Inscripciones abiertas</div>
+        <div class="mini" id="inicios-mini">Inscripciones abiertas</div>
         <h2 id="inicios-titulo">Próximos inicios en Argentina</h2>
-        <p>Elegí tu programa, tu sede y tu horario. Cupos limitados por comisión.</p>
+        <p id="inicios-intro">Elegí tu programa, tu sede y tu horario. Cupos limitados por comisión.</p>
       </div>
       <div class="inicios-board">
         <div class="inicios-head"><span>Inicio</span><span>Programa · Filial · Horario</span><span></span></div>
@@ -2451,7 +2451,7 @@ function refrescarPais(cod){
   try{ if(typeof renderInicios==='function') renderInicios(); }catch(e){}
   try{ if(typeof setHeroVar==='function') setHeroVar(heroVar); }catch(e){}
   try{ var mini=document.querySelector('#v-catalogo .enc .mini'); if(mini) mini.textContent=(PAIS_NOMBRE[cod]||'Argentina'); }catch(e){}
-  try{ var it=document.getElementById('inicios-titulo'); if(it) it.textContent=(cod==='BR'?'Próximas turmas no Brasil':('Próximos inicios en '+(PAIS_NOMBRE[cod]||'Argentina'))); }catch(e){}
+  try{ var it=document.getElementById('inicios-titulo'); if(it) it.textContent=(cod==='AR'?'Encontrá una fecha y un horario para empezar':(cod==='BR'?'Próximas turmas no Brasil':('Próximos inicios en '+(PAIS_NOMBRE[cod]||'Argentina')))); }catch(e){}
   try{
     var dc=document.getElementById('dif-cert');
     if(dc){
@@ -2502,7 +2502,23 @@ function refrescarPais(cod){
       var CI_PY='Convertite en un profesional de la gastronomía en <b>1, 2 o 3 años</b>, con <b>títulos reconocidos Internacionalmente y por el MEC</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más prestigiosos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.';
       var CI_BO='Convertite en un profesional de la gastronomía en <b>1, 2 o 3 años</b>, con <b>títulos reconocidos Internacionalmente y por el Ministerio de Educación</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.';
       var CI_CO='Convertite en un profesional de la gastronomía en <b>1 o 2 años</b>, con <b>títulos reconocidos Internacionalmente y por el Ministerio de Educación</b> que respaldan tu carrera. Cursás <b>100% práctico</b> desde la primera clase —con uniforme, manuales, recetarios y materias primas <b>incluidos</b>— y competís en los <b>torneos gastronómicos más reconocidos de Latinoamérica</b>. Tu futuro en la cocina empieza hoy.';
-      ci.innerHTML = (cod==='PY') ? CI_PY : (cod==='BO' ? CI_BO : (cod==='CO' ? CI_CO : (cod==='BR' ? CI_PT : CI_ES)));
+      var CI_AR='Elegí una formación de <b>1 o 2 años</b> y aprendé haciendo desde la primera clase. Desarrollá técnicas gastronómicas, organización, costos y gestión para desempeñarte en cocinas profesionales o crear tu propio proyecto.';
+      ci.innerHTML = (cod==='AR') ? CI_AR : (cod==='PY') ? CI_PY : (cod==='BO' ? CI_BO : (cod==='CO' ? CI_CO : (cod==='BR' ? CI_PT : CI_ES)));
+    }
+  }catch(e){}
+  /* Rótulo, título y bajada de las secciones "Carreras", "Cursos" e "Inicios" —
+     SOLO Argentina. Corre DESPUÉS de aplicarIdioma (que ya restaura/traduce el
+     texto original para los demás países), así que solo pisa cuando cod==='AR'. */
+  try{
+    if(cod==='AR'){
+      var _set=function(id,t){ var el=document.getElementById(id); if(el) el.textContent=t; };
+      _set('carreras-mini','Carreras profesionales');
+      _set('carreras-h2','Formate para trabajar, liderar una cocina o emprender');
+      _set('cursos-mini','Cursos cortos');
+      _set('cursos-h2','Aprendé una especialidad en pocos meses');
+      _set('cursos-intro','Cursos presenciales y prácticos para empezar desde cero, sumar una nueva habilidad o profesionalizar lo que ya hacés. Elegí cocina, pastelería, panadería, catering, servicio, coctelería o café.');
+      _set('inicios-mini','Vacantes disponibles');
+      _set('inicios-intro','Elegí el programa y la sede que mejor se adapten a vos. Consultá disponibilidad y valor de la próxima comisión.');
     }
   }catch(e){}
 }
