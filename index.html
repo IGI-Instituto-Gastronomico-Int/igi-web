@@ -817,7 +817,7 @@ footer a:hover{color:var(--naranja)}
         <p>Hace más de 20 años organizamos el torneo gastronómico educativo más importante de Latinoamérica, y cada año celebramos colaciones multitudinarias junto a las familias de toda la red.</p>
       </div>
       <div class="reels-intro">
-        <span class="manuales-tag">🎥 Videos propios de nuestros eventos</span>
+        <span class="manuales-tag">🎥 Videos de nuestros eventos</span>
       </div>
       <div class="reels-row reels-4">
         <div class="reel-card"><iframe src="https://www.facebook.com/plugins/video.php?height=446&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1062299242023494%2F&show_text=true&width=250&t=0" width="250" height="560" style="border:none;overflow:hidden" scrolling="no" frameborder="0" loading="lazy" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe><div class="reel-cap">🏆 InterIGI — San Juan</div></div>
@@ -2303,7 +2303,7 @@ function verSede(id){
             <div><span class="ic">💬</span> <a target="_blank" href="${wspLink(f.wsp,'Hola '+f.n+'! Quiero información sobre los cursos.')}">${L('WhatsApp de la filial','WhatsApp da unidade')} ${f.wsp?('+'+f.wsp):''}</a></div>
             <div><span class="ic">📞</span> <a href="tel:0">${f.tel}</a></div>
             <div><span class="ic">✉️</span> <a href="mailto:${f.mail}">${f.mail}</a></div>
-            <div><span class="ic">🕒</span> Lun a Vie 9–21 h · Sáb 9–13 h (ejemplo)</div>
+            <div><span class="ic">🕒</span> ${f.horario||'Lunes a viernes de 9:00 a 22:00 y Sábados de 9:00 a 21:00 hs'}</div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <button class="btn btn-wsp" onclick="window.open(wspLink('${f.wsp}','Hola ${f.n}! Quiero información sobre los cursos.'),'_blank')">💬 Hablar con esta filial</button>
@@ -2396,7 +2396,7 @@ const TR_BR = {
  "Certificados verificables con QR":"Certificados verificáveis com QR","Cada certificado IGI lleva un código QR único. Descargá tus certificaciones cuando quieras y cualquier empleador puede validarlas online al instante.":"Cada certificado IGI tem um código QR único. Baixe suas certificações quando quiser e qualquer empregador pode validá-las online na hora.","Validar un certificado →":"Validar um certificado →",
  "La experiencia IGI":"A experiência IGI","Torneo InterIGI y actos de colación":"Torneio InterIGI e formaturas",
  "Hace más de 20 años organizamos el torneo gastronómico educativo más importante de Latinoamérica, y cada año celebramos colaciones multitudinarias junto a las familias de toda la red.":"Há mais de 20 anos organizamos o torneio gastronômico educacional mais importante da América Latina, e todo ano celebramos formaturas com as famílias de toda a rede.",
- "🎥 Videos propios de nuestros eventos":"🎥 Vídeos próprios dos nossos eventos",
+ "🎥 Videos de nuestros eventos":"🎥 Vídeos próprios dos nossos eventos",
  "👨‍🍳 Torneo de Cocineritos":"👨‍🍳 Torneio de Cozinheirinhos","🎓 Última colación":"🎓 Última formatura","🎓 Colación 2025":"🎓 Formatura 2025",
  "Podio InterIGI":"Pódio InterIGI","Colación 2025":"Formatura 2025","Competencia":"Competição","Familias":"Famílias","Platos finalistas":"Pratos finalistas","Festejo":"Festa",
  "Inscripciones abiertas":"Inscrições abertas","Próximos inicios en Brasil":"Próximas turmas no Brasil",
@@ -3174,7 +3174,7 @@ async function cargarDesdeAPI(){
           lat:(f.lat!=null&&f.lat!=='')?parseFloat(f.lat):undefined,
           lng:(f.lng!=null&&f.lng!=='')?parseFloat(f.lng):undefined,
           dir:f.direccion||'', tel:f.telefono||'—', wsp:f.whatsapp||'',
-          mail:f.email||'', kw:f.keywords||'', real:true, prox:(f.proximamente==1) });
+          mail:f.email||'', kw:f.keywords||'', horario:(f.horario||''), real:true, prox:(f.proximamente==1) });
       });
       for(var c in nuevo){ if(nuevo[c].length) FILIALES[c]=nuevo[c]; }
     }
