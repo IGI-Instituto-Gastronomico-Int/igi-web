@@ -597,33 +597,18 @@ footer a:hover{color:var(--naranja)}
 .manuales-band p b{color:#fff}
 .manuales-tag{display:inline-block;background:rgba(245,130,32,.18);color:#F9A24E;font-weight:800;font-size:12px;letter-spacing:.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
 </style>
-<!-- ===== Analítica (GA4 + Microsoft Clarity) con consentimiento ===== -->
+<!-- ===== Analítica (GA4 + Microsoft Clarity) ===== -->
 <script>
 (function(){
-  var GA_ID='G-2H24GS3HKH', CLARITY_ID='y1n5mo1dsk', loaded=false;
+  var GA_ID='G-2H24GS3HKH', CLARITY_ID='y1n5mo1dsk';
   window.dataLayer=window.dataLayer||[];
   window.gtag=window.gtag||function(){dataLayer.push(arguments);};
-  window.igiTrack=function(name,params){ try{ if(loaded && window.gtag) gtag('event',name,params||{}); }catch(e){} };
-  function loadAnalytics(){
-    if(loaded) return; loaded=true;
-    try{
-      var s=document.createElement('script'); s.async=1; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
-      gtag('js', new Date()); gtag('config', GA_ID, {anonymize_ip:true});
-      (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window,document,'clarity','script',CLARITY_ID);
-    }catch(e){}
-  }
-  function setC(v){ try{ localStorage.setItem('igi_consent',v); }catch(e){} }
-  function getC(){ try{ return localStorage.getItem('igi_consent'); }catch(e){ return null; } }
-  function banner(){
-    var b=document.createElement('div'); b.id='igi-cookie';
-    b.innerHTML='<div class="igi-ck-txt">Usamos cookies para analizar la navegación y mejorar el sitio. Podés aceptarlas o rechazarlas.</div><div class="igi-ck-btns"><button id="igi-ck-no" class="igi-ck-b sec" type="button">Rechazar</button><button id="igi-ck-yes" class="igi-ck-b si" type="button">Aceptar</button></div>';
-    var st=document.createElement('style'); st.textContent='#igi-cookie{position:fixed;left:12px;right:12px;bottom:12px;z-index:99999;max-width:600px;margin:0 auto;background:#1F2430;color:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 12px 34px rgba(0,0,0,.32);display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-family:inherit;font-size:13.5px}#igi-cookie .igi-ck-txt{flex:1;min-width:210px;line-height:1.45}#igi-cookie .igi-ck-btns{display:flex;gap:8px;margin-left:auto}#igi-cookie .igi-ck-b{border:0;border-radius:8px;padding:9px 18px;font-weight:800;font-size:13px;cursor:pointer;font-family:inherit}#igi-cookie .igi-ck-b.si{background:#F58220;color:#fff}#igi-cookie .igi-ck-b.sec{background:transparent;color:#c7ccd6;border:1px solid #3a4150}';
-    document.head.appendChild(st); (document.body||document.documentElement).appendChild(b);
-    document.getElementById('igi-ck-yes').onclick=function(){ setC('granted'); loadAnalytics(); b.remove(); };
-    document.getElementById('igi-ck-no').onclick=function(){ setC('denied'); b.remove(); };
-  }
-  function init(){ var c=getC(); if(c==='granted') loadAnalytics(); else if(c!=='denied') banner(); }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+  window.igiTrack=function(name,params){ try{ if(window.gtag) gtag('event',name,params||{}); }catch(e){} };
+  try{
+    var s=document.createElement('script'); s.async=1; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', GA_ID, {anonymize_ip:true});
+    (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window,document,'clarity','script',CLARITY_ID);
+  }catch(e){}
 })();
 </script>
 </head>
