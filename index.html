@@ -2028,6 +2028,7 @@ const PAIS_NOMBRE={AR:'Argentina',PY:'Paraguay',BO:'Bolivia',CL:'Chile',CO:'Colo
 function paisNombre(id){for(const c in FILIALES){if(FILIALES[c].some(f=>f.id===id))return PAIS_NOMBRE[c]}return 'Argentina'}
 function filialPorId(id){return todasFiliales().find(f=>f.id===id)}
 function wspLink(num,msg){return 'https://wa.me/'+(num||WSP_CENTRAL)+'?text='+encodeURIComponent(msg)}
+function wspMsg(nombre){return '¡Hola, '+(nombre||'IGI')+'! 👋 Llegué desde la página web y quisiera recibir información sobre sus cursos. ¿Me pueden asesorar?';}
 
 function cardPrograma(p){
   const tag=p.tipo==='carrera'?'Carrera':(p.tipo==='kids'?'Para chicos':'Curso');
@@ -2300,13 +2301,13 @@ function verSede(id){
           <div class="estado" ${f.prox?'style="color:#b8860b"':''}>● ${f.prox?'Apertura próximamente':'Inscripciones abiertas'} · ${pais}</div>
           <div class="sede-datos">
             <div><span class="ic">🏠</span> <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${qMapa}">${f.dir}</a></div>
-            <div><span class="ic">💬</span> <a target="_blank" href="${wspLink(f.wsp,'Hola '+f.n+'! Quiero información sobre los cursos.')}">${L('WhatsApp de la filial','WhatsApp da unidade')} ${f.wsp?('+'+f.wsp):''}</a></div>
+            <div><span class="ic">💬</span> <a target="_blank" href="${wspLink(f.wsp,wspMsg(f.n))}">${L('WhatsApp de la filial','WhatsApp da unidade')} ${f.wsp?('+'+f.wsp):''}</a></div>
             <div><span class="ic">📞</span> <a href="tel:0">${f.tel}</a></div>
             <div><span class="ic">✉️</span> <a href="mailto:${f.mail}">${f.mail}</a></div>
             <div><span class="ic">🕒</span> ${f.horario||'Lunes a viernes de 9:00 a 22:00 y Sábados de 9:00 a 21:00 hs'}</div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <button class="btn btn-wsp" onclick="window.open(wspLink('${f.wsp}','Hola ${f.n}! Quiero información sobre los cursos.'),'_blank')">💬 Hablar con esta filial</button>
+            <button class="btn btn-wsp" onclick="window.open(wspLink('${f.wsp}',wspMsg('${f.n}')),'_blank')">💬 Hablar con esta filial</button>
             <button class="btn btn-borde" onclick="ir('contacto')">Pedir info por formulario</button>
           </div>
         </div>
@@ -2651,12 +2652,12 @@ function abrirWsp(curso){
 }
 function lanzarWsp(){
   const f=filialPorId($('#wsp-filial').value);
-  const msg='Hola '+f.n+'! Quiero información'+(cursoWspCtx?' sobre '+cursoWspCtx:' sobre los cursos')+'.';
+  const msg=wspMsg(f.n);
   window.open(wspLink(f.wsp,msg),'_blank');
   $('#wsp-sel').classList.remove('abierto');
 }
-function wspSede(id,curso){const f=filialPorId(id);try{if(window.igiTrack)igiTrack('whatsapp_click',{contexto:curso||'',filial:(f?f.n:'')});}catch(e){}window.open(wspLink(f&&f.wsp,'Hola '+(f?f.n:'IGI')+'! Quiero info sobre '+curso+'.'),'_blank')}
-function wspPrograma(id){const p=progById(id);try{if(window.igiTrack)igiTrack('whatsapp_click',{contexto:(p?p.nombre:'programa')});}catch(e){}window.open(wspLink('','Hola IGI! Quiero info sobre '+(p?p.nombre:'los cursos')+'.'),'_blank')}
+function wspSede(id,curso){const f=filialPorId(id);try{if(window.igiTrack)igiTrack('whatsapp_click',{contexto:curso||'',filial:(f?f.n:'')});}catch(e){}window.open(wspLink(f&&f.wsp,wspMsg(f?f.n:'IGI')),'_blank')}
+function wspPrograma(id){const p=progById(id);try{if(window.igiTrack)igiTrack('whatsapp_click',{contexto:(p?p.nombre:'programa')});}catch(e){}window.open(wspLink('',wspMsg('IGI')),'_blank')}
 
 /* ================= FORM CONTACTO ================= */
 /* Endpoint del panel que recibe las consultas/leads y avisa por email a la filial elegida. */
