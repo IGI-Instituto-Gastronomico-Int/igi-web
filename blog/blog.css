@@ -169,3 +169,8 @@ table.cmp td:first-child{font-weight:700;color:var(--azul);white-space:nowrap}
   .prose{font-size:16.5px}
   .cta-final{padding:28px 20px}
 }
+
+/* ===== Artículos 21-25: callout de fórmulas + caption accesible ===== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.prose .tip{background:#fff7ea;border:1px solid #f3d9a6;border-left:4px solid #E96B00;border-radius:10px;padding:12px 16px;margin:14px 0;font-size:15px;line-height:1.5;color:#5a3d00;overflow-wrap:anywhere}
+.prose .tip strong{color:#8a5a00;font-weight:700}
