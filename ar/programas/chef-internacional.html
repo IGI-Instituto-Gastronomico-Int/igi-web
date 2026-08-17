@@ -59,17 +59,16 @@
       <aside class="panel">
         <a href="/prog-ar-chef-internacional.jpg" target="_blank" rel="noopener"><img class="folleto-img" src="/prog-ar-chef-internacional.jpg" alt="Folleto oficial de Chef Internacional"></a><div class="folleto-cap">📄 Folleto oficial — tocá para ampliar</div>
         <h3>¿Te interesa Chef Internacional?</h3>
-        <div class="sub">Te contactamos con la filial que elijas, sin compromiso.</div>
-        <button class="btn btn-wsp" type="button" onclick="igiWsp('Chef Internacional')">💬 Consultar por WhatsApp</button>
+        <div class="sub">Elegí tu filial y dejanos tus datos. Te contactamos sin compromiso.</div>
         <form onsubmit="return igiEnviar(event)">
           <input type="hidden" name="programa" value="Chef Internacional">
-          <input name="nombre" required placeholder="Nombre y apellido">
-          <input name="telefono" required type="tel" placeholder="WhatsApp">
-          <input name="email" required type="email" placeholder="Email">
-          <select name="filial" required><option value="">Filial de interés…</option><option value="28">IGI Bahía Blanca</option><option value="23">IGI Berazategui</option><option value="34">IGI Cañuelas</option><option value="22">IGI Ezeiza</option><option value="20">IGI Florencio Varela</option><option value="31">IGI González Catán</option><option value="27">IGI Grand Bourg</option><option value="30">IGI José C. Paz</option><option value="33">IGI Junín</option><option value="8">IGI La Plata</option><option value="25">IGI Laferrere</option><option value="16">IGI Lanús</option><option value="13">IGI Lomas de Zamora</option><option value="7">IGI Mar del Plata</option><option value="19">IGI Merlo</option><option value="24">IGI Monte Grande</option><option value="14">IGI Moreno</option><option value="18">IGI Morón</option><option value="29">IGI Pacheco</option><option value="26">IGI Pilar</option><option value="17">IGI Quilmes</option><option value="12">IGI San Fernando</option><option value="15">IGI San Isidro</option><option value="9">IGI San Justo</option><option value="10">IGI San Martín</option><option value="11">IGI San Miguel</option><option value="21">IGI Vicente López</option><option value="6">IGI Belgrano</option><option value="2">IGI Congreso</option><option value="1">IGI Flores</option><option value="3">IGI Liniers</option><option value="5">IGI Pompeya</option><option value="4">IGI Villa Urquiza</option><option value="36">IGI Resistencia</option><option value="38">IGI Comodoro Rivadavia</option><option value="37">IGI Puerto Madryn</option><option value="39">IGI Córdoba</option><option value="42">IGI Marcos Juárez</option><option value="40">IGI Río Cuarto</option><option value="43">IGI Villa Carlos Paz</option><option value="41">IGI Villa Dolores</option><option value="44">IGI Corrientes</option><option value="45">IGI Paraná</option><option value="46">IGI Formosa</option><option value="47">IGI San Salvador de Jujuy</option><option value="48">IGI Mendoza</option><option value="51">IGI Oberá</option><option value="49">IGI Posadas</option><option value="52">IGI Neuquén</option><option value="53">IGI Bariloche</option><option value="54">IGI Salta</option><option value="55">IGI San Juan</option><option value="56">IGI Merlo</option><option value="58">IGI Rosario</option><option value="57">IGI Santa Fe</option><option value="80">IGI Santiago del Estero</option><option value="59">IGI Tucuman</option></select>
-          <input name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
-          <button class="btn btn-naranja" type="submit">Quiero que me llamen</button>
+          <select name="filial"><option value="">Filial de interés…</option><option value="28">IGI Bahía Blanca</option><option value="23">IGI Berazategui</option><option value="34">IGI Cañuelas</option><option value="22">IGI Ezeiza</option><option value="20">IGI Florencio Varela</option><option value="31">IGI González Catán</option><option value="27">IGI Grand Bourg</option><option value="30">IGI José C. Paz</option><option value="33">IGI Junín</option><option value="8">IGI La Plata</option><option value="25">IGI Laferrere</option><option value="16">IGI Lanús</option><option value="13">IGI Lomas de Zamora</option><option value="7">IGI Mar del Plata</option><option value="19">IGI Merlo</option><option value="24">IGI Monte Grande</option><option value="14">IGI Moreno</option><option value="18">IGI Morón</option><option value="29">IGI Pacheco</option><option value="26">IGI Pilar</option><option value="17">IGI Quilmes</option><option value="12">IGI San Fernando</option><option value="15">IGI San Isidro</option><option value="9">IGI San Justo</option><option value="10">IGI San Martín</option><option value="11">IGI San Miguel</option><option value="21">IGI Vicente López</option><option value="6">IGI Belgrano</option><option value="2">IGI Congreso</option><option value="1">IGI Flores</option><option value="3">IGI Liniers</option><option value="5">IGI Pompeya</option><option value="4">IGI Villa Urquiza</option><option value="36">IGI Resistencia</option><option value="38">IGI Comodoro Rivadavia</option><option value="37">IGI Puerto Madryn</option><option value="39">IGI Córdoba</option><option value="42">IGI Marcos Juárez</option><option value="40">IGI Río Cuarto</option><option value="43">IGI Villa Carlos Paz</option><option value="41">IGI Villa Dolores</option><option value="44">IGI Corrientes</option><option value="45">IGI Paraná</option><option value="46">IGI Formosa</option><option value="47">IGI San Salvador de Jujuy</option><option value="48">IGI Mendoza</option><option value="51">IGI Oberá</option><option value="49">IGI Posadas</option><option value="52">IGI Neuquén</option><option value="53">IGI Bariloche</option><option value="54">IGI Salta</option><option value="55">IGI San Juan</option><option value="56">IGI Merlo</option><option value="58">IGI Rosario</option><option value="57">IGI Santa Fe</option><option value="80">IGI Santiago del Estero</option><option value="59">IGI Tucuman</option></select>
+          <input name="nombre" placeholder="Nombre y apellido">
+          <input name="telefono" type="tel" placeholder="WhatsApp / teléfono">
+          <input name="email" type="email" placeholder="Email">
+          <button class="btn btn-naranja" type="submit" style="width:100%;justify-content:center">Quiero que me llamen</button>
         </form>
+        <button class="btn btn-wsp" type="button" onclick="igiWsp('Chef Internacional')" style="width:100%;justify-content:center;margin-top:8px">💬 Consultar por WhatsApp</button>
         <div class="ok-msg" style="margin-top:8px">✅ ¡Listo! Te contactaremos a la brevedad con la información del programa.</div>
         <div class="legal">Tus datos van directo a la filial elegida.</div>
       </aside>
@@ -92,9 +91,10 @@ window.IGI_FIL={"28": {"ciudad": "Bahia Blanca", "nombre": "IGI Bahía Blanca", 
 function igiEnviar(e){
   e.preventDefault(); var f=e.target;
   var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?(''+el.value).trim():'';};
-  if(g('_hp')) return false;
   var filVal=g('filial'), fo=(window.IGI_FIL&&window.IGI_FIL[filVal])||{};
-  if(!g('nombre')||(!g('email')&&!g('telefono'))){alert('Completá tu nombre y un email o teléfono.');return false;}
+  if(!filVal){ alert('Elegí tu filial de interés.'); var s=f.querySelector('[name="filial"]'); if(s)s.focus(); return false; }
+  if(!g('nombre')){ alert('Completá tu nombre y apellido.'); return false; }
+  if(!g('email') && !g('telefono')){ alert('Dejanos un email o un teléfono para contactarte.'); return false; }
   var payload={nombre:g('nombre'),email:g('email'),telefono:g('telefono'),programa:g('programa'),
     filial_id:filVal,filial_email:fo.mail||'',filial_slug:filVal,filial_nombre:fo.nombre||'',
     mensaje:'',origen:'ficha',programa_pdf:'',_hp:''};
@@ -103,16 +103,17 @@ function igiEnviar(e){
   fetch('https://panel.igionline.com.ar/api/consultas.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
    .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||j.error)throw(j.error||'Error');return j;});})
    .then(function(){var ok=f.parentNode.querySelector('.ok-msg');if(ok)ok.style.display='block';f.style.display='none';})
-   .catch(function(){if(btn){btn.disabled=false;btn.textContent=prev;}alert('No se pudo enviar. Probá de nuevo o escribinos por WhatsApp.');});
+   .catch(function(){if(btn){btn.disabled=false;btn.textContent=prev;}alert('No se pudo enviar ahora. Probá de nuevo o escribinos por WhatsApp.');});
   return false;
 }
 function igiWsp(prog){
-  var sel=document.querySelector('form [name="filial"]'); var fo=sel&&window.IGI_FIL?window.IGI_FIL[sel.value]:null;
-  var nums=[]; for(var k in (window.IGI_FIL||{})){ if(window.IGI_FIL[k].wsp){nums.push(window.IGI_FIL[k].wsp);} }
-  var wsp=(fo&&fo.wsp)?fo.wsp:(nums[0]||'');
-  if(!wsp){ window.location.href='/#contacto'; return; }
-  var msg=encodeURIComponent('Hola! Me interesa '+(prog||'un programa')+' en IGI. ¿Me pasan información?');
-  window.open('https://wa.me/'+(''+wsp).replace(/[^0-9]/g,'')+'?text='+msg,'_blank');
+  var sel=document.querySelector('form [name="filial"]');
+  if(!sel || !sel.value){ alert('Elegí primero tu filial de interés 👇'); if(sel){sel.focus(); sel.scrollIntoView({block:'center'});} return; }
+  var fo=(window.IGI_FIL||{})[sel.value]||{};
+  var wsp=fo.wsp?(''+fo.wsp).replace(/[^0-9]/g,''):'';
+  if(!wsp){ alert('Esa filial no tiene WhatsApp cargado. Escribinos desde Contacto.'); return; }
+  var msg=encodeURIComponent('Hola! Me interesa '+(prog||'un programa')+' en IGI ('+(fo.nombre||'')+'). ¿Me pasan información?');
+  window.open('https://wa.me/'+wsp+'?text='+msg,'_blank');
 }
 (function(){
   var box=document.getElementById('inicios-live'); if(!box) return;
