@@ -15,19 +15,65 @@
 <link rel="stylesheet" href="/estilos-igi.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "EducationalOccupationalProgram", "name": "Pastelero Internacional", "description": "Una carrera profesional basada en las técnicas de la Pastelería moderna nacional e internacional, dirigida a quienes quieran introducirse en todos los secretos de este dulce arte. Pensada para formar profesionales a nivel internacional.", "url": "https://www.igi-la.com/bo/programas/pastelero.html", "inLanguage": "es-BO", "provider": {"@type": "EducationalOrganization", "name": "Instituto Gastronómico Internacional", "alternateName": "IGI", "url": "https://www.igi-la.com/"}, "timeToComplete": "1 año lectivo", "occupationalCategory": "Pastelero Internacional"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.igi-la.com/"}, {"@type": "ListItem", "position": 2, "name": "Sedes en Bolivia", "item": "https://www.igi-la.com/bo/"}, {"@type": "ListItem", "position": 3, "name": "Pastelero Internacional", "item": "https://www.igi-la.com/bo/programas/pastelero.html"}]}</script>
+<style>.figbandera{display:inline-flex;border-radius:2px;overflow:hidden;vertical-align:middle;box-shadow:0 0 0 1px rgba(0,0,0,.08);line-height:0;flex:0 0 auto}
+.figbandera svg{width:100%;height:auto;display:block}
+.paises a{display:inline-flex;align-items:center;gap:5px}
+.badge-paises{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.femoji{font-size:16px;margin-right:2px}
+.fdrop{margin-bottom:7px}
+.fdd summary{color:#c3c9d6;cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.fdd summary::-webkit-details-marker{display:none}
+.fdd summary::before{content:'▸';font-size:10px;color:#8d95a6;transition:transform .15s}
+.fdd[open] summary::before{transform:rotate(90deg)}
+.fdd summary:hover{color:var(--naranja)}
+.fdd-list{margin:6px 0 4px 14px;padding:0;border-left:1px solid #333b4d;list-style:none}
+.fdd-list li{margin:0 0 4px 10px}
+.fdd-list a{color:#aeb4c2;font-size:13px;display:flex;align-items:center;gap:7px;text-decoration:none}
+.fdd-list a:hover{color:var(--naranja)}
+.fdd-list .fdd-em{font-size:14px;flex:0 0 auto}
+/* Próximos inicios: si hay más de los que entran, la caja se desplaza (scroll) con encabezado fijo */
+#inicios-live .tabla-inicios{max-height:340px;overflow-y:auto;border-radius:var(--radius,12px)}
+#inicios-live table{width:100%;border-collapse:collapse}
+#inicios-live thead th{position:sticky;top:0;z-index:2}</style>
 </head>
 <body>
 <header>
-  <div class="navbar"><div class="container">
-    <a class="logo" href="/" aria-label="IGI inicio"><img src="/logo-header.png" alt="IGI — Instituto Gastronómico Internacional" style="height:46px;display:block"></a>
-    <nav class="menu">
-      <a href="/#catalogo">Carreras y cursos</a>
-      <a href="/bo/">Filiales</a>
-      <a href="/blog/">Conocimiento</a>
-      <a href="/#contacto">Contacto</a>
-    </nav>
-    <a class="btn btn-naranja" href="/#contacto">Pedí info</a>
-  </div></div>
+  <div class="top-strip">
+    <div class="container">
+      <div class="paises">
+        <span class="lbl" style="font-weight:700">🌎 Cambiar país:</span>
+        <a class="" href="/ar/"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#74ACDF"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><circle cx="1.5" cy="1" r="0.22" fill="#F6B40E"/></svg></span><span class="pnom">Argentina</span></a><a class="" href="/#filiales"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#009C3B"/><polygon points="1.5,0.2 2.8,1 1.5,1.8 0.2,1" fill="#FEDF00"/><circle cx="1.5" cy="1" r="0.4" fill="#002776"/></svg></span><span class="pnom">Brasil</span></a><a class="activo" href="/bo/"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#F9E300"/><rect y="1.333" width="3" height="0.667" fill="#007934"/></svg></span><span class="pnom">Bolivia</span></a><a class="" href="/#filiales"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#fff"/><rect y="1" width="3" height="1" fill="#D52B1E"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.2 0.57,0.42 0.8,0.42 0.62,0.57 0.69,0.8 0.5,0.66 0.31,0.8 0.38,0.57 0.2,0.42 0.43,0.42" fill="#fff"/></svg></span><span class="pnom">Chile</span></a><a class="" href="/#filiales"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#FCD116"/><rect y="1" width="3" height="0.5" fill="#003893"/><rect y="1.5" width="3" height="0.5" fill="#CE1126"/></svg></span><span class="pnom">Colombia</span></a><a class="" href="/py/"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><rect y="1.333" width="3" height="0.667" fill="#0038A8"/><circle cx="1.5" cy="1" r="0.24" fill="none" stroke="#4c6b31" stroke-width="0.05"/><circle cx="1.5" cy="1" r="0.09" fill="#F6B40E"/></svg></span><span class="pnom">Paraguay</span></a><a class="" href="/#filiales"><span class="figbandera" style="width:18px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect y="0.222" width="3" height="0.222" fill="#0038A8"/><rect y="0.667" width="3" height="0.222" fill="#0038A8"/><rect y="1.111" width="3" height="0.222" fill="#0038A8"/><rect y="1.556" width="3" height="0.222" fill="#0038A8"/><rect width="1.2" height="0.889" fill="#fff"/><circle cx="0.55" cy="0.44" r="0.26" fill="#F6B40E"/></svg></span><span class="pnom">Uruguay</span></a>
+      </div>
+      <div class="top-links">
+        <a href="https://campus.igi-la.com/" target="_blank" rel="noopener">Campus virtual</a>
+        <a href="/#contacto">Franquicias</a>
+        <span class="top-social">
+          <a href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener" aria-label="Instagram @igi.argentina" title="@igi.argentina"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.12-1.38 5.86 5.86 0 0 0 1.38-2.12c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.12A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0m0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84m0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4m6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44"/></svg></a>
+          <a href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener" aria-label="Facebook IGI" title="Facebook"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.68 4.53-4.68 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.24h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07"/></svg></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="container">
+      <a class="logo" href="/" aria-label="IGI — inicio">
+        <img id="logo-h" src="/logo-header.png" alt="IGI — Instituto Gastronómico Internacional">
+      </a>
+      <nav class="menu" id="menu">
+        <a href="/#catalogo">Carreras</a>
+        <a href="/#catalogo">Cursos</a>
+        <a href="/bo/">Filiales</a>
+        <a href="/#nosotros">Nosotros</a>
+        <a href="/blog/">Conocimiento</a>
+        <a href="/#certificados">Certificados</a>
+        <a href="/#contacto">Contacto</a>
+      </nav>
+      <div class="cta-header">
+        <a class="btn btn-borde" href="/#contacto">Pedí info</a>
+      </div>
+      <button class="hamb" aria-label="Menú" onclick="document.getElementById('menu').classList.toggle('abierto')">☰</button>
+    </div>
+  </div>
 </header>
 <main>
   <div class="ficha-hero"><div class="container">
@@ -78,12 +124,48 @@
 <footer>
   <div class="container">
     <div class="grid-footer">
-      <div><img src="/logo-footer.png" alt="IGI" style="height:50px;margin-bottom:10px;display:block"><p>La red de capacitación gastronómica más grande de Latinoamérica. Desde 2003.</p></div>
-      <div><h5>Quiero estudiar</h5><ul><li><a href="/#catalogo">Carreras y cursos</a></li><li><a href="/bo/">Filiales en Bolivia</a></li><li><a href="/blog/">Centro de Conocimiento</a></li></ul></div>
-      <div><h5>Nuestra red</h5><ul><li><a href="/ar/">Argentina</a></li><li><a href="/py/">Paraguay</a></li><li><a href="/bo/">Bolivia</a></li></ul></div>
-      <div><h5>Contacto</h5><ul><li><a href="/#contacto">Pedí información</a></li><li><a href="https://campus.igi-la.com/" target="_blank" rel="noopener">Campus virtual</a></li></ul></div>
+      <div>
+        <img src="/logo-footer.png" alt="IGI — Instituto Gastronómico Internacional" style="height:54px;margin-bottom:12px;display:block">
+        <p>La red de capacitación gastronómica más grande de Latinoamérica. Desde 2003. 7 países. +70 filiales.</p>
+        <div class="badge-paises"><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#74ACDF"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><circle cx="1.5" cy="1" r="0.22" fill="#F6B40E"/></svg></span><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#009C3B"/><polygon points="1.5,0.2 2.8,1 1.5,1.8 0.2,1" fill="#FEDF00"/><circle cx="1.5" cy="1" r="0.4" fill="#002776"/></svg></span><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#F9E300"/><rect y="1.333" width="3" height="0.667" fill="#007934"/></svg></span><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#fff"/><rect y="1" width="3" height="1" fill="#D52B1E"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.2 0.57,0.42 0.8,0.42 0.62,0.57 0.69,0.8 0.5,0.66 0.31,0.8 0.38,0.57 0.2,0.42 0.43,0.42" fill="#fff"/></svg></span><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#FCD116"/><rect y="1" width="3" height="0.5" fill="#003893"/><rect y="1.5" width="3" height="0.5" fill="#CE1126"/></svg></span><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><rect y="1.333" width="3" height="0.667" fill="#0038A8"/><circle cx="1.5" cy="1" r="0.24" fill="none" stroke="#4c6b31" stroke-width="0.05"/><circle cx="1.5" cy="1" r="0.09" fill="#F6B40E"/></svg></span><span class="figbandera" style="width:22px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect y="0.222" width="3" height="0.222" fill="#0038A8"/><rect y="0.667" width="3" height="0.222" fill="#0038A8"/><rect y="1.111" width="3" height="0.222" fill="#0038A8"/><rect y="1.556" width="3" height="0.222" fill="#0038A8"/><rect width="1.2" height="0.889" fill="#fff"/><circle cx="0.55" cy="0.44" r="0.26" fill="#F6B40E"/></svg></span></div>
+      </div>
+      <div>
+        <h5>Quiero estudiar</h5>
+        <ul>
+          <li class="fdrop"><details class="fdd" data-tipo="carreras"><summary>Carreras</summary><ul class="fdd-list"><li><a href="/bo/programas/tecnico-superior.html"><span class="fdd-em">🎓</span>Técnico Superior en Gastronomía</a></li><li><a href="/bo/programas/chef.html"><span class="fdd-em">👨‍🍳</span>Chef Internacional</a></li><li><a href="/bo/programas/pastelero.html"><span class="fdd-em">🍰</span>Pastelero Internacional</a></li><li><a href="/bo/programas/master-pasteleria.html"><span class="fdd-em">🧁</span>Master en Pastelería</a></li></ul></details></li>
+          <li class="fdrop"><details class="fdd" data-tipo="cursos"><summary>Cursos cortos</summary><ul class="fdd-list"><li><a href="/bo/programas/abc-chef.html"><span class="fdd-em">🍳</span>ABC Chef</a></li><li><a href="/bo/programas/abc-panadero.html"><span class="fdd-em">🥖</span>ABC Panadero</a></li><li><a href="/bo/programas/bartender.html"><span class="fdd-em">🍸</span>Bartender Internacional</a></li><li><a href="/bo/programas/barista.html"><span class="fdd-em">☕</span>Barista Internacional</a></li><li><a href="/bo/programas/catering.html"><span class="fdd-em">🥂</span>Catering para Eventos</a></li><li><a href="/bo/programas/diseno-tortas.html"><span class="fdd-em">🎨</span>Diseño de Tortas</a></li><li><a href="/bo/programas/pastas-salsas.html"><span class="fdd-em">🍝</span>Pastas y Salsas</a></li><li><a href="/bo/programas/parrillas.html"><span class="fdd-em">🔥</span>Parrillas y Fuegos</a></li><li><a href="/bo/programas/sushi.html"><span class="fdd-em">🍣</span>Sushi</a></li><li><a href="/bo/programas/cocineritos.html"><span class="fdd-em">🧒</span>Cocineritos IGI</a></li></ul></details></li>
+          <li><a href="/#catalogo">Cocineritos</a></li>
+          <li><a href="/bo/">Buscar filial</a></li>
+          <li><a href="/#contacto">Pedir información</a></li>
+          <li><a href="/#certificados">Validá tu certificado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/#nosotros">Sobre IGI</a></li>
+          <li><a href="/#trabaja">Trabajá con nosotros</a></li>
+          <li><a href="https://campus.igi-la.com/" target="_blank" rel="noopener">Campus virtual</a></li>
+          <li><a href="/blog/">Centro de Conocimiento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Nuestra red · 7 países</h5>
+        <ul>
+          <li><a href="/ar/"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#74ACDF"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><circle cx="1.5" cy="1" r="0.22" fill="#F6B40E"/></svg></span> Argentina</a> · <a href="/#filiales"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#009C3B"/><polygon points="1.5,0.2 2.8,1 1.5,1.8 0.2,1" fill="#FEDF00"/><circle cx="1.5" cy="1" r="0.4" fill="#002776"/></svg></span> Brasil</a> · <a href="/bo/"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#F9E300"/><rect y="1.333" width="3" height="0.667" fill="#007934"/></svg></span> Bolivia</a></li>
+          <li><a href="/#filiales"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#fff"/><rect y="1" width="3" height="1" fill="#D52B1E"/><rect width="1" height="1" fill="#0039A6"/><polygon points="0.5,0.2 0.57,0.42 0.8,0.42 0.62,0.57 0.69,0.8 0.5,0.66 0.31,0.8 0.38,0.57 0.2,0.42 0.43,0.42" fill="#fff"/></svg></span> Chile</a> · <a href="/#filiales"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="1" fill="#FCD116"/><rect y="1" width="3" height="0.5" fill="#003893"/><rect y="1.5" width="3" height="0.5" fill="#CE1126"/></svg></span> Colombia</a> · <a href="/py/"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="0.667" fill="#D52B1E"/><rect y="0.667" width="3" height="0.667" fill="#fff"/><rect y="1.333" width="3" height="0.667" fill="#0038A8"/><circle cx="1.5" cy="1" r="0.24" fill="none" stroke="#4c6b31" stroke-width="0.05"/><circle cx="1.5" cy="1" r="0.09" fill="#F6B40E"/></svg></span> Paraguay</a> · <a href="/#filiales"><span class="figbandera" style="width:16px"><svg viewBox="0 0 3 2" preserveAspectRatio="none"><rect width="3" height="2" fill="#fff"/><rect y="0.222" width="3" height="0.222" fill="#0038A8"/><rect y="0.667" width="3" height="0.222" fill="#0038A8"/><rect y="1.111" width="3" height="0.222" fill="#0038A8"/><rect y="1.556" width="3" height="0.222" fill="#0038A8"/><rect width="1.2" height="0.889" fill="#fff"/><circle cx="0.55" cy="0.44" r="0.26" fill="#F6B40E"/></svg></span> Uruguay</a></li>
+          <li style="margin-top:10px"><a href="/bo/"><b>📍 Todas las filiales, con su WhatsApp, teléfono y mail →</b></a></li>
+          <li style="margin-top:6px;font-size:12px;color:#8d95a6">Todas las sedes de la red ofrecen la misma calidad y los mismos programas.</li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2003–2026 IGI — Instituto Gastronómico Internacional</span></div>
+    <div class="footer-bottom">
+      <span>© 2003–2026 IGI — Instituto Gastronómico Internacional</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener" title="@igi.argentina"><b>Instagram · @igi.argentina</b></a>
+        <a href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener" title="Facebook /Institutos.IGI"><b>Facebook · Institutos.IGI</b></a>
+      </div>
+    </div>
   </div>
 </footer>
 <script>
