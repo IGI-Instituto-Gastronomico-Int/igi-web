@@ -13,10 +13,23 @@
 <meta property="og:url" content="https://www.igi-la.com/ar/belgrano.html">
 <meta property="og:image" content="https://www.igi-la.com/logo-header.png">
 <link rel="stylesheet" href="/estilos-igi.css">
+<style>.femoji{font-size:16px;margin-right:2px}
+.badge-paises{display:flex;gap:6px;font-size:18px;margin-top:8px}
+.fdrop{margin-bottom:7px}
+.fdd summary{color:#c3c9d6;cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.fdd summary::-webkit-details-marker{display:none}
+.fdd summary::before{content:'▸';font-size:10px;color:#8d95a6;transition:transform .15s}
+.fdd[open] summary::before{transform:rotate(90deg)}
+.fdd summary:hover{color:var(--naranja)}
+.fdd-list{margin:6px 0 4px 14px;padding:0;border-left:1px solid #333b4d;list-style:none}
+.fdd-list li{margin:0 0 4px 10px}
+.fdd-list a{color:#aeb4c2;font-size:13px;display:flex;align-items:center;gap:7px;text-decoration:none}
+.fdd-list a:hover{color:var(--naranja)}
+.fdd-list .fdd-em{font-size:14px;flex:0 0 auto}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["EducationalOrganization", "LocalBusiness"], "name": "IGI Belgrano", "url": "https://www.igi-la.com/ar/belgrano.html", "image": "https://www.igi-la.com/logo-header.png", "address": {"@type": "PostalAddress", "streetAddress": "Av. Cabildo 811 (esq. F. Lacroze)", "addressLocality": "Belgrano", "addressRegion": "CABA", "addressCountry": "AR"}, "telephone": "(011) 4776-2911 / +5491137993267", "email": "belgrano@igi-la.com", "geo": {"@type": "GeoCoordinates", "latitude": "-34.566", "longitude": "-58.457"}, "parentOrganization": {"@type": "EducationalOrganization", "name": "Instituto Gastronómico Internacional", "alternateName": "IGI", "url": "https://www.igi-la.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.igi-la.com/"}, {"@type": "ListItem", "position": 2, "name": "Sedes en Argentina", "item": "https://www.igi-la.com/ar/"}, {"@type": "ListItem", "position": 3, "name": "IGI Belgrano", "item": "https://www.igi-la.com/ar/belgrano.html"}]}</script>
 </head>
-<body>
+<body data-filial="IGI Belgrano" data-ciudad="Belgrano" data-pais="Argentina">
 <header>
   <div class="navbar"><div class="container">
     <a class="logo" href="/" aria-label="IGI inicio"><img src="/logo-header.png" alt="IGI — Instituto Gastronómico Internacional" style="height:46px;display:block"></a>
@@ -36,22 +49,22 @@
       <div class="sede-head">
         <div class="sede-info">
           <h1>📍 IGI Belgrano</h1>
-          <div class="estado">● Inscripciones abiertas · Argentina</div>
+          <div class="estado" id="sede-estado">● Inscripciones abiertas · Argentina</div>
           <div class="sede-datos">
-            <div><span class="ic">🏠</span> <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cabildo%20811%20%28esq.%20F.%20Lacroze%29%2C%20Belgrano%2C%20Argentina">Av. Cabildo 811 (esq. F. Lacroze)</a></div>
-            <div><span class="ic">💬</span> <a target="_blank" rel="noopener" href="https://wa.me/5491137993267?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20IGI%20Belgrano.">WhatsApp de la filial +5491137993267</a></div>
-            <div><span class="ic">📞</span> <a href="tel:(011) 4776-2911">(011) 4776-2911</a></div>
-            <div><span class="ic">✉️</span> <a href="mailto:belgrano@igi-la.com">belgrano@igi-la.com</a></div>
-            <div><span class="ic">🕒</span> Lunes a viernes de 9:00 a 22:00 y Sábados de 9:00 a 21:00 hs</div>
+            <div><span class="ic">🏠</span> <a id="sede-dir" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cabildo%20811%20%28esq.%20F.%20Lacroze%29%2C%20Belgrano%2C%20Argentina">Av. Cabildo 811 (esq. F. Lacroze)</a></div>
+            <div id="sede-wsp-row"><span class="ic">💬</span> <a id="sede-wsp" target="_blank" rel="noopener" href="https://wa.me/5491137993267?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20IGI%20Belgrano.">WhatsApp de la filial +5491137993267</a></div>
+            <div id="sede-tel-row"><span class="ic">📞</span> <a id="sede-tel" href="tel:(011) 4776-2911">(011) 4776-2911</a></div>
+            <div id="sede-mail-row"><span class="ic">✉️</span> <a id="sede-mail" href="mailto:belgrano@igi-la.com">belgrano@igi-la.com</a></div>
+            <div><span class="ic">🕒</span> <span id="sede-horario">Lunes a viernes de 9:00 a 22:00 y Sábados de 9:00 a 21:00 hs</span></div>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-            <a class="btn btn-wsp" target="_blank" rel="noopener" href="https://wa.me/5491137993267?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20IGI%20Belgrano.">💬 Hablar con esta filial</a>
+            <a id="sede-wsp-btn" class="btn btn-wsp" target="_blank" rel="noopener" href="https://wa.me/5491137993267?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20IGI%20Belgrano.">💬 Hablar con esta filial</a>
             <a class="btn btn-borde" href="/#contacto">Pedir info por formulario</a>
           </div>
         </div>
         <div class="mapa-sede">
-      <iframe loading="lazy" src="https://www.google.com/maps?q=Av.%20Cabildo%20811%20%28esq.%20F.%20Lacroze%29%2C%20Belgrano%2C%20Argentina&output=embed" allowfullscreen title="Mapa de IGI Belgrano"></iframe>
-      <a class="btn btn-borde" style="justify-content:center" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cabildo%20811%20%28esq.%20F.%20Lacroze%29%2C%20Belgrano%2C%20Argentina">🗺️ Abrir en Google Maps / Cómo llegar</a>
+      <iframe id="sede-map" loading="lazy" src="https://www.google.com/maps?q=Av.%20Cabildo%20811%20%28esq.%20F.%20Lacroze%29%2C%20Belgrano%2C%20Argentina&output=embed" allowfullscreen title="Mapa de IGI Belgrano"></iframe>
+      <a id="sede-maplink" class="btn btn-borde" style="justify-content:center" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.%20Cabildo%20811%20%28esq.%20F.%20Lacroze%29%2C%20Belgrano%2C%20Argentina">🗺️ Abrir en Google Maps / Cómo llegar</a>
     </div>
       </div>
       <h2 style="margin:34px 0 16px">Conocé la sede</h2>
@@ -176,14 +189,101 @@
 <footer>
   <div class="container">
     <div class="grid-footer">
-      <div><img src="/logo-footer.png" alt="IGI" style="height:50px;margin-bottom:10px;display:block"><p>La red de capacitación gastronómica más grande de Latinoamérica. Desde 2003.</p></div>
-      <div><h5>Quiero estudiar</h5><ul><li><a href="/#catalogo">Carreras y cursos</a></li><li><a href="/ar/">Filiales en Argentina</a></li><li><a href="/blog/">Centro de Conocimiento</a></li></ul></div>
-      <div><h5>Nuestra red</h5><ul><li><a href="/ar/">Argentina</a></li><li><a href="/py/">Paraguay</a></li><li><a href="/bo/">Bolivia</a></li></ul></div>
-      <div><h5>Contacto</h5><ul><li><a href="/#contacto">Pedí información</a></li><li><a href="https://campus.igi-la.com/" target="_blank" rel="noopener">Campus virtual</a></li></ul></div>
+      <div>
+        <img src="/logo-footer.png" alt="IGI — Instituto Gastronómico Internacional" style="height:54px;margin-bottom:12px;display:block">
+        <p>La red de capacitación gastronómica más grande de Latinoamérica. Desde 2003. 7 países. +70 filiales.</p>
+        <div class="badge-paises"><span class="femoji">🇦🇷</span><span class="femoji">🇧🇷</span><span class="femoji">🇧🇴</span><span class="femoji">🇨🇱</span><span class="femoji">🇨🇴</span><span class="femoji">🇵🇾</span><span class="femoji">🇺🇾</span></div>
+      </div>
+      <div>
+        <h5>Quiero estudiar</h5>
+        <ul>
+          <li class="fdrop"><details class="fdd" data-tipo="carreras"><summary>Carreras</summary><ul class="fdd-list"><li><a href="/ar/programas/chef-internacional.html"><span class="fdd-em">👨‍🍳</span>Chef Internacional</a></li><li><a href="/ar/programas/pastelero-internacional.html"><span class="fdd-em">🍰</span>Pastelero Internacional</a></li><li><a href="/ar/programas/maestro-pastelero.html"><span class="fdd-em">🧁</span>Maestro Pastelero</a></li><li><a href="/ar/programas/master-pasteleria.html"><span class="fdd-em">🎓</span>Master en Pastelería</a></li><li><a href="/ar/programas/master-gastronomia.html"><span class="fdd-em">🎓</span>Master en Gastronomía</a></li></ul></details></li>
+          <li class="fdrop"><details class="fdd" data-tipo="cursos"><summary>Cursos cortos</summary><ul class="fdd-list"><li><a href="/ar/programas/abc-chef.html"><span class="fdd-em">🍳</span>ABC Chef</a></li><li><a href="/ar/programas/abc-pastelero.html"><span class="fdd-em">🎂</span>ABC Pastelero</a></li><li><a href="/ar/programas/abc-panadero.html"><span class="fdd-em">🥖</span>ABC Panadero</a></li><li><a href="/ar/programas/abc-tortas.html"><span class="fdd-em">🍥</span>ABC Tortas</a></li><li><a href="/ar/programas/diseno-tortas.html"><span class="fdd-em">🎨</span>Diseño de Tortas</a></li><li><a href="/ar/programas/catering.html"><span class="fdd-em">🥂</span>Catering para Eventos</a></li><li><a href="/ar/programas/mozo-maitre.html"><span class="fdd-em">🤵</span>Mozo / Camarera + Maître</a></li><li><a href="/ar/programas/bartender.html"><span class="fdd-em">🍸</span>Bartender Internacional</a></li><li><a href="/ar/programas/barista.html"><span class="fdd-em">☕</span>Barista Internacional</a></li><li><a href="/ar/programas/arte-latte.html"><span class="fdd-em">🫖</span>Experto en Arte Latte</a></li><li><a href="/ar/programas/cocineritos.html"><span class="fdd-em">🧒</span>Cocineritos IGI</a></li></ul></details></li>
+          <li><a href="/#catalogo">Cocineritos</a></li>
+          <li><a href="/ar/">Buscar filial</a></li>
+          <li><a href="/#contacto">Pedir información</a></li>
+          <li><a href="/#certificados">Validá tu certificado</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Institucional</h5>
+        <ul>
+          <li><a href="/#nosotros">Sobre IGI</a></li>
+          <li><a href="/#trabaja">Trabajá con nosotros</a></li>
+          <li><a href="https://campus.igi-la.com/" target="_blank" rel="noopener">Campus virtual</a></li>
+          <li><a href="/blog/">Centro de Conocimiento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Nuestra red · 7 países</h5>
+        <ul>
+          <li><a href="/ar/">🇦🇷 Argentina</a> · <a href="/#filiales">🇧🇷 Brasil</a> · <a href="/bo/">🇧🇴 Bolivia</a></li>
+          <li><a href="/#filiales">🇨🇱 Chile</a> · <a href="/#filiales">🇨🇴 Colombia</a> · <a href="/py/">🇵🇾 Paraguay</a> · <a href="/#filiales">🇺🇾 Uruguay</a></li>
+          <li style="margin-top:10px"><a href="/ar/"><b>📍 Todas las filiales, con su WhatsApp, teléfono y mail →</b></a></li>
+          <li style="margin-top:6px;font-size:12px;color:#8d95a6">Todas las sedes de la red ofrecen la misma calidad y los mismos programas.</li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><span>© 2003–2026 IGI — Instituto Gastronómico Internacional</span></div>
+    <div class="footer-bottom">
+      <span>© 2003–2026 IGI — Instituto Gastronómico Internacional</span>
+      <div class="social-links">
+        <a href="https://www.instagram.com/igi.argentina/" target="_blank" rel="noopener" title="@igi.argentina"><b>Instagram · @igi.argentina</b></a>
+        <a href="https://www.facebook.com/Institutos.IGI" target="_blank" rel="noopener" title="Facebook /Institutos.IGI"><b>Facebook · Institutos.IGI</b></a>
+      </div>
+    </div>
   </div>
 </footer>
+<script>
+/* Datos de la filial EN VIVO desde el panel: si se editan en el panel, esta ficha se actualiza sola.
+   Los valores "horneados" quedan como respaldo (SEO / sin JS / si falla el fetch). */
+(function(){
+  var PANEL='https://panel.igionline.com.ar/api/api.php?r=filiales';
+  var NOMBRE=(document.body.getAttribute('data-filial')||'').trim().toLowerCase();
+  if(!NOMBRE) return;
+  var $=function(id){return document.getElementById(id);};
+  var norm=function(s){return (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase();};
+  fetch(PANEL,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    var arr=Array.isArray(d)?d:(d.data||d.filiales||[]);
+    var f=arr.filter(function(x){return norm(x.nombre)===norm(NOMBRE);})[0];
+    if(!f) return;
+    var ciudad=f.ciudad||document.body.getAttribute('data-ciudad')||'';
+    var paisN=f.pais||document.body.getAttribute('data-pais')||'';
+    var dir=(f.direccion||'').trim();
+    var tieneDir=dir && dir!=='Dirección a confirmar' && dir!=='Em breve';
+    var qmapa=encodeURIComponent((tieneDir?dir+', ':'IGI Instituto Gastronómico Internacional, ')+ciudad+', '+paisN);
+    // dirección
+    var dEl=$('sede-dir');
+    if(dEl){ dEl.textContent=dir||'Dirección a confirmar'; if(dEl.tagName==='A'){ dEl.href='https://www.google.com/maps/search/?api=1&query='+qmapa; } }
+    // whatsapp
+    var wsp=(f.whatsapp||'').replace(/[^0-9]/g,'');
+    var wRow=$('sede-wsp-row'), wEl=$('sede-wsp'), wBtn=$('sede-wsp-btn');
+    if(wsp){
+      var wl='https://wa.me/'+wsp+'?text='+encodeURIComponent('Hola, quiero información sobre IGI '+ciudad+'.');
+      if(wRow) wRow.hidden=false;
+      if(wEl){ wEl.href=wl; wEl.textContent='WhatsApp de la filial +'+wsp; }
+      if(wBtn){ wBtn.href=wl; wBtn.hidden=false; }
+    } else { if(wRow) wRow.hidden=true; if(wBtn) wBtn.hidden=true; }
+    // teléfono
+    var tel=(f.telefono||'').trim(), tRow=$('sede-tel-row'), tEl=$('sede-tel');
+    if(tel && tel!=='—'){ if(tRow) tRow.hidden=false; if(tEl){ tEl.href='tel:'+tel; tEl.textContent=tel; } }
+    else { if(tRow) tRow.hidden=true; }
+    // email
+    var mail=(f.email||'').trim(), mRow=$('sede-mail-row'), mEl=$('sede-mail');
+    if(mail){ if(mRow) mRow.hidden=false; if(mEl){ mEl.href='mailto:'+mail; mEl.textContent=mail; } }
+    else { if(mRow) mRow.hidden=true; }
+    // horario
+    var hEl=$('sede-horario'); if(hEl && f.horario) hEl.textContent=f.horario;
+    // estado
+    var eEl=$('sede-estado');
+    if(eEl){ var prox=(f.proximamente==1||f.proximamente==='1'||f.proximamente===true);
+      eEl.textContent='● '+(prox?'Apertura próximamente':'Inscripciones abiertas')+' · '+paisN;
+      eEl.style.color=prox?'#b8860b':''; }
+    // mapa
+    var mp=$('sede-map'); if(mp) mp.src='https://www.google.com/maps?q='+qmapa+'&output=embed';
+    var ml=$('sede-maplink'); if(ml) ml.href='https://www.google.com/maps/search/?api=1&query='+qmapa;
+  }).catch(function(){});
+})();
+</script>
 <script>
 /* Si el navegador bloquea el iframe de Google Maps, mostrar un placeholder elegante (igual que la app) */
 (function(){
