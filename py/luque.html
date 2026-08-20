@@ -28,7 +28,11 @@
 .fdd-list li{margin:0 0 4px 10px}
 .fdd-list a{color:#aeb4c2;font-size:13px;display:flex;align-items:center;gap:7px;text-decoration:none}
 .fdd-list a:hover{color:var(--naranja)}
-.fdd-list .fdd-em{font-size:14px;flex:0 0 auto}</style>
+.fdd-list .fdd-em{font-size:14px;flex:0 0 auto}
+/* Próximos inicios: si hay más de los que entran, la caja se desplaza (scroll) con encabezado fijo */
+#inicios-live .tabla-inicios{max-height:340px;overflow-y:auto;border-radius:var(--radius,12px)}
+#inicios-live table{width:100%;border-collapse:collapse}
+#inicios-live thead th{position:sticky;top:0;z-index:2}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["EducationalOrganization", "LocalBusiness"], "name": "IGI Luque", "url": "https://www.igi-la.com/py/luque.html", "image": "https://www.igi-la.com/logo-header.png", "address": {"@type": "PostalAddress", "streetAddress": "Cerro Corá c/ Carlos Antonio López", "addressLocality": "Luque", "addressRegion": "Paraguay", "addressCountry": "PY"}, "telephone": "(021) 643040 / +595986452741", "email": "luque@igi-la.com", "geo": {"@type": "GeoCoordinates", "latitude": "-25.27", "longitude": "-57.48"}, "parentOrganization": {"@type": "EducationalOrganization", "name": "Instituto Gastronómico Internacional", "alternateName": "IGI", "url": "https://www.igi-la.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.igi-la.com/"}, {"@type": "ListItem", "position": 2, "name": "Sedes en Paraguay", "item": "https://www.igi-la.com/py/"}, {"@type": "ListItem", "position": 3, "name": "IGI Luque", "item": "https://www.igi-la.com/py/luque.html"}]}</script>
 </head>
@@ -97,7 +101,7 @@
     </div>
       </div>
       <h2 style="margin:34px 0 16px">Conocé la sede</h2>
-      <div class="galeria" style="margin-top:0"><div class="gal-item" style="background:#2B3245"><img src="/sede-01-panaderia.jpg" loading="lazy" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-02-cocina.jpg" loading="lazy" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-03-pasteleria.jpg" loading="lazy" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-04-clase.jpg" loading="lazy" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-05-tortas.jpg" loading="lazy" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-06-emplatado.jpg" loading="lazy" alt="Foto de la sede IGI Luque"></div></div>
+      <div class="galeria" style="margin-top:0"><div class="gal-item" style="background:#2B3245"><img src="/sede-01-panaderia.jpg" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-02-cocina.jpg" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-03-pasteleria.jpg" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-04-clase.jpg" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-05-tortas.jpg" alt="Foto de la sede IGI Luque"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-06-emplatado.jpg" alt="Foto de la sede IGI Luque"></div></div>
       <h2 style="margin:34px 0 16px">Qué podés estudiar en IGI Luque</h2>
       <div class="grid c3"><div class="card" data-href="/py/programas/tecnico-superior.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
     <div class="foto" style="background:linear-gradient(120deg,#5B2A63,#93549E)"><span class="tag">Carrera</span>🎓</div>
