@@ -28,7 +28,11 @@
 .fdd-list li{margin:0 0 4px 10px}
 .fdd-list a{color:#aeb4c2;font-size:13px;display:flex;align-items:center;gap:7px;text-decoration:none}
 .fdd-list a:hover{color:var(--naranja)}
-.fdd-list .fdd-em{font-size:14px;flex:0 0 auto}</style>
+.fdd-list .fdd-em{font-size:14px;flex:0 0 auto}
+/* Próximos inicios: si hay más de los que entran, la caja se desplaza (scroll) con encabezado fijo */
+#inicios-live .tabla-inicios{max-height:340px;overflow-y:auto;border-radius:var(--radius,12px)}
+#inicios-live table{width:100%;border-collapse:collapse}
+#inicios-live thead th{position:sticky;top:0;z-index:2}</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["EducationalOrganization", "LocalBusiness"], "name": "IGI Puerto Madryn", "url": "https://www.igi-la.com/ar/puerto-madryn.html", "image": "https://www.igi-la.com/logo-header.png", "address": {"@type": "PostalAddress", "streetAddress": "9 de Julio 84", "addressLocality": "Puerto Madryn", "addressRegion": "Chubut", "addressCountry": "AR"}, "telephone": "(0280) 154636529 / +5492804636529", "email": "puertomadryn@igi-la.com", "geo": {"@type": "GeoCoordinates", "latitude": "-42.77", "longitude": "-65.04"}, "parentOrganization": {"@type": "EducationalOrganization", "name": "Instituto Gastronómico Internacional", "alternateName": "IGI", "url": "https://www.igi-la.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.igi-la.com/"}, {"@type": "ListItem", "position": 2, "name": "Sedes en Argentina", "item": "https://www.igi-la.com/ar/"}, {"@type": "ListItem", "position": 3, "name": "IGI Puerto Madryn", "item": "https://www.igi-la.com/ar/puerto-madryn.html"}]}</script>
 </head>
@@ -97,115 +101,115 @@
     </div>
       </div>
       <h2 style="margin:34px 0 16px">Conocé la sede</h2>
-      <div class="galeria" style="margin-top:0"><div class="gal-item" style="background:#2B3245"><img src="/sede-01-panaderia.jpg" loading="lazy" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-02-cocina.jpg" loading="lazy" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-03-pasteleria.jpg" loading="lazy" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-04-clase.jpg" loading="lazy" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-05-tortas.jpg" loading="lazy" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-06-emplatado.jpg" loading="lazy" alt="Foto de la sede IGI Puerto Madryn"></div></div>
+      <div class="galeria" style="margin-top:0"><div class="gal-item" style="background:#2B3245"><img src="/sede-01-panaderia.jpg" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-02-cocina.jpg" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-03-pasteleria.jpg" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-04-clase.jpg" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-05-tortas.jpg" alt="Foto de la sede IGI Puerto Madryn"></div><div class="gal-item" style="background:#2B3245"><img src="/sede-06-emplatado.jpg" alt="Foto de la sede IGI Puerto Madryn"></div></div>
       <h2 style="margin:34px 0 16px">Qué podés estudiar en IGI Puerto Madryn</h2>
       <div class="grid c3"><div class="card" data-href="/ar/programas/chef-internacional.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#E24E1B,#F58220)"><span class="tag">Carrera</span><img src="/prog-chef-internacional.jpg" alt="Chef Internacional" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#E24E1B,#F58220)"><span class="tag">Carrera</span><img src="/prog-chef-internacional.jpg" alt="Chef Internacional" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Chef Internacional</h3>
       <div class="datos"><span class="chip">⏱ 2 años lectivos</span><span class="chip">📍 Presencial</span><span class="chip">🗓 5 hs semanales</span></div>
       <p class="desc">Una carrera profesional, basada en las técnicas de la cocina moderna nacional e …</p>
       <div class="pie"><a class="ver" href="/ar/programas/chef-internacional.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Chef%20Internacional%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/pastelero-internacional.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#C42847,#E85D75)"><span class="tag">Carrera</span><img src="/prog-pastelero-internacional.jpg" alt="Pastelero Internacional" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#C42847,#E85D75)"><span class="tag">Carrera</span><img src="/prog-pastelero-internacional.jpg" alt="Pastelero Internacional" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Pastelero Internacional</h3>
       <div class="datos"><span class="chip">⏱ 1 año lectivo</span><span class="chip">📍 Presencial</span><span class="chip">🗓 5 hs semanales</span></div>
       <p class="desc">Una carrera profesional basada en las técnicas de la Pastelería moderna nacional…</p>
       <div class="pie"><a class="ver" href="/ar/programas/pastelero-internacional.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Pastelero%20Internacional%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/maestro-pastelero.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#D81E7B,#F06AAE)"><span class="tag">Carrera</span><img src="/prog-maestro-pastelero.jpg" alt="Maestro Pastelero" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#D81E7B,#F06AAE)"><span class="tag">Carrera</span><img src="/prog-maestro-pastelero.jpg" alt="Maestro Pastelero" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Maestro Pastelero</h3>
       <div class="datos"><span class="chip">⏱ 1 año lectivo</span><span class="chip">📍 Presencial</span><span class="chip">🗓 3 hs semanales</span></div>
       <p class="desc">Un programa completo para desarrollar todas tus habilidades en la Pastelería: un…</p>
       <div class="pie"><a class="ver" href="/ar/programas/maestro-pastelero.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Maestro%20Pastelero%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/master-pasteleria.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#6A2C91,#A24BC9)"><span class="tag">Carrera</span><img src="/hero-master-pasteleria.jpg" alt="Master en Pastelería" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#6A2C91,#A24BC9)"><span class="tag">Carrera</span><img src="/hero-master-pasteleria.jpg" alt="Master en Pastelería" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Master en Pastelería</h3>
       <div class="datos"><span class="chip">⏱ 1 año lectivo</span><span class="chip">📍 Presencial</span><span class="chip">🗓 3 hs semanales prácticas</span></div>
       <p class="desc"><b style="color:var(--azul)">Ya sos Pastelero. Es hora de convertirte en referente.</b> Terminaste tu carrera de Pastelero y querés más. Este posgrado profesional lleva…</p>
       <div class="pie"><a class="ver" href="/ar/programas/master-pasteleria.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Master%20en%20Pasteler%C3%ADa%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/master-gastronomia.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#5B2A86,#8E44AD)"><span class="tag">Carrera</span><img src="/hero-master-gastronomia.jpg" alt="Master en Gastronomía" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#5B2A86,#8E44AD)"><span class="tag">Carrera</span><img src="/hero-master-gastronomia.jpg" alt="Master en Gastronomía" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Master en Gastronomía</h3>
       <div class="datos"><span class="chip">⏱ 1 año lectivo</span><span class="chip">📍 Presencial</span><span class="chip">🗓 3 hs semanales prácticas</span></div>
       <p class="desc"><b style="color:var(--azul)">Ya sos Chef. Ahora, especialista.</b> Te recibiste de Chef Internacional y querés seguir. Este posgrado revaloriza tu …</p>
       <div class="pie"><a class="ver" href="/ar/programas/master-gastronomia.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Master%20en%20Gastronom%C3%ADa%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/abc-chef.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#0E7C61,#2BAE8E)"><span class="tag">Curso</span><img src="/prog-abc-chef.jpg" alt="ABC Chef" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#0E7C61,#2BAE8E)"><span class="tag">Curso</span><img src="/prog-abc-chef.jpg" alt="ABC Chef" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>ABC Chef</h3>
       <div class="datos"><span class="chip">⏱ 5 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Un curso práctico y de corta duración que te llevará por los caminos de las dist…</p>
       <div class="pie"><a class="ver" href="/ar/programas/abc-chef.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20ABC%20Chef%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/abc-pastelero.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#5CA62D,#8CCB5E)"><span class="tag">Curso</span><img src="/prog-abc-pastelero.jpg" alt="ABC Pastelero" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#5CA62D,#8CCB5E)"><span class="tag">Curso</span><img src="/prog-abc-pastelero.jpg" alt="ABC Pastelero" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>ABC Pastelero</h3>
       <div class="datos"><span class="chip">⏱ 5 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Un curso práctico y de corta duración que te introducirá por los dulces senderos…</p>
       <div class="pie"><a class="ver" href="/ar/programas/abc-pastelero.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20ABC%20Pastelero%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/abc-panadero.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#1273B5,#4FA3D8)"><span class="tag">Curso</span><img src="/prog-abc-panadero.jpg" alt="ABC Panadero" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#1273B5,#4FA3D8)"><span class="tag">Curso</span><img src="/prog-abc-panadero.jpg" alt="ABC Panadero" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>ABC Panadero</h3>
       <div class="datos"><span class="chip">⏱ 5 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Un curso práctico y de corta duración que te introducirá al mundo de la panaderí…</p>
       <div class="pie"><a class="ver" href="/ar/programas/abc-panadero.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20ABC%20Panadero%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/abc-tortas.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#C22335,#E85A68)"><span class="tag">Curso</span><img src="/prog-abc-tortas.jpg" alt="ABC Tortas" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#C22335,#E85A68)"><span class="tag">Curso</span><img src="/prog-abc-tortas.jpg" alt="ABC Tortas" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>ABC Tortas</h3>
       <div class="datos"><span class="chip">⏱ 5 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Un curso práctico y de corta duración que te llevará a recorrer el mundo aprendi…</p>
       <div class="pie"><a class="ver" href="/ar/programas/abc-tortas.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20ABC%20Tortas%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/diseno-tortas.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#E0447C,#F291B7)"><span class="tag">Curso</span><img src="/prog-diseno-tortas.jpg" alt="Diseño de Tortas" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#E0447C,#F291B7)"><span class="tag">Curso</span><img src="/prog-diseno-tortas.jpg" alt="Diseño de Tortas" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Diseño de Tortas</h3>
       <div class="datos"><span class="chip">⏱ 3 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 12 clases prácticas · equipamiento incluido</span></div>
       <p class="desc">Aprendé desde cero o perfeccioná tus técnicas para crear tortas increíbles que d…</p>
       <div class="pie"><a class="ver" href="/ar/programas/diseno-tortas.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Dise%C3%B1o%20de%20Tortas%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/catering.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#3B2A78,#6C55B8)"><span class="tag">Curso</span><img src="/prog-catering.jpg" alt="Catering para Eventos" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#3B2A78,#6C55B8)"><span class="tag">Curso</span><img src="/prog-catering.jpg" alt="Catering para Eventos" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Catering para Eventos</h3>
       <div class="datos"><span class="chip">⏱ 5 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Un curso netamente práctico con rápida salida laboral independiente.…</p>
       <div class="pie"><a class="ver" href="/ar/programas/catering.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Catering%20para%20Eventos%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/mozo-maitre.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#5B2A63,#93549E)"><span class="tag">Curso</span><img src="/prog-mozo-maitre.jpg" alt="Mozo / Camarera + Maître" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#5B2A63,#93549E)"><span class="tag">Curso</span><img src="/prog-mozo-maitre.jpg" alt="Mozo / Camarera + Maître" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Mozo / Camarera + Maître</h3>
       <div class="datos"><span class="chip">⏱ 3 meses + 3 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 3 hs semanales</span></div>
       <p class="desc">Un curso corto y de rápida salida laboral que te capacitará en el arte del monta…</p>
       <div class="pie"><a class="ver" href="/ar/programas/mozo-maitre.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Mozo%20/%20Camarera%20%2B%20Ma%C3%AEtre%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/bartender.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#B4126B,#E4599E)"><span class="tag">Curso</span><img src="/prog-bartender.jpg" alt="Bartender Internacional" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#B4126B,#E4599E)"><span class="tag">Curso</span><img src="/prog-bartender.jpg" alt="Bartender Internacional" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Bartender Internacional</h3>
       <div class="datos"><span class="chip">⏱ 6 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Un curso práctico y de corta duración para iniciarte en la profesión de bartende…</p>
       <div class="pie"><a class="ver" href="/ar/programas/bartender.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Bartender%20Internacional%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/barista.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#5C3A21,#96633C)"><span class="tag">Curso</span><img src="/prog-barista.jpg" alt="Barista Internacional" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#5C3A21,#96633C)"><span class="tag">Curso</span><img src="/prog-barista.jpg" alt="Barista Internacional" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Barista Internacional</h3>
       <div class="datos"><span class="chip">⏱ 3 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
       <p class="desc">Convertite en un barista experto: café de alta calidad, espresso básico y avanza…</p>
       <div class="pie"><a class="ver" href="/ar/programas/barista.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Barista%20Internacional%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/arte-latte.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#7A4A12,#B97E33)"><span class="tag">Curso</span><img src="/prog-arte-latte.jpg" alt="Experto en Arte Latte" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#7A4A12,#B97E33)"><span class="tag">Curso</span><img src="/prog-arte-latte.jpg" alt="Experto en Arte Latte" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Experto en Arte Latte</h3>
       <div class="datos"><span class="chip">⏱ 3 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs · 100% práctico</span></div>
       <p class="desc">Dominá las técnicas para diseñar figuras artísticas sobre café con leche texturi…</p>
       <div class="pie"><a class="ver" href="/ar/programas/arte-latte.html">Ver programa completo →</a><a class="wsp-mini" href="https://wa.me/5492804636529?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Experto%20en%20Arte%20Latte%20en%20IGI%20Puerto%20Madryn." target="_blank" rel="noopener" title="Consultar por WhatsApp" onclick="event.stopPropagation()">💬</a></div>
     </div></div><div class="card" data-href="/ar/programas/cocineritos.html" onclick="if(!(event.target.closest('a'))) location.href=this.dataset.href" style="cursor:pointer">
-    <div class="foto" style="background:linear-gradient(120deg,#F0841C,#33B5B5)"><span class="tag">Para chicos</span><img src="/prog-cocineritos.jpg" alt="Cocineritos IGI" loading="lazy" style="object-position:center 62%"></div>
+    <div class="foto" style="background:linear-gradient(120deg,#F0841C,#33B5B5)"><span class="tag">Para chicos</span><img src="/prog-cocineritos.jpg" alt="Cocineritos IGI" style="object-position:center 62%"></div>
     <div class="cuerpo">
       <h3>Cocineritos IGI</h3>
       <div class="datos"><span class="chip">⏱ 3 módulos de 3 meses</span><span class="chip">📍 Presencial</span><span class="chip">🗓 1 clase semanal de 2 hs</span></div>
