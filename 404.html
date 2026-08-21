@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada — IGI Instituto Gastronómico Internacional</title>
+<meta name="robots" content="noindex,follow">
+<script>
+/* GitHub Pages sirve este 404.html ante cualquier ruta inexistente.
+   Recuperamos las URLs viejas conocidas hacia la home de país correspondiente.
+   (Pages no puede emitir un 301 real; esto redirige al usuario y Google termina soltando la vieja.) */
+(function(){
+  var P={argentina:'/ar/',paraguay:'/py/',bolivia:'/bo/',brasil:'/br/',brazil:'/br/',chile:'/cl/',colombia:'/co/',uruguay:'/uy/'};
+  var path=(location.pathname||'').toLowerCase(), qs=(location.search||'').toLowerCase()+(location.hash||'').toLowerCase();
+  try{
+    if(path.indexOf('inicial.php')>=0){
+      var m=qs.match(/pais=([a-zñ]+)/);
+      if(m && P[m[1]]){ location.replace(P[m[1]]); return; }
+      location.replace('/'); return;
+    }
+    if(path.indexOf('/landing/')>=0 || /\.php(?:$|\/|\?)/.test(path)){ location.replace('/'); return; }
+  }catch(e){}
+})();
+</script>
+<link rel="stylesheet" href="/estilos-igi.css">
+<style>
+.nf-wrap{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 20px;background:linear-gradient(140deg,#10182b,#243354)}
+.nf-card{max-width:640px;color:#fff}
+.nf-card img{height:64px;margin-bottom:22px}
+.nf-card h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px}
+.nf-card p{color:#c7d0e0;font-size:17px;margin:0 auto 26px;max-width:48ch;line-height:1.55}
+.nf-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.nf-links a{background:#fff;color:var(--azul,#10182b);text-decoration:none;font-weight:700;border-radius:12px;padding:12px 18px;font-size:14px}
+.nf-links a:hover{color:var(--naranja)}
+.nf-paises{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.nf-paises a{color:#aebacf;text-decoration:none;font-size:14px;font-weight:600}
+.nf-paises a:hover{color:var(--naranja)}
+</style>
+</head>
+<body>
+<div class="nf-wrap"><div class="nf-card">
+  <img src="/logo-bienvenida.png" alt="IGI — Instituto Gastronómico Internacional">
+  <h1>No encontramos esa página</h1>
+  <p>Puede que el enlace sea viejo o esté mal escrito. Elegí tu país o volvé al inicio para encontrar carreras, cursos y sedes de IGI.</p>
+  <div class="nf-links">
+    <a href="/">Ir al inicio</a>
+    <a href="/filiales/">Encontrá tu sede</a>
+    <a href="/nosotros/">Sobre IGI</a>
+  </div>
+  <div class="nf-paises">
+    <a href="/ar/">Argentina</a><a href="/br/">Brasil</a><a href="/bo/">Bolivia</a><a href="/cl/">Chile</a><a href="/co/">Colombia</a><a href="/py/">Paraguay</a><a href="/uy/">Uruguay</a>
+  </div>
+</div></div>
+</body>
+</html>
