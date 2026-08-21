@@ -3447,7 +3447,9 @@ $('#sel-filial').innerHTML='<option value="">¿En qué filial te queda cómodo c
   function forcePais(){
     try{localStorage.setItem('igi_pais','UY');}catch(e){}
     var g=document.getElementById('gate'); if(g)g.classList.add('cerrada');
-    try{ if(typeof verPais==='function') verPais('UY'); if(typeof ir==='function') ir('home'); }catch(e){}
+    var _h=(location.hash||'').replace(/^#\/?/,'').trim();
+    var _keep=(/^(catalogo|carreras|cursos|filiales|contacto|nosotros|certificados|wsp)$/.test(_h))||_h.indexOf('prog=')===0||_h.indexOf('pais=')===0;
+    try{ if(typeof verPais==='function') verPais('UY'); if(!_keep && typeof ir==='function') ir('home'); }catch(e){}
   }
   if(document.readyState!=='loading') forcePais(); else document.addEventListener('DOMContentLoaded', forcePais);
 })();
