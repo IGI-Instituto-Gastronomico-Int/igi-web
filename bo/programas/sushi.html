@@ -46,6 +46,25 @@
     gtag('js', new Date()); gtag('config', GA_ID, {anonymize_ip:true});
     (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window,document,'clarity','script',CLARITY_ID);
   }catch(e){}
+  /* ===== Eventos de conversión (auto-enganche, sin tocar el JS de cada página) ===== */
+  try{
+    var WA=/wa\.me|api\.whatsapp\.com|whatsapp\.com\/send|wa\.link/i, _lastWa=0;
+    function waHit(url){ var n=+new Date(); if(n-_lastWa<900) return; _lastWa=n; window.igiTrack('whatsapp_click',{link_url:(''+(url||'')).slice(0,120), page:location.pathname}); }
+    /* 1) botones que abren WhatsApp con window.open (fichas de programa, botón flotante, páginas nuevas) */
+    var _open=window.open;
+    window.open=function(u){ try{ if(u&&WA.test(''+u)) waHit(u); }catch(e){} return _open.apply(this,arguments); };
+    /* 2) enlaces <a href="wa.me"> (fichas de filial y demás anchors) */
+    document.addEventListener('click',function(e){ try{ var t=e.target, a=t&&t.closest?t.closest('a[href]'):null; if(a&&WA.test(a.getAttribute('href')||'')) waHit(a.getAttribute('href')); }catch(_){} },true);
+    /* 3) formularios: consultas.php (lead) y postulaciones.php (postulación), vía fetch */
+    var _fetch=window.fetch;
+    if(_fetch){ window.fetch=function(u,opt){
+      try{ var url=''+((u&&u.url)?u.url:u), body=(opt&&typeof opt.body==='string')?opt.body:'';
+        if(/consultas\.php/i.test(url)){ if(!/origen["'\s:]*whatsapp/i.test(body)) window.igiTrack('generate_lead',{via: /programa_pdf["'\s:]*[^"',}]{4,}/i.test(body)?'folleto_mail':'form', page:location.pathname}); }
+        else if(/postulaciones\.php/i.test(url)){ window.igiTrack('postulacion',{page:location.pathname}); }
+      }catch(_){}
+      return _fetch.apply(this,arguments);
+    }; }
+  }catch(e){}
 })();
 </script>
 </head>
