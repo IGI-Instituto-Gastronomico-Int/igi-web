@@ -29,6 +29,9 @@
 .fdd-list a{color:#aeb4c2;font-size:13px;display:flex;align-items:center;gap:7px;text-decoration:none}
 .fdd-list a:hover{color:var(--naranja)}
 .fdd-list .fdd-em{font-size:14px;flex:0 0 auto}
+/* Filas de contacto ocultas (sede sin ese dato / desactivada): asegurar que no se muestren */
+.sede-datos [hidden]{display:none!important}
+[hidden]{display:none!important}
 /* Próximos inicios: si hay más de los que entran, la caja se desplaza (scroll) con encabezado fijo */
 #inicios-live .tabla-inicios{max-height:340px;overflow-y:auto;border-radius:var(--radius,12px)}
 #inicios-live table{width:100%;border-collapse:collapse}
@@ -36,7 +39,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": ["EducationalOrganization", "LocalBusiness"], "name": "IGI Córdoba", "url": "https://www.igi-la.com/ar/cordoba.html", "image": "https://www.igi-la.com/logo-header.png", "address": {"@type": "PostalAddress", "streetAddress": "Tucumán 140, Centro", "addressLocality": "Córdoba", "addressRegion": "Córdoba", "addressCountry": "AR"}, "telephone": "(0351) 422-3349 / +5493515511896", "email": "cordoba@igi-la.com", "geo": {"@type": "GeoCoordinates", "latitude": "-31.417", "longitude": "-64.183"}, "parentOrganization": {"@type": "EducationalOrganization", "name": "Instituto Gastronómico Internacional", "alternateName": "IGI", "url": "https://www.igi-la.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.igi-la.com/"}, {"@type": "ListItem", "position": 2, "name": "Sedes en Argentina", "item": "https://www.igi-la.com/ar/"}, {"@type": "ListItem", "position": 3, "name": "IGI Córdoba", "item": "https://www.igi-la.com/ar/cordoba.html"}]}</script>
 </head>
-<body data-filial="IGI Córdoba" data-ciudad="Córdoba" data-pais="Argentina">
+<body data-filial="IGI Córdoba" data-ciudad="Córdoba" data-pais="Argentina" data-filial-id="39">
 <header>
   <div class="top-strip">
     <div class="container">
@@ -273,12 +276,20 @@
 (function(){
   var PANEL='https://panel.igionline.com.ar/api/api.php?r=filiales';
   var NOMBRE=(document.body.getAttribute('data-filial')||'').trim().toLowerCase();
-  if(!NOMBRE) return;
+  var FID=(document.body.getAttribute('data-filial-id')||'').replace(/^f/,'');
   var $=function(id){return document.getElementById(id);};
   var norm=function(s){return (s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toLowerCase();};
   fetch(PANEL,{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
     var arr=Array.isArray(d)?d:(d.data||d.filiales||[]);
-    var f=arr.filter(function(x){return norm(x.nombre)===norm(NOMBRE);})[0];
+    var f=FID?arr.filter(function(x){return String(x.id)===String(FID);})[0]
+             :arr.filter(function(x){return norm(x.nombre)===norm(NOMBRE);})[0];
+    // Respeta el panel: si la ficha tiene id y la filial no existe o está desactivada, se oculta.
+    if(FID && (!f || !(f.activo==1||f.activo==='1'))){
+      var main=document.querySelector('main');
+      if(main) main.innerHTML='<section class="bloque gris"><div class="container" style="text-align:center;padding:60px 0"><h1>Sede no disponible</h1><p>Esta sede no está disponible por el momento. <a href="/ar/" style="font-weight:700">Ver todas las sedes →</a></p></div></section>';
+      var wf=$('sede-wsp-float'); if(wf) wf.style.display='none';
+      return;
+    }
     if(!f) return;
     var ciudad=f.ciudad||document.body.getAttribute('data-ciudad')||'';
     var paisN=f.pais||document.body.getAttribute('data-pais')||'';
