@@ -210,6 +210,7 @@ function igiWsp(prog){
   var wsp=fo.wsp?(''+fo.wsp).replace(/[^0-9]/g,''):'';
   if(!wsp){ alert('Esa filial no tiene WhatsApp cargado. Escribinos desde Contacto.'); return; }
   var msg=encodeURIComponent('Hola! Me interesa '+(prog||'un programa')+' en IGI ('+(fo.nombre||'')+'). ¿Me pasan información?');
+  try{var _f=sel.form||sel.closest('form'),_g=function(n){var e=_f&&_f.querySelector('[name="'+n+'"]');return e?(''+e.value).trim():'';},_m=(''+sel.value).match(/^f?(\d+)$/);fetch('https://panel.igionline.com.ar/api/consultas.php',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:_g('nombre'),email:_g('email'),telefono:_g('telefono'),programa:(prog||_g('programa')||''),filial_id:(_m?_m[1]:''),filial_email:fo.mail||'',filial_slug:(''+sel.value),filial_nombre:fo.nombre||'',mensaje:'Consulta iniciada por WhatsApp',origen:'whatsapp',programa_pdf:'',_hp:''})}).catch(function(){});}catch(e){}
   window.open('https://wa.me/'+wsp+'?text='+msg,'_blank');
 }
 (function(){
