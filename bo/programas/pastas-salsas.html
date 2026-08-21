@@ -170,6 +170,7 @@
 </footer>
 <script>
 window.IGI_FIL={"60": {"ciudad": "La Paz", "nombre": "IGI La Paz", "mail": "lapaz@igi-la.com", "wsp": "59169861015"}};
+/* live-form-panel */(function(){var PAIS='Bolivia';var sel=document.querySelector('form [name="filial"]'); if(!sel) return;fetch('https://panel.igionline.com.ar/api/api.php?r=filiales',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){if(!Array.isArray(d)) return;var fs=d.filter(function(x){return x.pais===PAIS && (x.activo==1||x.activo==='1') && !(x.proximamente==1||x.proximamente==='1');});if(!fs.length) return;fs.sort(function(a,b){return String(a.nombre||'').localeCompare(String(b.nombre||''));});var FIL={}, opts='<option value="">Filial de inter\u00e9s\u2026</option>';fs.forEach(function(f){ FIL[f.id]={ciudad:f.ciudad,nombre:f.nombre,mail:f.email,wsp:(f.whatsapp||'')};opts+='<option value="'+f.id+'">'+String(f.nombre||('IGI '+f.ciudad)).replace(/[<>&]/g,'')+'</option>'; });window.IGI_FIL=FIL; sel.innerHTML=opts;}).catch(function(){});})();
 function igiEnviar(e){
   e.preventDefault(); var f=e.target;
   var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?(''+el.value).trim():'';};
