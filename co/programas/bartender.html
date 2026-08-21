@@ -31,6 +31,9 @@
 .fdd-list a{color:#aeb4c2;font-size:13px;display:flex;align-items:center;gap:7px;text-decoration:none}
 .fdd-list a:hover{color:var(--naranja)}
 .fdd-list .fdd-em{font-size:14px;flex:0 0 auto}
+/* Filas de contacto ocultas (sede sin ese dato / desactivada): asegurar que no se muestren */
+.sede-datos [hidden]{display:none!important}
+[hidden]{display:none!important}
 /* Próximos inicios: si hay más de los que entran, la caja se desplaza (scroll) con encabezado fijo */
 #inicios-live .tabla-inicios{max-height:340px;overflow-y:auto;border-radius:var(--radius,12px)}
 #inicios-live table{width:100%;border-collapse:collapse}
@@ -168,6 +171,19 @@
 </footer>
 <script>
 window.IGI_FIL={"chapinerobogota": {"ciudad": "Chapinero (Bogotá)", "nombre": "IGI Chapinero (Bogotá)", "mail": "chapinerobogota@igi-la.com", "wsp": "573024201350"}, "restrepobogota": {"ciudad": "Restrepo (Bogotá)", "nombre": "IGI Restrepo (Bogotá)", "mail": "restrepobogota@igi-la.com", "wsp": "573209271413"}, "chia": {"ciudad": "Chía", "nombre": "IGI Chía", "mail": "chia@igi-la.com", "wsp": "573004027051"}};
+/* Formulario en vivo desde el panel: solo filiales ACTIVAS de Colombia (respeta el panel; se actualiza solo). */
+(function(){
+  var sel=document.querySelector('form [name="filial"]'); if(!sel) return;
+  fetch('https://panel.igionline.com.ar/api/api.php?r=filiales',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){
+    if(!Array.isArray(d)) return;
+    var fs=d.filter(function(x){return x.pais==='Colombia' && (x.activo==1||x.activo==='1');});
+    if(!fs.length) return;
+    var FIL={}, opts='<option value="">Filial de interés…</option>';
+    fs.forEach(function(f){ var id='f'+f.id; FIL[id]={ciudad:f.ciudad,nombre:f.nombre,mail:f.email,wsp:(f.whatsapp||'')};
+      opts+='<option value="'+id+'">'+String(f.nombre||('IGI '+f.ciudad)).replace(/[<>&]/g,'')+'</option>'; });
+    window.IGI_FIL=FIL; sel.innerHTML=opts;
+  }).catch(function(){});
+})();
 function igiEnviar(e){
   e.preventDefault(); var f=e.target;
   var g=function(n){var el=f.querySelector('[name="'+n+'"]');return el?(''+el.value).trim():'';};
