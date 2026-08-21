@@ -3200,6 +3200,7 @@ async function cargarDesdeAPI(){
       var ZONAS={}; try{ Object.keys(FILIALES).forEach(function(c){ (FILIALES[c]||[]).forEach(function(o){ if(o.mail) ZONAS[(''+o.mail).toLowerCase()]={reg:o.reg,prov:o.prov}; }); }); }catch(e){}
       var nuevo={AR:[],PY:[],BO:[],CL:[],CO:[],BR:[],UY:[]};
       fApi.forEach(function(f){
+        if(!(f.activo==1||f.activo==='1')) return; // filial desactivada en el panel: no se muestra
         var cod=PAIS2COD[f.pais]||'AR'; if(!nuevo[cod])nuevo[cod]=[];
         var z=ZONAS[(''+(f.email||'')).toLowerCase()]||{};
         var _prov=f.provincia||'', _reg, _provChip;
