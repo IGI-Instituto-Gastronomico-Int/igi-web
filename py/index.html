@@ -3061,7 +3061,13 @@ let INICIOS_CO=[
 function esc(s){return String(s).replace(/'/g,"\\'")}
 function renderInicios(){
   const t=document.getElementById('inicios-track'); if(!t)return;
-  const lista=(paisActual==='BO')?INICIOS_BO:((paisActual==='BR')?INICIOS_BR:((paisActual==='PY')?INICIOS_PY:((paisActual==='CO')?INICIOS_CO:INICIOS)));
+  /* Con datos del panel: solo inicios del pais actual. Sin datos: respaldo estatico (CL/UY no tienen -> se oculta la seccion). */
+  let lista;
+  if(window.INICIOS_API){ lista=INICIOS_API[paisActual]||[]; }
+  else { lista=(paisActual==='BO')?INICIOS_BO:((paisActual==='BR')?INICIOS_BR:((paisActual==='PY')?INICIOS_PY:((paisActual==='CO')?INICIOS_CO:((paisActual==='AR')?INICIOS:[])))); }
+  var _sec=t.closest('section');
+  if(!lista.length){ if(_sec)_sec.style.display='none'; return; }
+  if(_sec)_sec.style.display='';
   const rows=lista.map(i=>'<div class="ini-row"><span class="fecha-pill">'+i.f+'</span>'+
     '<div class="ini-info"><b>'+i.prog+'</b><small>📍 '+i.sedeN+' · '+i.hor+'</small></div>'+
     '<button class="btn btn-wsp ini-btn" onclick="wspSede(\''+esc(i.sedeId)+'\',\''+esc(i.prog)+'\')">💬 Consultar</button></div>').join('');
@@ -3222,10 +3228,14 @@ async function cargarDesdeAPI(){
           mail:f.email||'', kw:f.keywords||'', horario:(f.horario||''), real:true, prox:(f.proximamente==1) });
       });
       for(var c in nuevo){ if(nuevo[c].length) FILIALES[c]=nuevo[c]; }
+      window._SEDE_PAIS={}; for(var c2 in nuevo){ nuevo[c2].forEach(function(f){ _SEDE_PAIS[f.id]=c2; }); }
     }
-    if(Array.isArray(iApi) && iApi.length){
-      INICIOS=iApi.map(function(i){ return { f:_fmtFechaINI(i.fecha_inicio), prog:i.programa_nombre||'',
-        sedeN:(i.filial_nombre||('IGI '+(i.filial_ciudad||''))), hor:i.turno||'', sedeId:'f'+i.filial_id }; });
+    /* Inicios del panel agrupados por pais de la filial: cada home muestra SOLO los suyos. */
+    if(Array.isArray(iApi) && iApi.length && window._SEDE_PAIS){
+      window.INICIOS_API={};
+      iApi.forEach(function(i){ var codp=_SEDE_PAIS['f'+i.filial_id]; if(!codp) return;
+        (INICIOS_API[codp]=INICIOS_API[codp]||[]).push({ f:_fmtFechaINI(i.fecha_inicio), prog:i.programa_nombre||'',
+        sedeN:(i.filial_nombre||('IGI '+(i.filial_ciudad||''))), hor:i.turno||'', sedeId:'f'+i.filial_id }); });
     }
   }catch(e){}
 }
