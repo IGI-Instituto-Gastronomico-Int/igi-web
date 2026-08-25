@@ -12,6 +12,31 @@
 <meta property="og:url" content="https://www.igi-la.com/blog/">
 <meta property="og:image" content="https://www.igi-la.com/og-image.jpg">
 <link rel="stylesheet" href="/blog/blog.css">
+<!-- ===== Analítica (GA4 + Microsoft Clarity) ===== -->
+<script>
+(function(){
+  var GA_ID='G-2H24GS3HKH', CLARITY_ID='y1n5mo1dsk';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){dataLayer.push(arguments);};
+  window.igiTrack=function(name,params){ try{ if(window.gtag) gtag('event',name,params||{}); }catch(e){} };
+  try{
+    var s=document.createElement('script'); s.async=1; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', GA_ID, {anonymize_ip:true});
+    (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window,document,'clarity','script',CLARITY_ID);
+  }catch(e){}
+  document.addEventListener('DOMContentLoaded',function(){
+    var slug=(location.pathname.match(/^\/blog\/([^\/]+)\//)||[])[1]||'blog-index';
+    document.querySelectorAll('.cta-final a').forEach(function(a){
+      a.addEventListener('click',function(){
+        igiTrack('blog_cta_click',{article:slug,cta_text:(a.textContent||'').trim().slice(0,80),cta_url:a.getAttribute('href')||''});
+      });
+    });
+    document.querySelectorAll('a[href*="wa.me"],a[href*="api.whatsapp"]').forEach(function(a){
+      a.addEventListener('click',function(){ igiTrack('whatsapp_click',{origen:'blog',article:slug}); });
+    });
+  });
+})();
+</script>
 </head>
 <body>
 
@@ -70,6 +95,19 @@
 
   <div class="sec-title">Más artículos</div>
   <div class="grid-cards">
+    <a class="card" href="/blog/cuanto-gana-cocinero-paraguay/" style="text-decoration:none">
+      <div class="ph"><img src="/blog/cuanto-gana-cocinero-paraguay/cuanto-gana-cocinero-py-800.jpg" loading="lazy" width="400" height="300" alt="Chef instructor de IGI emplatando durante una clase práctica"></div>
+      <div class="body"><span class="card-cat">Profesión y Salida Laboral</span><h3>¿Cuánto gana un cocinero en Paraguay? (2026)</h3><span class="card-foot">Leer artículo →</span></div>
+    </a>
+    <a class="card" href="/blog/perfiles-gastronomicos-mas-demandados-paraguay/" style="text-decoration:none">
+      <div class="ph"><img src="/blog/perfiles-gastronomicos-mas-demandados-paraguay/perfiles-demandados-py-800.jpg" loading="lazy" width="400" height="300" alt="Equipo de mozos y personal de salón tomando pedidos en un restaurante"></div>
+      <div class="body"><span class="card-cat">Profesión y Salida Laboral</span><h3>Cocineros, mozos y delivery: los perfiles más demandados en Paraguay</h3><span class="card-foot">Leer artículo →</span></div>
+    </a>
+    <a class="card" href="/blog/masa-madre-tendencia-panaderia/" style="text-decoration:none">
+      <div class="ph"><img src="/blog/masa-madre-tendencia-panaderia/masa-madre-panaderia-800.jpg" loading="lazy" width="400" height="300" alt="Manos de un estudiante de panadería trabajando masa sobre la mesada"></div>
+      <div class="body"><span class="card-cat">Panadería</span><h3>Masa madre: por qué es la tendencia N°1 en panadería (2026)</h3><span class="card-foot">Leer artículo →</span></div>
+    </a>
+
     <a class="card" href="/blog/que-hace-bartender-profesional/" style="text-decoration:none">
       <div class="ph"><img src="/blog/que-hace-bartender-profesional/que-hace-bartender-profesional-800.jpg" loading="lazy" width="400" height="300" alt="Bartender trabajando en una barra durante una práctica profesional"></div>
       <div class="body"><span class="card-cat">Bartender</span><h3>¿Qué hace un bartender profesional?</h3><span class="card-foot">Leer artículo →</span></div>
