@@ -54,6 +54,31 @@
   ]
 }
 </script>
+<!-- ===== Analítica (GA4 + Microsoft Clarity) ===== -->
+<script>
+(function(){
+  var GA_ID='G-2H24GS3HKH', CLARITY_ID='y1n5mo1dsk';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){dataLayer.push(arguments);};
+  window.igiTrack=function(name,params){ try{ if(window.gtag) gtag('event',name,params||{}); }catch(e){} };
+  try{
+    var s=document.createElement('script'); s.async=1; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
+    gtag('js', new Date()); gtag('config', GA_ID, {anonymize_ip:true});
+    (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window,document,'clarity','script',CLARITY_ID);
+  }catch(e){}
+  document.addEventListener('DOMContentLoaded',function(){
+    var slug=(location.pathname.match(/^\/blog\/([^\/]+)\//)||[])[1]||'blog-index';
+    document.querySelectorAll('.cta-final a').forEach(function(a){
+      a.addEventListener('click',function(){
+        igiTrack('blog_cta_click',{article:slug,cta_text:(a.textContent||'').trim().slice(0,80),cta_url:a.getAttribute('href')||''});
+      });
+    });
+    document.querySelectorAll('a[href*="wa.me"],a[href*="api.whatsapp"]').forEach(function(a){
+      a.addEventListener('click',function(){ igiTrack('whatsapp_click',{origen:'blog',article:slug}); });
+    });
+  });
+})();
+</script>
 </head>
 <body>
 
@@ -133,11 +158,11 @@
 
       <h2 id="organizacion-e-higiene">Organización e higiene</h2>
 
-      <p>Una cocina profesional exige mise en place, limpieza, conservación y coordinación. Evitar consejos sanitarios específicos sin fuente oficial.</p>
+      <p>Una cocina profesional exige mise en place, limpieza, conservación y coordinación: hábitos que se entrenan desde el primer día de clase.</p>
 
       <h2 id="del-estudio-a-la-experiencia">Del estudio a la experiencia</h2>
 
-      <p>La formación aporta bases; los roles de responsabilidad se construyen también con práctica laboral, experiencia y desempeño. No prometer cargo ni salario.</p>
+      <p>La formación aporta bases; los roles de responsabilidad se construyen también con práctica laboral, experiencia y desempeño.</p>
 
       <h2 id="formacion-disponible-en-san-lorenzo">Formación disponible en San Lorenzo</h2>
 
@@ -147,7 +172,7 @@
 
       <details class="faq-b"><summary>¿Necesito experiencia para empezar?</summary><div class="r">Depende del programa. Confirmá el nivel de ingreso con la filial.</div></details>
 
-      <details class="faq-b"><summary>¿Cuánto dura la formación?</summary><div class="r">La duración depende de la propuesta vigente. Mostrarla únicamente desde datos académicos confirmados.</div></details>
+      <details class="faq-b"><summary>¿Cuánto dura la formación?</summary><div class="r">La duración depende de la propuesta vigente; consultala con tu filial junto con turnos y modalidad.</div></details>
 
       <details class="faq-b"><summary>¿Al terminar ya soy jefe de cocina?</summary><div class="r">No necesariamente. Los puestos de conducción requieren además experiencia, liderazgo y dominio operativo.</div></details>
 
