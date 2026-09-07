@@ -25,25 +25,49 @@
 sueltas en la raíz del repo y se publicaron en su ubicación correcta el
 2026-09-02.)
 
+| 2026-09-07 | `cuanto-gana-barista-argentina` | Profesión y Salida Laboral | AR (2.243 palabras de cuerpo) |
+| 2026-09-07 | `donde-estudiar-gastronomia-bogota` | Estudiar Gastronomía | CO (2.419 palabras) |
+| 2026-09-07 | `chocolateria-profesional-que-se-aprende` | Pastelería | AR (2.590 palabras) |
+
+Ampliadas el 2026-09-07: `cuanto-cuesta-estudiar-gastronomia-argentina`
+(536 → 2.043 palabras) y `salida-laboral-gastronomia-trabajos` (689 → 1.987).
+
+Regla vigente desde 2026-09-07: toda nota nueva lleva al menos 1.300
+palabras de cuerpo real (la mediana histórica del blog era 491 y sólo las
+notas largas traen tráfico). Las 6 notas que rankean promedian 1.297.
+
 ## Pendientes (propuestos, en orden sugerido)
 
 Verificados contra los slugs existentes en `blog/`: ninguno se superpone.
 
-1. `cuanto-gana-barista-argentina` — sueldo de barista/cafetero según CCT 389/04 (UTHGRA), con fuente y fecha. CTA: `/ar/programas/barista.html`.
-2. `cuanto-gana-bartender-argentina` — categoría 6 (barman) del CCT 389/04, adicionales y propinas. CTA: `/ar/programas/bartender.html`.
+1. ~~`cuanto-gana-barista-argentina`~~ — PUBLICADA 2026-09-07.
+2. `cuanto-gana-bartender-argentina` — categoría 6 (barman) del CCT 389/04, adicionales y propinas. CTA: `/ar/programas/bartender.html`. Reusar las cifras jul–sep 2026 ya verificadas en la nota de barista.
 3. `cuanto-gana-pastelero-paraguay` — piso legal 2026 (Decreto 6225) y demanda Sinafocal. CTA: `/py/programas/pastelero.html`.
-4. `donde-estudiar-gastronomia-bogota` — filiales Chapinero y Restrepo. CTA: `/co/programas/cocina-internacional.html` + `/co/#contacto`.
-5. `donde-estudiar-gastronomia-chia-colombia` — filial Chía. CTA: `/co/programas/abc-chef.html`.
+4. ~~`donde-estudiar-gastronomia-bogota`~~ — PUBLICADA 2026-09-07 (cubre Chapinero, Restrepo y Chía; `co/chapinero-bogota.html` y `co/chia.html` son redirecciones a `/co/`, no fichas).
+5. `donde-estudiar-gastronomia-chia-colombia` — filial Chía. CTA: `/co/programas/abc-chef.html`. Baja prioridad: la nota de Bogotá ya cubre Chía; evaluar si canibaliza.
 6. `que-se-aprende-curso-sushi-bolivia` — programa Sushi de La Paz. CTA: `/bo/programas/sushi.html`.
 7. `que-se-aprende-curso-pastas-salsas-bolivia` — CTA: `/bo/programas/pastas-salsas.html`.
 8. `tecnico-superior-gastronomia-bolivia-que-es` — CTA: `/bo/programas/tecnico-superior.html`.
 9. `abc-teens-curso-cocina-adolescentes-paraguay` — CTA: `/py/programas/abc-teens.html`.
 10. `master-gastronomia-igi-que-es-para-quien` — CTA: `/ar/programas/master-gastronomia.html`.
-11. `chocolateria-profesional-que-se-aprende` — Pastelería. CTA: `/ar/programas/maestro-pastelero.html`.
+11. ~~`chocolateria-profesional-que-se-aprende`~~ — PUBLICADA 2026-09-07 (CTA final a `/ar/programas/pastelero-internacional.html`; el Master en Pastelería es el único programa AR cuya ficha nombra chocolatería).
 12. `cocina-plant-based-tendencia-gastronomia` — Técnicas y Conocimiento, con fuentes de tendencias 2026. CTA: `/ar/programas/chef-internacional.html`.
 13. `turismo-gastronomico-salida-laboral` — Profesión y Salida Laboral. CTA: `/ar/programas/chef-internacional.html`.
 14. `cuanto-gana-mozo-camarero-argentina` — categoría 6 (mozo de salón) del CCT 389/04. CTA: `/ar/programas/mozo-maitre.html`.
 15. `donde-estudiar-gastronomia-brasil-guarulhos-osasco` — filiales BR. CTA: `/br/programas/chef-internacional.html` + `/br/#contacto`.
+
+## Notas cortas a ampliar (prioridad por intención de búsqueda × vistas GA4 30 días al 2026-09-06)
+
+Ya ampliadas: `cuanto-cuesta-estudiar-gastronomia-argentina` (30 vistas), `salida-laboral-gastronomia-trabajos` (7).
+
+1. `conviene-estudiar-gastronomia` (711 palabras, 4 vistas).
+2. `donde-estudiar-gastronomia-cordoba` (561, 6 vistas).
+3. `que-estudiar-para-ser-pastelero-profesional` (407, 3 vistas).
+4. `donde-estudiar-gastronomia-bolivia` (573, 2 vistas) — sumar los 14 programas de `/bo/programas/`.
+5. `que-hace-barista-profesional` (423, 4 vistas) — ahora enlazada desde la nota de sueldo.
+6. `cuanto-gana-pastelero-argentina` (929, 17 vistas) — llevarla a 1.300 con la tabla completa por categoría de establecimiento.
+
+Brasil: `br/` está en portugués (pt-BR) y la única filial listada dice "Em breve"; una nota en castellano no encaja. Si se quiere contenido BR, debería ser en portugués y con filial confirmada.
 
 ## Ideas sin priorizar
 

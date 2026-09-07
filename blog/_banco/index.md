@@ -1,5 +1,7 @@
 # Banco de fotos del blog — reserva SIN USAR
 
+> Estado al 2026-09-07: 57 fotos sin usar, 3 usadas (ver tabla).
+
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
 
@@ -63,7 +65,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `postres-en-vaso-01` | Postres en vaso con frutos rojos | **SIN USAR** |
 | `pasteleria-manga-vasitos-01` | Armado de postres individuales con manga | **SIN USAR** |
 | `pasteleria-cupcakes-01` | Alumna decorando cupcakes | **SIN USAR** |
-| `pasteleria-petit-fours-01` | Chef con bandeja de petit fours | **SIN USAR** |
+| `pasteleria-petit-fours-01` | Chef con bandeja de petit fours | USADA en `chocolateria-profesional-que-se-aprende` (2026-09-07) |
 | `pasteleria-vitrina-01` | Pastelera junto a una vitrina de tortas | **SIN USAR** |
 | `pasteleria-tarta-alumna-01` | Alumna apoyada en la mesada junto a su tarta | **SIN USAR** |
 | `pasteleria-torta-armado-01` | Armado y decorado de una torta en la mesada | **SIN USAR** |
@@ -91,14 +93,14 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `barista-portafiltro-01` | Barista con dos portafiltros frente a la máquina de café | **SIN USAR** |
+| `barista-portafiltro-01` | Barista con dos portafiltros frente a la máquina de café | USADA en `cuanto-gana-barista-argentina` (2026-09-07) |
 | `barista-taza-cafe-01` | Barista mostrando una taza de café | **SIN USAR** |
 
 ## Aula y clases (5)
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `aula-clase-cocina-01` | Clase de cocina con el grupo alrededor de la isla | **SIN USAR** |
+| `aula-clase-cocina-01` | Clase de cocina con el grupo alrededor de la isla | USADA en `donde-estudiar-gastronomia-bogota` (2026-09-07) |
 | `aula-clase-teorica-01` | Clase teórica en aula con proyector | **SIN USAR** |
 | `aula-alumnos-estudio-01` | Alumnos estudiando en el aula | **SIN USAR** |
 | `clase-cortes-verduras-01` | Clase práctica de cortes de verduras | **SIN USAR** |
