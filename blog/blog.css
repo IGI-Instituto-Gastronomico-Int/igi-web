@@ -217,3 +217,34 @@ table.cmp td:first-child{font-weight:700;color:var(--azul);white-space:nowrap}
 .prose .prensa-list .titu{display:block;font-size:15px;line-height:1.4;color:#16233c;font-weight:700;margin-bottom:6px}
 @media(max-width:700px){.prose .vgrid{grid-template-columns:1fr}}
 @media(max-width:560px){.prose .pasos-hito{grid-template-columns:1fr}}
+
+/* ===== Ajuste de ancho en escritorio (2026-09-08) — AJUSTE DE ANCHO ===== */
+/* 1. El indice se queda fijo mientras se lee. Antes el <aside> no era sticky,
+      el indice se iba y la columna izquierda quedaba en blanco. */
+.art-layout > aside{position:sticky;top:90px;align-self:start}
+
+/* 2. En pantallas grandes la nota usa todo el ancho disponible:
+      el texto corrido mantiene un ancho comodo de lectura y los bloques
+      visuales (tabla de datos, pasos, videos, prensa, fotos) ocupan todo. */
+@media(min-width:1200px){
+  .wrap-art{max-width:1320px}
+  .art-layout{grid-template-columns:272px minmax(0,1fr);gap:50px}
+  .prose{max-width:none}
+  .prose > *{max-width:880px}
+  .prose > .datos,
+  .prose > .pasos-hito,
+  .prose > .vgrid,
+  .prose > .prensa-list,
+  .prose > .fig-duo,
+  .prose > figure.art-fig,
+  .prose > table,
+  .prose > .tabla-wrap,
+  .prose > .cta-final,
+  .prose > .related,
+  .prose > .grid-cards{max-width:none}
+  .prose > figure.art-fig.vert{max-width:520px}
+  .prose .pasos-hito{grid-template-columns:repeat(4,1fr)}
+}
+@media(min-width:1500px){
+  .wrap-art{max-width:1440px}
+}
