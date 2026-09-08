@@ -286,5 +286,48 @@ function igiWsp(prog){
 .tabla-inicios td:first-child{font-weight:700;color:var(--azul)}
 .tabla-inicios tr:nth-child(even) td{background:#fafbfc}
 </style>
+<script>
+/* Eventos de medicion del hito Record Guinness (2026-09-08).
+   Delegado: no toca el markup existente. Depende de window.igiTrack, que ya
+   viene en el snippet de GA4 de cada pagina y es a prueba de errores. */
+(function(){
+  if (window.__igiHitoEv) return; window.__igiHitoEv = 1;
+  function T(n,p){ try{ if(window.igiTrack) window.igiTrack(n, p||{}); }catch(e){} }
+  function corta(s){ return (''+(s||'')).slice(0,120); }
+
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a');
+    if (!a) return;
+
+    /* 1) Clic en la franja del record o en el aviso de las fichas */
+    if (a.closest('.hito-band') || a.closest('.hito-ficha')) {
+      T('hito_click', { page: location.pathname, destino: corta(a.getAttribute('href')) });
+      return;
+    }
+
+    /* 2) Clic saliente a un medio de prensa */
+    var h = a.getAttribute('href') || '';
+    if (/^https?:\/\//i.test(h) &&
+        !/(^|\.)igi-la\.com|wa\.me|instagram\.com|facebook\.com|tiktok\.com|youtube\.com|googletagmanager/i.test(h)) {
+      var host = '';
+      try { host = (a.hostname || '').replace(/^www\./, ''); } catch(err) {}
+      T('prensa_click', { medio: host, link_url: corta(h), page: location.pathname });
+    }
+  }, true);
+
+  /* 3) Play de video (el evento 'play' no burbujea: se escucha en captura) */
+  document.addEventListener('play', function(e){
+    var v = e.target;
+    if (!v || v.tagName !== 'VIDEO') return;
+    if (v.getAttribute('data-igi-play')) return;      /* una vez por video y visita */
+    v.setAttribute('data-igi-play', '1');
+    var nombre = '';
+    try { nombre = (v.currentSrc || '').split('/').pop().replace(/\.mp4$/i, ''); } catch(err) {}
+    T('video_play', { video: nombre, page: location.pathname });
+  }, true);
+})();
+</script>
 </body>
 </html>
