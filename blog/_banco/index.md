@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-09-07: 57 fotos sin usar, 3 usadas (ver tabla).
+> Estado al 2026-09-14: 54 fotos sin usar, 6 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -42,7 +42,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `chef-olla-cocina-02` | Chef con olla en cocina de la escuela | **SIN USAR** |
 | `chef-cucharon-01` | Chef extendiendo un cucharón hacia cámara | **SIN USAR** |
 | `emplatado-fine-dining-01` | Emplatado fino con pinza sobre plato terminado | **SIN USAR** |
-| `emplatado-salsa-01` | Chef sirviendo salsa sobre el plato | **SIN USAR** |
+| `emplatado-salsa-01` | Chef sirviendo salsa sobre el plato | USADA en `salsas-madre-cocina-guia` (2026-09-14) |
 | `emplatado-aceite-01` | Aceite en hilo sobre bocados emplatados | **SIN USAR** |
 | `emplatado-gourmet-01` | Plato gourmet en detalle con salsa | **SIN USAR** |
 | `emplatado-flor-01` | Alumno decorando un plato con flor comestible | **SIN USAR** |
@@ -87,7 +87,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `cocteleria-clase-01` | Clase de cocteliería: tragos y frutas sobre la mesada | **SIN USAR** |
+| `cocteleria-clase-01` | Clase de cocteliería: tragos y frutas sobre la mesada | USADA en `cuanto-gana-bartender-argentina` (2026-09-14) |
 
 ## Barista / café (2)
 
@@ -117,7 +117,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `alumnos-verduras-01` | Alumnos trabajando con verduras frescas | **SIN USAR** |
 | `alumnos-platos-grupo-01` | Grupo de alumnos con sus platos terminados | **SIN USAR** |
 | `alumnos-pizza-01` | Alumna presentando una pizza sobre tabla | **SIN USAR** |
-| `alumnos-practica-mesada-01` | Práctica de alumnos en la mesada de la cocina | **SIN USAR** |
+| `alumnos-practica-mesada-01` | Práctica de alumnos en la mesada de la cocina | USADA en `tecnico-superior-gastronomia-bolivia-que-es` (2026-09-14) |
 
 ## Cocineritos (niños) (3)
 

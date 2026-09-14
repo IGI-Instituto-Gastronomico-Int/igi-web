@@ -29,6 +29,109 @@
 
 ## Resumen de corridas
 
+### 2026-09-14 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición (GA4, runReport vía Zapier, 2026-08-15 a 2026-09-13, vistas de
+página): `/ar/` 9.300, home 7.541, `/py/` 987, `/bo/` 165, `/co/` 147,
+`/cl/` 138, `/br/` 133. Blog: `alfajor-mas-grande-del-mundo` 144,
+`metodos-de-coccion-guia` 144, `cortes-de-verduras` 84,
+`diferencias-panaderia-pasteleria-reposteria` 78, `brigada-cocina` 76,
+`mise-en-place` 55, `cuanto-cuesta-estudiar-gastronomia-argentina` 43,
+`que-estudiar-para-ser-chef-profesional` 41, `cuanto-gana-pastelero-argentina`
+39, `como-calcular-costo-plato` 34, `cuanto-dura-carrera-chef` 25,
+`cuanto-gana-chef-argentina` 23, `cuanto-gana-cocinero-paraguay` 23,
+`donde-estudiar-gastronomia-cordoba` 15, `cuanto-gana-barista-argentina` 7
+(publicada el 07/09), `donde-estudiar-gastronomia-bogota` 4. Eventos:
+`blog_cta_click` 43 (vs. 32 la semana anterior), `whatsapp_click` 3.504,
+`generate_lead` 345. Fichas más vistas: `/ar/programas/chef-internacional.html`
+277, `/ar/programas/barista.html` 192, `/ar/programas/bartender.html` 88.
+El diagnóstico de la consigna (cuanto-cuesta con 536 palabras) ya estaba
+resuelto el 07/09: hoy tiene 1.994 palabras de cuerpo y 43 vistas.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/cuanto-gana-bartender-argentina/` — 2.377 palabras, es-AR, CTA
+  `/ar/programas/bartender.html` + `/ar/#contacto`. Foto `cocteleria-clase-01`.
+  Barman nivel 6 ($1.292.026 D / $1.524.806 Especial + $88.000–$104.000),
+  ayudante nivel 3, ejemplo de liquidación, propinas (iProfesional 2026),
+  World's 50 Best Bars 2025 (Tres Monos 10, CoChinChina 26, Florería
+  Atlántico 90).
+- `blog/tecnico-superior-gastronomia-bolivia-que-es/` — 2.585 palabras,
+  es-BO, CTA `/bo/programas/tecnico-superior.html` + `/bo/#contacto`. Foto
+  `alumnos-practica-mesada-01`. Niveles Técnico Medio/Superior (Ministerio de
+  Educación, R.M. 350/2023), R.M. 0882/2022, plan de 3 años, comparativa con
+  Chef Internacional y cursos, INE turismo 2025 (2,65 M visitantes, 1.145.165
+  extranjeros, 27 % del gasto en alimentos y bebidas), SMN 2026 Bs 3.300 (D.S.
+  5516). Sede La Paz; Santa Cruz sigue sin ficha.
+- `blog/salsas-madre-cocina-guia/` — 2.785 palabras, es-AR, CTA
+  `/ar/programas/chef-internacional.html` + `/ar/#contacto`. Foto
+  `emplatado-salsa-01`. Carême/Escoffier, fondos y roux con proporciones,
+  las 5 salsas con derivadas, tabla resumen, errores y correcciones.
+
+Ampliadas: `cuanto-gana-pastelero-argentina` 891 → 1.893 palabras (tabla
+niveles 3/5/6 por categoría D y Especial, ejemplo de liquidación, sección
+sobre el CCT 272/96 de pastelerías con el acuerdo abril–octubre 2026 del
+Sindicato de Pasteleros, evolución de la carrera, 3 FAQ y 5 fuentes nuevas);
+`donde-estudiar-gastronomia-cordoba` 506 → 2.125 (cifras de la Agencia
+Córdoba Turismo: +2 M turistas verano 2026, $273.000 M, 70,33 % ocupación,
+378 mil turistas en invierno; tabla de las 5 filiales `ar/cordoba.html`,
+`villa-carlos-paz`, `rio-cuarto`, `villa-dolores`, `marcos-juarez`; tabla de
+los 16 programas AR con duración; costo, certificación, salida laboral,
+checklist, 6 FAQ, 6 fuentes; CTAs corregidos a `/ar/cordoba.html` +
+`/ar/#contacto`).
+
+Enlazado: `cuanto-gana-bartender-argentina` recibe 8 entrantes
+(`brigada-cocina`, `cuanto-cuesta`, `cuanto-gana-barista`,
+`cuanto-gana-pastelero`, `que-hace-bartender-profesional`,
+`que-se-aprende-curso-bartender`, `salida-laboral-gastronomia-trabajos`,
+`donde-estudiar-gastronomia-cordoba`); `tecnico-superior-gastronomia-bolivia-que-es`
+4 (`que-estudiar-para-ser-chef-profesional`, `donde-estudiar-gastronomia-bolivia`,
+`donde-estudiar-gastronomia-la-paz-bolivia`, `cuanto-dura-carrera-chef`);
+`salsas-madre-cocina-guia` 7 (`metodos-de-coccion-guia`, `cortes-de-verduras`,
+`mise-en-place`, `brigada-cocina`, `que-estudiar-para-ser-chef-profesional`,
+`ciencia-cocina`, `emplatado-profesional`). Desde las 6 notas con tráfico se
+agregaron además enlaces a notas del cluster sin tráfico:
+`manipulacion-segura-alimentos-claves`, `emplatado-profesional-tecnicas-errores`,
+`cocina-sostenible-reducir-desperdicios`, `como-es-clase-chef-internacional-igi`,
+`catering-eventos-planificar-producir-servir`, `curso-mozo-camarera-maitre-servicio-profesional`,
+`que-hace-bartender-profesional`, `abc-panadero-curso-panificacion-inicial`,
+`abc-pastelero-curso-inicial-pasteleria`, `diseno-tortas-curso-decoracion`,
+`masa-madre-tendencia-panaderia`, `estudiar-pasteleria-para-emprender`,
+`pasteleria-clasica-superior-vanguardia`, `materias-chef-internacional`,
+`especializaciones-gastronomicas-como-elegir`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems nuevos arriba; sitemap
+con 269 URLs únicas y `lastmod` 2026-09-14 en las 22 notas tocadas). También
+se acortaron las meta descriptions de `alumnos-igi-record-guinness-alfajor`
+(180 → 148) y `como-escalar-receta-pasteleria-alfajor-gigante` (174 → 159),
+que superaban los 165 caracteres desde la corrida anterior.
+
+Fuentes verificadas por búsqueda web el 2026-09-14 (los dominios .com.ar,
+.bo y minedu.gob.bo no se pueden abrir desde el entorno; se usaron los
+resúmenes de búsqueda con cifras citadas): escala UTHGRA jul–sep 2026 nivel 6
+$1.292.026 (D) / $1.524.806 (Especial) + $88.000 / $104.000, nivel 3
+$1.099.139 / $1.342.334, nivel 5 $1.210.980 + $83.000, referencia intermedia
+Perfil $1.337.186 + $91.000 (Atril, Perfil, El Sindicato, Vilaplana);
+iProfesional bartender $900.000–$1.200.000 con propinas; Sindicato de
+Pasteleros CCT 272/96 acuerdo abril–octubre 2026 (2,5 % → 15,97 %, 15,97 % al
+básico en octubre, antigüedad 2 %–19 %); INE Bolivia 2025 vía La Patria y
+eju.tv; D.S. 5516 y R.M. 088/26 (Unitel, Ferrere); Agencia Córdoba Turismo vía
+prensa.cba.gov.ar, Hoy Día, Dailyweb y El Diario de Carlos Paz; Circuito
+Gastronómico 13.073 votos.
+
+Hallazgos del repo: `ar/index.html` y `bo/index.html` son SPA con vistas
+(`id="v-contacto"`) y no tienen `id="contacto"`; los enlaces `/{pais}/#contacto`
+dependen del router por hash, igual que en todas las notas anteriores.
+`br/` sigue en portugués con filiales "em breve": no se escribió nota de
+Brasil. `blog/index.html` conserva enlaces `/#contacto` de raíz y una meta
+description de 170 caracteres (preexistentes, no se tocaron). Banco de fotos:
+quedan 54 sin usar.
+
+Pendiente: nota de Colombia (7 fichas, 1 sola nota), ampliar
+`donde-estudiar-gastronomia-mendoza`, `masa-madre-tendencia-panaderia` y
+`cuanto-gana-cocinero-paraguay`; `fondos-de-cocina-guia` como continuación de
+salsas madre; revisar `llms.txt` para sumar las notas de sueldos.
+
+
 ### 2026-09-07 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-08-08 a 2026-09-06, vistas de
