@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-09-14: 54 fotos sin usar, 6 usadas (ver tabla).
+> Estado al 2026-09-21: 51 fotos sin usar, 9 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -34,8 +34,8 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
 | `chef-salteado-01` | Chef salteando en sartén durante una clase | **SIN USAR** |
-| `chef-clase-fuego-01` | Chef instructor y alumna trabajando sobre el fuego | **SIN USAR** |
-| `chef-coccion-olla-01` | Chef cocinando en olla sobre la cocina industrial | **SIN USAR** |
+| `chef-clase-fuego-01` | Chef instructor y alumna trabajando sobre el fuego | USADA en `cuanto-gana-chef-colombia` (2026-09-21) |
+| `chef-coccion-olla-01` | Chef cocinando en olla sobre la cocina industrial | USADA en `fondos-de-cocina-guia` (2026-09-21) |
 | `chef-retrato-cocina-01` | Retrato de chef con brazos cruzados en cocina profesional | **SIN USAR** |
 | `chef-retrato-cocina-02` | Retrato de chef mujer en cocina profesional | **SIN USAR** |
 | `cocina-flambeado-01` | Flambeado con llama alta frente a los alumnos | **SIN USAR** |
@@ -132,7 +132,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
 | `catering-mesa-01` | Mesa de catering con bocados y postres | **SIN USAR** |
-| `servicio-mozos-01` | Equipo de servicio de sala con bandejas | **SIN USAR** |
+| `servicio-mozos-01` | Equipo de servicio de sala con bandejas | USADA en `cuanto-gana-mozo-camarero-argentina` (2026-09-21) |
 
 ## Origen de cada foto
 

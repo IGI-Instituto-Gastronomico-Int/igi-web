@@ -29,6 +29,119 @@
 
 ## Resumen de corridas
 
+### 2026-09-21 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición (GA4, runReport vía Zapier, 2026-08-22 a 2026-09-20, vistas de
+página): `/ar/` 11.275, home 5.100, `/py/` 1.203, `/bo/` 214, `/br/` 175,
+`/co/` 167, `/cl/` 158, `/uy/` 117. Blog: `metodos-de-coccion-guia` 217,
+`alfajor-mas-grande-del-mundo` 193, `/blog/` 153, `cortes-de-verduras` 123,
+`brigada-cocina` 102, `diferencias-panaderia-pasteleria-reposteria` 97,
+`mise-en-place` 66, `cuanto-cuesta-estudiar-gastronomia-argentina` 59,
+`que-estudiar-para-ser-chef-profesional` 58, `cuanto-gana-pastelero-argentina`
+52, `como-calcular-costo-plato` 51, `cuanto-dura-carrera-chef` 39,
+`ciencia-cocina` 34, `cuanto-gana-barista-argentina` 34 (publicada el 07/09),
+`cuanto-gana-chef-argentina` 34, `cuanto-gana-cocinero-paraguay` 29,
+`donde-estudiar-gastronomia-argentina` 26, `donde-estudiar-gastronomia-cordoba`
+23, `masa-madre` 20, `donde-estudiar-gastronomia-mendoza` 19,
+`que-es-tecnologia-de-alimentos-paraguay` 18, `donde-estudiar-gastronomia-bogota`
+16, `salsas-madre-cocina-guia` 13 (publicada el 14/09), `cuanto-gana-bartender-argentina`
+9, `tecnico-superior-gastronomia-bolivia-que-es` 5. Eventos: `blog_cta_click`
+49 (vs. 43 la semana anterior), `whatsapp_click` 3.395, `generate_lead` 332.
+Fichas más vistas: `/ar/programas/chef-internacional.html` 375,
+`/ar/programas/barista.html` 275, `/ar/programas/abc-chef.html` 238,
+`/ar/programas/mozo-maitre.html` 100 (motivo para la nota de mozo);
+`/co/programas/cocina-internacional.html` 17.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/cuanto-gana-chef-colombia/` — 2.758 palabras, es-CO, CTA
+  `/co/programas/cocina-internacional.html` + `/co/#contacto`. Foto
+  `chef-clase-fuego-01`. SMMLV 2026 $1.750.905 + auxilio $249.095 (Decretos
+  1469/1470 de 2025, suspensión del Consejo de Estado y Decreto 0159 de 2026),
+  promedios por puesto (Computrabajo jun. 2026: cocinero $1.407.138, chef
+  cocinero $1.703.087, subchef $1.783.742, chef de restaurante $2.345.932;
+  Indeed abr. 2026 chef $1.838.789, Medellín $1.946.547; chef ejecutivo
+  $2.576.179–$3.294.954), Ley 1935/2018 de propinas, jornada de 42 h (Ley
+  2101) y recargo dominical 90 % (Ley 2466), ejemplo bruto→neto, DANE
+  (−109.000 empleos en enero, +289.000 en el año a junio), Decreto 4904/2009.
+- `blog/cuanto-gana-mozo-camarero-argentina/` — 2.606 palabras, es-AR, CTA
+  `/ar/programas/mozo-maitre.html` + `/ar/#contacto`. Foto `servicio-mozos-01`.
+  Niveles del salón en el CCT 389/04 (mozo de mostrador 2, comis de comedor
+  3, cajero 5, mozo y maître 6, maître principal 7), básicos jul–sep 2026
+  ($1.292.026 D / $1.337.186 C / $1.524.806 Especial + $88.000–$104.000;
+  nivel 7 $1.538.297 en B), ejemplo de liquidación, propinas (Decreto 731/2024
+  y Ley 27.802 del 6/03/2026: no remunerativas), eventos, plan del curso.
+- `blog/fondos-de-cocina-guia/` — 3.349 palabras, es-AR, CTA
+  `/ar/programas/chef-internacional.html` + `/ar/#contacto`. Foto
+  `chef-coccion-olla-01`. Fondo vs caldo vs consomé, cuatro ingredientes,
+  proporciones (1 kg : 2 L; Escoffier 1903 para 10 L), fondo blanco, oscuro,
+  fumet, verduras y court-bouillon, glace y demi-glace, reglas de oro, tabla
+  de errores, usos, 7 FAQ, 8 fuentes.
+
+Ampliadas: `cuanto-gana-cocinero-paraguay` 1.053 → 2.420 palabras (datos
+completos de Sinafocal: 77,4 % de empresas con intención de contratar, 437
+vacantes en 25 ocupaciones, 52,6 % en ayudante/cocinero/mozo; tabla del sector
+con INE 2T 2024 (876.130 ocupados, 29,5 %), ABC ago. 2026 (+73.575 →
+1.063.284), Senatur (97.000 nuevas ocupaciones 2T 2025, 2.252.532 visitantes
+ene–sep 2025, 80 % de ocupación hotelera ene. 2026); Código del Trabajo
+(recargo nocturno 30 %, extras 50 %/100 %, IPS 9 %, aguinaldo 1/12); ejemplo
+bruto→neto ₲ 3.044.000 → ₲ 2.770.040; tabla de puestos; 3 FAQ y 9 fuentes
+nuevas; enlaces a Técnico Superior PY, Colombia, brigada, costo de plato);
+`donde-estudiar-gastronomia-mendoza` 848 → 2.219 (Vendimia 2026: 41.593
+visitantes, $11.714 M, $94.207/día, 85 % de ocupación; enoturismo: 876
+bodegas, 209–230 abiertas, 1,59 M visitas 2024, 53,85 % con gastronomía;
+tabla de los 16 programas de `ar/mendoza.html` con duración; secciones de
+costo, certificación y salida laboral; 3 FAQ nuevas y sección Fuentes con 8
+enlaces; meta description reescrita).
+
+Enlazado: `cuanto-gana-mozo-camarero-argentina` recibe 10 entrantes
+(`brigada-cocina`, `cuanto-cuesta`, `cuanto-gana-chef-argentina`,
+`cuanto-gana-bartender`, `cuanto-gana-barista`, `cuanto-gana-pastelero`,
+`curso-mozo-camarera-maitre`, `catering-eventos`, `salida-laboral`,
+`diferencias-panaderia`, `donde-estudiar-gastronomia-mendoza`);
+`cuanto-gana-chef-colombia` 5 (`brigada-cocina`, `que-estudiar-para-ser-chef`,
+`cuanto-gana-chef-argentina`, `donde-estudiar-gastronomia-bogota`,
+`salida-laboral`, `cuanto-gana-cocinero-paraguay`); `fondos-de-cocina-guia` 8
+(`salsas-madre`, `metodos-de-coccion`, `mise-en-place`, `brigada-cocina`,
+`que-estudiar-para-ser-chef`, `cortes-de-verduras`, `cuanto-dura-carrera-chef`,
+`materias-chef-internacional`). Desde las notas con tráfico se sumaron además
+enlaces a notas sin tráfico: `que-se-aprende-pastelero-internacional`,
+`abc-tortas-curso-tortas-clasicas`, `materiales-herramientas-estudiar-pasteleria`,
+`chef-internacional-es-para-vos`, `que-se-aprende-curso-parrillas-fuegos`,
+`estudiar-gastronomia-sin-experiencia`, `estudiar-chef-internacional-mientras-trabajas`,
+y desde Mendoza a `certificado-igi-certificacion-uflo-diferencias`,
+`que-revisar-formacion-certificacion-universitaria`, `abc-pastelero-vs-maestro-vs-profesional`,
+`como-es-clase-chef-internacional-igi`, `curso-cocina-o-carrera-chef`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems nuevos arriba; sitemap
+con 272 URLs y `lastmod` 2026-09-21 en las 23 notas tocadas). Se acortó la
+meta description de `blog/index.html` (170 → 162 caracteres), pendiente desde
+la corrida anterior. Banco de fotos: quedan 51 sin usar.
+
+Fuentes verificadas por búsqueda web el 2026-09-21 (los dominios .com.ar,
+.com.co, .com.py, .gov.py, .gob.ar, computrabajo, scoolinary, wikisource y
+mendoza.gov.ar no se pueden abrir desde el entorno; se usaron los resúmenes
+de búsqueda con cifras citadas): Computrabajo/Indeed/Magneto365 Colombia,
+Impera Abogados y Consultorsalud (SMMLV 2026), Siigo y SUIN-Juriscol (Ley
+1935), Actualícese y Portafolio (jornada y recargos 2026), El Colombiano y El
+Tiempo (DANE), Función Pública (Decreto 4904); Vilaplana (categorías CCT
+389/04: mozo y maître en nivel 6), Atril, Perfil, El Sindicato, Restaurant
+Argentina, Boletín Oficial (Decreto 731/2024), Argentina.gob.ar,
+Abogados.com.ar (Ley 27.802); Wikisource Escoffier 1903, Scoolinary,
+Gastronosfera, ABC Color gastronomía, Culinaria Mexicana, USDA FSIS; Los
+Andes, Sitio Andino, ADN País, Prensa Mendoza, MDZ, Diario Uno, UTHGRA
+Mendoza; Agencia IP, MarketData, ABC Color economía, Senatur, La Tribuna,
+TopTrabajos, Lenox HR, Vacantes.com.
+
+Hallazgo: la nota de brigada de cocina decía que mozo y maître "comparten
+nivel con el cocinero y el jefe de partida", y las guías consultadas lo
+confirman (nivel 6); el mozo de mostrador está en el nivel 2 y el comis de
+comedor en el 3, no en el 5 como se podía inferir del backlog.
+
+Pendiente: segunda nota de Colombia (`tecnico-laboral-cocina-internacional-colombia-que-es`),
+ampliar `que-es-tecnologia-de-alimentos-paraguay` (406 palabras, 18 vistas) y
+`masa-madre-tendencia-panaderia`; `br/` sigue en portugués sin filial
+confirmada; revisar `llms.txt` para sumar las notas de sueldos.
+
 ### 2026-09-14 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-08-15 a 2026-09-13, vistas de
