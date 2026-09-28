@@ -29,6 +29,101 @@
 
 ## Resumen de corridas
 
+### 2026-09-28 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición (GA4, runReport vía Zapier, 2026-08-29 a 2026-09-27, vistas de
+página): `/ar/` 10.610, home 4.715, `/py/` 1.176, `/cl/` 262, `/bo/` 196,
+`/co/` 186, `/br/` 175, `/uy/` 129. El blog completo sumó 2.321 vistas
+(2.152 sin el índice), contra ~344 en la auditoría del 2026-09-02.
+Blog: `metodos-de-coccion-guia` 356, `alfajor-mas-grande-del-mundo` 224,
+`/blog/` 169, `cortes-de-verduras` 166, `diferencias-panaderia-pasteleria-
+reposteria` 103, `brigada-cocina` 95, `cuanto-cuesta-estudiar-gastronomia-
+argentina` 80, `cuanto-gana-barista-argentina` 75, `cuanto-gana-pastelero-
+argentina` 75, `que-estudiar-para-ser-chef-profesional` 71, `mise-en-place`
+69, `como-calcular-costo-plato` 51, `donde-estudiar-gastronomia-bogota` 49,
+`cuanto-dura-carrera-chef` 47, `salsas-madre-cocina-guia` 44,
+`cuanto-gana-chef-argentina` 43, `ciencia-cocina` 38, `cuanto-gana-cocinero-
+paraguay` 31, `donde-estudiar-gastronomia-argentina` 28, `cuanto-gana-
+bartender-argentina` 26, `donde-estudiar-gastronomia-cordoba` 23,
+`donde-estudiar-gastronomia-mendoza` 19, `masa-madre` 19, `que-es-tecnologia-
+de-alimentos-paraguay` 19, `conviene-estudiar-gastronomia` 13, `que-hace-
+barista-profesional` 13, `que-estudiar-para-ser-pastelero-profesional` 12,
+`tecnico-superior-gastronomia-bolivia-que-es` 12, `fondos-de-cocina-guia` 5
+(publicada el 21/09), `cuanto-gana-mozo-camarero-argentina` 4 (ídem),
+`cuanto-gana-chef-colombia` no aparece entre las 210 filas pedidas.
+Eventos: `blog_cta_click` 56 (vs. 49 la semana anterior), `whatsapp_click`
+3.197, `generate_lead` 326. Fichas más vistas: `/ar/programas/chef-
+internacional.html` 428, `/ar/programas/barista.html` 333, `/ar/programas/
+abc-chef.html` 276, `/ar/programas/pastelero-internacional.html` 249,
+`/ar/programas/abc-pastelero.html` 243 (motivo de la nota de masas);
+`/co/programas/cocina-internacional.html` 23, `/co/restrepo-bogota.html` 61.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/tecnico-laboral-cocina-internacional-colombia-que-es/` — 3.149
+  palabras, es-CO, CTA `/co/programas/cocina-internacional.html` +
+  `/co/#contacto`. Foto `alumnos-emplatado-grupo-01`. Marco legal ETDH (Ley
+  1064/2006, Decreto 4904/2009 compilado en Decreto 1075/2015: 600 h mínimas,
+  50 % práctica, noveno grado, certificado de aptitud ocupacional "Técnico
+  Laboral en…"), tabla técnico laboral vs. técnico profesional vs. tecnólogo,
+  plan por semestre de la ficha, tres sedes con dirección, sueldos
+  (Computrabajo jun. 2026, SMMLV 2026), DANE +289.000 ocupados a junio 2026.
+- `blog/cuanto-gana-pastelero-paraguay/` — 2.671 palabras, es-PY, CTA
+  `/py/programas/pastelero.html` + `/py/#contacto`. Foto
+  `pasteleria-vitrina-01`. SMN ₲ 3.044.000 / jornal ₲ 117.077 (Decreto 6225 y
+  Res. MTESS 670/2026), liquidación con IPS 9 %, rangos WageIndicator/
+  Tusalario 2026 (₲ 2.920.316–8.594.602; inicio 2.920.316–6.409.069; tras 5
+  años 3.306.515–8.914.577, 48 h), Sinafocal (panaderos entre los más
+  demandados; 77,4 % con intención de contratar), INE 1.063.284 ocupados,
+  recargos art. 234 CT (50/100 %, nocturno 30 %), tabla de 3 programas PY.
+- `blog/masas-basicas-pasteleria-guia/` — 3.417 palabras, es-AR, CTA
+  `/ar/programas/pastelero-internacional.html` + `/ar/#contacto`. Foto
+  `panaderia-amasado-palote-01`. Cinco familias (quebradas brisée/sucrée/
+  sablée/frola con sablage vs. crémage y regla 3-2-1; hojaldre con détrempe,
+  beurrage, 6 vueltas, manteca 14–18 °C; choux 250/125/150/4; batidas
+  livianas y pesadas; fermentadas y hojaldradas fermentadas), tabla
+  comparativa, tabla de errores, mise en place, 8 FAQ, 10 fuentes.
+
+Ampliadas: `que-es-tecnologia-de-alimentos-paraguay` 406 → 2.738 palabras
+(qué hace un técnico, INAN/RSPA 37 días y 5 años, Decreto 7634/2017 de
+dirección técnica, industria 19 % del PIB y 353.031 ocupados en manufactura
+2T 2026, exportaciones de carne ene–may 2026, plan por año, comparación con
+las otras carreras PY, 8 FAQ, 9 fuentes; se conservó el author-box de
+Victoria Barrios / Walter López y se agregó nota de ampliación);
+`que-estudiar-para-ser-pastelero-profesional` 494 → 2.477 (mapa de 8 bloques
+de contenido, tabla de 6 programas AR con duración y cursada, costos,
+habilidades, escalas CCT 389/04 jul–sep 2026 y CCT 272/96 abril–octubre 2026
+del Sindicato de Pasteleros, errores al elegir, 7 FAQ, 8 fuentes; se
+corrigió la FAQ que citaba "40 horas" del material paraguayo).
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 21 notas. Entrantes a
+las nuevas: masas 11 (diferencias-panaderia, metodos-de-coccion, mise-en-
+place, alfajor-record, que-se-estudia-panaderia, chocolateria, cuanto-gana-
+pastelero-ar, quimica-culinaria, donde-estudiar-pasteleria-py, que-estudiar-
+pastelero ampliada, blog/index), pastelero PY 12, técnico laboral CO 7. Desde las notas
+con tráfico se enlazaron además notas sin tráfico: `primer-segundo-ano-chef-
+internacional`, `materias-chef-internacional`, `como-es-clase-chef-
+internacional-igi`, `como-es-clase-pasteleria-profesional-igi`, `pasteleria-
+clasica-superior-vanguardia`, `cocina-sostenible-reducir-desperdicios`,
+`estudiar-chef-internacional-mientras-trabajas`, `carreras-cursos-gastronomia-
+salida-laboral`, `estudiar-gastronomia-sin-experiencia`, `estudiar-pasteleria-
+para-emprender`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 275
+URLs únicas, `lastmod` 2026-09-28 en las 26 notas tocadas y en `/blog/`).
+Banco de fotos: quedan 48 sin usar (índice `blog/_banco/index.md` al día).
+
+Hallazgos del repo: `br/` sigue en portugués con filiales "em breve" (la
+única entrada BR en el JSON de filiales es "IGI Brasil, Em breve"): no se
+escribió nota de Brasil. wageindicator.org, py.computrabajo.com y la mayoría
+de los diarios están bloqueados por el proxy de salida; se usaron los
+resúmenes de búsqueda con cifras citadas, como en corridas anteriores.
+
+Pendiente: ampliar `masa-madre-tendencia-panaderia`, `conviene-estudiar-
+gastronomia` y `que-hace-barista-profesional`; segunda nota CO
+(`tecnico-laboral-panaderia-pasteleria-colombia-que-es`); notas de técnica
+`cremas-base-pasteleria-guia` y `merengues`; `llms.txt` sigue sin listar las
+notas de sueldos.
+
 ### 2026-09-21 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-08-22 a 2026-09-20, vistas de

@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-09-21: 51 fotos sin usar, 9 usadas (ver tabla).
+> Estado al 2026-09-28: 48 fotos sin usar, 12 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -66,7 +66,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `pasteleria-manga-vasitos-01` | Armado de postres individuales con manga | **SIN USAR** |
 | `pasteleria-cupcakes-01` | Alumna decorando cupcakes | **SIN USAR** |
 | `pasteleria-petit-fours-01` | Chef con bandeja de petit fours | USADA en `chocolateria-profesional-que-se-aprende` (2026-09-07) |
-| `pasteleria-vitrina-01` | Pastelera junto a una vitrina de tortas | **SIN USAR** |
+| `pasteleria-vitrina-01` | Pastelera junto a una vitrina de tortas | USADA en `cuanto-gana-pastelero-paraguay` (2026-09-28) |
 | `pasteleria-tarta-alumna-01` | Alumna apoyada en la mesada junto a su tarta | **SIN USAR** |
 | `pasteleria-torta-armado-01` | Armado y decorado de una torta en la mesada | **SIN USAR** |
 
@@ -76,7 +76,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 |---|---|---|
 | `panaderia-alumnos-panes-01` | Alumnos trabajando con panes recién horneados | **SIN USAR** |
 | `panaderia-croissants-01` | Croissants y facturas terminadas sobre la mesada | **SIN USAR** |
-| `panaderia-amasado-palote-01` | Amasado con palote en clase de panificación | **SIN USAR** |
+| `panaderia-amasado-palote-01` | Amasado con palote en clase de panificación | USADA en `masas-basicas-pasteleria-guia` (2026-09-28) |
 | `panaderia-bandeja-panes-01` | Bandeja de panes y bollos terminados | **SIN USAR** |
 | `panaderia-amasado-manos-01` | Detalle de manos amasando sobre la mesada | **SIN USAR** |
 | `panaderia-bollos-clase-01` | Clase de panadería armando bollos | **SIN USAR** |
@@ -112,7 +112,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 |---|---|---|
 | `alumnos-amasado-grupo-01` | Grupo de alumnos amasando en la mesada | **SIN USAR** |
 | `brigada-cocina-retrato-01` | Retrato de brigada de cocina en la escuela | **SIN USAR** |
-| `alumnos-emplatado-grupo-01` | Grupo de alumnos emplatando con el chef | **SIN USAR** |
+| `alumnos-emplatado-grupo-01` | Grupo de alumnos emplatando con el chef | USADA en `tecnico-laboral-cocina-internacional-colombia-que-es` (2026-09-28) |
 | `alumnos-emplatado-01` | Alumnos emplatando sobre tabla de corte | **SIN USAR** |
 | `alumnos-verduras-01` | Alumnos trabajando con verduras frescas | **SIN USAR** |
 | `alumnos-platos-grupo-01` | Grupo de alumnos con sus platos terminados | **SIN USAR** |
