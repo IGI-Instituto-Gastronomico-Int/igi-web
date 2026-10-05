@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-09-28: 48 fotos sin usar, 12 usadas (ver tabla).
+> Estado al 2026-10-05: 45 fotos sin usar, 15 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -41,7 +41,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `cocina-flambeado-01` | Flambeado con llama alta frente a los alumnos | **SIN USAR** |
 | `chef-olla-cocina-02` | Chef con olla en cocina de la escuela | **SIN USAR** |
 | `chef-cucharon-01` | Chef extendiendo un cucharón hacia cámara | **SIN USAR** |
-| `emplatado-fine-dining-01` | Emplatado fino con pinza sobre plato terminado | **SIN USAR** |
+| `emplatado-fine-dining-01` | Emplatado fino con pinza sobre plato terminado | USADA en `que-se-aprende-curso-sushi-bolivia` (2026-10-05) |
 | `emplatado-salsa-01` | Chef sirviendo salsa sobre el plato | USADA en `salsas-madre-cocina-guia` (2026-09-14) |
 | `emplatado-aceite-01` | Aceite en hilo sobre bocados emplatados | **SIN USAR** |
 | `emplatado-gourmet-01` | Plato gourmet en detalle con salsa | **SIN USAR** |
@@ -81,7 +81,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `panaderia-amasado-manos-01` | Detalle de manos amasando sobre la mesada | **SIN USAR** |
 | `panaderia-bollos-clase-01` | Clase de panadería armando bollos | **SIN USAR** |
 | `panaderia-horno-industrial-01` | Horno industrial en uso durante la clase | **SIN USAR** |
-| `panaderia-horno-facturas-01` | Chef sacando una bandeja de facturas del horno | **SIN USAR** |
+| `panaderia-horno-facturas-01` | Chef sacando una bandeja de facturas del horno | USADA en `cuanto-gana-panadero-argentina` (2026-10-05) |
 
 ## Bartender / coctelería (1)
 
@@ -104,7 +104,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `aula-clase-teorica-01` | Clase teórica en aula con proyector | **SIN USAR** |
 | `aula-alumnos-estudio-01` | Alumnos estudiando en el aula | **SIN USAR** |
 | `clase-cortes-verduras-01` | Clase práctica de cortes de verduras | **SIN USAR** |
-| `clase-tecnicas-corte-01` | Alumnos practicando técnicas de corte en fila | **SIN USAR** |
+| `clase-tecnicas-corte-01` | Alumnos practicando técnicas de corte en fila | USADA en `cuchillos-de-cocina-tipos-afilado` (2026-10-05) |
 
 ## Alumnos y prácticas (8)
 

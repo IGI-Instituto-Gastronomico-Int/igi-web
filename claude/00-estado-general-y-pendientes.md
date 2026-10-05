@@ -29,6 +29,105 @@
 
 ## Resumen de corridas
 
+### 2026-10-05 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición (GA4, runReport vía Zapier, 2026-09-05 a 2026-10-04, vistas de
+página, 299 filas): `/ar/` 10.166, home 3.867, `/py/` 1.184, `/cl/` 307,
+`/co/` 224, `/bo/` 195, `/br/` 191, `/uy/` 125. Blog: `metodos-de-coccion-guia`
+499, `alfajor-mas-grande-del-mundo` 244, `cortes-de-verduras` 217, `/blog/`
+191, `cuanto-gana-barista-argentina` 115, `cuanto-cuesta-estudiar-gastronomia-
+argentina` 95, `cuanto-gana-pastelero-argentina` 95, `brigada-cocina` 94,
+`diferencias-panaderia-pasteleria-reposteria` 91, `salsas-madre-cocina-guia`
+89, `que-estudiar-para-ser-chef-profesional` 74, `donde-estudiar-gastronomia-
+bogota` 72, `mise-en-place` 65, `cuanto-gana-chef-argentina` 63, `cuanto-gana-
+bartender-argentina` 55, `cuanto-dura-carrera-chef` 53, `como-calcular-costo-
+plato` 51, `ciencia-cocina` 46, `donde-estudiar-gastronomia-argentina` 31,
+`cuanto-gana-cocinero-paraguay` 27, `donde-estudiar-gastronomia-cordoba` 24,
+`masa-madre` 24, `donde-estudiar-gastronomia-mendoza` 21, `ia-tecnologia-
+gastronomia` 20, `tecnico-superior-gastronomia-bolivia-que-es` 18, `que-es-
+tecnologia-de-alimentos-paraguay` 17, `que-estudiar-para-ser-pastelero-
+profesional` 17, `que-hace-barista-profesional` 16, `fondos-de-cocina-guia` 14,
+`salida-laboral-gastronomia-trabajos` 14, `masas-basicas-pasteleria-guia` 10,
+`cuanto-gana-mozo-camarero-argentina` 9, `conviene-estudiar-gastronomia` 9,
+`cuanto-gana-chef-colombia` 7, `tecnico-laboral-cocina-internacional-colombia`
+no aparece entre las 210 filas pedidas. Eventos: `blog_cta_click` 42 (vs. 56 la
+semana anterior), `whatsapp_click` 3.140, `generate_lead` 345, `postulacion`
+215. Fichas más vistas: `/ar/programas/chef-internacional.html` 515,
+`abc-chef.html` 374, `barista.html` 359, `abc-pastelero.html` 306,
+`pastelero-internacional.html` 277, `maestro-pastelero.html` 218,
+`mozo-maitre.html` 190, `bartender.html` 182, `abc-panadero.html` 175 (motivo
+de la nota de panadero); `/bo/programas/barista.html` 21, `tecnico-superior`
+15, `parrillas` 7, `chef` 6 (`sushi` no aparece entre las 210 filas);
+`/br/foz-do-iguacu.html` 44, `/br/osasco.html` 24.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/cuanto-gana-panadero-argentina/` — 2.762 palabras, es-AR, CTA
+  `/ar/programas/abc-panadero.html` + `/ar/#contacto`. Foto
+  `panaderia-horno-facturas-01`. CCT 478/06 FAUPPA–FAIPA con categorías del
+  texto del convenio (OIT/Cinterfor), escala junio 2026 vía Perfil (maestro
+  $1.285.276, medio oficial $1.265.873, ayudante $1.263.326, dependiente
+  $1.261.541, peón $1.260.130; 2,80 % no rem. + $20.000), enero 2026 UPPARNYN
+  (maestro $1.134.268), otros convenios locales (231/94, 269/95), jornada
+  nocturna LCT, FAIPA (17.000 panaderías, 10.000 despachos, 2.000 cierres,
+  16.000 puestos, 75 kg/hab), 7 FAQ, 10 fuentes.
+- `blog/que-se-aprende-curso-sushi-bolivia/` — 2.520 palabras, es-BO
+  (tz −04:00), CTA `/bo/programas/sushi.html` + `/bo/#contacto`. Foto
+  `emplatado-fine-dining-01` (no hay foto de sushi en el banco). Temario de
+  la ficha por bloques, técnica de arroz/corte/enrollado, seguridad con
+  pescado crudo (FDA Food Code §3-402.11, Reg. CE 853/2004), trucha del
+  Titicaca (planta Tiquina Bs 75,4 M / 488 t; 153 jaulas), SIN vía ABI
+  (US$ 312 M 1S2023, La Paz 96 M), INE (alojamiento y comidas +3,58 % 2025;
+  11,4 % de ocupados urbanos ≈ 557.000), delivery Statista US$ 11,14 M, SMN
+  2026 Bs 3.300 (D.S. 5516), IGI La Paz Av. Busch 1774, 7 FAQ, 12 fuentes.
+- `blog/cuchillos-de-cocina-tipos-afilado/` — 2.848 palabras, es-AR, CTA
+  `/ar/programas/chef-internacional.html` + `/ar/#contacto`. Foto
+  `clase-tecnicas-corte-01`. Tabla de 10 cuchillos, acero alemán (54–57 HRC,
+  20°) vs japonés (60–61 HRC, 12–15°), agarre de pinza y garra, afilado con
+  piedra (1000 trabajo, 3000–6000 pulido), chaira alinea no afila, tablas
+  HACCP por color, errores, 7 FAQ, 8 fuentes.
+
+Ampliadas: `que-hace-barista-profesional` 506 → 2.440 palabras (jornada hora
+por hora, tabla de parámetros SCA del espresso, agua 75–250 mg/L, microespuma
+60–65 °C, filtrados y catación, mantenimiento, mercado: Hotelga 300
+cafeterías CABA, PedidosYa +33 %/+12 %/1.400 cafeterías al 01/10/2026, CAC 138
+→ 208 tazas, World's 100 Best 2026; 7 FAQ, 8 fuentes; meta description
+nueva); `conviene-estudiar-gastronomia` 705 → 1.832 (tabla del mercado:
+FEHGRA 84.000 establecimientos, SIPA 269.900 empleos a mayo 2026 −1,4 %,
+INDEC ETI agosto 2026 262,4 mil +19,7 % y 3.797.000 ene–ago, cafeterías,
+FAIPA; tabla de 6 programas AR con duraciones reales de las fichas: Chef 2
+años lectivos, Pastelero 1 año, ABC Chef 5 meses, Barista 3, Bartender 6,
+Master 1 año; lista de decisión con dos columnas; 7 FAQ; 6 fuentes; se
+corrigió el CTA `/ar/#wsp` por `/ar/programas/chef-internacional.html` +
+`/ar/#contacto`).
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 18 notas (las 6 con
+tráfico incluidas). Entrantes: panadero AR 10, sushi BO 8, cuchillos 9,
+barista 8, conviene 9. Desde las notas con tráfico se enlazaron además notas
+sin tráfico: `chef-costos-marketing-gestion-gastronomica`, `chef-internacional-
+es-para-vos`, `chef-internacional-certificacion-uflo`, `certificado-igi-
+certificacion-uflo-diferencias`, `datos-certificado-formacion-gastronomica`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 278
+URLs, `lastmod` 2026-10-05 en las 23 notas tocadas y en `/blog/`). Banco de
+fotos: quedan 45 sin usar (índice `blog/_banco/index.md` al día). Sin fotos
+específicas de sushi ni de cuchillos en el banco: se usaron las más afines.
+
+Hallazgos: perfil.com, iprofesional, upparnyn, hotelga, ladevi, agencianova,
+hamonoclub, teloafilo, knivesandtools y sindicatopanaderossanjuan están
+bloqueados por el proxy; se usaron los resúmenes de búsqueda con cifras
+citadas y se enlazó la fuente original. El acuerdo de panaderos del
+28/09/2026 que aparece en búsquedas corresponde al CCT 231/94 (Santiago del
+Estero), no al 478/06: se citó como convenio local. `blog/index.html` sigue
+usando hashes de raíz en su nav (`/#catalogo`, `/#contacto`, `/#wsp`): es
+preexistente y no se tocó. `br/` sigue en portugués con filiales "em breve":
+no se escribió nota de Brasil.
+
+Pendiente: ampliar `masa-madre-tendencia-panaderia` (24 vistas, 887 palabras)
+y `donde-estudiar-gastronomia-bolivia` (726); segunda nota CO
+(`tecnico-laboral-panaderia-pasteleria-colombia-que-es`); BO
+`que-se-aprende-curso-pastas-salsas-bolivia`; técnicas `cremas-base-pasteleria-
+guia` y `merengues`; `llms.txt` sigue sin listar las notas de sueldos.
+
 ### 2026-09-28 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-08-29 a 2026-09-27, vistas de
