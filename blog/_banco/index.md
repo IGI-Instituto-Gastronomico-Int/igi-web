@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-10-05: 45 fotos sin usar, 15 usadas (ver tabla).
+> Estado al 2026-10-12: 42 fotos sin usar, 18 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -55,10 +55,10 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
 | `pasteleria-manga-torta-01` | Alumna decorando una torta con manga | **SIN USAR** |
-| `pasteleria-tortas-clase-01` | Clase de tortas con el grupo alrededor de la mesada | **SIN USAR** |
+| `pasteleria-tortas-clase-01` | Clase de tortas con el grupo alrededor de la mesada | USADA en `tecnico-laboral-panaderia-pasteleria-colombia-que-es` (2026-10-12) |
 | `pasteleria-naked-cake-01` | Naked cake decorada con flores | **SIN USAR** |
 | `pasteleria-manga-detalle-01` | Detalle de manos trabajando con manga pastelera | **SIN USAR** |
-| `pasteleria-batido-crema-01` | Batido de crema con batidor de alambre | **SIN USAR** |
+| `pasteleria-batido-crema-01` | Batido de crema con batidor de alambre | USADA en `cremas-base-pasteleria-guia` (2026-10-12) |
 | `pasteleria-torta-decorada-01` | Torta decorada con merengues de colores | **SIN USAR** |
 | `pasteleria-torta-artistica-01` | Torta artística terminada con decoración modelada | **SIN USAR** |
 | `pasteleria-soplete-01` | Postre en copa terminado con soplete | **SIN USAR** |
@@ -94,7 +94,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
 | `barista-portafiltro-01` | Barista con dos portafiltros frente a la máquina de café | USADA en `cuanto-gana-barista-argentina` (2026-09-07) |
-| `barista-taza-cafe-01` | Barista mostrando una taza de café | **SIN USAR** |
+| `barista-taza-cafe-01` | Barista mostrando una taza de café | USADA en `cuanto-gana-barista-paraguay` (2026-10-12) |
 
 ## Aula y clases (5)
 

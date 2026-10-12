@@ -29,6 +29,116 @@
 
 ## Resumen de corridas
 
+### 2026-10-12 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición (GA4, runReport vía Zapier, 2026-09-12 a 2026-10-11, vistas de
+página, 304 filas, se pidieron 210): `/ar/` 10.097, home 2.918, `/py/` 1.117,
+`/cl/` 345, `/co/` 205, `/bo/` 196, `/br/` 194, `/uy/` 119. Blog:
+`metodos-de-coccion-guia` 639, `brigada-cocina` 313, `cortes-de-verduras` 232,
+`/blog/` 198, `alfajor-mas-grande-del-mundo` 174, `cuanto-gana-barista-argentina`
+147, `salsas-madre-cocina-guia` 135, `cuanto-cuesta-estudiar-gastronomia-
+argentina` 131, `diferencias-panaderia-pasteleria-reposteria` 129, `cuanto-gana-
+pastelero-argentina` 99, `que-estudiar-para-ser-chef-profesional` 96, `cuanto-
+gana-chef-argentina` 88, `donde-estudiar-gastronomia-bogota` 83, `mise-en-place`
+79, `cuanto-gana-bartender-argentina` 71, `cuanto-dura-carrera-chef` 70,
+`fondos-de-cocina-guia` 57, `ciencia-cocina` 49, `como-calcular-costo-plato` 48,
+`donde-estudiar-gastronomia-cordoba` 32, `donde-estudiar-gastronomia-argentina`
+31, `salida-laboral-gastronomia-trabajos` 29, `como-empezar-emprendimiento` 28,
+`donde-estudiar-gastronomia-mendoza` 27, `que-estudiar-para-ser-pastelero` 26,
+`cuanto-gana-cocinero-paraguay` 25, `masa-madre` 22, `que-hace-barista` 22,
+`ia-tecnologia` 21, `tecnico-superior-gastronomia-bolivia` 21, `chocolateria`
+19, `cuanto-gana-chef-colombia` 19, `que-es-tecnologia-de-alimentos-paraguay`
+19, `masas-basicas` 17, `donde-estudiar-gastronomia-rosario` 15, `cuanto-gana-
+panadero-argentina` y `que-se-aprende-curso-sushi-bolivia` (publicadas el
+05/10) no aparecen todavía; `cuchillos` 10. Eventos: `blog_cta_click` 42
+(igual que la semana anterior), `whatsapp_click` 3.083, `generate_lead` 355,
+`postulacion` 139. Fichas más vistas: `/ar/programas/chef-internacional.html`
+622, `abc-chef` 433, `barista` 397, `abc-pastelero` 358, `pastelero-internacional`
+331, `maestro-pastelero` 243, `mozo-maitre` 232, `bartender` 219, `abc-panadero`
+188; `/py/programas/barista.html` 59 (la ficha PY más vista: motivo de la nota
+de barista PY), `tecnologia-alimentos` 52, `chef` 49, `tecnico-superior` 47;
+`/co/programas/cocina-internacional.html` 27, `tecnico-pastelero` 9;
+`/bo/programas/barista.html` 29, `tecnico-superior` 20, `chef` 12, `sushi` 5.
+
+Nota sobre la consigna: el diagnóstico de la rutina sigue citando a
+`cuanto-cuesta-estudiar-gastronomia-argentina` con 536 palabras y 19 vistas;
+ya fue ampliada el 2026-09-07 (hoy 2.428 palabras y 131 vistas). Se eligieron
+otras dos notas cortas para ampliar.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/tecnico-laboral-panaderia-pasteleria-colombia-que-es/` — 3.003
+  palabras, es-CO (tz −05:00), CTA `/co/programas/tecnico-pastelero.html` +
+  `/co/#contacto`. Foto `pasteleria-tortas-clase-01`. Marco ETDH (Ley 1064,
+  Decreto 4904: 600 h, 50 % práctica, noveno grado; Decreto 1075), ficha (4
+  semestres, 9 h, plan por semestre, sedes Chapinero/Restrepo/Chía), SMMLV
+  2026 $1.750.905 + $249.095, Computrabajo pastelero $1.513.910 / panadero
+  $1.385.019, ofertas Elempleo $1,5–2,5 M (feb. 2026), Adepan 22 kg/hab y
+  400.000 empleos, Levapan 20.000 panaderías, $4,75 billones, Andi −9,7 %,
+  impuesto ultraprocesados 20 % (pan exento, pastelería gravada), DANE +289.000,
+  convocatoria Bogotá 250 vacantes; 8 FAQ, 15 fuentes.
+- `blog/cuanto-gana-barista-paraguay/` — 3.028 palabras, es-PY, CTA
+  `/py/programas/barista.html` + `/py/#contacto`. Foto `barista-taza-cafe-01`.
+  No existe sueldo oficial por puesto (se dice explícitamente): SMN ₲ 3.044.000
+  / jornal ₲ 117.077 (Decreto 6225/2026, Res. MTESS 670/2026), nocturno ₲
+  3.957.200, recargos 30/50/100 %, IPS 9 % + 16,5 %, INE ingreso promedio ₲ 3,2
+  M (3T2025), MTESS feb. 2026 (77,4 % intención de contratar, 437 vacantes),
+  INE 1.063.284 ocupados, importaciones de café +71,8 % en 2025 (1.400 t, US$
+  13 M; La Tribuna y ABC oct. 2026), CCR US$ 34 M, Forbes 60 % Asunción, Café
+  Martínez 19 tiendas (2025), Kaffe'i top 100 Sudamérica 2025, Senatur
+  2.252.532 visitantes; 7 FAQ, 19 fuentes.
+- `blog/cremas-base-pasteleria-guia/` — 3.097 palabras, es-AR, CTA
+  `/ar/programas/pastelero-internacional.html` + `/ar/#contacto`. Foto
+  `pasteleria-batido-crema-01`. Cinco cremas (pastelera, inglesa, chantilly,
+  ganache, de manteca) con tabla de agentes espesantes, gelatinización del
+  almidón (52–64 / 62–74 °C), inglesa 82–85 °C, FDA 68 °C/17 s y enfriado
+  57→21 °C, crema para batir >35 % (Res. Conj. 3/2022, art. 585 bis CAA),
+  proporciones de ganache 1:2/1:1/2:1, derivadas (mousseline, diplomata,
+  chiboust, frangipane, bavaroise), errores; 7 FAQ, 10 fuentes.
+
+Ampliadas: `masa-madre-tendencia-panaderia` 954 → 2.553 palabras (ciencia del
+fermento: F. sanfranciscensis, 22–24 °C, pH 3,5–4, relación acético/láctico
+4:1 a 4 °C y 1:1 a 10 °C, FOS −76 a −97 % según Foods 2021, sin afirmaciones
+médicas; proceso en 7 pasos; Argentina: 55 % sabor, Sudamérica +118 % dulces,
+La Nación, concurso de Pan Danés abr. 2026, Mordor USD 51.690 M; 4 FAQ y 8
+fuentes nuevas; meta description nueva) y `donde-estudiar-gastronomia-rosario`
+894 → 2.126 (datos de contacto y horarios de la filial, tabla de los 16
+programas con duración y cursada tomada de `ar/rosario.html`, mercado: AEHGAR
+1.748 locales 2022, ETuR 1S2026 1.910.860 visitantes / 54 % ocupación /
+$137.180 M, 2025 +2,4 M, Juegos Suramericanos; escala UTHGRA jul–sep 2026 por
+nivel; 4 FAQ; sección Fuentes nueva con 8 fuentes; TOC actualizado).
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 20 notas (las 6 con
+tráfico histórico más cortes, salsas madre y barista AR incluidas).
+Entrantes: CO pastelería 10, barista PY 8, cremas 9. Desde las notas con
+tráfico se enlazaron además notas sin tráfico: `cocina-sostenible-reducir-
+desperdicios`, `estudiar-chef-internacional-mientras-trabajas`, `curso-mozo-
+camarera-maitre-servicio-profesional`, `catering-eventos-planificar-producir-
+servir`, `materiales-herramientas-estudiar-pasteleria`, `materias-chef-
+internacional`, `como-es-clase-chef-internacional-igi`, `certificacion-
+universitaria-cursos-cortos-igi`, `curso-barista-tecnica-servicio-practica`,
+`barista-vs-arte-latte-diferencias`, `estudiar-pasteleria-para-emprender`,
+`que-se-aprende-pastelero-internacional`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 281
+URLs únicas, `lastmod` 2026-10-12 en las 22 notas tocadas y en `/blog/`).
+Verificación: JSON-LD válido, un h1, meta descriptions de 156–163 caracteres,
+enlaces e imágenes existentes, sin hashes de raíz, sin directivas filtradas.
+Banco de fotos: quedan 42 sin usar (`blog/_banco/index.md` al día).
+
+Hallazgos: computrabajo.com (PY y CO), tusalario.org, wageindicator.org y
+latribuna.com.py están bloqueados por el proxy; se usaron los resúmenes de
+búsqueda con cifras citadas y se enlazó la fuente original. El acuerdo UTHGRA
+de octubre 2026 todavía no estaba publicado al 12/10: se citó la escala
+jul–sep 2026 y la reapertura. `br/` sigue en portugués con filiales "em
+breve" (Foz do Iguaçu 35 vistas, Osasco 23): no se escribió nota de Brasil.
+No hay PIL ni ImageMagick: las fotos del banco ya vienen en 1200/800 jpg+webp.
+
+Pendiente: ampliar `donde-estudiar-gastronomia-bolivia` (789 palabras) y
+`curso-cocina-o-carrera-chef` (959); BO `que-se-aprende-curso-pastas-salsas-
+bolivia`; técnica `merengues-frances-italiano-suizo`; serie PY
+`cuanto-gana-bartender-paraguay`; `llms.txt` sigue sin listar las notas de
+sueldos; decidir si se hace contenido BR en portugués.
+
 ### 2026-10-05 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-09-05 a 2026-10-04, vistas de

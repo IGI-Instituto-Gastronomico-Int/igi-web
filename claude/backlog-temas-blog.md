@@ -10,7 +10,7 @@
 
 - 3 notas nuevas por semana, estructura de `blog/cuanto-gana-cocinero-paraguay/index.html`.
 - Sueldos, demanda o mercado: siempre con fuente enlazada y fecha. Sin fuente, no se afirma.
-- No duplicar slugs ni canibalizar notas existentes (hay 128 notas en `blog/` al 2026-10-05).
+- No duplicar slugs ni canibalizar notas existentes (hay 131 notas en `blog/` al 2026-10-12).
 - CTA final a la ficha real del programa (`/{pais}/programas/x.html`) + `/{pais}/#contacto`.
 
 ## Publicado
@@ -60,6 +60,13 @@ palabras) y `que-estudiar-para-ser-pastelero-profesional` (494 → 2.477).
 Ampliadas el 2026-10-05: `que-hace-barista-profesional` (506 → 2.440 palabras) y
 `conviene-estudiar-gastronomia` (705 → 1.832).
 
+| 2026-10-12 | `tecnico-laboral-panaderia-pasteleria-colombia-que-es` | Estudiar Gastronomía | CO (3.003 palabras) |
+| 2026-10-12 | `cuanto-gana-barista-paraguay` | Profesión y Salida Laboral | PY (3.028 palabras) |
+| 2026-10-12 | `cremas-base-pasteleria-guia` | Técnicas y Conocimiento | AR (3.097 palabras) |
+
+Ampliadas el 2026-10-12: `masa-madre-tendencia-panaderia` (954 → 2.553 palabras) y
+`donde-estudiar-gastronomia-rosario` (894 → 2.126).
+
 Regla vigente desde 2026-09-07: toda nota nueva lleva al menos 1.300
 palabras de cuerpo real (la mediana histórica del blog era 491 y sólo las
 notas largas traen tráfico). Las 6 notas que rankean promedian 1.297.
@@ -84,10 +91,10 @@ Verificados contra los slugs existentes en `blog/`: ninguno se superpone.
 14. ~~`cuanto-gana-mozo-camarero-argentina`~~ — PUBLICADA 2026-09-21 (mozo de salón y maître en nivel 6, comis nivel 3, mozo de mostrador nivel 2; propinas según Ley 27.802).
 15. `donde-estudiar-gastronomia-brasil-guarulhos-osasco` — filiales BR. CTA: `/br/programas/chef-internacional.html` + `/br/#contacto`.
 16. ~~`fondos-de-cocina-guia`~~ — PUBLICADA 2026-09-21.
-17. ~~`cuanto-gana-chef-colombia`~~ — PUBLICADA 2026-09-21. ~~`tecnico-laboral-cocina-internacional-colombia-que-es`~~ — PUBLICADA 2026-09-28 (CO: 7 fichas, ahora 3 notas). Próxima CO sugerida: `tecnico-laboral-panaderia-pasteleria-colombia-que-es` (CTA `/co/programas/tecnico-pastelero.html`).
-18. `cuanto-gana-panadero-argentina` — PUBLICADA 2026-10-05 fuera del orden del backlog (serie "cuánto gana" AR, ficha `abc-panadero.html` con 175 vistas/30 días; CCT 478/06 FAUPPA–FAIPA, escala junio 2026 vía Perfil; FAIPA 17.000 panaderías). Quedan pendientes de la serie AR: `cuanto-gana-panadero` ya hecha; posibles `cuanto-gana-cocinero-argentina` (verificar canibalización con chef) y `cuanto-gana-catering`.
+17. ~~`cuanto-gana-chef-colombia`~~ — PUBLICADA 2026-09-21. ~~`tecnico-laboral-cocina-internacional-colombia-que-es`~~ — PUBLICADA 2026-09-28. ~~`tecnico-laboral-panaderia-pasteleria-colombia-que-es`~~ — PUBLICADA 2026-10-12 (CO: 7 fichas, ahora 4 notas; CTA `/co/programas/tecnico-pastelero.html`). Próximas CO sugeridas: `cuanto-gana-barista-colombia` o `abc-chef-colombia-que-se-aprende`.
+18. `cuanto-gana-panadero-argentina` — PUBLICADA 2026-10-05 fuera del orden del backlog (serie "cuánto gana" AR, ficha `abc-panadero.html` con 175 vistas/30 días; CCT 478/06 FAUPPA–FAIPA, escala junio 2026 vía Perfil; FAIPA 17.000 panaderías). Quedan pendientes de la serie AR: posibles `cuanto-gana-cocinero-argentina` (verificar canibalización con chef) y `cuanto-gana-catering`. Serie PY: ~~`cuanto-gana-barista-paraguay`~~ — PUBLICADA 2026-10-12 (no hay sueldo oficial por puesto: se usó SMN ₲ 3.044.000, recargos del Código del Trabajo, demanda MTESS y mercado del café; CTA `/py/programas/barista.html`). Posible `cuanto-gana-bartender-paraguay` con el mismo esquema.
 18b. `cuanto-gana-cocinero-bolivia` — sólo si aparece una fuente oficial de sueldos por puesto; al 2026-09-14 no la hay (se usó el SMN 2026 Bs 3.300, D.S. 5516).
-19. ~~`masas-basicas-pasteleria-guia`~~ — PUBLICADA 2026-09-28 (técnica evergreen, cluster pastelería). Próximas técnicas sugeridas: `cremas-base-pasteleria-guia` (pastelera, inglesa, chantilly, mousseline), `merengues-frances-italiano-suizo`, `emulsiones-en-cocina-guia`. ~~`cuchillos-de-cocina-tipos-afilado`~~ — PUBLICADA 2026-10-05 (cluster cocina: enlazada desde cortes, mise en place, métodos de cocción, brigada y qué estudiar para ser chef).
+19. ~~`masas-basicas-pasteleria-guia`~~ — PUBLICADA 2026-09-28 (técnica evergreen, cluster pastelería). ~~`cremas-base-pasteleria-guia`~~ — PUBLICADA 2026-10-12 (pastelera, inglesa, chantilly, ganache, crema de manteca y derivadas; CTA `/ar/programas/pastelero-internacional.html`). Próximas técnicas sugeridas: `merengues-frances-italiano-suizo`, `emulsiones-en-cocina-guia`, `gelatinas-y-estabilizantes-pasteleria`. ~~`cuchillos-de-cocina-tipos-afilado`~~ — PUBLICADA 2026-10-05 (cluster cocina: enlazada desde cortes, mise en place, métodos de cocción, brigada y qué estudiar para ser chef).
 
 ## Notas cortas a ampliar (prioridad por intención de búsqueda × vistas GA4 30 días al 2026-09-06)
 
@@ -98,7 +105,7 @@ Ya ampliadas: `cuanto-cuesta-estudiar-gastronomia-argentina` (30 vistas), `salid
 Vistas GA4 de 30 días al 2026-09-13 entre paréntesis:
 
 1. ~~`donde-estudiar-gastronomia-mendoza`~~ — AMPLIADA 2026-09-21 (848 → 2.219; 19 vistas al 2026-09-20).
-2. `masa-madre-tendencia-panaderia` (887, 24 vistas al 2026-10-04) — ya recibe tráfico; llevarla a 1.300 con proceso, hidratación y fuentes. ES LA PRÓXIMA A AMPLIAR (la de mayor retorno entre las cortas que quedan), junto con `donde-estudiar-gastronomia-bolivia` (726, ahora con 3 notas BO para enlazar) y `curso-cocina-o-carrera-chef` (947, 9 vistas).
+2. ~~`masa-madre-tendencia-panaderia`~~ — AMPLIADA 2026-10-12 (954 → 2.553; 22 vistas al 2026-10-11). ~~`donde-estudiar-gastronomia-rosario`~~ — AMPLIADA 2026-10-12 (894 → 2.126; 15 vistas). PRÓXIMAS A AMPLIAR: `donde-estudiar-gastronomia-bolivia` (789, <4 vistas, pero BO tiene 14 fichas y 3 notas para enlazar), `curso-cocina-o-carrera-chef` (959, 10 vistas), `donde-estudiar-gastronomia-salta` (807, 12 vistas), `donde-estudiar-gastronomia-buenos-aires` (888, 5 vistas).
 3. ~~`conviene-estudiar-gastronomia`~~ — AMPLIADA 2026-10-05 (705 → 1.832; 9 vistas al 2026-10-04).
 4. ~~`que-estudiar-para-ser-pastelero-profesional`~~ — AMPLIADA 2026-09-28 (494 → 2.477; 12 vistas al 2026-09-27).
 5. `donde-estudiar-gastronomia-bolivia` (613, 2 vistas) — ahora enlaza a los programas BO y a la nota de Técnico Superior.
