@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-10-12: 42 fotos sin usar, 18 usadas (ver tabla).
+> Estado al 2026-10-19: 39 fotos sin usar, 21 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -43,10 +43,10 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `chef-cucharon-01` | Chef extendiendo un cucharón hacia cámara | **SIN USAR** |
 | `emplatado-fine-dining-01` | Emplatado fino con pinza sobre plato terminado | USADA en `que-se-aprende-curso-sushi-bolivia` (2026-10-05) |
 | `emplatado-salsa-01` | Chef sirviendo salsa sobre el plato | USADA en `salsas-madre-cocina-guia` (2026-09-14) |
-| `emplatado-aceite-01` | Aceite en hilo sobre bocados emplatados | **SIN USAR** |
+| `emplatado-aceite-01` | Aceite en hilo sobre bocados emplatados | USADA en `emulsiones-en-cocina-guia` (2026-10-19) |
 | `emplatado-gourmet-01` | Plato gourmet en detalle con salsa | **SIN USAR** |
 | `emplatado-flor-01` | Alumno decorando un plato con flor comestible | **SIN USAR** |
-| `emplatado-salon-01` | Chef emplatando en el salón de un restaurante | **SIN USAR** |
+| `emplatado-salon-01` | Chef emplatando en el salón de un restaurante | USADA en `cuanto-gana-bartender-paraguay` (2026-10-19) |
 | `hamburguesa-gourmet-01` | Hamburguesa gourmet terminada por una alumna | **SIN USAR** |
 | `pizza-artesanal-01` | Pizza artesanal sobre tabla de madera | **SIN USAR** |
 
@@ -110,7 +110,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `alumnos-amasado-grupo-01` | Grupo de alumnos amasando en la mesada | **SIN USAR** |
+| `alumnos-amasado-grupo-01` | Grupo de alumnos amasando en la mesada | USADA en `que-se-aprende-curso-pastas-salsas-bolivia` (2026-10-19) |
 | `brigada-cocina-retrato-01` | Retrato de brigada de cocina en la escuela | **SIN USAR** |
 | `alumnos-emplatado-grupo-01` | Grupo de alumnos emplatando con el chef | USADA en `tecnico-laboral-cocina-internacional-colombia-que-es` (2026-09-28) |
 | `alumnos-emplatado-01` | Alumnos emplatando sobre tabla de corte | **SIN USAR** |

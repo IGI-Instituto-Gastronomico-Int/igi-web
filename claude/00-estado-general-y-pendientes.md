@@ -29,6 +29,132 @@
 
 ## Resumen de corridas
 
+### 2026-10-19 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición (GA4, runReport vía Zapier, 2026-09-19 a 2026-10-18, vistas de
+página, 300 filas, se pidieron 210): `/ar/` 10.241, home 2.845, `/py/` 1.104,
+`/cl/` 399, `/bo/` 216, `/co/` 215, `/br/` 187, `/uy/` 127. Blog:
+`metodos-de-coccion-guia` 715, `brigada-cocina` 315, `cortes-de-verduras` 242,
+`/blog/` 200, `salsas-madre-cocina-guia` 199, `diferencias-panaderia-pasteleria-
+reposteria` 187, `cuanto-gana-barista-argentina` 148, `cuanto-cuesta-estudiar-
+gastronomia-argentina` 147, `cuanto-gana-chef-argentina` 121, `cuanto-gana-
+pastelero-argentina` 112, `alfajor-mas-grande-del-mundo` 111, `que-estudiar-para-
+ser-chef-profesional` 111, `mise-en-place` 110, `donde-estudiar-gastronomia-bogota`
+95, `cuanto-gana-bartender-argentina` 76, `fondos-de-cocina-guia` 74, `cuanto-
+dura-carrera-chef` 68, `ciencia-cocina` 53, `como-calcular-costo-plato` 50,
+`salida-laboral-gastronomia-trabajos` 38, `chocolateria` 34, `donde-estudiar-
+gastronomia-argentina` 33, `que-estudiar-para-ser-pastelero` 32, `donde-estudiar-
+gastronomia-cordoba` 31, `masa-madre` 31, `emplatado` 30, `que-hace-barista` 30,
+`como-empezar-emprendimiento` 29, `cuanto-gana-chef-colombia` 29, `tecnico-
+superior-gastronomia-bolivia` 28, `cuanto-gana-cocinero-paraguay` 27, `donde-
+estudiar-gastronomia-mendoza` 27, `masas-basicas` 26, `conviene-estudiar` 21,
+`cremas-base` 20, `ia-tecnologia` 20, `parrillero` 19, `manipulacion` 18,
+`donde-estudiar-gastronomia-rosario` 17, `pasteleria-clasica-superior-vanguardia`
+17, `tecnologia-de-alimentos-paraguay` 17, `cuchillos` 16, `que-se-estudia-
+panaderia` 15, `quimica-culinaria` 15, `certificacion-academica-uflo` 14,
+`maestro-pizzero` 14, `cuanto-gana-mozo-camarero-argentina` 11, `cuanto-gana-
+pastelero-paraguay` 11, `curso-cocina-o-carrera-chef` 11, `donde-estudiar-
+pasteleria-profesional-paraguay` 11, `materias-chef-internacional` 11,
+`cocteleria-sin-alcohol` 10, `como-es-clase-chef` 9, `abc-pastelero-vs-maestro`
+8, `cortes-puntos-parrilla` 8, `ciudad-del-este` 8, `seguridad-higiene-ninos` 8,
+`tecnico-laboral-cocina-internacional-colombia` 8, `donde-estudiar-gastronomia-
+salta` 7, `que-hace-bartender` 7, `que-hace-chef-privado` 7, `alfajor-gigante` 6,
+`gastronomia-vs-tecnologia-alimentos` 6, `primer-segundo-ano` 6, `abc-panadero`
+5, `abc-pastelero` 5, `chef-costos-marketing` 5, `curso-cocina-ninos` 5, `donde-
+estudiar-gastronomia-paraguay` 5, `que-se-aprende-curso-barista` 5, `que-se-
+aprende-curso-sushi-bolivia` 5, `salida-laboral-pasteleria` 5, `tecnico-laboral-
+panaderia-pasteleria-colombia` 5; `cuanto-gana-panadero-argentina` y `cuanto-
+gana-barista-paraguay` no aparecen entre las 210 filas. Eventos: `blog_cta_click`
+46 (vs. 42), `whatsapp_click` 3.144, `generate_lead` 362, `postulacion` 111.
+Fichas más vistas: `/ar/programas/chef-internacional.html` 665, `abc-chef` 470,
+`barista` 398, `abc-pastelero` 354, `pastelero-internacional` 333, `mozo-maitre`
+240, `bartender` 218, `maestro-pastelero` 217, `abc-panadero` 184, `catering` 162,
+`cocineritos` 141, `master-gastronomia` 121; `/py/programas/barista.html` 66,
+`tecnologia-alimentos` 65, `tecnico-superior` 58, `chef` 49, `abc-chef` 40,
+`bartender` 36 (motivo de la nota de bartender PY), `parrillas` 27;
+`/py/asuncion.html` 115 (motivo de ampliar la nota de Asunción), `/py/san-lorenzo`
+65, `/py/luque` 49; `/bo/la-paz.html` 66, `/bo/programas/barista.html` 32,
+`tecnico-superior` 15, `chef` 9, `pastelero` 8, `sushi` 5, `pastas-salsas` no
+aparece; `/co/restrepo-bogota.html` 55, `/co/programas/cocina-internacional` 25;
+`/br/foz-do-iguacu.html` 37, `/br/programas/catering.html` 31, `/br/osasco` 23.
+
+Nota sobre la consigna: sigue citando a `cuanto-cuesta-estudiar-gastronomia-
+argentina` con 536 palabras; ya tiene 2.484 y 147 vistas. Brasil (`br/`) sigue en
+portugués con filiales "em breve": no se escribió nota de Brasil (pendiente de
+decisión del equipo). Se eligió Bolivia (pastas y salsas) como nota de país.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/que-se-aprende-curso-pastas-salsas-bolivia/` — 3.417 palabras, es-BO
+  (tz −04:00), CTA `/bo/programas/pastas-salsas.html` + `/bo/#contacto`. Foto
+  `alumnos-amasado-grupo-01`. Temario de la ficha en tabla, proporción 1 huevo
+  por 100 g (Directo al Paladar, Visit Tuscany), rellenos/sellado/terminado en
+  sartén, sección de cocción a 3.600 m (USDA FSIS, Consumer: ~85 °C), INE 47 kg
+  fideos+pan por persona (ANF), Anapo 850.000 t y US$ 79,3 M importados (92 %
+  Argentina), Correo del Sur arancel cero, INE +3,58 % y 11,4 %, 1,1 M turistas,
+  Gustu 50 Best, SMN Bs 3.300; sorrentinos (HCDN 7210-D-2022) y ñoquis del 29;
+  8 FAQ, 17 fuentes.
+- `blog/cuanto-gana-bartender-paraguay/` — 3.024 palabras, es-PY, CTA
+  `/py/programas/bartender.html` + `/py/#contacto`. Foto `emplatado-salon-01`
+  (NO hay foto de bartender sin usar en el banco: se usó la de salón de
+  restaurante, la más afín; avisado en el reporte). SMN ₲ 3.044.000 / jornal ₲
+  117.077 (Decreto 6225, Res. 670), nocturno 30 % (≈ ₲ 3.957.000), art. 234 CT
+  50/100 %, IPS 9 %/16,5 %, INE ₲ 3,2 M, Tusalario ₲ 2.935.935–15.642.566,
+  Sinafocal jul. 2026 (Última Hora), Agencia IP 77,4 %/437 vacantes, ABC
+  1.063.284 ocupados, propinas voluntarias (ABC 2021, La Nación 2023) y propina
+  en el POS de Bancard 5–20 % (ABC 29/04/2026), Senatur 972.835 1S2026 (+33,5 %),
+  Visit Paraguay, IWSR, World Class Paraguay; tabla de puestos; 7 FAQ, 16 fuentes.
+- `blog/emulsiones-en-cocina-guia/` — 3.509 palabras, es-AR, CTA
+  `/ar/programas/chef-internacional.html` + `/ar/#contacto`. Foto
+  `emplatado-aceite-01`. Definición (Ciencia Hoy), gotas/emulsionante/viscosidad
+  (Alimentos Argentinos, UAEH lecitina), tabla de 7 emulsiones, mayonesa y CAA
+  art. 1280 (≥5 % huevo / 2,5 % yema), alioli, holandesa 40–70 °C (Consumer) y
+  LCB 50–55 / 45–50 °C, beurre blanc con manteca fría (Cook's Illustrated),
+  vinagreta 3:1, por qué se corta y cómo recuperar, seguridad del huevo
+  (Comunidad de Madrid, art. 513 bis CAA), emulsiones ocultas; 8 FAQ, 11 fuentes.
+
+Ampliadas: `donde-estudiar-gastronomia-bolivia` 789 → 2.281 palabras (R.M.
+350/2023 y niveles técnicos, datos de IGI La Paz, tabla de los 14 programas con
+duración y cursada, qué incluye la cuota, SMN Bs 3.300, INE +3,58 % / 11,4 %,
+1,1 M turistas e IBCE 2,6 M movimientos, Gustu, altura y trigo importado; 7
+FAQ; sección Fuentes nueva con 11 fuentes; meta description nueva) y
+`donde-estudiar-gastronomia-asuncion` 649 → 2.121 (dirección, WhatsApp,
+teléfono, mail y horarios de la filial, tabla de los 18 programas con duración
+y cursada, Ley 4995/2013 y MEC, qué incluye la cuota, SMN, Sinafocal, Agencia IP,
+ABC, Senatur 1S2026, Forbes 60 % café en Asunción, filiales del área
+metropolitana; 8 FAQ; Fuentes nueva con 9 fuentes; autoría Victoria Barrios
+conservada).
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 26 notas (las 6 con
+tráfico histórico, cluster cocina/salsas, cluster bartender/PY y cluster BO).
+Entrantes: pastas BO 9, bartender PY 13, emulsiones 11. Desde las notas con
+tráfico se enlazaron además notas sin tráfico: `como-controlar-fuego-temperatura-
+parrilla`, `que-hace-chef-privado`, `abc-panadero-curso-panificacion-inicial`,
+`diseno-tortas-curso-decoracion`, `chef-internacional-es-para-vos`, `estudiar-
+gastronomia-sin-experiencia`, `certificado-igi-certificacion-uflo-diferencias`,
+`estudiar-gastronomia-despues-30-40`, `que-se-aprende-curso-barista`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 284
+URLs únicas, `lastmod` 2026-10-19 en las 28 notas tocadas y en `/blog/`).
+Verificación: JSON-LD válido, un h1, meta descriptions de 153–165 caracteres
+(se recortaron 5 que habían quedado en 170–194), enlaces e imágenes
+existentes, sin hashes de raíz en las notas, sin directivas filtradas.
+Banco de fotos: quedan 39 sin usar; ya no hay fotos de bartender ni de barista
+sin usar (`blog/_banco/index.md` al día).
+
+Hallazgos: no existe cifra oficial ni relevamiento específico de sueldo de
+bartender en Paraguay (Tusalario es estimación privada); no se encontró dato
+de consumo de fideos por sí solo en Bolivia (el INE lo agrupa con pan); la
+temperatura de ebullición en La Paz se citó como rango (~85–88 °C) porque las
+fuentes difieren. `blog/index.html` conserva enlaces `/#contacto` de raíz
+(preexistente, no se tocó).
+
+Pendiente: ampliar `curso-cocina-o-carrera-chef` (959), `donde-estudiar-
+gastronomia-salta` (807) y `donde-estudiar-gastronomia-la-paz-bolivia` (768);
+BO `que-se-aprende-curso-parrillas-bolivia`; técnica `merengues-frances-
+italiano-suizo`; `llms.txt` sigue sin listar las notas de sueldos; decidir si se
+hace contenido BR en portugués; conseguir fotos de bartender y barista para el
+banco.
+
 ### 2026-10-12 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-09-12 a 2026-10-11, vistas de
