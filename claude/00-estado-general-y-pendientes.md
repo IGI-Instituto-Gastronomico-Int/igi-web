@@ -29,6 +29,97 @@
 
 ## Resumen de corridas
 
+### 2026-10-26 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición: SIN ACCESO A GA4 en esta corrida. El conector Zapier no estaba
+autorizado en la sesión (requiere OAuth desde la configuración de conectores de
+claude.ai) y Supermetrics tiene GA4 conectado pero la licencia del equipo no
+incluye esa fuente (error LICENSE_DATA_SOURCE_NOT_AVAILABLE, licencia 1808536).
+Se siguió el orden del backlog y se usaron como referencia los datos GA4 de la
+corrida del 2026-10-19. No se inventó ninguna cifra de tráfico.
+
+Red externa: WebFetch y curl fallaron para todos los hosts (el proxy de la
+sesión respondió 403 a cada CONNECT). Las fuentes se verificaron por búsqueda
+web (extractos textuales devueltos por el buscador, con dominio acotado) y
+reutilizando URLs ya citadas en notas hermanas. Se eliminaron de la nota de
+Paraguay dos fuentes que no pudieron confirmarse (una página de UNVES con slug
+incoherente y una estimación de un blog de 2023). PENDIENTE: pasada de
+verificación de enlaces externos (HEAD 200) sobre las 5 notas tocadas desde
+un entorno con red.
+
+Nota sobre la consigna: sigue citando a `cuanto-cuesta-estudiar-gastronomia-
+argentina` con 536 palabras; tiene 2.484 desde el 2026-09-07. Brasil (`br/`)
+sigue en portugués con filiales "em breve": no se escribió nota BR. Se eligió
+Colombia (7 fichas, ahora 5 notas) como país de la semana.
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/cuanto-gana-pastelero-colombia/` — 4.079 palabras, es-CO (tz −05:00),
+  CTA `/co/programas/tecnico-pastelero.html` + `/co/#contacto`. Foto
+  `pasteleria-manga-torta-01`. SMMLV 2026 $1.750.905 + auxilio $249.095
+  (Decretos 1469 y 1470 de 2025), neto y costo empleador (Auren), Computrabajo
+  pastelero $1.513.910 / panadero $1.385.019, ofertas 2026 (auxiliar = mínimo;
+  junior $1,5–2 M; chef repostero $3.643.400; chef de pastelería $5,5–6 M),
+  recargos (nocturno 35 %, dominical 90 % desde 1/7/2026, jornada 42 h),
+  mercado (20.000 panaderías, 22 kg pan/hab., CCB 400.000 empleos, DANE jun.
+  2026, impuesto a ultraprocesados); tabla de puestos; 8 FAQ, 23 fuentes.
+- `blog/cuanto-cuesta-estudiar-gastronomia-paraguay/` — 3.760 palabras, es-PY,
+  CTA `/py/programas/chef.html` + `/py/#contacto`. Foto `alumnos-platos-grupo-01`.
+  Enfoque de la nota hermana AR: qué determina el costo, tabla de referencias
+  públicas (SNPP y Sinafocal gratuitos, Infonegocios carreras privadas), gastos
+  ocultos, qué incluye la cuota en IGI (textual de las fichas PY), tabla de 18
+  programas con duración y cursada, inflación BCP (2025 3,1 %; sept. 2026 1,7 %
+  i.a.), plantilla para comparar, SMN ₲ 3.044.000 (Decreto 6225, Res. MTESS
+  670), demanda (Agencia IP 77,4 %, INE 1.063.284 ocupados, Senatur 972.835);
+  8 FAQ, 15 fuentes.
+- `blog/merengues-frances-italiano-suizo/` — 5.722 palabras, es-AR, CTA
+  `/ar/programas/pastelero-internacional.html` + `/ar/#contacto`. Foto
+  `pasteleria-torta-decorada-01`. Ciencia de la espuma (UNLP, UAEH), tabla de
+  los tres merengues, almíbar 115–121 °C (118 °C el más citado), baño María
+  45–60 °C, puntos de batido (Iowa State, American Egg Board), por qué no
+  monta, estabilizantes, seguridad del huevo (MSAL, Senasa, Res. Conj. 1/2021
+  CAA), derivados, errores; 8 FAQ, 14 fuentes.
+
+Ampliadas: `curso-cocina-o-carrera-chef` 959 → 3.745 palabras (4 tablas con
+datos reales de 5 fichas AR, CCT 389/04 jul–sep 2026 vía Vilaplana e
+iProfesional, FEHGRA 650.000 puestos, Hotelga 2026, SIPA 269.900 asalariados,
+INDEC ETI/EOH, perfiles, itinerarios ABC Chef → Chef Internacional → Master,
+8 FAQ, sección Fuentes nueva; 9 enlaces internos nuevos) y
+`donde-estudiar-gastronomia-buenos-aires` 888 → 3.994 (tabla de 29 filiales por
+zona enlazando cada `/ar/<ciudad>.html`, tabla de 16 programas, qué incluye la
+cuota, GCBA 7.000 establecimientos / 75.000 empleos, Ente de Turismo 1,61 M
+turistas ene–jul 2026, Michelin 2026, CCT 389/04; 8 FAQ, Fuentes nueva; 14
+enlaces internos nuevos). Hallazgo del repo: `filiales/index.html` lista "IGI
+González Catán, Simón Pérez 4874" apuntando a `/ar/laferrere.html`, que es
+"IGI Laferrere, Av. Luro 5960": revisar.
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 31 notas existentes (las
+6 con tráfico histórico, cluster pastelería, cluster PY y cluster CO).
+Entrantes: pastelero CO 9, cuesta PY 13, merengues 16. Desde las notas con
+tráfico se enlazaron además notas sin tráfico: `pastelero-profesional-es-para-
+vos`, `como-disenar-menu-rentable`, `cocina-sostenible-reducir-desperdicios`,
+`quimica-culinaria-pasteleria-profesional`, `especializaciones-gastronomicas-
+como-elegir`, `abc-chef-curso-corto-empezar-cocina`, `estudiar-gastronomia-
+despues-30-40`, `como-tramitar-certificacion-universitaria-uflo-igi`, `como-es-
+clase-pasteleria-profesional-igi`, `curso-mozo-camarera-maitre-servicio-
+profesional`, más las dos ampliadas.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 287
+URLs, `lastmod` 2026-10-26 en las 36 notas tocadas y en `/blog/`).
+Verificación: JSON-LD válido, un h1, meta descriptions de 70–165 caracteres,
+enlaces e imágenes internas existentes, sin hashes de raíz, sin directivas
+filtradas, las 3 nuevas por encima de 1.300 palabras. Banco de fotos: quedan 36
+sin usar (`blog/_banco/index.md` al día); sigue sin haber fotos de bartender,
+barista ni parrilla.
+
+Pendiente: autorizar Zapier (o sumar GA4 a la licencia de Supermetrics) para
+recuperar la medición; verificar enlaces externos de las 5 notas tocadas;
+ampliar `donde-estudiar-gastronomia-salta` (807) y `donde-estudiar-gastronomia-
+la-paz-bolivia` (768); BO `que-se-aprende-curso-parrillas-bolivia` (sin foto de
+parrilla); CO `cuanto-gana-barista-colombia` cuando haya foto de barista;
+técnica `gelatinas-y-estabilizantes-pasteleria`; `llms.txt` sigue sin listar
+las notas de sueldos; decidir contenido BR en portugués; revisar la ficha de
+González Catán/Laferrere en `filiales/index.html`.
+
 ### 2026-10-19 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición (GA4, runReport vía Zapier, 2026-09-19 a 2026-10-18, vistas de

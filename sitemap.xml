@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.igi-la.com/</loc><lastmod>2026-08-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.igi-la.com/blog/</loc><lastmod>2026-10-19</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/</loc><lastmod>2026-10-26</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url>
+    <loc>https://www.igi-la.com/blog/cuanto-gana-pastelero-colombia/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.igi-la.com/blog/cuanto-cuesta-estudiar-gastronomia-paraguay/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.igi-la.com/blog/merengues-frances-italiano-suizo/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.igi-la.com/blog/que-se-aprende-curso-pastas-salsas-bolivia/</loc>
     <lastmod>2026-10-19</lastmod>
@@ -16,13 +34,13 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/emulsiones-en-cocina-guia/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/tecnico-laboral-panaderia-pasteleria-colombia-que-es/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -34,7 +52,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/cremas-base-pasteleria-guia/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -64,19 +82,19 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/cuanto-gana-pastelero-paraguay/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/masas-basicas-pasteleria-guia/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/cuanto-gana-chef-colombia/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -142,13 +160,13 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-bogota/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/chocolateria-profesional-que-se-aprende/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -166,7 +184,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/como-es-clase-pasteleria-profesional-igi/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -178,7 +196,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/brigada-cocina-puestos-funciones/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -190,7 +208,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/ciencia-cocina-quimica-fisica-microbiologia/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -214,19 +232,19 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/cuanto-gana-cocinero-paraguay/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/perfiles-gastronomicos-mas-demandados-paraguay/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/cuanto-gana-pastelero-argentina/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -262,7 +280,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/que-estudiar-para-ser-pastelero-profesional/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/abc-pastelero-vs-maestro-vs-profesional/</loc>
@@ -274,7 +292,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/salida-laboral-pasteleria-emprendimientos/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/que-se-aprende-curso-parrillas-fuegos/</loc>
@@ -294,7 +312,7 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/curso-corto-o-carrera-gastronomia-asuncion/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/donde-estudiar-pasteleria-luque/</loc>
@@ -326,11 +344,11 @@
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/quimica-culinaria-pasteleria-profesional/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/pasteleria-clasica-superior-vanguardia/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://www.igi-la.com/blog/estudiar-pasteleria-para-emprender/</loc>
@@ -445,19 +463,19 @@
     <lastmod>2026-08-24</lastmod>
   </url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-argentina/</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.igi-la.com/blog/que-estudiar-para-ser-chef-profesional/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.igi-la.com/blog/que-estudiar-para-ser-chef-profesional/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.igi-la.com/blog/cuanto-dura-carrera-chef/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.igi-la.com/blog/cuanto-gana-chef-argentina/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.igi-la.com/blog/salida-laboral-gastronomia-trabajos/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.igi-la.com/blog/conviene-estudiar-gastronomia/</loc><lastmod>2026-10-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.igi-la.com/blog/curso-cocina-o-carrera-chef/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.igi-la.com/blog/conviene-estudiar-gastronomia/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.igi-la.com/blog/curso-cocina-o-carrera-chef/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.igi-la.com/blog/estudiar-gastronomia-sin-experiencia/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/cuanto-cuesta-estudiar-gastronomia-argentina/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/cuanto-cuesta-estudiar-gastronomia-argentina/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/carreras-cursos-gastronomia-salida-laboral/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-cordoba/</loc><lastmod>2026-09-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-rosario/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-mendoza/</loc><lastmod>2026-09-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-buenos-aires/</loc><lastmod>2026-09-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-buenos-aires/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-salta/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/autores/</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://www.igi-la.com/autores/maximiliano-ferrari/</loc><lastmod>2026-08-04</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -465,20 +483,20 @@
   <url><loc>https://www.igi-la.com/blog/que-estudiar-para-ser-parrillero-profesional/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/como-empezar-emprendimiento-gastronomico/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/como-calcular-costo-plato-precio-venta/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/metodos-de-coccion-guia/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/mise-en-place-que-es-como-hacerla/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/metodos-de-coccion-guia/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/mise-en-place-que-es-como-hacerla/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/cortes-de-verduras-guia-basica/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/manipulacion-segura-alimentos-claves/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/como-disenar-menu-rentable/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/diferencias-panaderia-pasteleria-reposteria/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-paraguay/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-asuncion/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-ciudad-del-este/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/diferencias-panaderia-pasteleria-reposteria/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-paraguay/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-asuncion/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-ciudad-del-este/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-bolivia/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-la-paz-bolivia/</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-coronel-oviedo/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-san-lorenzo-paraguay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-luque-paraguay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-san-lorenzo-paraguay/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-luque-paraguay/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-gastronomia-lambare-paraguay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/donde-estudiar-pasteleria-profesional-paraguay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/que-hace-barista-profesional/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -487,7 +505,7 @@
   <url><loc>https://www.igi-la.com/blog/curso-cocina-para-ninos-beneficios/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/que-aprenden-chicos-cocineritos-igi/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/seguridad-higiene-cocina-para-ninos/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.igi-la.com/blog/que-es-tecnologia-de-alimentos-paraguay/</loc><lastmod>2026-09-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.igi-la.com/blog/que-es-tecnologia-de-alimentos-paraguay/</loc><lastmod>2026-10-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/materias-tecnicatura-tecnologia-alimentos-paraguay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/salida-laboral-tecnico-tecnologia-alimentos-paraguay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.igi-la.com/blog/gastronomia-vs-tecnologia-alimentos-paraguay/</loc><lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

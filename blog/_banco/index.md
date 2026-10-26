@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-10-19: 39 fotos sin usar, 21 usadas (ver tabla).
+> Estado al 2026-10-26: 36 fotos sin usar, 24 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -54,12 +54,12 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `pasteleria-manga-torta-01` | Alumna decorando una torta con manga | **SIN USAR** |
+| `pasteleria-manga-torta-01` | Alumna decorando una torta con manga | USADA en `cuanto-gana-pastelero-colombia` (2026-10-26) |
 | `pasteleria-tortas-clase-01` | Clase de tortas con el grupo alrededor de la mesada | USADA en `tecnico-laboral-panaderia-pasteleria-colombia-que-es` (2026-10-12) |
 | `pasteleria-naked-cake-01` | Naked cake decorada con flores | **SIN USAR** |
 | `pasteleria-manga-detalle-01` | Detalle de manos trabajando con manga pastelera | **SIN USAR** |
 | `pasteleria-batido-crema-01` | Batido de crema con batidor de alambre | USADA en `cremas-base-pasteleria-guia` (2026-10-12) |
-| `pasteleria-torta-decorada-01` | Torta decorada con merengues de colores | **SIN USAR** |
+| `pasteleria-torta-decorada-01` | Torta decorada con merengues de colores | USADA en `merengues-frances-italiano-suizo` (2026-10-26) |
 | `pasteleria-torta-artistica-01` | Torta artística terminada con decoración modelada | **SIN USAR** |
 | `pasteleria-soplete-01` | Postre en copa terminado con soplete | **SIN USAR** |
 | `postres-en-vaso-01` | Postres en vaso con frutos rojos | **SIN USAR** |
@@ -115,7 +115,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `alumnos-emplatado-grupo-01` | Grupo de alumnos emplatando con el chef | USADA en `tecnico-laboral-cocina-internacional-colombia-que-es` (2026-09-28) |
 | `alumnos-emplatado-01` | Alumnos emplatando sobre tabla de corte | **SIN USAR** |
 | `alumnos-verduras-01` | Alumnos trabajando con verduras frescas | **SIN USAR** |
-| `alumnos-platos-grupo-01` | Grupo de alumnos con sus platos terminados | **SIN USAR** |
+| `alumnos-platos-grupo-01` | Grupo de alumnos con sus platos terminados | USADA en `cuanto-cuesta-estudiar-gastronomia-paraguay` (2026-10-26) |
 | `alumnos-pizza-01` | Alumna presentando una pizza sobre tabla | **SIN USAR** |
 | `alumnos-practica-mesada-01` | Práctica de alumnos en la mesada de la cocina | USADA en `tecnico-superior-gastronomia-bolivia-que-es` (2026-09-14) |
 
