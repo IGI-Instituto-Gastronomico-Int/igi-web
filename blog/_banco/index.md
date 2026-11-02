@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-10-26: 36 fotos sin usar, 24 usadas (ver tabla).
+> Estado al 2026-11-02: 33 fotos sin usar, 27 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -38,7 +38,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `chef-coccion-olla-01` | Chef cocinando en olla sobre la cocina industrial | USADA en `fondos-de-cocina-guia` (2026-09-21) |
 | `chef-retrato-cocina-01` | Retrato de chef con brazos cruzados en cocina profesional | **SIN USAR** |
 | `chef-retrato-cocina-02` | Retrato de chef mujer en cocina profesional | **SIN USAR** |
-| `cocina-flambeado-01` | Flambeado con llama alta frente a los alumnos | **SIN USAR** |
+| `cocina-flambeado-01` | Flambeado con llama alta frente a los alumnos | USADA en `que-se-aprende-curso-parrillas-bolivia` (2026-11-02) |
 | `chef-olla-cocina-02` | Chef con olla en cocina de la escuela | **SIN USAR** |
 | `chef-cucharon-01` | Chef extendiendo un cucharón hacia cámara | **SIN USAR** |
 | `emplatado-fine-dining-01` | Emplatado fino con pinza sobre plato terminado | USADA en `que-se-aprende-curso-sushi-bolivia` (2026-10-05) |
@@ -75,7 +75,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
 | `panaderia-alumnos-panes-01` | Alumnos trabajando con panes recién horneados | **SIN USAR** |
-| `panaderia-croissants-01` | Croissants y facturas terminadas sobre la mesada | **SIN USAR** |
+| `panaderia-croissants-01` | Croissants y facturas terminadas sobre la mesada | USADA en `masas-laminadas-hojaldre-croissant` (2026-11-02) |
 | `panaderia-amasado-palote-01` | Amasado con palote en clase de panificación | USADA en `masas-basicas-pasteleria-guia` (2026-09-28) |
 | `panaderia-bandeja-panes-01` | Bandeja de panes y bollos terminados | **SIN USAR** |
 | `panaderia-amasado-manos-01` | Detalle de manos amasando sobre la mesada | **SIN USAR** |
@@ -102,7 +102,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 |---|---|---|
 | `aula-clase-cocina-01` | Clase de cocina con el grupo alrededor de la isla | USADA en `donde-estudiar-gastronomia-bogota` (2026-09-07) |
 | `aula-clase-teorica-01` | Clase teórica en aula con proyector | **SIN USAR** |
-| `aula-alumnos-estudio-01` | Alumnos estudiando en el aula | **SIN USAR** |
+| `aula-alumnos-estudio-01` | Alumnos estudiando en el aula | USADA en `cuanto-cuesta-estudiar-gastronomia-colombia` (2026-11-02) |
 | `clase-cortes-verduras-01` | Clase práctica de cortes de verduras | **SIN USAR** |
 | `clase-tecnicas-corte-01` | Alumnos practicando técnicas de corte en fila | USADA en `cuchillos-de-cocina-tipos-afilado` (2026-10-05) |
 

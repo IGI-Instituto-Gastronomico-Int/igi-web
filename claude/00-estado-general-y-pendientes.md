@@ -29,6 +29,97 @@
 
 ## Resumen de corridas
 
+### 2026-11-02 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición: SIN ACCESO A GA4 en esta corrida. Zapier sigue sin autorizar en la
+sesión (requiere OAuth desde la configuración de conectores de claude.ai).
+Supermetrics muestra la propiedad 392456474 "IGI - GA4" conectada, pero la
+licencia 1808536 del equipo no incluye la fuente (error
+LICENSE_DATA_SOURCE_NOT_AVAILABLE al pedir pagePath/screenPageViews y
+eventName/eventCount). Se siguió el orden del backlog con los datos GA4 del
+2026-10-19 como referencia. No se inventó ninguna cifra de tráfico.
+
+Red externa: WebFetch no resolvió hosts externos (dominios fuera de la lista
+permitida de la sesión); las fuentes se verificaron por búsqueda web con
+extractos textuales y reutilizando URLs ya citadas en notas hermanas.
+PENDIENTE: pasada de verificación HEAD 200 sobre los enlaces externos de las 5
+notas tocadas desde un entorno con red.
+
+Nota sobre la consigna: `cuanto-cuesta-estudiar-gastronomia-argentina` tiene
+2.650 palabras (ampliada el 2026-09-07), no 536; se eligieron las dos
+siguientes del orden de ampliación. Brasil sigue en portugués con filiales
+"em breve": no se escribió nota BR. País de la semana: Bolivia (14 fichas,
+ahora 9 notas); la nota de intención fue de Colombia (7 fichas, ahora 6 notas).
+
+Publicado (cuerpo real dentro de `<article class="prose">`):
+- `blog/que-se-aprende-curso-parrillas-bolivia/` — 3.555 palabras, es-BO (tz
+  −04:00), CTA `/bo/programas/parrillas.html` + `/bo/#contacto`. Foto
+  `cocina-flambeado-01` (el banco no tiene fotos de parrilla; se usó la llama
+  del flambeado, afín a "Fuegos"). Ficha completa del taller (12 clases, 3 h),
+  tabla de 10 bloques, Maillard 140–165 °C, 9 preparaciones estilo gaucho,
+  altura (USDA), tabla USDA 63/71/74 °C, embutidos y pacumutu/churrasco/llajua,
+  mercado (ANA 46/23/12 kg 2024, IBCE 337.846 t 2025, US$ 188,5 M a nov. 2025,
+  INE 1.145.165 turistas, SMN Bs 3.300); 9 FAQ, 15 fuentes.
+- `blog/cuanto-cuesta-estudiar-gastronomia-colombia/` — 3.614 palabras, es-CO
+  (tz −05:00), CTA `/co/programas/cocina-internacional.html` + `/co/#contacto`.
+  Foto `aula-alumnos-estudio-01`. Tabla de referencias (SENA $0; Javeriana Cali
+  $12.733.000; La Sabana $21.541.000 publicado para 2027; ECCI $4,3–6,3 M; San
+  Mateo $5.515.720; UNICH $7.983.360; Mariano Moreno/Gato Dumas "a consultar"),
+  marco ETDH (Ley 1064/2006, Decreto 4904/2009, SIET), gastos ocultos con
+  TransMilenio $3.550, qué incluye la cuota según las 7 fichas CO, tabla de 7
+  programas, Icetex ETDH (2 SMMLV, 14,10 % EA, 30/70, cierre 25/09/2026),
+  inflación DANE 6,29 % sept. 2026, plantilla, sueldos (SMMLV, Computrabajo,
+  ofertas), DANE GEIH, Acoga 4.400 cierres, Publimetro +12,7 %; 8 FAQ, 25 fuentes.
+- `blog/masas-laminadas-hojaldre-croissant/` — 3.748 palabras, es-AR, CTA
+  `/ar/programas/abc-panadero.html` + `pastelero-internacional.html` +
+  `/ar/#contacto`. Foto `panaderia-croissants-01`. Tres familias, ciencia
+  (vapor/gluten/plasticidad, ICE), tabla de capas 3→729 (INRAE, Académie de
+  Versailles, Meilleur du Chef), paso a paso, tabla de temperaturas (Scoolinary
+  4–6 °C, King Arthur 400 °F), CAA art. 596 (manteca 82 %) y art. 155 tris
+  (trans 2 %, Res. Conj. 16/2023), invertido/rápido, tabla de errores, dónde se
+  aprende; 8 FAQ, 14 fuentes.
+
+Ampliadas: `donde-estudiar-gastronomia-salta` 807 → 2.572 palabras (tabla de
+los 16 programas de la sede con enlace a cada ficha AR, UPATecO Tecnicatura
+Universitaria en Gastronomía e ISFD Rural 6012 de El Carril, qué incluye la
+cuota, Min. de Turismo de Salta 651.184 viajeros ene–feb 2026 / $137.437 /
+4,5 noches, Carnaval +40 mil, ocupación 40 % en junio, CAME invierno, Concurso
+de la Empanada 2026, PatryTer, CCT 389/04; 8 FAQ, Fuentes nueva, 10 enlaces
+internos nuevos) y `donde-estudiar-gastronomia-la-paz-bolivia` 768 → 2.719
+(tabla de 14 programas con enlace a cada ficha BO, Técnico Superior y R.M.
+350/2023, tres tipos de certificación, Manq'a, INE 1.145.165, Dockweiler
+300.000 visitantes, bloqueos Bs 1.100 M, Gustu 38 en 2024, DP 5486, SMN Bs
+3.300, altura USDA; 8 FAQ, Fuentes nueva; se mantuvo la autoría de Gustavo
+Molinari). Descriptions y `dateModified` actualizados en ambas.
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 30 notas existentes (las
+6 con tráfico histórico, cluster parrilla/BO, cluster CO, cluster
+pastelería/panadería y la guía AR). Entrantes: parrillas BO 12, cuesta CO 8,
+hojaldre 12. Desde las notas con tráfico se enlazaron además notas sin
+tráfico: `como-controlar-fuego-temperatura-parrilla`, `que-hace-chef-privado`,
+`abc-panadero-curso-panificacion-inicial`,
+`estudiar-chef-internacional-mientras-trabajas`, más las dos ampliadas.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 290
+URLs, `lastmod` 2026-11-02 en las 35 notas tocadas y en `/blog/`).
+Verificación automática: JSON-LD válido, un h1, meta descriptions de 70–165
+caracteres, enlaces e imágenes internas existentes, sin hashes de raíz, sin
+directivas filtradas, analítica y CTA presentes, las 3 nuevas por encima de
+1.300 palabras, cada nueva enlazada desde al menos 8 notas. CNAME,
+google7c95af54c2fa6355.html e index.html de raíz sin tocar. Banco de fotos:
+quedan 33 sin usar (`blog/_banco/index.md` al día); sigue sin haber fotos de
+bartender, barista ni parrilla.
+
+Pendiente: autorizar Zapier (o sumar GA4 a la licencia de Supermetrics) para
+recuperar la medición; verificar enlaces externos de las 5 notas tocadas;
+ampliar `estudiar-gastronomia-sin-experiencia` (684) y
+`donde-estudiar-pasteleria-profesional-paraguay` (703); las 4 notas cortas del
+cluster parrilla AR (485–537 palabras) son candidatas a ampliar; BO
+`cuanto-cuesta-estudiar-gastronomia-bolivia`; CO `cuanto-gana-barista-colombia`
+cuando haya foto de barista; técnica `gelatinas-y-estabilizantes-pasteleria`;
+`llms.txt` sigue sin listar las notas de sueldos; decidir contenido BR en
+portugués; revisar la ficha de González Catán/Laferrere en `filiales/index.html`.
+
 ### 2026-10-26 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición: SIN ACCESO A GA4 en esta corrida. El conector Zapier no estaba
