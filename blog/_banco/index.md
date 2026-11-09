@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-11-02: 33 fotos sin usar, 27 usadas (ver tabla).
+> Estado al 2026-11-09: 30 fotos sin usar, 30 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -39,7 +39,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `chef-retrato-cocina-01` | Retrato de chef con brazos cruzados en cocina profesional | **SIN USAR** |
 | `chef-retrato-cocina-02` | Retrato de chef mujer en cocina profesional | **SIN USAR** |
 | `cocina-flambeado-01` | Flambeado con llama alta frente a los alumnos | USADA en `que-se-aprende-curso-parrillas-bolivia` (2026-11-02) |
-| `chef-olla-cocina-02` | Chef con olla en cocina de la escuela | **SIN USAR** |
+| `chef-olla-cocina-02` | Chef con olla en cocina de la escuela | USADA en `arroces-y-risotto-tecnica` (2026-11-09) |
 | `chef-cucharon-01` | Chef extendiendo un cucharón hacia cámara | **SIN USAR** |
 | `emplatado-fine-dining-01` | Emplatado fino con pinza sobre plato terminado | USADA en `que-se-aprende-curso-sushi-bolivia` (2026-10-05) |
 | `emplatado-salsa-01` | Chef sirviendo salsa sobre el plato | USADA en `salsas-madre-cocina-guia` (2026-09-14) |
@@ -101,7 +101,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
 | `aula-clase-cocina-01` | Clase de cocina con el grupo alrededor de la isla | USADA en `donde-estudiar-gastronomia-bogota` (2026-09-07) |
-| `aula-clase-teorica-01` | Clase teórica en aula con proyector | **SIN USAR** |
+| `aula-clase-teorica-01` | Clase teórica en aula con proyector | USADA en `cuanto-cuesta-estudiar-gastronomia-bolivia` (2026-11-09) |
 | `aula-alumnos-estudio-01` | Alumnos estudiando en el aula | USADA en `cuanto-cuesta-estudiar-gastronomia-colombia` (2026-11-02) |
 | `clase-cortes-verduras-01` | Clase práctica de cortes de verduras | **SIN USAR** |
 | `clase-tecnicas-corte-01` | Alumnos practicando técnicas de corte en fila | USADA en `cuchillos-de-cocina-tipos-afilado` (2026-10-05) |
@@ -131,7 +131,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `catering-mesa-01` | Mesa de catering con bocados y postres | **SIN USAR** |
+| `catering-mesa-01` | Mesa de catering con bocados y postres | USADA en `cuanto-gana-mozo-paraguay` (2026-11-09) |
 | `servicio-mozos-01` | Equipo de servicio de sala con bandejas | USADA en `cuanto-gana-mozo-camarero-argentina` (2026-09-21) |
 
 ## Origen de cada foto

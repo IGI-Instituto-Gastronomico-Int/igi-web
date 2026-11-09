@@ -29,6 +29,104 @@
 
 ## Resumen de corridas
 
+### 2026-11-09 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición: SIN ACCESO A GA4 en esta corrida. Zapier sigue sin autorizar en la
+sesión (requiere OAuth desde la configuración de conectores de claude.ai).
+Supermetrics tiene GA4 (GAWA) autenticado pero la licencia 1808536 del equipo
+no incluye la fuente (LICENSE_DATA_SOURCE_NOT_AVAILABLE al pedir
+pagePath/screenPageViews y eventName/eventCount). Se siguió el orden del
+backlog con los datos GA4 del 2026-10-19 como referencia. No se inventó
+ninguna cifra de tráfico.
+
+Nota sobre la consigna: `cuanto-cuesta-estudiar-gastronomia-argentina` ya
+tiene 2.650 palabras (ampliada el 2026-09-07), por eso se ampliaron las dos
+siguientes del orden del backlog. Brasil sigue en portugués con filiales "em
+breve" y Colombia ya tiene 6 notas sobre 7 fichas: país de la semana, Bolivia
+(14 fichas, ahora 10 notas). Chile y Uruguay sin fichas: no se escribió nada.
+
+Publicado (cuerpo real dentro de `<article class="prose">`, sin TOC, autor,
+fuentes ni related):
+- `blog/cuanto-cuesta-estudiar-gastronomia-bolivia/` — 3.354 palabras, es-BO
+  (tz −04:00), CTA `/bo/programas/tecnico-superior.html` + `chef.html` +
+  `/bo/#contacto`. Foto `aula-clase-teorica-01`. Tabla de referencias con
+  fuente (institutos públicos gratuitos, Manq'a, UPB Bs 850/2.900/15.350 +
+  Bs 800–1.500 materiales, Salesiana "consultar", técnicos Bs 4.000–6.000 por
+  semestre, universidades Bs 2.000–8.000), R.M. 350/2023 y R.M. 0882/2022,
+  gastos ocultos, qué incluye la cuota según las fichas BO, tabla de 14
+  programas, INE oct. 2026 (2,07 % mensual, 6,03 % acumulada, 7,08 % i.a.,
+  micro +14,55 %), fin del cambio fijo 26/06/2026 y oficial Bs 11,81, D.S.
+  5516 Bs 3.300, INE +3,58 % y 11,4 %, 1,1 M turistas, Gustu; 8 FAQ, 18
+  fuentes. Sin valores de cuota de IGI.
+- `blog/cuanto-gana-mozo-paraguay/` — 3.116 palabras, es-PY (tz −03:00), CTA
+  `/py/programas/mozo-maitre.html` + `/py/#contacto` + `/py/#filiales`. Foto
+  `catering-mesa-01` (el banco no tiene foto de mozo sin usar). Decreto 6225
+  (₲ 3.044.000, jornal ₲ 117.077, hora ≈ ₲ 14.635, nocturna ≈ ₲ 19.025, neto
+  ≈ ₲ 2.770.040), tabla WageIndicator camareros, propina voluntaria (ABC 2021,
+  La Nación 2023/2024, Bancard POS 5–20 %, La Nación 04/05/2026), tabla de
+  recargos (art. 234 CT, nocturno 30 %, aguinaldo, IPS), ejemplo de mes
+  marcado como ilustrativo, Sinafocal 42,3 %, INE 1.063.284, Senatur 972.835 y
+  80 %, escalera mozo → maître con la ficha, 6 filiales enlazadas; 8 FAQ, 20
+  fuentes.
+- `blog/arroces-y-risotto-tecnica/` — 3.890 palabras, es-AR, CTA
+  `/ar/programas/chef-internacional.html` + `abc-chef.html` + `/ar/#contacto`.
+  Foto `chef-olla-cocina-02`. Amilosa/amilopectina, gelatinización 61,6–73,9 °C
+  (Redalyc), carnaroli/vialone nano 20–24 % amilosa (UJAR 2017, Foods 2021),
+  tabla de 11 tipos con CAA art. 649, producción AR 2025/26 (1.471.673 t,
+  204.900 ha, Corrientes 48,5 %, Entre Ríos 30 %, 502.000 t exportadas),
+  tabla de 4 métodos, risotto en 5 etapas con tiempos (Bonato 14 min, UJAR
+  15,8/12,8), mantecatura como emulsión, tabla de errores, Bacillus cereus
+  (MPI NZ, Torbay, IFAS/FDA 74 °C); 8 FAQ, 17 fuentes.
+
+Ampliadas: `estudiar-gastronomia-sin-experiencia` 684 → 2.522 palabras (tabla
+de 8 programas AR que empiezan desde cero con duración e inclusiones, qué se
+aprende primero con enlaces a mise en place, cuchillos, cortes, métodos,
+fondos, salsas y arroces, sección nueva "El primer trabajo" con CCT 389/04,
+FEHGRA 650.000, Hotelga 67.000, SIPA 269.900; 8 FAQ; Fuentes nueva; CTA a
+fichas reales en lugar de `/ar/#catalogo` y `/ar/#wsp`) y
+`donde-estudiar-pasteleria-profesional-paraguay` 703 → 2.332 (tabla de los 5
+programas de pastelería PY con planes de estudio, opciones gratuitas
+SNPP/Sinafocal, Ley 4995/CONES, qué incluye la cuota por ficha, Sinafocal
+pastelero 39,7 %, INE 1.063.284, SMN, 6 filiales enlazadas a `/py/<ciudad>.html`
+y a sus guías; 8 FAQ; Fuentes nueva; CTA `/py/#contacto` en lugar de `/py/`; se
+mantuvo la autoría de Victoria Barrios / Walter López). Descriptions y
+`dateModified` actualizados en ambas.
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 39 notas existentes (las
+6 con tráfico histórico, cluster BO, serie de costos, cluster PY/salón, cluster
+técnica AR, cluster estudiar AR y cluster pastelería). Entrantes: cuesta BO 13,
+mozo PY 12, arroces 16, sin experiencia 18, pastelería PY 11. Desde las notas
+con tráfico se enlazaron además notas sin tráfico:
+`abc-pastelero-vs-maestro-vs-profesional`,
+`curso-mozo-camarera-maitre-servicio-profesional`,
+`emplatado-profesional-tecnicas-errores`, `materias-chef-internacional`,
+`certificado-igi-certificacion-uflo-diferencias`,
+`catering-eventos-planificar-producir-servir`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 293
+URLs, `lastmod` 2026-11-09 en las 44 notas tocadas y en `/blog/`).
+Verificación automática: JSON-LD válido, un h1, meta descriptions de 70–165
+caracteres (3 acortadas en la pasada), enlaces e imágenes internas existentes,
+sin hashes de raíz, sin directivas filtradas, analítica y CTA a ficha del país
+presentes, las 3 nuevas por encima de 1.300 palabras, cada nueva enlazada desde
+al menos 12 notas, feed y sitemap parsean como XML. CNAME,
+google7c95af54c2fa6355.html e index.html de raíz sin tocar. Banco de fotos:
+quedan 30 sin usar (`blog/_banco/index.md` al día); sigue sin haber fotos de
+bartender, barista, parrilla ni mozo.
+
+Red externa: WebFetch no se usó; las fuentes se verificaron por búsqueda web
+con extractos textuales y reutilizando URLs ya citadas en notas hermanas.
+PENDIENTE: pasada de verificación HEAD 200 sobre los enlaces externos de las 5
+notas tocadas desde un entorno con red.
+
+Pendiente: autorizar Zapier (o sumar GA4 a la licencia de Supermetrics) para
+recuperar la medición; ampliar `donde-estudiar-gastronomia-paraguay` (982) y
+las 4 notas cortas del cluster parrilla AR (485–537 palabras); BO
+`cuanto-gana-cocinero-bolivia` sólo con fuente oficial; CO
+`cuanto-gana-barista-colombia` cuando haya foto de barista; técnica
+`gelatinas-y-estabilizantes-pasteleria`; `llms.txt` sigue sin listar las notas
+de sueldos; decidir contenido BR en portugués.
+
 ### 2026-11-02 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición: SIN ACCESO A GA4 en esta corrida. Zapier sigue sin autorizar en la
