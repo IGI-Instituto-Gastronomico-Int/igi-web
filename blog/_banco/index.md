@@ -1,6 +1,6 @@
 # Banco de fotos del blog — reserva SIN USAR
 
-> Estado al 2026-11-09: 30 fotos sin usar, 30 usadas (ver tabla).
+> Estado al 2026-11-16: 27 fotos sin usar, 33 usadas (ver tabla).
 
 Fotos propias de IGI, procesadas para usarse como **imagen héroe** de las notas del blog.
 Armado el **2026-09-02** desde los bancos de Dropbox del titular.
@@ -33,7 +33,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 
 | Archivo (base) | Descripción | Estado |
 |---|---|---|
-| `chef-salteado-01` | Chef salteando en sartén durante una clase | **SIN USAR** |
+| `chef-salteado-01` | Chef salteando en sartén durante una clase | USADA en `cuanto-gana-cocinero-bolivia` (2026-11-16) |
 | `chef-clase-fuego-01` | Chef instructor y alumna trabajando sobre el fuego | USADA en `cuanto-gana-chef-colombia` (2026-09-21) |
 | `chef-coccion-olla-01` | Chef cocinando en olla sobre la cocina industrial | USADA en `fondos-de-cocina-guia` (2026-09-21) |
 | `chef-retrato-cocina-01` | Retrato de chef con brazos cruzados en cocina profesional | **SIN USAR** |
@@ -61,7 +61,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `pasteleria-batido-crema-01` | Batido de crema con batidor de alambre | USADA en `cremas-base-pasteleria-guia` (2026-10-12) |
 | `pasteleria-torta-decorada-01` | Torta decorada con merengues de colores | USADA en `merengues-frances-italiano-suizo` (2026-10-26) |
 | `pasteleria-torta-artistica-01` | Torta artística terminada con decoración modelada | **SIN USAR** |
-| `pasteleria-soplete-01` | Postre en copa terminado con soplete | **SIN USAR** |
+| `pasteleria-soplete-01` | Postre en copa terminado con soplete | USADA en `puntos-del-almibar-azucar-caramelo` (2026-11-16) |
 | `postres-en-vaso-01` | Postres en vaso con frutos rojos | **SIN USAR** |
 | `pasteleria-manga-vasitos-01` | Armado de postres individuales con manga | **SIN USAR** |
 | `pasteleria-cupcakes-01` | Alumna decorando cupcakes | **SIN USAR** |
@@ -77,7 +77,7 @@ Fuente: bancos de Dropbox del titular (`Banco imágenes propio`, `Banco 2025`, `
 | `panaderia-alumnos-panes-01` | Alumnos trabajando con panes recién horneados | **SIN USAR** |
 | `panaderia-croissants-01` | Croissants y facturas terminadas sobre la mesada | USADA en `masas-laminadas-hojaldre-croissant` (2026-11-02) |
 | `panaderia-amasado-palote-01` | Amasado con palote en clase de panificación | USADA en `masas-basicas-pasteleria-guia` (2026-09-28) |
-| `panaderia-bandeja-panes-01` | Bandeja de panes y bollos terminados | **SIN USAR** |
+| `panaderia-bandeja-panes-01` | Bandeja de panes y bollos terminados | USADA en `cuanto-gana-panadero-paraguay` (2026-11-16) |
 | `panaderia-amasado-manos-01` | Detalle de manos amasando sobre la mesada | **SIN USAR** |
 | `panaderia-bollos-clase-01` | Clase de panadería armando bollos | **SIN USAR** |
 | `panaderia-horno-industrial-01` | Horno industrial en uso durante la clase | **SIN USAR** |

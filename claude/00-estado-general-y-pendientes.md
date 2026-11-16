@@ -29,6 +29,134 @@
 
 ## Resumen de corridas
 
+### 2026-11-16 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición: CON ACCESO A GA4 (Zapier ya autorizado; acción runReport sobre
+properties/392456474, 17/10 a 15/11/2026, limit 210; la acción figura como
+"write" en Zapier y se ejecuta con execute_zapier_write_action, pero sólo lee).
+Blog: 85 rutas /blog/ dentro del top 210 suman 5.351 vistas en 30 días (contra
+~344 en el diagnóstico de septiembre). Top: metodos-de-coccion 891, salsas-madre
+316, cortes-de-verduras 250, cuanto-gana-panadero-argentina 226, diferencias
+202, mise-en-place 169, fondos 167, cuanto-cuesta-AR 164, cuanto-gana-chef-AR
+151, que-estudiar-chef 148, calcular-costo-plato 140, barista-AR 139,
+pastelero-AR 135, bogota 118, brigada 97. Evento blog_cta_click: 43 en 30 días
+(whatsapp_click 3.471, generate_lead 448). Fichas: /ar/ 11.712, home 3.612,
+/py/ 1.542, chef-internacional AR 868, abc-chef 500, barista AR 493;
+/bo/programas/barista.html es la ficha BO más vista (41). Datos guardados en el
+scratchpad de la sesión (ga4_blog_views.tsv), no en el repo.
+
+Nota sobre la consigna: `cuanto-cuesta-estudiar-gastronomia-argentina` ya tiene
+2.650 palabras (164 vistas/30 días), por eso se ampliaron las dos notas cortas
+con intención y vistas: `salida-laboral-pasteleria-emprendimientos` (425
+palabras, 18 vistas) y `donde-estudiar-gastronomia-paraguay` (1.055, primera
+del backlog). Brasil sigue en portugués con las tres filiales "Unidade não
+disponível": no se escribió nota BR. País de la semana: Bolivia (14 fichas,
+ahora 11 notas). Chile y Uruguay sin fichas: nada.
+
+Publicado (cuerpo real dentro de `<article class="prose">`, sin TOC, autor,
+fuentes ni related):
+- `blog/cuanto-gana-cocinero-bolivia/` — 3.200 palabras, es-BO (tz −04:00), CTA
+  `/bo/programas/chef.html` + `tecnico-superior.html` + `/bo/#contacto`. Foto
+  `chef-salteado-01`. D.S. 5516 Bs 3.300 (hora Bs 13,75 y extra Bs 27,50 como
+  cálculo propio), INE dic. 2023 restaurantes Bs 2.979 / privado Bs 5.058 /
+  remuneración Bs 7.609 (eju.tv, RTP), Cazvid jun. 2026 Bs 3.300–6.000 y
+  ayudante 3.300–5.700 marcados como portal privado, Paylab 4.083 (n<20), LGT
+  art. 55 horas extra 100 % y art. 50 tope 2 h, nocturno 25–50 %, bono de
+  antigüedad art. 60 D.S. 21060 (5/11/18/26/34/42/50 %) sobre SMN, aguinaldo y
+  D.S. 1802, ejemplo ilustrativo Bs 4.498, Viceministerio de Gastronomía
+  97.555 negocios (12.409 formales) y 145.208 empleos, bloqueos 2026 (21.819 /
+  1.103 / 92.984), Cámara Gastronómica La Paz 80.000, turismo 1,1 M, Gustu,
+  INE oct. 2026 2,07/6,03/7,08 %, dólar Bs 11,81, tabla de 7 programas BO;
+  8 FAQ, 24 fuentes. WageIndicator BO no publica cifra abierta para cocineros:
+  se enlaza la ficha sin citar número.
+- `blog/cuanto-gana-panadero-paraguay/` — 2.813 palabras, es-PY (tz −03:00),
+  CTA `/py/programas/abc-panadero.html` + `/py/#contacto` + `/py/#filiales`.
+  Foto `panaderia-bandeja-panes-01`. Res. MTESS 670/2026 (ABC Color
+  10/07/2026): maestro panadero confitero ₲ 3.613.073 y jornal ₲ 138.964,
+  ayudante ₲ 3.044.469; Decreto 6225 ₲ 3.044.000 / 117.077; tabla de netos y
+  horas (IPS 9 %, ÷208 h, nocturna +30 %, extra +50/+100 %) como cálculo
+  propio; Tusalario 2.920.316–6.409.069 y 3.306.515–8.914.577; art. 234 CT y
+  jornada nocturna 20–06 de 7 h; ejemplo ilustrativo ₲ 4.155.048 bruto /
+  3.781.094 neto; Agroalimentaria/CCR US$ 67 M, 43.000 t, 61 % Asunción;
+  Infonegocios 80.000 familias y 90 % informal; La Nación trigo 1,2 M t y
+  molienda 700.000 t; Sinafocal jul. 2026 (certificación de panadero entre las
+  más pedidas), IP 77,4 % y 437 vacantes, INE 1.063.284; tabla de 6 programas
+  PY y 6 filiales enlazadas; 8 FAQ, 19 fuentes. No se citó el precio de la
+  harina de Última Hora por fecha dudosa del artículo.
+- `blog/puntos-del-almibar-azucar-caramelo/` — 3.346 palabras, es-AR, CTA
+  `/ar/programas/pastelero-internacional.html` + `abc-pastelero.html` +
+  `/ar/#contacto`. Foto `pasteleria-soplete-01`. Tabla de 9 puntos con °C,
+  concentración, prueba del agua fría y usos (Exploratorium, CooksInfo,
+  LibreTexts, Joy of Baking, Wikipedia es, Directo al Paladar, Comesaña), CAA
+  cap. X arts. 767 y 777 (ANMAT PDF 2023), ebullición y concentración,
+  corrección por altura 2 °F/1.000 pies (Land O'Lakes), cristalización e
+  interferentes (glucosa, crémor tártaro 0,15–0,25 % vía Wikipedia, Cook's
+  Illustrated 10 min), caramelización 160 °C / fusión 183 °C / tope 185–190 °C
+  (Duarte, Zenodo) y 170 °C (Lifeder), seco vs húmedo, Maillard, tabla de 7
+  errores, seguridad, zafra 2025 (Vía País 17.055.349 t caña y 1.192.677 t
+  azúcar; Cadena 3 Tucumán 17,6 M t; exportaciones 576.442 t US$ 292 M y
+  campaña 605.000 t US$ 306 M vía La Gaceta); 8 FAQ, 17 fuentes.
+
+Ampliadas: `salida-laboral-pasteleria-emprendimientos` 425 → 2.149 palabras
+(tabla de 9 ámbitos con convenio y requisitos, FEHGRA 650.000, Hotelga 84.000 /
+67.000 / 17.000, SIPA 269.900, FAIPA 17.000 + 10.000 y caída de facturas/tortas,
+básicos CCT 389/04 jul–sep 2026 niveles 3/5/6 reutilizados de la nota de
+sueldos, CCT 272/96, checklist de 5 puntos para emprender con RNE/RNPA, tabla
+de 6 programas AR de pastelería; 8 FAQ; Fuentes nueva; CTA a fichas +
+`/ar/#contacto`; related suma la nota de almíbar) y
+`donde-estudiar-gastronomia-paraguay` 1.055 → 2.264 (tabla de 6 filiales con
+ficha `/py/<ciudad>.html` y guía, tabla de 18 programas por área con duración
+según las fichas, Ley 4995/2013 y tres tipos de título, SNPP 80 h y Sinafocal
+190 h, Sinafocal 77,4 %, INE 1.063.284, Senatur 972.835 +33,5 %, serie de
+sueldos PY enlazada; 8 FAQ; Fuentes nueva; CTA `/py/programas/chef.html` +
+`/py/#contacto` + `/py/#filiales` en lugar de `/py/` y `/py/#catalogo`; se
+mantuvo la autoría de Victoria Barrios / Walter López). Descriptions,
+`dateModified` y "Actualizado" al día en ambas.
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 42 notas existentes (las
+6 con tráfico histórico más salsas-madre y cortes-de-verduras, que hoy son 2.ª
+y 3.ª del blog; cluster BO; serie de sueldos AR/PY/CO; cluster panadería y PY;
+cluster pastelería y ciencia). Entrantes: cocinero BO 18, panadero PY 16,
+almíbar 16, salida-laboral-pastelería 11, dónde-estudiar-PY 16. Desde las notas
+con tráfico se enlazaron además notas sin tráfico:
+`abc-panadero-curso-panificacion-inicial`, `abc-tortas-curso-tortas-clasicas`,
+`materias-chef-internacional`, `primer-segundo-ano-chef-internacional`,
+`como-es-clase-chef-internacional-igi`, `que-se-aprende-curso-parrillas-fuegos`,
+`como-controlar-fuego-temperatura-parrilla`,
+`cortes-puntos-coccion-reposo-parrilla`, `abc-chef-curso-corto-empezar-cocina`,
+`certificacion-academica-universitaria-uflo-igi`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 296
+URLs, `lastmod` 2026-11-16 en las 47 notas tocadas y en `/blog/`). Verificación
+automática sobre las 47 notas + índice: JSON-LD válido, un h1, meta
+descriptions de 70–165 caracteres (4 acortadas en la pasada), enlaces e
+imágenes internas existentes, anclas del TOC resueltas, sin directivas
+filtradas, analítica y CTA a ficha del país presentes, lang = og:locale, las 3
+nuevas por encima de 1.300 palabras con el conteo estricto (sin TOC, autor,
+fuentes ni related), feed y sitemap parsean como XML, héroes 1200×675 y
+800×450. Preexistente y no tocado: `blog/index.html` usa `/#catalogo`,
+`/#contacto`, `/#filiales`, `/#wsp` y `/#certificados` en su nav (hashes de
+raíz; corregir en una pasada aparte). CNAME, google7c95af54c2fa6355.html e
+index.html de raíz sin tocar. Banco de fotos: quedan 27 sin usar
+(`blog/_banco/index.md` al día); sigue sin haber fotos de bartender, barista,
+parrilla ni mozo.
+
+Red externa: WebFetch no resuelve hosts fuera de la lista permitida de la
+sesión (wageindicator.org, tusalario.org, vouga.com.py, ine.gob.bo,
+exploratorium.edu fallaron); las fuentes se verificaron por búsqueda web con
+extractos textuales y reutilizando URLs ya citadas en notas hermanas.
+PENDIENTE: pasada de verificación HEAD 200 sobre los enlaces externos de las 5
+notas tocadas desde un entorno con red.
+
+Pendiente: ampliar `quimica-culinaria-pasteleria-profesional` (502 palabras, 27
+vistas), `pasteleria-clasica-superior-vanguardia` (376, 23),
+`certificacion-academica-universitaria-uflo-igi` (502, 20),
+`maestro-pizzero-masas-fermentacion-produccion` (408, 17) y el cluster parrilla
+AR; BO `que-se-aprende-curso-barista-bolivia` (ficha BO más vista) cuando haya
+foto de barista; técnica `gelatinas-y-estabilizantes-pasteleria`; corregir los
+hashes de raíz del nav de `blog/index.html`; `llms.txt` sigue sin listar las
+notas de sueldos; decidir contenido BR en portugués.
+
 ### 2026-11-09 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición: SIN ACCESO A GA4 en esta corrida. Zapier sigue sin autorizar en la
