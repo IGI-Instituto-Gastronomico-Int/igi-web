@@ -29,6 +29,126 @@
 
 ## Resumen de corridas
 
+### 2026-11-23 — 3 notas nuevas + 2 ampliaciones + enlazado interno
+
+Medición: CON ACCESO A GA4 (Zapier, runReport sobre properties/392456474,
+24/10 a 22/11/2026, limit 210 de 372 rutas; la acción figura como "write" y se
+ejecuta con execute_zapier_write_action, pero sólo lee). Blog: 83 rutas /blog/
+dentro del top 210 suman 5.396 vistas en 30 días. Top: metodos-de-coccion 852,
+salsas-madre 324, cuanto-gana-panadero-AR 247, cortes-de-verduras 217,
+diferencias 212, fondos 175, cuanto-cuesta-AR 167, que-estudiar-chef 167,
+cuanto-gana-chef-AR 160, mise-en-place 154, pastelero-AR 138, calcular-costo
+135, barista-AR 131, bogota 103, cremas 84, bartender-AR 83, brigada 82.
+Evento blog_cta_click: 49 en 30 días (whatsapp_click 3.469, generate_lead 455).
+Fichas: /ar/ 11.766, home 3.800, /py/ 1.572, /cl/ 414, /co/ 259, /br/ 210, /bo/
+195; chef-internacional AR 822, barista AR 506, abc-chef AR 463, mozo-maitre AR
+210; /co/programas/abc-chef 19; /py/san-lorenzo.html 100. Datos guardados en el
+scratchpad de la sesión (ga4_blog_views_2026-11-23.tsv), no en el repo.
+
+Nota sobre la consigna: `cuanto-cuesta-estudiar-gastronomia-argentina` ya tiene
+2.647 palabras (167 vistas/30 días), por eso se ampliaron dos notas cortas con
+intención "dónde/qué estudiar" y ficha con tráfico:
+`donde-estudiar-gastronomia-san-lorenzo-paraguay` (516 palabras; la ficha de la
+filial tiene 100 vistas) y `abc-chef-curso-corto-empezar-cocina` (464; la ficha
+ABC Chef AR tiene 463 vistas). Brasil sigue en portugués: no se escribió nota
+BR. País de la semana: Colombia (7 fichas, ahora 7 notas; BO quedó en 11/14).
+Chile y Uruguay sin fichas: nada.
+
+Publicado (cuerpo real dentro de `<article class="prose">`, sin TOC, autor,
+fuentes ni related; FAQPage JSON-LD agregado al generador):
+- `blog/abc-chef-colombia-que-se-aprende/` — 2.611 palabras, es-CO (tz −05:00),
+  CTA `/co/programas/abc-chef.html` + `cocina-internacional.html` +
+  `/co/#contacto`. Foto `clase-cortes-verduras-01`. Ficha CO (60 h, 3 h
+  semanales, 3 materias, incluye uniforme/recetarios/materias primas, título
+  privado); Decreto 1075/2015 art. 2.6.6.8 (educación informal <160 h, constancia
+  de asistencia) y concepto del MEN; Decreto 4904/2009 (ETDH ≥160 h, certificado
+  de aptitud ocupacional); SMMLV 2026 $1.750.905 + auxilio $249.095; Computrabajo
+  Bogotá nov. 2026 $1.463.500–$3.200.000 (moda $1.750.905); DANE GEIH jun. 2026
+  +289.000 e informalidad 55,1 %; Acoga 4.400 cierres a sept. 2026 y 6.500
+  proyectados, 143.000 de 791.000 empleos 2025; Acodrés 80.000 establecimientos
+  en Bogotá y costos 87→109 %; SENA 50.000 cupos; tabla ABC Chef vs Técnico
+  Laboral (4 semestres, 9 h, plan por semestre); 8 FAQ, 14 fuentes.
+- `blog/cuanto-gana-ayudante-de-cocina-argentina/` — 3.012 palabras, es-AR, CTA
+  `/ar/programas/abc-chef.html` + `chef-internacional.html` + `/ar/#contacto`.
+  Foto `brigada-cocina-retrato-01`. Distinta de la nota de chef AR (escala
+  completa): se centra en peón (nivel 1), ayudante (nivel 3, junto con cafetero
+  y gambucero según escalas CABA/El Calafate del Consejo CABA) y comis. CCT
+  389/04 jul–sep 2026: nivel 1 $990.555 D / $1.013.346 C / $1.038.120 B; nivel 2
+  $1.102.324 B; nivel 3 $1.099.139 D y $1.342.334 especial; nivel 6 $1.292.026 /
+  $1.337.186 / $1.524.806; techo $1.970.475; sumas no rem. $68.000–$134.000;
+  acta 24/07/2026 básicos congelados y base oct. +8,03 % (sin escala oct–dic
+  publicada al 23/11, dicho en la nota); adicionales 32 % y ejemplo ilustrativo
+  neto $1.279.216 (cálculo propio); LCT arts. 200/201; Ley 27.802 y Decreto
+  731/2024 (propinas); SMVM $398.800 nov. y $406.400 dic.; Computrabajo/Indeed
+  CABA $900.000–$1.200.000; cadenas $1.108.417 / $1.863.345; FEHGRA 650.000,
+  Hotelga 67.000, SIPA 269.900; CAA art. 21 (carnet); 8 FAQ, 21 fuentes.
+  estudiovilaplana.com.ar no se pudo abrir desde la sesión (host no permitido):
+  las cifras se tomaron de iProfesional/Perfil y de las notas previas del repo
+  que ya citan Vilaplana/Atril.
+- `blog/gelatina-agar-pectina-gelificantes-pasteleria/` — 3.656 palabras, es-AR,
+  CTA `/ar/programas/pastelero-internacional.html` + `abc-pastelero.html` +
+  `/ar/#contacto`. Foto `postres-en-vaso-01`. Bloom (6,67 %, 10 °C, 17 h, 12,7
+  mm, 4 mm) vía Wikipedia/USP <1081>/Gelita (fusión ≈ +5 °C); hojas Platinum
+  235–265 Bloom 1,7 g y Gold 190–220 2 g vía JWU; polvo 230–250 vía Wikibooks;
+  fórmula (200 ÷ Bloom) × g; dosis 8–24 g/L (Canal 26 7 g/500 ml, Directo al
+  Paladar 10 g/500 ml, Hola 3 hojas/250 ml); frutas con proteasas vía Wikibooks;
+  agar 32–42 °C / >85 °C (Wikipedia E406, RSC 38/85), hervir, 15–30 g/L
+  (BCcampus) y 8 g/450 g (OCW EHU), gel fluido; pectina HM >60 % sólidos y pH
+  <3,5 (UAB), LM calcio 20–65 % y pH 3,6–4,0, NH 0,5–1 % / 1,5–2 % (Töufood),
+  Cargill; CAA cap. XVIII INS 406/440 sin número de artículo; tabla comparativa,
+  tabla de usos, tabla de 9 errores; 8 FAQ, 18 fuentes. Se evitó citar una
+  temperatura de cuajado de la gelatina y la Res. GMC 55/98 por no poder
+  verificarlas.
+
+Ampliadas: `donde-estudiar-gastronomia-san-lorenzo-paraguay` 516 → 2.506
+(Censo 2022 225.395 y Central 1.883.927; UNA 54.569; Infonegocios 4.458
+comercios, 53 %, Shopping 13 gastronómicos, locales vacíos ago. 2026; tabla de 4
+opciones y tabla de 18 programas de la ficha con duración y cursada; SNPP La
+Casita del Sol 80 h (IP 03/03 y 28/07/2026); Sinafocal 255; Ley 4995; Decreto
+6225; Sinafocal 77,4 %, INE 1.063.284, Senatur 972.835; serie de sueldos PY; 8
+FAQ; Fuentes nueva; CTA `/py/san-lorenzo.html` + `/py/programas/chef.html` +
+`/py/#contacto` en lugar de `/py/` y `/py/#catalogo`; autoría de Victoria Barrios
+y revisión de Walter López mantenidas; FAQPage agregado) y
+`abc-chef-curso-corto-empezar-cocina` 464 → 2.431 (ficha AR 5 meses / 1 clase de
+2 h, 57 filiales enumeradas, 3 materias con enlaces a 14 guías técnicas, tabla
+de técnicas, UFLO como certificación complementaria coherente con la nota de
+certificación, tabla comparativa con Chef Internacional y 6 cursos, CCT nivel 3
+$1.099.139 y nivel 1 $990.555, FEHGRA/Hotelga/SIPA; 8 FAQ; Fuentes nueva; CTA a
+fichas AR + `/ar/#contacto` en lugar de `/ar/`; FAQPage agregado).
+
+Enlazado: párrafo contextual nuevo antes de la FAQ en 46 notas existentes (las 6
+con tráfico histórico, salsas-madre y cortes-de-verduras, serie de sueldos
+AR/CO/PY/BO, cluster pastelería, cluster PY). Entrantes: ABC Chef CO 11,
+ayudante AR 21, gelificantes 18, San Lorenzo 8, ABC Chef AR 19. Desde las notas
+con tráfico se enlazaron además notas sin tráfico: `curso-mozo-camarera-maitre-
+servicio-profesional`, `que-se-aprende-curso-barista`,
+`curso-barista-tecnica-servicio-practica`, `materiales-herramientas-estudiar-
+pasteleria`, `abc-pastelero-curso-inicial-pasteleria`, `abc-tortas-curso-tortas-
+clasicas`, `diseno-tortas-curso-decoracion`, `chef-internacional-es-para-vos`,
+`pastelero-profesional-es-para-vos`, `especializaciones-gastronomicas-como-
+elegir`, `cocina-sostenible-reducir-desperdicios`, `como-disenar-menu-rentable`,
+`catering-eventos-planificar-producir-servir`, `materias-chef-internacional`,
+`primer-segundo-ano-chef-internacional`, `como-es-clase-chef-internacional-igi`,
+`como-es-clase-pasteleria-profesional-igi`, `que-estudiar-para-ser-chef-san-
+lorenzo-paraguay`, `perfiles-gastronomicos-mas-demandados-paraguay`.
+
+Índice, feed y sitemap actualizados (3 tarjetas/ítems arriba; sitemap con 299
+URLs, `lastmod` 2026-11-23 en las 51 notas tocadas y en `/blog/`). Verificación
+automática sobre las 51 notas + índice: JSON-LD válido, un h1, meta descriptions
+de 70–165 caracteres (3 acortadas), enlaces e imágenes internas existentes,
+anclas del TOC resueltas, sin directivas filtradas, analítica presente, lang =
+og:locale, CTA a ficha del país en las 5 notas nuevas/ampliadas, las 3 nuevas por
+encima de 1.300 palabras con el conteo estricto, feed y sitemap parsean como
+XML, héroes 1200×675 y 800×450 copiados del banco. Preexistente y no tocado:
+`blog/index.html` usa hashes de raíz en su nav; CTAs de notas viejas sin ficha de
+programa (por ejemplo `metodos-de-coccion-guia`). CNAME,
+google7c95af54c2fa6355.html e index.html de raíz sin tocar. Banco de fotos:
+quedan 24 sin usar (verificado por checksum contra los héroes de las notas).
+Bloqueo de red: WebFetch no resuelve hosts fuera de la lista permitida
+(Wikipedia, Directo al Paladar, Cargill, IP, Infonegocios, Vilaplana): las
+cifras se tomaron de los extractos de búsqueda y de fuentes ya citadas en el
+repo.
+
 ### 2026-11-16 — 3 notas nuevas + 2 ampliaciones + enlazado interno
 
 Medición: CON ACCESO A GA4 (Zapier ya autorizado; acción runReport sobre
